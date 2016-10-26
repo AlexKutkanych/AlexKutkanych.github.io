@@ -45,8 +45,11 @@ header {
       border-left: 1px solid white;
       border-right: 1px solid white;
       width: 140px;
+}
 
-  }
+.chosen {
+
+}
 
 footer {
   width:1100px;
@@ -95,10 +98,11 @@ footer {
   margin-left: 0px;
 }
 
-.chosen {
+.chosen:hover {
     padding-left: 45px;
     color: black;
     width: auto;
+    background-color: #dbdde0;
 }
 
 .image {
