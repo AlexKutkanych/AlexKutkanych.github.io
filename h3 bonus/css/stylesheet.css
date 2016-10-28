@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.wrapper {
+    width: 960px;
+    height: 881px;
+    color: white;
+    background-image: url("../pic/layer.jpg");
+}
+
+.content {
+    margin: -10px 68px;
+    display: inline-block;
+}
+
+.logo {
+  border: none;
+  margin-top: 70px;
+  margin-bottom: -5px;
+}
+
+.contacts {
+    margin-left: 437px;
+    padding: 5px;
+    margin-bottom: 10px;
+
+}
+
+.img {
+  display: inline-block;
+  margin:0 10px 40px 0;
+}
+
+
+header {
+    display: inline-block;
+}
+
+
+.footer {
+  text-align: center;
+  margin:170px 330px;
+  padding-bottom: 10px;
+
+}
