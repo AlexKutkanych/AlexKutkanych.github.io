@@ -6,8 +6,10 @@
 .wrapper {
     background-color: white;
     width: 1200px;
-    margin-left: 150px;
-}
+    margin: auto;
+    padding-top: 7px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  }
 
 .content {
   margin-left: 50px;
@@ -17,6 +19,7 @@
 
 .logo {
     width: 300px;
+    border: none;
     line-height: 50px;
     font-size: 74px;
     font-family: Calibri;
@@ -24,53 +27,73 @@
     color: #444444;
 }
 
-header {
-    background-color: #5c5d60;
+.menu {
+
 }
 
-.header {
-    display: inline-block;
-    width: 162px;
+
+header {
+    background-color: #545454;
     height: 50px;
-    margin: auto;
+}
+
+.menu_item {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
     text-align: center;
     line-height: 50px;
     color: white;
     font-family: Calibri;
     font-size: 22px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 }
 
-.goods:hover {
-      background-color: #393a3d;
+a {
+    color: white;
+    font-family: Calibri;
+    text-decoration: none;
+}
+
+.link {
+    color:grey;
+    font-family: Calibri;
+    text-decoration: none;
+}
+
+
+.menu_item:hover {
+      background-color: #414141;
       border-left: 1px solid white;
       border-right: 1px solid white;
-      width: 140px;
 }
 
-.chosen {
-
-}
 
 footer {
   width:1100px;
   height: 50px;
-  background-color: lightgrey;
+  background-color: #e1e1e1;
 
 }
 .footer {
-  display: inline-block;;
-  width: 160px;
+  display: inline-block;
+  width: 140px;
   height: 50px;
   text-align: center;
   line-height: 50px;
-  background-color: lightgrey;
+  background-color: #e1e1e1;
   font-size: 20px;
   font-family: Calibri;
   color: #444444;
 }
 
+.bottom {
+  color:#444444;
+}
+
 .copy {
-  width: 430px;
+  width: 480px;
   display: inline-block;
   text-align: right;
   padding-right: 30px;
@@ -78,12 +101,11 @@ footer {
 }
 
 .left_menu {
+    display: inline-block;
     color: black;
     margin: 50px 20px 0 0;
-    display: inline-block;
     vertical-align: top;
-    color: #444444;
-    font-family: Calibri;
+
 }
 
 .leftmenu {
@@ -96,20 +118,25 @@ footer {
   text-align: left;
   padding: 10px 0px 10px 30px;
   margin-left: 0px;
+  color: #444444;
+  font-family: Calibri;
+  font-size: 16px;
 }
 
 .chosen:hover {
     padding-left: 45px;
-    color: black;
+    color: red;
     width: auto;
-    background-color: #dbdde0;
+    background-color: #d4d4d6;
 }
+
 
 .image {
   display: inline-block;
   margin: 50px 0 0 30px;
 
 }
+
 
 img {
 
@@ -125,25 +152,6 @@ img {
     color: #444444;
 
 }
-
-
-.name {
-  display: inline-block;
-
-}
-
-.model {
-  width: 500px;
-  text-align: left;
-  margin-left: 380px;
-  margin-bottom: 50px;
-  padding: 5px;
-  line-height: 25px;
-
-
-}
-
-
 
 
 .botborder {
