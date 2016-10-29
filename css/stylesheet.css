@@ -123,12 +123,19 @@ footer {
   font-size: 16px;
 }
 
-.chosen:hover {
+.link:hover {
+  color: black;
+
+}
+
+.leftmenu:hover {
     padding-left: 45px;
-    color: red;
     width: auto;
     background-color: #d4d4d6;
 }
+
+
+
 
 
 .image {
