@@ -60,6 +60,10 @@ a {
     height: 100%;
 }
 
+.left_menu a {
+  height: 100%;
+}
+
 .link {
     color:grey;
     font-family: Calibri;
