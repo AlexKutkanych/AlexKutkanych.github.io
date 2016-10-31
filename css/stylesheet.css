@@ -29,7 +29,6 @@
 
 
 header {
-    /*background-color: #545454;*/
     background: linear-gradient(to top, #464545, #5c5c5c);
     height: 50px;
 }
@@ -49,9 +48,6 @@ header {
     border-right: 1px solid transparent;
 }
 
-
-
-
 a {
     color: white;
     font-family: Calibri;
@@ -60,15 +56,8 @@ a {
     height: 100%;
 }
 
-.left_menu a {
-  height: 100%;
-}
 
-.link {
-    color:grey;
-    font-family: Calibri;
-    text-decoration: none;
-}
+
 
 
 .menu_item:hover {
@@ -124,23 +113,29 @@ footer {
 
 .leftmenu {
   list-style: none;
-  border-left: 1px solid lightgrey;
-  border-right: 1px solid lightgrey;
-  border-top: 1px solid lightgrey;
+  border: 1px solid lightgrey;
   width: 250px;
   vertical-align: middle;
   text-align: left;
-  padding: 10px 0px 10px 30px;
+  /*padding: 10px 0px 10px 30px;*/
   margin-left: 0px;
   color: #444444;
   font-family: Calibri;
   font-size: 16px;
+  margin-bottom: -1px;
+}
+
+.link {
+    display: block;
+    height: 100%;
+    color:grey;
+    font-family: Calibri;
+    text-decoration: none;
+    margin: 10px 0px 10px 30px;
 }
 
 a.link:hover {
   color: black;
-
-
 
 }
 
@@ -179,5 +174,6 @@ img {
 
 .botborder {
   border-bottom: 1px solid lightgrey;
+  margin-bottom: -2px;
 
 }
