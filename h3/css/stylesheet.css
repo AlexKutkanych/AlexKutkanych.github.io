@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+    background-color: white;
+    width: 1200px;
+    margin: auto;
+    padding-top: 7px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  }
+
+.content {
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 1100px;
+}
+
+.logo {
+    width: 300px;
+    border: none;
+    line-height: 50px;
+    font-size: 74px;
+    font-family: Calibri;
+    margin: 62px 0 48px 0;
+    color: #444444;
+}
+
+
+header {
+    background: linear-gradient(to top, #464545, #5c5c5c);
+    height: 50px;
+}
+
+
+
+.menu_item {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-family: Calibri;
+    font-size: 22px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+
+
+a {
+    color: white;
+    font-family: Calibri;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+.menu_item:hover {
+      background-color: #414141;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+}
+
+.menu_item:first-child:hover {
+  border-left: 1px solid grey;
+}
+
+
+footer {
+  width:1100px;
+  height: 50px;
+  background-color: #e1e1e1;
+
+}
+.footer {
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #e1e1e1;
+  font-size: 20px;
+  font-family: Calibri;
+  color: #444444;
+}
+
+
+.bottom {
+  color:#444444;
+}
+
+.copy {
+  width: 480px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 30px;
+
+}
+
+.left_menu {
+    display: inline-block;
+    color: black;
+    margin: 50px 20px 0 0;
+    vertical-align: top;
+    width: 250px;
+
+}
+
+
+.leftmenu {
+  display: block;
+  list-style: none;
+  border: 1px solid lightgrey;
+  vertical-align: middle;
+  text-align: left;
+  /*padding: 10px 0px 10px 30px;*/
+  color: #444444;
+  font-family: Calibri;
+  font-size: 16px;
+  margin-bottom: -1px;
+  height: 100%;
+}
+
+
+.link {
+    display: block;
+    height: 42px;
+    width: 250px;
+    color:grey;
+    font-family: Calibri;
+    text-decoration: none;
+    padding-left: 20px;
+    line-height: 42px;
+
+}
+
+
+.leftmenu:hover {
+    padding-left: 35px;
+    width: auto;
+    background-color: #d4d4d6;
+}
+
+.image {
+  display: inline-block;
+  margin: 50px 0 0 30px;
+
+}
+
+
+img {
+
+  width: 47em;
+  display: inline-block;
+  border: 1px solid lightgrey;
+}
+
+.text {
+    width: 700px;
+    margin: 50px 30px 55px 375px;
+    font-family: Calibri;
+    color: #444444;
+
+}
+
+
+.botborder {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: -2px;
+
+}
