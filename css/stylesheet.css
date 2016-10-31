@@ -172,6 +172,9 @@ img {
 
 }
 
+.bottom:hover {
+  text-decoration: underline;
+}
 
 .botborder {
   border-bottom: 1px solid lightgrey;
