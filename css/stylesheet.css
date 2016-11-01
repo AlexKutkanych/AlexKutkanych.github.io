@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-image: url(../img/background.png);
+    background-repeat: repeat-x;
+    background-color: #0c739f;
+
+}
+
+.wrapper {
+  width: 1280px;
+  height: auto;
+  margin: auto;
+}
+
+.content_all {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  background-color: white;
+  border-bottom: 3px solid black;
+  padding-top: 35px;
+  box-shadow: 0 0 10px #1e1f20;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+/*HEADER*/
+.contacts {
+  float: right;
+  margin: 10px 25px 0 0;
+  color: #5fa5bb;
+  padding-bottom: 10px;
+  font-size: 13px;
+  font-family: Calibri;
+}
+
+.logo {
+  float: left;
+  margin: 15px 0 0 35px;
+}
+
+.countries {
+  position: relative;
+  overflow: hidden;
+  top: 110px;
+  left: 330px;
+}
+
+.countries a {
+  font-size: 12px;
+  text-align: center;
+  color: #5fa5bb;
+  font-family: Calibri;
+}
+
+.leftc {
+  margin-left: -10px;
+}
+
+.leftc1 {
+  margin-left: -6px;
+}
+
+.india, .nepal, .tibet, .bhutan, .sri-lanka, .maldives {
+  display: inline-block;
+  padding-right:10px;
+}
+
+.main_img {
+  margin-top: -5px;
+  margin-bottom: -2px;
+}
+
+/*MENU*/
+.menu {
+  height: 30px;
+  width: 1000px;
+  background-color: #333333;
+  border-bottom: 3px solid black;
+  box-shadow: 0 0 10px #555555;
+  z-index: 2;
+}
+
+ul .menu_item {
+  float: left;
+  width: 135px;
+  height: 30px;
+  padding: 0px auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+ul.menu .left {
+  text-align: left;
+  width: 140px;
+  padding-left: 10px;
+}
+
+
+ul .menu_item ul {
+  display:none;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  margin: 0;
+  background-color: #333333;
+  z-index: 1;
+}
+
+ul .menu_item .submenu {
+  float: none;
+  display: block;
+  background: none;
+  width: 150px;
+}
+
+.submenu a {
+  padding-left: 10px;
+}
+
+.menu li:hover ul {
+  display: block;
+}
+
+.top {
+  border-top: 3px solid black;
+}
+.menu a {
+  text-decoration: none;
+  color: white;
+  line-height: 30px;
+  display: block;
+  height: 100%;
+}
+
+.menu li {
+  font-family: Calibri;
+  font-size: 18px;
+}
+
+.menu ul {
+  box-shadow: 0 0 10px #1e1f20;
+}
+
+/*SIDEBAR*/
+.fon {
+  width: 1000px;
+  clear: both;
+  overflow: hidden;
+}
+
+
+.sidebar {
+  width: 20%;
+  background-color: #edeef0;
+  float: left;
+  height: 500px;
+  color: #7d837f;
+  border-right: 1px solid #c7cacf;
+  border-left: 1px solid #c7cacf;
+  padding-bottom: 20000px;
+  margin-bottom: -20000px;
+}
+
+.news p, .sidebar p {
+  padding-left: 5px;
+  font-family: Calibri;
+}
+
+.news {
+  width: 20%;
+  background-color: #edeef0;
+  float: right;
+  height: auto;
+  color: #7d837f;
+  border-left: 1px solid #c7cacf;
+  border-left: 1px solid #c7cacf;
+  padding-bottom: 20000px;
+  margin-bottom: -20000px;
+  font-style: sans-serif;
+}
+
+h2 {
+  color: #424c43;
+  text-align: center;
+  padding-top: 7px;
+  font-family: Calibri;
+}
+
+
+/*FOOTER*/
+footer {
+  width: 1000px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+}
