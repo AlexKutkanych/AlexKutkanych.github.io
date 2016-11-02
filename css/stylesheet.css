@@ -101,6 +101,7 @@ ul .menu_item {
 
 ul.menu .left {
   text-align: left;
+  text-indent: 10px;
   width: 140px;
 }
 
@@ -119,11 +120,12 @@ ul .menu_item .submenu {
   float: none;
   display: block;
   background: none;
-  width: 150px;
+  width: 140px;
 }
 
 .submenu a {
-  padding-left: 10px;
+  text-align: left;
+  text-indent: 10px;
 }
 
 .menu li:hover ul {
@@ -139,7 +141,6 @@ ul .menu_item .submenu {
   line-height: 30px;
   display: block;
   height: 100%;
-  text-indent: 10px;
 }
 
 .menu li {
