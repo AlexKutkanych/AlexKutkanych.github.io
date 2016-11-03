@@ -48,10 +48,10 @@ li {
 }
 
 .countries {
-  position: relative;
+  position: absolute;
   overflow: hidden;
-  top: 110px;
-  left: 330px;
+  top: 135px;
+  left: 816px;
 }
 
 .countries a {
@@ -187,7 +187,7 @@ ul .menu_item .submenu {
   border-left: 1px solid #c7cacf;
   padding-bottom: 20000px;
   margin-bottom: -20000px;
-  font-style: sans-serif;
+  font-family: sans-serif;
 }
 
 h2 {
