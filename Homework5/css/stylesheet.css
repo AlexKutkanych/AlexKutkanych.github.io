@@ -4,16 +4,34 @@
 }
 
 
-html, body {
-    background-image: url(../img/background.jpg);
-    background-position: center center;
+
+
+
+body {
+    height: 100%;
+    width: 100%;
+    /background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
-
+    background-image: url(../img/background.jpg);
+    background-position-y: 0;
+    position: relative;/
 }
+
+/*.wrapper {
+  background-size: cover;
+  background-image: url(../img/background.jpg);
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  width: 5000px;
+  height: 5000px;
+}*/
+
+
 
 
 .content {
@@ -23,10 +41,6 @@ html, body {
     height: 100%;
     bottom: 0;
     left: 0;
-
-
-
-
 }
 
 
@@ -48,13 +62,9 @@ a {
   background-image: url(../img/menu.png);
 }
 
-ul {
-  border-right: 1px solid white
-}
-
 ul .menu_item {
   display: inline-block;
-
+  float: right;
 }
 
 
@@ -64,6 +74,8 @@ ul .menu_item {
   height: 100%;
   line-height: 36px;
   color: #60b5ed;
+  padding: 0 15px;
+
 }
 
 .line {
@@ -85,7 +97,13 @@ ul .menu_item {
 .white {
   color: white;
   font-size: 16px;
+  line-height: 36px;
 
+}
+
+.flag {
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .menu_item:hover .white {
@@ -128,13 +146,13 @@ hr {
 
 .facebook {
   background-color: blue;
-  width: 150px;
+  width: 200px;
   height: 30px;
   border: none;
   border-radius: 5px;
   color: white;
   background: linear-gradient (top right, #2e7ac4, red)
-
+  text-align: center;
 }
 
 .form_format {
@@ -171,6 +189,7 @@ span {
   color: #ccc;
   margin: 10px;
 
+
 }
 
 p {
@@ -182,4 +201,9 @@ p {
 
 .row {
   font-size: 30px;
+}
+
+.checkbox {
+  margin-left: 35px;
+
 }
