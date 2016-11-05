@@ -1,208 +1,209 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
+
+
+
+
 
 body {
-    background-image: url(../img/background.png);
-    background-repeat: repeat-x;
-    background-color: #0c739f;
-
+    height: 100%;
+    width: 100%;
+    /background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(../img/background.jpg);
+    background-position-y: 0;
+    position: relative;/
 }
 
-.wrapper {
-  width: 1280px;
-  height: auto;
-  margin: auto;
+/*.wrapper {
+  background-size: cover;
+  background-image: url(../img/background.jpg);
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  width: 5000px;
+  height: 5000px;
+}*/
+
+
+
+
+.content {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
 }
 
-.content_all {
-  width: 1000px;
-  height: auto;
-  margin: auto;
-  background-color: white;
-  border-bottom: 3px solid black;
-  padding-top: 35px;
-  box-shadow: 0 0 10px #1e1f20;
-}
+
 
 li {
   list-style: none;
 }
 
-
-
-/*HEADER*/
-.contacts {
-  float: right;
-  margin: 10px 25px 0 0;
-  color: #5fa5bb;
-  padding-bottom: 10px;
-  font-size: 13px;
-  font-family: Calibri;
-}
-
-.logo {
-  float: left;
-  margin: 15px 0 0 35px;
-}
-
-.countries {
-  position: absolute;
-  overflow: hidden;
-  top: 135px;
-  left: 816px;
-}
-
-.countries a {
-  font-size: 12px;
-  text-align: center;
-  color: #5fa5bb;
-  font-family: Calibri;
-}
-
-.leftc {
-  margin-left: -10px;
-}
-
-.leftc1 {
-  margin-left: -6px;
-}
-
-.india, .nepal, .tibet, .bhutan, .sri-lanka, .maldives {
-  display: inline-block;
-  padding-right:10px;
-}
-
-.main_img {
-  margin-top: -5px;
-  margin-bottom: -2px;
+a {
+  text-decoration: none;
+  color: white;
 }
 
 /*MENU*/
 .menu {
-  height: 30px;
-  width: 1000px;
-  background-color: #333333;
-  border-bottom: 3px solid black;
-  box-shadow: 0 0 10px #555555;
-  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 36px;
+  background-image: url(../img/menu.png);
 }
 
 ul .menu_item {
-  float: left;
-  width: 135px;
-  height: 30px;
-  padding: 0px auto;
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-
-ul.menu .left {
-  text-align: left;
-  text-indent: 10px;
-  width: 140px;
-}
-
-
-ul .menu_item ul {
-  display:none;
-  position: absolute;
-  left: 0;
-  top: 30px;
-  margin: 0;
-  background-color: #333333;
-  z-index: 1;
-}
-
-ul .menu_item .submenu {
-  float: none;
-  display: block;
-  background: none;
-  width: 140px;
-}
-
-.submenu a {
-  text-align: left;
-  text-indent: 10px;
-}
-
-.menu li:hover ul {
-  display: block;
-}
-
-.top {
-  border-top: 3px solid black;
-}
-.menu a {
-  text-decoration: none;
-  color: white;
-  line-height: 30px;
-  display: block;
-  height: 100%;
-}
-
-.menu li {
-  font-family: Calibri;
-  font-size: 18px;
-}
-
-.menu ul {
-  box-shadow: 0 0 10px #1e1f20;
-}
-
-/*SIDEBAR*/
-.fon {
-  width: 1000px;
-  clear: both;
-  overflow: hidden;
-}
-
-
-.sidebar {
-  width: 20%;
-  background-color: #edeef0;
-  float: left;
-  height: 500px;
-  color: #7d837f;
-  border-right: 1px solid #c7cacf;
-  border-left: 1px solid #c7cacf;
-  padding-bottom: 20000px;
-  margin-bottom: -20000px;
-}
-
-.news p, .sidebar p {
-  padding-left: 5px;
-  font-family: Calibri;
-}
-
-.news {
-  width: 20%;
-  background-color: #edeef0;
+  display: inline-block;
   float: right;
-  height: auto;
-  color: #7d837f;
-  border-left: 1px solid #c7cacf;
-  border-left: 1px solid #c7cacf;
-  padding-bottom: 20000px;
-  margin-bottom: -20000px;
-  font-family: sans-serif;
-}
-
-h2 {
-  color: #424c43;
-  text-align: center;
-  padding-top: 7px;
-  font-family: Calibri;
 }
 
 
-/*FOOTER*/
-footer {
-  width: 1000px;
+.menu_link {
+  display: block;
+  float: right;
+  height: 100%;
+  line-height: 36px;
+  color: #60b5ed;
+  padding: 0 15px;
+
+}
+
+.line {
+  border-right: 1px solid white;
+  padding-right: 10px;
+}
+
+.menu_item:hover a {
+  background-color: #4eabda;
   color: white;
+}
+
+.underline {
+  text-decoration: underline;
+  color: white;
+  font-size: 16px;
+}
+
+.white {
+  color: white;
+  font-size: 16px;
+  line-height: 36px;
+
+}
+
+.flag {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.menu_item:hover .white {
+  /*background: linear-gradient (90deg, #2e7ac4, #50aedb)*/
+  background: linear-gradient (top right, #2e7ac4, red)
+}
+
+
+/*FORM*/
+.registration {
+  width: 560px;
+  height: 615px;
+  background-color: rgba(14, 14, 14, 0.7);
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left:-250px;
+  margin-top:-250px;
+
+
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
   text-align: center;
+  padding: 15px;
+}
+
+hr {
+  color: #c0c9b4;
+}
+
+.allforms {
+  margin: 20px auto;
+  text-align: center;
+
+}
+
+.facebook {
+  background-color: blue;
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: linear-gradient (top right, #2e7ac4, red)
+  text-align: center;
+}
+
+.form_format {
+  background-color: black;
+  color: #ccc;
+  width: 280px;
+  height: 36px;
+  margin: 20px auto;
+  text-indent: 10px;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+.form_format:hover {
+  background-color: #1b5288;
+  box-shadow: 0 0 10px #4f8ab4;
+}
+
+.button {
+  /*background: linear-gradient (top right, #2e7ac4, #50aedb)*/
+  width: 150px;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+}
+
+label {
+  margin-left: -100px;
+}
+span {
+  font-size: 13px;
+  color: #ccc;
+  margin: 10px;
+
+
+}
+
+p {
+  text-align: center;
+  color: #ccc;
+  font-size: 10px;
   padding: 10px;
-  margin: auto;
+}
+
+.row {
+  font-size: 30px;
+}
+
+.checkbox {
+  margin-left: 35px;
+
 }
