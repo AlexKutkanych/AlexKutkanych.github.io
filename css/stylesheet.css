@@ -10,7 +10,7 @@
 body {
     height: 100%;
     width: 100%;
-    /background-position: center center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -98,7 +98,6 @@ ul .menu_item {
   color: white;
   font-size: 16px;
   line-height: 36px;
-
 }
 
 .flag {
@@ -107,10 +106,12 @@ ul .menu_item {
 }
 
 .menu_item:hover .white {
-  /*background: linear-gradient (90deg, #2e7ac4, #50aedb)*/
-  background: linear-gradient (top right, #2e7ac4, red)
+  background: linear-gradient(to top, #2e7ac4, #51b1dc)
 }
 
+.selected {
+  background: linear-gradient(to top, #2e7ac4, #51b1dc)
+}
 
 /*FORM*/
 .registration {
@@ -123,8 +124,17 @@ ul .menu_item {
   left: 50%;
   margin-left:-250px;
   margin-top:-250px;
+}
 
+.facebook {
+  margin: 30px 138px 30px 138px;
 
+}
+
+.title {
+  overflow: hidden;
+  font-size: 16px;
+  margin: -20px auto;
 }
 
 h1 {
@@ -139,31 +149,23 @@ hr {
 }
 
 .allforms {
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
 
 }
 
-.facebook {
-  background-color: blue;
-  width: 200px;
-  height: 30px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  background: linear-gradient (top right, #2e7ac4, red)
-  text-align: center;
-}
+
 
 .form_format {
   background-color: black;
   color: #ccc;
   width: 280px;
   height: 36px;
-  margin: 20px auto;
-  text-indent: 10px;
+  margin: 20px 10px auto;
+  text-indent: 15px;
   border: none;
   border-bottom: 1px solid grey;
+  font-size: 14px;
 }
 
 .form_format:hover {
@@ -171,39 +173,69 @@ hr {
   box-shadow: 0 0 10px #4f8ab4;
 }
 
+
+
+label {
+  margin: 0 0 10px -100px;
+}
+
+.title:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 118px;
+  height: 1px;
+  background: #666;
+  border-width: 0 10px;
+  margin-right: 10px;
+  box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.75);
+
+}
+
+.title:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 118px;
+  height: 1px;
+  background: #666;
+  border-width: 0 10px;
+  margin-left: 10px;
+  box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.75);
+}
+
+.title:before {
+  margin-left: -100%;
+}
+.title:after {
+  margin-right: -100%;
+}
+
+.checkbox {
+  margin: 20px 0px 20px 70px;
+}
+
+span {
+  font-size: 15px;
+  color: #ccc;
+  margin: 10px;
+}
+
 .button {
-  /*background: linear-gradient (top right, #2e7ac4, #50aedb)*/
   width: 150px;
   height: 36px;
   border: none;
   border-radius: 5px;
   color: white;
-  background-color: black;
-}
-
-label {
-  margin-left: -100px;
-}
-span {
-  font-size: 13px;
-  color: #ccc;
-  margin: 10px;
-
-
+  background: linear-gradient(to top, #2e7ac4, #50aedb);
+  font-size: 14px;
 }
 
 p {
   text-align: center;
   color: #ccc;
-  font-size: 10px;
+  font-size: 12px;
   padding: 10px;
-}
-
-.row {
-  font-size: 30px;
-}
-
-.checkbox {
-  margin-left: 35px;
-
 }
