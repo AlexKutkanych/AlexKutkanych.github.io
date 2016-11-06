@@ -21,23 +21,7 @@ body {
          url('fonts/helveticaneue-thin-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
-
-/*.wrapper {
-  background-size: cover;
-  background-image: url(../img/background.jpg);
-  position: absolute;
-  top:0;
-  bottom:0;
-  right:0;
-  left:0;
-  width: 5000px;
-  height: 5000px;
-}*/
-
-
-
 
 .content {
     display: block;
@@ -45,10 +29,7 @@ body {
     height: 100%;
     bottom: 0;
     left: 0;
-
 }
-
-
 
 li {
   list-style: none;
@@ -72,7 +53,6 @@ ul .menu_item {
   float: right;
 }
 
-
 .menu_link {
   display: block;
   float: right;
@@ -80,7 +60,6 @@ ul .menu_item {
   line-height: 36px;
   color: #60b5ed;
   padding: 0 15px;
-
 }
 
 .line {
@@ -134,7 +113,6 @@ ul .menu_item {
 
 .facebook {
   margin: 30px 138px 30px 138px;
-
 }
 
 .title {
@@ -157,10 +135,7 @@ hr {
 .allforms {
   margin: 10px auto;
   text-align: center;
-
 }
-
-
 
 .form_format {
   background-color: black;
@@ -179,10 +154,8 @@ hr {
   box-shadow: 0 0 10px #4f8ab4;
 }
 
-
-
 label {
-  margin: 0 0 10px -100px;
+  margin: 0 0 10px -80px;
 }
 
 .title:before {
@@ -196,7 +169,6 @@ label {
   border-width: 0 10px;
   margin-right: 10px;
   box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.75);
-
 }
 
 .title:after {
@@ -215,6 +187,7 @@ label {
 .title:before {
   margin-left: -100%;
 }
+
 .title:after {
   margin-right: -100%;
 }
