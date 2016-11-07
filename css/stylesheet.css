@@ -3,14 +3,10 @@
   margin: 0;
 }
 
-body {
-    height: 1029px;
-    width: 100%;
-    background-repeat: no-repeat;
+html {
+    background: url(../img/background.jpg) no-repeat;
     background-size: cover;
-    background-image: url(../img/background.jpg);
-    position: relative;
-    overflow: auto;
+    background-attachment: fixed;
     font-family: "helvetica_neueregular", Tahoma, sans-serif;
 }
 
@@ -101,7 +97,7 @@ ul .menu_item {
 /*FORM*/
 .registration {
   width: 560px;
-  height: 615px;
+  min-height: 620px;
   background-color: rgba(14, 14, 14, 0.7);
   margin: 0 auto;
   position: fixed;
