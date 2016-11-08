@@ -1,0 +1,377 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 915px;
+  margin: auto;
+  padding-top: 8px;
+  font-family: "helvetica_neueregular", Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'helvetica_neueregular';
+    src: url('fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
+         url('fonts/helveticaneue-thin-webfont.woff') format('woff'),
+         url('fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/*HEADER*/
+.contacts {
+  width: 300px;
+  float: left;
+  font-size: 16px;
+  margin: 3px 0 0 5px;
+}
+
+.phone {
+  float: left;
+}
+
+.contacts p {
+  color: #5e696d;
+  float: left;
+  letter-spacing: 1px;
+  margin-left: 4px;
+}
+
+/*LOGIN*/
+
+.login {
+  width: 490px;
+  height: 25px;
+  float: left;
+  margin:0 0 10px 10px;
+  background: linear-gradient(to top, #0c3357, #1f6787);
+  box-shadow: 0 0 10px rgb(180,180,180);
+}
+
+.login_icon {
+  float: left;
+  margin: 2px 2px 0 7px;
+
+}
+
+.forma {
+  float: left;
+  width: 245px;
+  line-height: 23px;
+}
+
+.log_form {
+  width: 114px;
+  height: 16px;
+}
+
+.pass_form {
+  width: 114px;
+  height: 16px;
+}
+
+.enter, .reg {
+  float: left;
+  border: none;
+  color: white;
+  line-height: 25px;
+  font-size: 13px;
+}
+
+.enter {
+  height: 15px;
+  line-height: 25px;
+}
+
+hr {
+  float: left;
+  margin: 7px 4px 0 4px;
+  width: 0px;
+  height: 11px;
+  color: white;
+}
+
+.forgot {
+  float: right;
+  font-size: 13px;
+  line-height: 25px;
+  text-decoration: underline;
+}
+
+.forgot a {
+  color: #bfbfbf;
+}
+
+
+/*NAVIGATION*/
+.nav {
+  float: left;
+  margin-left: 30px;
+  width: 65px;
+  border: 1px solid #c0c7c9;
+  border-radius: 10px;
+}
+
+.main {
+  float: left;
+  width: 909px;
+  margin-bottom: 7px;
+}
+/*MENU*/
+.menu {
+  height: 35px;
+  width: 912px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: linear-gradient(to top, #010101, #4d5663);
+  clear: both;
+  font-size: 12px;
+  box-shadow: 0 0 10px #50525e;
+  border: 1px solid #0a1030;
+}
+
+.name {
+  margin-left: 128px;
+  height: 30px;
+}
+
+span {
+  color: #0d5a8f;
+}
+
+.right {
+  padding-left: 150px;
+  color: #8c9599;
+}
+
+ul li {
+  display: inline-block;
+  line-height: 35px;
+}
+
+.menu_link {
+  display: block;
+  padding: 0px 10px;
+  height: 30px;
+  color: #b1bcc0;
+}
+
+.menu li:hover a {
+  background: linear-gradient(to top, #0c3357, #25617b);
+  border-radius: 20px;
+  color: white;
+
+}
+
+.content div {
+  border-radius: 5px;
+
+}
+
+/*SELECTION*/
+
+.block1, .block2, .block3 {
+  height: 132px;
+  border-radius: 17px;
+  background-color: lightblue;
+  border: 1px solid black;
+
+}
+
+.find {
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 10px;
+  float: right;
+  margin: 7px 26px 0 0;
+  color: blue;
+}
+/*BLOCK1*/
+.block1 {
+  width: 45%;
+  float: left;
+  margin-left: 3px;
+}
+
+.top {
+  display: inline-block;
+  color: blue;
+  font-size: 13px;
+  clear: both;
+  text-align: center;
+  width: 410px;
+  margin-top: -10px;
+
+}
+
+.top ul {
+  height: 15px;
+}
+
+.top li {
+  padding-right: 42px;
+}
+
+.bigger {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.left {
+  float: left;
+  display: block;
+  width: 80px;
+  margin: 3px 0 0 16px;
+  font-size: 10px;
+}
+
+
+.left p {
+  margin-top: 2px;
+  padding-bottom: 1px;
+}
+
+
+
+.select {
+  float: left;
+  width: 100px;
+
+}
+
+select {
+  width: 100px;
+  margin:0 0 2px -4px;
+}
+
+.year {
+  width: 60px;
+}
+
+
+/*BLOCK2*/
+.block2 {
+  width: 21%;
+  float: left;
+  margin-left: 15px;
+  font-size: 10px;
+}
+
+.block2 p {
+  color: blue;
+  font-weight: bold;
+  font-size: 10px;
+  margin: 3px 0 0 10px;
+}
+
+.block2 ul {
+  margin: 2px 0 0 12px;
+}
+
+.block2 select {
+  margin: 0px 0 0 9px;
+  width: 50px;
+}
+
+
+
+/*BLOCK3*/
+
+
+.block3 {
+  width: 29%;
+  float: left;
+  /*clear: both;*/
+    margin-left: 9px;
+}
+
+
+/*CONTENT*/
+.leftmenu {
+  background-color: yellow;
+  width: 20%;
+  float: left;
+}
+
+.icon {
+  float: left;
+}
+
+section li {
+  list-style: circle;
+}
+
+/*Centermenu*/
+.centermenu {
+  background-color: lightblue;
+  width: 50%;
+  height: 700px;
+  float: left;
+}
+
+figure {
+  width: 139px;
+  float: left;
+  text-align: center;
+  margin: 0 30px;
+}
+
+
+
+
+
+
+
+
+
+.sidemenu {
+  background-color: lightgreen;
+  width: 20%;
+  float: left;
+}
+
+h2 {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.logo {
+  margin: 20px 250px 10px 250px;
+}
+
+/*FOOTER*/
+footer {
+  height: 100px;
+  background-color: blue;
+  clear: both;
+
+}
+
+footer p {
+  text-align: center;
+  color: orange;
+}
+
+footer ul {
+  text-align: center;
+
+
+}
+
+footer li {
+  border-right: 1px solid white;
+  padding-right: 15px;
+  margin: 10px auto;
+}
