@@ -8,6 +8,7 @@ html {
     background-size: cover;
     background-attachment: fixed;
     font-family: "helvetica_neueregular", Tahoma, sans-serif;
+    height: 100vh;
 }
 
 @font-face {
