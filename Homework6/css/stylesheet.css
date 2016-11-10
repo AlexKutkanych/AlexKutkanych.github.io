@@ -68,7 +68,7 @@ a {
 
 .forma {
   float: left;
-  width: 245px;
+  width: 465px;
   line-height: 23px;
 }
 
@@ -83,21 +83,22 @@ a {
 }
 
 .enter, .reg {
-  float: left;
+
   border: none;
   color: white;
   line-height: 25px;
   font-size: 13px;
+  background: linear-gradient(to top, #0c3357, #1f6787);
+  cursor: pointer;
 }
 
 .enter {
-  height: 15px;
   line-height: 25px;
 }
 
 hr {
-  float: left;
-  margin: 7px 4px 0 4px;
+
+  /*margin: 7px 4px 0 4px;*/
   width: 0px;
   height: 11px;
   color: white;
@@ -108,6 +109,9 @@ hr {
   font-size: 13px;
   line-height: 25px;
   text-decoration: underline;
+  background: linear-gradient(to top, #0c3357, #1f6787);
+  border: none;
+  color: grey;
 }
 
 .forgot a {
@@ -185,9 +189,9 @@ ul li {
 .block1, .block2, .block3 {
   height: 132px;
   border-radius: 17px;
-  background-color: lightblue;
+  box-shadow: 0 0 10px #50525e;
   border: 1px solid black;
-
+  font-size: 10px;
 }
 
 .find {
@@ -243,8 +247,6 @@ ul li {
   padding-bottom: 1px;
 }
 
-
-
 .select {
   float: left;
   width: 100px;
@@ -285,6 +287,14 @@ select {
   width: 50px;
 }
 
+.block2 .left {
+  margin-left: -5px
+
+}
+
+.radio {
+
+}
 
 
 /*BLOCK3*/
@@ -293,10 +303,34 @@ select {
 .block3 {
   width: 29%;
   float: left;
-  /*clear: both;*/
     margin-left: 9px;
 }
 
+.dco {
+  width: 70px;
+  float: right;
+  border-left: 1px solid grey;
+  padding-left: 10px;
+}
+
+.block3 select {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.block3 select:nth-child(2) {
+  width: 30px;
+}
+
+.block3 .select {
+  margin-top: 20px;
+  width: 60px;
+}
+
+.block3 .dco select {
+  width: 40px;
+
+}
 
 /*CONTENT*/
 .leftmenu {

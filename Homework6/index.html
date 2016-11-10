@@ -19,11 +19,14 @@
           <form action="#" method="post" >
             <input type="text" name="text" placeholder="логин" class="log_form">
             <input type="password" name="password" placeholder="пароль" class="pass_form">
+            <input type="button" name="name" value="вход" class="enter">
+            <input type="button" name="name" value="регистрация" class="reg">
+            <input type="button" name="name" value="забыли пароль?" class="forgot">
           </form>
           </div>
-          <div class="enter"><a href="#">вход</a></div><hr>
-          <div class="reg"><a href="#">регистрация</a></div>
-          <div class="forgot"><a href="#">забыли пароль?</a></div>
+          <!-- <div class="enter"><a href="#">вход</a></div>
+          <div class="reg"><a href="#">регистрация</a></div> -->
+          <!-- <div class="forgot"><a href="#">забыли пароль?</a></div> -->
         </div>
         <div class="nav">
           <img src="img/nav.png" alt="nav icon">
@@ -32,7 +35,7 @@
         <div class="menu">
           <div class="name">
             <ul>
-              <li class="menu_item"><a href="#" class="menu_link">О КОМПАНИИ</a></li>
+              <li class="menu_item"><a href="#" class="menu_link">О КОМПАНИ</a></li>
               <li class="menu_item"><a href="#" class="menu_link">ОПЛАТА</a></li>
               <li class="menu_item"><a href="#" class="menu_link">ДОСТАВКА</a></li>
               <li class="menu_item"><a href="#" class="menu_link">СТАТЬИ</a></li>
@@ -111,47 +114,84 @@
           <div class="find"><a href="#">ПОИСК...</a></div>
         </div>
         <div class="block2">
-          <p>ПОИСК ШИН</p>
-          <ul>
-            <li>Размер:
+          <div class="left">
+            <p>ПОИСК ШИН</p>
+            <p>Размер:</p>
+            <p>R</p>
+            <p>Сезон:</p>
+          </div>
+          <div class="select">
             <select>
-              <option>1</option>
-              <option>1</option>
-              <option>1</option>
-            </select></li>
-            <li>/
-            <select>
-              <option>1</option>
-              <option>1</option>
-              <option>1</option>
-            </select></li>
-            <li>R
-            <select>
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
-            </select></li>
-            <li>Сезон:
-              <ul>
-              <form class="" action="#" method="post">
-                <li><input type="checkbox" name="name" value="">лето</li>
-                <li><input type="checkbox" name="name" value="">зима</li>
-                <li><input type="checkbox" name="name" value="">всесез</li>
+                <option>145</option>
+                <option>150</option>
+                <option>155</option>
+              </select>/
+              <select>
+                <option>1</option>
+                <option>1</option>
+                <option>1</option>
+              </select>
+              <select>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+              </select>
+              <form class="radio" action="#" method="post">
+                <input type="radio" name="name" value="">лето<br>
+                <input type="radio" name="name" value="">зима<br>
+                <input type="radio" name="name" value="">всесез
               </form>
-              </ul>
-            </li>
+            </div>
+
 
           <div class="find"><a href="#">ПОИСК...</a></div>
         </div>
 
 
         <div class="block3">
+          <div class="left">
+            <p>ПОИСК ДИСКОВ</p>
+            <p>Диаметр диска:</p>
+            <p>Количество крепёжных отверствий:</p>
+            <p>Диаметр расположения крепёжных отверствий:</p>
+          </div>
+          <div class="select">
+            <select>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+            </select>
+            <select>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <select>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+            </select>
+          </div>
+          <div class="dco">
+            <p>ДЦО (диаметр центрального отверствия):</p>
+              <select>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+              </select>
+              <p>ЕТ (вылет диска):</p>
+              <select>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+          </div>
           <div class="find"><a href="#">ПОИСК...</a></div>
         </div>
       </div>
 
 
-      <!-- <div class="content">
+      <div class="content">
         <div class="leftmenu">
           <figure><img src="img/list.png" alt="list icon"><h4>КАТАЛОГ ПРОДУКЦИИ</h4>
           </figure>
@@ -246,7 +286,7 @@
         <!-- <div class="sidemenu">
           <h2>КАТАЛОГ ПРОДУКЦИИ</h2>
         </div>
-      </div> -->
+      </div>
       <!-- <img src="img/logo.png" alt="logo" class="logo">
       <footer>
         <ul>
