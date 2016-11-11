@@ -140,9 +140,9 @@
                 <option>14</option>
               </select>
               <form class="radio" action="#" method="post">
-                <label><input type="radio" name="name" value="">лето<br></label>
-                <label><input type="radio" name="name" value="">зима<br></label>
-                <label><input type="radio" name="name" value="">всесез</label>
+                <label><input type="checkbox" name="name" value="">лето<br></label>
+                <label><input type="checkbox" name="name" value="">зима<br></label>
+                <label><input type="checkbox" name="name" value="">всесез</label>
               </form>
             </div>
           <div class="find"><a href="#">ПОИСК...</a></div>
@@ -195,8 +195,15 @@
       <div class="content">
         <div class="leftmenu">
           <figure class="category"><img src="img/list.png" alt="list icon"><h5>КАТАЛОГ ПРОДУКЦИИ</h5></figure>
-          <section class="">
-            <figure class="subcat"><img src="img/disk.png" alt="circle icon"><h5>ШИНЫ</h5></figure>
+          <figure class="subcat"><img src="img/disk.png" alt="circle icon"><h5>ШИНЫ</h5></figure>
+          <ul>
+            <li>Наименование 1</li>
+            <li>Наименование 2</li>
+            <li>Наименование 3</li>
+            <li>Наименование 4</li>
+          </ul>
+          <section>
+            <figure class="subcat disk"><img src="img/disk.png" alt="circle icon" ><h5>ДИСКИ</h5></figure>
             <ul>
               <li>Наименование 1</li>
               <li>Наименование 2</li>
@@ -205,16 +212,7 @@
             </ul>
           </section>
           <section class="">
-            <figure class="subcat"><img src="img/disk.png" alt="circle icon" ><h5>ДИСКИ</h5></figure>
-            <ul>
-              <li>Наименование 1</li>
-              <li>Наименование 2</li>
-              <li>Наименование 3</li>
-              <li>Наименование 4</li>
-            </ul>
-          </section>
-          <section class="">
-            <figure class="subcat"><img src="img/disk.png" alt="circle icon"><h5>БОЛТЫ</h5></figure>
+            <figure class="subcat disk"><img src="img/disk.png" alt="circle icon"><h5>БОЛТЫ</h5></figure>
             <ul>
               <li>Наименование 1</li>
               <li>Наименование 2</li>
@@ -287,15 +285,15 @@
         <figure class="category"><img src="img/list.png" alt="list icon"><h5>БРЕНДЫ</h5></figure>
         <figure class="subcat"><img src="img/disk.png" alt="circle icon"><h5>ШИНЫ</h5></figure>
         <form class="checkb" action="#" method="get">
-          <label><input type="checkbox" name="name" value="Бренд1">Бренд1</label>
-          <label><input type="checkbox" name="name" value="Бренд2">Бренд2</label>
-          <label><input type="checkbox" name="name" value="Бренд3">Бренд3</label>
+          <label><input type="checkbox" name="name" value="Бренд1">&emsp;Бренд1</label>
+          <label><input type="checkbox" name="name" value="Бренд2">&emsp;Бренд2</label>
+          <label><input type="checkbox" name="name" value="Бренд3">&emsp;Бренд3</label>
         </form>
         <figure class="subcat"><img src="img/disk.png" alt="circle icon"><h5>ДИСКИ</h5></figure>
         <form class="checkb" action="#" method="get">
-          <label><input type="checkbox" name="name" value="Бренд1">Бренд1</label>
-          <label><input type="checkbox" name="name" value="Бренд2">Бренд2</label>
-          <label><input type="checkbox" name="name" value="Бренд3">Бренд3</label>
+          <label><input type="checkbox" name="name" value="Бренд1">&emsp;Бренд1</label>
+          <label><input type="checkbox" name="name" value="Бренд2">&emsp;Бренд2</label>
+          <label><input type="checkbox" name="name" value="Бренд3">&emsp;Бренд3</label>
           <input type="button" name="name" value="ВЫБРАТЬ" class="downbutton">
         </form>
 

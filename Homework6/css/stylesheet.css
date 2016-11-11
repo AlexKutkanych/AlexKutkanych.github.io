@@ -332,14 +332,13 @@ select {
   margin: 10px 8px 0 0;
 }
 
-
 .leftmenu .category {
   float: left;
   height: 24px;
   width: 180px;
   border: 1px solid grey;
   border-radius:10px;
-  margin: 8px 0 0 3px;
+  margin: 9px 0 0 3px;
   box-shadow: 0 0 10px #50525e;
 }
 
@@ -361,15 +360,22 @@ h5 {
   width: 146px;
   border: 1px solid grey;
   border-radius:10px;
-  margin: 13px 0 0 4px;
+  margin: 13px 0 4px 4px;
   padding: 2px 0 0 4px;
+
 }
 
 .leftmenu li {
-  font-size: 13px;
+  clear: both;
   margin-left: 49px;
-  list-style: circle;
   color: black;
+  list-style: circle;
+  font-size: 13px;
+  padding: 0 0 11px 0;
+}
+
+.leftmenu .disk {
+  margin: -7px 0 0 1px;
 }
 
 .leftmenu li:hover {
@@ -378,6 +384,9 @@ h5 {
   font-style: italic;
 }
 
+/*.leftmenu li:before {
+content: "a";
+}*/
 /*Centermenu*/
 .centermenu {
   float: left;
