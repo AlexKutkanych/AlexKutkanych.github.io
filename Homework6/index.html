@@ -29,7 +29,10 @@
           <!-- <div class="forgot"><a href="#">забыли пароль?</a></div> -->
         </div>
         <div class="nav">
-          <img src="img/nav.png" alt="nav icon">
+          <a href="#"><img src="img/home.png" alt="home icon"></a>
+          <a href="#"><img src="img/nav.png" alt="nav icon"></a>
+          <a href="mailto:"><img src="img/mail.png" alt="mail icon"></a>
+
         </div>
         <img src="img/main.jpg" alt="zazor.com.ua" class="main">
         <div class="menu">
@@ -137,13 +140,11 @@
                 <option>14</option>
               </select>
               <form class="radio" action="#" method="post">
-                <input type="radio" name="name" value="">лето<br>
-                <input type="radio" name="name" value="">зима<br>
-                <input type="radio" name="name" value="">всесез
+                <label><input type="radio" name="name" value="">лето<br></label>
+                <label><input type="radio" name="name" value="">зима<br></label>
+                <label><input type="radio" name="name" value="">всесез</label>
               </form>
             </div>
-
-
           <div class="find"><a href="#">ПОИСК...</a></div>
         </div>
 
@@ -193,11 +194,9 @@
 
       <div class="content">
         <div class="leftmenu">
-          <figure><img src="img/list.png" alt="list icon"><h4>КАТАЛОГ ПРОДУКЦИИ</h4>
-          </figure>
-
+          <figure class="category"><img src="img/list.png" alt="list icon"><h5>КАТАЛОГ ПРОДУКЦИИ</h5></figure>
           <section class="">
-            <figure><img src="img/circle.png" alt="circle icon" class="icon"><h4>ШИНЫ</h4>
+            <figure class="subcat"><img src="img/disk.png" alt="circle icon"><h5>ШИНЫ</h5></figure>
             <ul>
               <li>Наименование 1</li>
               <li>Наименование 2</li>
@@ -206,7 +205,7 @@
             </ul>
           </section>
           <section class="">
-            <figure><img src="img/circle.png" alt="circle icon"><h4>БОЛТЫ</h4>
+            <figure class="subcat"><img src="img/disk.png" alt="circle icon" ><h5>ДИСКИ</h5></figure>
             <ul>
               <li>Наименование 1</li>
               <li>Наименование 2</li>
@@ -215,7 +214,7 @@
             </ul>
           </section>
           <section class="">
-            <figure><img src="img/circle.png" alt="circle icon"><h4>ДИСКИ</h4>
+            <figure class="subcat"><img src="img/disk.png" alt="circle icon"><h5>БОЛТЫ</h5></figure>
             <ul>
               <li>Наименование 1</li>
               <li>Наименование 2</li>
@@ -282,12 +281,30 @@
               <figurecaption class="price">90.00 грн.</figurecaption>
             </figure>
           </div>
-        </div> -->
-        <!-- <div class="sidemenu">
-          <h2>КАТАЛОГ ПРОДУКЦИИ</h2>
+        </div>
+
+      <div class="sidemenu">
+        <figure class="category"><img src="img/list.png" alt="list icon"><h5>БРЕНДЫ</h5></figure>
+        <figure class="subcat"><img src="img/disk.png" alt="circle icon"><h5>ШИНЫ</h5></figure>
+        <form class="checkb" action="#" method="get">
+          <label><input type="checkbox" name="name" value="Бренд1">Бренд1</label>
+          <label><input type="checkbox" name="name" value="Бренд2">Бренд2</label>
+          <label><input type="checkbox" name="name" value="Бренд3">Бренд3</label>
+        </form>
+        <figure class="subcat"><img src="img/disk.png" alt="circle icon"><h5>ДИСКИ</h5></figure>
+        <form class="checkb" action="#" method="get">
+          <label><input type="checkbox" name="name" value="Бренд1">Бренд1</label>
+          <label><input type="checkbox" name="name" value="Бренд2">Бренд2</label>
+          <label><input type="checkbox" name="name" value="Бренд3">Бренд3</label>
+          <input type="button" name="name" value="ВЫБРАТЬ" class="downbutton">
+        </form>
+
         </div>
       </div>
-      <!-- <img src="img/logo.png" alt="logo" class="logo">
+
+
+
+      <!-- <img src="img/logo.png" alt="logo" class="Logo">
       <footer>
         <ul>
           <li class="menu_item"><a href="#" class="menu_link">О компании</a></li>
