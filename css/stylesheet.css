@@ -52,7 +52,6 @@ a {
 }
 
 /*LOGIN*/
-
 .login {
   float: left;
   width: 490px;
@@ -90,13 +89,12 @@ a {
   float: left;
 }
 
-
 hr {
+  float: left;
   width: 0px;
   height: 11px;
-  color: white;
-  float: left;
   margin: 3px 5px;
+  color: white;
 }
 
 .forgot {
@@ -145,8 +143,19 @@ hr {
   border: 1px solid #0a1030;
 }
 
+.cart {
+  display: inline-block;
+  width: 200px;
+  color: #8c9599;
+  margin-left: 165px;
+}
+
+.cart img {
+  margin: -3px 0;
+}
+
 .name {
-  height: 30px;
+  height: 32px;
   margin-left: 128px;
 }
 
@@ -154,19 +163,14 @@ span {
   color: #0d5a8f;
 }
 
-.right {
-  padding-left: 150px;
-  color: #8c9599;
-}
-
 .menu ul li {
   display: inline-block;
-  line-height: 35px;
+  line-height: 32px;
 }
 
 .menu_link {
   display: block;
-  height: 30px;
+  height: 26px;
   padding: 0px 10px;
   color: #b1bcc0;
 }
@@ -175,6 +179,8 @@ span {
   background: linear-gradient(to top, #0c3357, #25617b);
   border-radius: 20px;
   color: white;
+  height: 26px;
+  line-height: 27px;
 }
 
 .content div {
@@ -277,13 +283,22 @@ select {
   margin: 2px 0 0 12px;
 }
 
+.block2 .select {
+  width: 115px;
+  margin: 20px 0 0 0;
+}
+
 .block2 select {
-  width: 50px;
-  margin: 0px 0 0 9px;
+  width: 45px;
+  margin: 0 5px 0 0;
 }
 
 .block2 .left {
   margin-left: -5px
+}
+
+.left .right {
+  text-align: right;
 }
 
 /*BLOCK3*/
@@ -331,6 +346,7 @@ select {
   width: 185px;
   float: left;
   margin: 10px 8px 0 0;
+  color: blue;
 }
 
 .leftmenu .category {
@@ -343,7 +359,6 @@ select {
   box-shadow: 0 0 10px #50525e;
 }
 
-
 .category, .category img, .subcat, .subcat img {
   float: left;
 }
@@ -351,7 +366,6 @@ select {
 h5 {
   float: left;
   display: block;
-  /*vertical-align: 24px;*/
   padding: 4px 0 0 3px;
 }
 
@@ -385,9 +399,6 @@ h5 {
   font-style: italic;
 }
 
-/*.leftmenu li:before {
-content: "a";
-}*/
 /*Centermenu*/
 .centermenu {
   float: left;
