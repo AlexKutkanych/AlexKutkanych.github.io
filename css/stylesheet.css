@@ -7,14 +7,13 @@
   width: 915px;
   margin: auto;
   padding-top: 8px;
-  font-family: "helvetica_neueregular", Arial, sans-serif;
+  font-family: 'lucida_sans_unicoderegular';
 }
 
 @font-face {
-    font-family: 'helvetica_neueregular';
-    src: url('fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
-         url('fonts/helveticaneue-thin-webfont.woff') format('woff'),
-         url('fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+    font-family: 'lucida_sans_unicoderegular';
+    src: url('../fonts/lucida_sans_unicode_regular-webfont.woff2') format('woff2'),
+         url('../fonts/lucida_sans_unicode_regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -36,19 +35,21 @@ a {
 .contacts {
   float: left;
   width: 300px;
-  margin: 3px 0 0 5px;
-  font-size: 16px;
+  margin: 5px 0 0 5px;
+  font-size: 18px;
+
 }
 
 .phone {
   float: left;
+  margin: -1px 0 0 2px;
 }
 
 .contacts p {
   float: left;
   margin-left: 4px;
-  letter-spacing: 1px;
   color: #5e696d;
+  font-family: Arial;
 }
 
 /*LOGIN*/
@@ -63,28 +64,33 @@ a {
 
 .login_icon {
   float: left;
-  margin: 2px 2px 0 7px;
+  margin: 4px 3px 0 6px;
 }
 
 .forma {
   float: left;
   width: 465px;
-  padding: 2px 0 0 0;
-  vertical-align: middle;
+  padding: 3px 0 0 0;
 }
 
 .log_form, .pass_form {
-  width: 114px;
-  height: 16px;
+  width: 110px;
+  height: 13px;
   float: left;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.pass_form {
+  margin: 0 6px 0 7px;
 }
 
 .enter, .reg {
   border: none;
-  margin: 2px 0 0 3px;
-  font-size: 13px;
+  margin: 3px 0 0 3px;
+  font-size: 11px;
   cursor: pointer;
-  background: none;/*linear-gradient(to top, #0c3357, #1f6787);*/
+  background: none;
   color: white;
   float: left;
 }
@@ -92,8 +98,8 @@ a {
 hr {
   float: left;
   width: 0px;
-  height: 11px;
-  margin: 3px 5px;
+  height: 8px;
+  margin: 5px 4px 5px 5px;
   color: white;
 }
 
@@ -115,13 +121,22 @@ hr {
 .nav {
   float: left;
   width: 74px;
+  height: 21px;
   margin-left: 21px;
   vertical-align: middle;
   border: 1px solid #c0c7c9;
   border-radius: 10px;
 }
-.nav img {
-  padding: 0 0 1px 8px;
+.nav .homeicon {
+  padding: 0 0 4px 8px;
+}
+
+.nav .navicon {
+  padding: 0 0 4px 3px;
+}
+
+.nav .mailicon {
+  padding: 0 0 4px 4px;
 }
 
 .main {
@@ -145,9 +160,9 @@ hr {
 
 .cart {
   display: inline-block;
-  width: 200px;
+  width: 217px;
   color: #8c9599;
-  margin-left: 165px;
+  margin-left: 140px;
 }
 
 .cart img {
@@ -156,7 +171,8 @@ hr {
 
 .name {
   height: 32px;
-  margin-left: 128px;
+  margin-left: 135px;
+  font-size: 14px;
 }
 
 span {
@@ -397,6 +413,7 @@ h5 {
   text-decoration: underline;
   font-weight: bold;
   font-style: italic;
+  color: blue;
 }
 
 /*Centermenu*/
