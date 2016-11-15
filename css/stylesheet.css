@@ -262,7 +262,7 @@ span {
 .block1, .block2, .block3 {
   height: 134px;
   /*box-shadow: 0 0 10px #50525e;*/
-  border: 1px solid black;
+  border: 1px solid #9c9c9d;
   border-radius: 17px;
   font-size: 10px;
   font-family: 'lucida_sans_unicoderegular';
@@ -531,7 +531,7 @@ select img:hover {
 
 .block3 p:first-child {
   color: #154468;
-  margin: 3px 0 0 -7px;
+  margin: 2px 0 0 -7px;
 }
 
 .block3 .left p:nth-child(2) {
@@ -542,31 +542,53 @@ select img:hover {
   margin: 0 0 3px 0px;
 }
 
-
+.block3 p:last-child {
+  margin-top: 3px;
+}
 
 .dco {
   width: 70px;
-  float: right;
-  border-left: 1px solid grey;
-  padding-left: 10px;
+  height: 102px;
+  float: left;
+  border-left: 1px solid lightgrey;
+  padding-left: 9px;
+  font-weight: bold;
+  color: black;
+  margin: 2px 0 0 0;
 }
 
 .block3 select {
-  width: 50px;
-  margin-bottom: 15px;
+  font-size: 12px;
+}
+
+.block3 select:first-child {
+  width: 57px;
+  margin:0 0 0 10px;
 }
 
 .block3 select:nth-child(2) {
-  width: 30px;
+  width: 51px;
+  margin: 14px 0 0 10px;
+
 }
 
+.block3 select:nth-child(3) {
+  width: 59px;
+  margin: 15px 0 0 10px;
+
+}
+
+
 .block3 .select {
-  width: 60px;
+  width: 79px;
   margin-top: 20px;
 }
 
-.block3 .dco select {
-  width: 40px;
+
+
+.dco p:first-child {
+  margin: 0 0 0 0;
+  color: black;
 }
 
 .block3 .find {
@@ -848,7 +870,7 @@ h5 {
 }
 
 .logo {
-  margin: 38px 250px 9px 58px;
+  margin: 38px 250px 10px 59px;
 }
 
 /*FOOTER*/
@@ -857,13 +879,15 @@ footer {
   width: 909px;
   clear: both;
   margin: 0 0 0 1px;
-  background-color: blue;
+  background-color: #213a4d;
   color: grey;
+  font-family: 'lucida_sans_unicoderegular';
+
 }
 
 footer p {
   text-align: center;
-  color: orange;
+  color: #754542;
   font-size: 10px;
   margin: 7px 0 0 0;
 }
@@ -881,6 +905,10 @@ footer li {
 
 footer a {
   line-height: 28px;
+}
+
+footer a:hover  {
+  color: #52abcb;
 }
 
 footer hr {
