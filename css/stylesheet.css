@@ -7,7 +7,7 @@
   width: 915px;
   margin: auto;
   padding-top: 8px;
-  font-family: 'lucida_sans_unicoderegular';
+  /*font-family: 'lucida_sans_unicoderegular';*/
 }
 
 @font-face {
@@ -36,8 +36,8 @@ a {
   float: left;
   width: 300px;
   margin: 5px 0 0 5px;
-  font-size: 18px;
-
+  font-size: 17px;
+  font-family: Arial, sans-serif;
 }
 
 .phone {
@@ -49,16 +49,20 @@ a {
   float: left;
   margin-left: 4px;
   color: #5e696d;
-  font-family: Arial;
+}
+
+.contacts .space {
+  margin-left: 13px;
 }
 
 /*LOGIN*/
 .login {
   float: left;
-  width: 490px;
+  width: 494px;
   height: 25px;
-  margin:0 0 10px 10px;
+  margin:0 0 10px 8px;
   background: linear-gradient(to top, #0c3357, #1f6787);
+  font-family: 'lucida_sans_unicoderegular', sans-serif;
   box-shadow: 0 0 10px rgb(180,180,180);
 }
 
@@ -81,37 +85,48 @@ a {
   line-height: 13px;
 }
 
+.log_form {
+  margin: 0 -1px 0 2px;
+}
 .pass_form {
-  margin: 0 6px 0 7px;
+  margin: 0 6px 0 8px;
 }
 
 .enter, .reg {
   border: none;
-  margin: 3px 0 0 3px;
-  font-size: 11px;
+  font-size: 10px;
   cursor: pointer;
   background: none;
   color: white;
   float: left;
+}
+
+.enter {
+  margin: 4px 0 0 3px;
+}
+
+.reg {
+  margin: 4px 0 0 1px;
 }
 
 hr {
   float: left;
   width: 0px;
-  height: 8px;
-  margin: 5px 4px 5px 5px;
+  height: 9px;
+  margin: 5px 4px 5px 8px;
   color: white;
 }
 
 .forgot {
   float: right;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 12px;
+  line-height: 16px;
   text-decoration: underline;
   background: none;
   border: none;
   color: #bfbfbf;
   cursor: pointer;
+  padding: 1px 7px 0 0;
 }
 
 .forgot a {
@@ -123,13 +138,14 @@ hr {
   float: left;
   width: 74px;
   height: 21px;
-  margin-left: 21px;
+  margin-left: 19px;
   vertical-align: middle;
   border: 1px solid #c0c7c9;
   border-radius: 10px;
+  box-shadow: 0 0 10px #50525e;
 }
 .nav .homeicon {
-  padding: 0 0 4px 8px;
+  padding: 3px 0 4px 8px;
 }
 
 .nav .navicon {
