@@ -200,8 +200,6 @@ span {
   padding: 0 11px;
 }
 
-
-
 .menu ul li:nth-child(4)  {
   padding: 0 6px;
 }
@@ -267,6 +265,8 @@ span {
   border: 1px solid black;
   border-radius: 17px;
   font-size: 10px;
+  font-family: 'lucida_sans_unicoderegular';
+
 }
 
 .find a {
@@ -276,6 +276,7 @@ span {
   font-style: italic;
   font-size: 10px;
   color: blue;
+  font-family: Arial,sans-serif;
 }
 /*BLOCK1*/
 .block1 {
@@ -410,6 +411,10 @@ select img:hover {
   margin: -2px 0 0 0;
 }
 
+.block1 .find {
+  margin: 3px 2px 0 0;
+}
+
 /*BLOCK2*/
 .block2 {
   width: 21%;
@@ -436,10 +441,10 @@ select img:hover {
   color: black;
 }
 .block2 .left p:nth-child(2) {
-  margin: 10px 0 0 30px;
+  margin: 11px 0 0 30px;
 }
 .block2 .left p:nth-child(3) {
-  margin: 8px 0 0 -2px;
+  margin: 9px 0 0 -2px;
 }
 
 .block2 ul {
@@ -479,14 +484,15 @@ select img:hover {
 .left .close {
   color: black;
   font-weight: bold;
+  padding: 0 0 0 0;
 }
 
 .radio {
-  margin: 6px 0 0 -15px;
-  vertical-align: middle;
+  position: relative;
+  margin: 8px 0 0 -15px;
 }
 
-.radio input:nth-child(2) {
+.radio label:nth-child(2) {
   margin: 0 0 0 0;
 }
 
@@ -494,13 +500,26 @@ select img:hover {
   margin: 0 0 0 0;
 }
 
-.radio span {
+.radio span:first-child {
+  position: absolute;
+  top: -3px;
   color: black;
-  /*margin: 0 0 0 0;*/
+}
+
+.radio span:nth-child(2) {
+  position: absolute;
+  top: 12px;
+  color: black;
+}
+
+.radio span:last-child {
+  position: absolute;
+  top: 26px;
+  color: black;
 }
 
 .block2 .find a {
-  margin: -4px 26px 0 0;
+  margin: -2px 26px 0 0;
 }
 
 /*BLOCK3*/
@@ -509,6 +528,21 @@ select img:hover {
   float: left;
   margin-left: 9px;
 }
+
+.block3 p:first-child {
+  color: #154468;
+  margin: 3px 0 0 -7px;
+}
+
+.block3 .left p:nth-child(2) {
+  margin: 8px 0 6px 0px;
+}
+
+.block3 .left p:nth-child(3) {
+  margin: 0 0 3px 0px;
+}
+
+
 
 .dco {
   width: 70px;
