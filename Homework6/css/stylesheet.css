@@ -239,7 +239,7 @@ span {
 
 .block1, .block2, .block3 {
   height: 134px;
-  box-shadow: 0 0 10px #50525e;
+  /*box-shadow: 0 0 10px #50525e;*/
   border: 1px solid black;
   border-radius: 17px;
   font-size: 10px;
@@ -781,7 +781,7 @@ h5 {
 }
 
 .logo {
-  margin: 36px 250px 10px 59px;
+  margin: 38px 250px 9px 58px;
 }
 
 /*FOOTER*/
@@ -797,6 +797,8 @@ footer {
 footer p {
   text-align: center;
   color: orange;
+  font-size: 10px;
+  margin: 7px 0 0 0;
 }
 
 footer ul {
@@ -806,8 +808,8 @@ footer ul {
 
 footer li {
   display: inline-block;
-  margin: 10px auto;
-  padding:5px 15px;
+  margin: 3px 0 2px -5px;
+  font-size: 12px;
 }
 
 footer a {
@@ -816,9 +818,9 @@ footer a {
 
 footer hr {
   width: 0px;
-  height: 26px;
+  height: 10px;
   color: white;
-  margin: -6px 0;
+  margin: -3px 0;
   float: none;
   display: inline-block;
 }
