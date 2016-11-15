@@ -108,9 +108,10 @@ hr {
   font-size: 13px;
   line-height: 19px;
   text-decoration: underline;
-  background: none/*linear-gradient(to top, #0c3357, #1f6787)*/;
+  background: none;
   border: none;
-  color: grey;
+  color: #bfbfbf;
+  cursor: pointer;
 }
 
 .forgot a {
@@ -142,7 +143,7 @@ hr {
 .main {
   float: left;
   width: 909px;
-  margin-bottom: 7px;
+  margin: 0 0 7px 0;
 }
 
 /*MENU*/
@@ -150,7 +151,7 @@ hr {
   height: 32px;
   width: 908px;
   clear: both;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   border-radius: 5px;
   background: linear-gradient(to top, #010101, #4d5663);
   font-size: 12px;
@@ -158,16 +159,6 @@ hr {
   border: 1px solid #0a1030;
 }
 
-.cart {
-  display: inline-block;
-  width: 217px;
-  color: #8c9599;
-  margin-left: 140px;
-}
-
-.cart img {
-  margin: -3px 0;
-}
 
 .name {
   height: 32px;
@@ -182,6 +173,26 @@ span {
 .menu ul li {
   display: inline-block;
   line-height: 32px;
+}
+
+.menu ul li:first-child {
+  margin-left: 1px;
+}
+
+.menu ul li:nth-child(2)  {
+  margin-left: 7px;
+}
+
+.menu ul li:nth-child(3)  {
+  margin-left: 5px;
+}
+
+.menu ul li:nth-child(4)  {
+  margin-left: 3px;
+}
+
+.menu ul li:last-child {
+  margin-left: 1px;
 }
 
 .menu_link {
@@ -203,10 +214,31 @@ span {
   border-radius: 5px;
 }
 
+.cart {
+  display: inline-block;
+  width: 217px;
+  color: #8c9599;
+  margin: 0 1px 0 54px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+
+.cart img {
+  margin: -3px 0;
+}
+
+.blue {
+  font-size: 11px;
+  color: #0d5a8f;
+}
+
+.menu_item .space {
+  margin: 0 0 0 12px;
+}
 /*SELECTION*/
 
 .block1, .block2, .block3 {
-  height: 132px;
+  height: 134px;
   box-shadow: 0 0 10px #50525e;
   border: 1px solid black;
   border-radius: 17px;
@@ -215,7 +247,7 @@ span {
 
 .find a {
   float: right;
-  margin: 7px 26px 0 0;
+  margin: 1px 26px 0 0;
   text-decoration: underline;
   font-style: italic;
   font-size: 10px;
@@ -225,17 +257,16 @@ span {
 .block1 {
   float: left;
   width: 45%;
-  margin-left: 3px;
+  margin-left: 5px;
 }
 
 .top {
   display: inline-block;
   clear: both;
   width: 410px;
-  margin-top: -10px;
+  margin-top: -11px;
   font-size: 13px;
   text-align: center;
-  color: blue;
 }
 
 .top ul {
@@ -244,13 +275,34 @@ span {
 
 .top li {
   display: inline-block;
-  padding-right: 42px;
-
 }
 
 .bigger {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
+  margin: 0px 0 0 35px;
+  color: #154468;
+}
+
+.smaller {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 14px 33px 0 -6px;
+  font-family: 'lucida_sans_unicoderegular';
+  color: #154468;
+}
+
+.small {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 13px 0 0 91px;
+  font-family: 'lucida_sans_unicoderegular';
+  color: #154468;
+}
+
+.grey {
+  font-weight: normal;
+  color: #77858b;
 }
 
 .left {
@@ -259,11 +311,53 @@ span {
   width: 80px;
   margin: 3px 0 0 16px;
   font-size: 10px;
+  color: black;
+  font-weight: bold;
 }
 
 .left p {
-  margin-top: 2px;
+  line-height: 10px;
+  margin-top: 5px;
   padding-bottom: 1px;
+}
+
+.left p:nth-child(3) {
+  margin-top: 1px;
+  line-height: 9px;
+}
+
+.left p:last-child {
+  margin-top: 9px;
+}
+
+.left p:first-child {
+  /*color: #154468;*/
+  font-weight: bold;
+}
+
+.right {
+  float: left;
+  display: block;
+  width: 80px;
+  margin: 1px 0 0 25px;
+  font-size: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.right p {
+  line-height: 10px;
+  margin-top: 5px;
+  padding-bottom: 1px;
+}
+
+.right p:nth-child(3) {
+  margin-top: 2px;
+  line-height: 9px;
+}
+
+.right p:last-child {
+  margin-top: 9px;
 }
 
 .select {
@@ -272,12 +366,20 @@ span {
 }
 
 select {
-  width: 100px;
-  margin:0 0 2px -4px;
+  width: 102px;
+  margin: 2px 0 4px -4px;
+  -webkit-appearance: none;
+  background-image: url(../img/arrow.png);
+  background-position: center right;
+  background-repeat: no-repeat;
 }
 
 .year {
   width: 60px;
+}
+
+ .select1 {
+  margin: -2px 0 0 0;
 }
 
 /*BLOCK2*/
@@ -288,11 +390,28 @@ select {
   font-size: 10px;
 }
 
+.block2 .left {
+  float: left;
+  width: 57px;
+  display: block;
+  margin: 1px 0 0 16px;
+}
 .block2 p {
-  margin: 3px 0 0 10px;
+  margin: 2px 0 0 10px;
   font-weight: bold;
   font-size: 10px;
-  color: blue;
+  color: #154468;
+}
+
+.block2 .left p:first-child {
+  margin: 11px 0 0 -3px;
+  color: black;
+}
+.block2 .left p:nth-child(2) {
+  margin: 10px 0 0 30px;
+}
+.block2 .left p:nth-child(3) {
+  margin: 8px 0 0 -2px;
 }
 
 .block2 ul {
@@ -300,21 +419,55 @@ select {
 }
 
 .block2 .select {
-  width: 115px;
-  margin: 20px 0 0 0;
+  width: 110px;
+  height: 95px;
 }
 
 .block2 select {
-  width: 45px;
-  margin: 0 5px 0 0;
+  width: 115px;
+  margin: 0px 0 0 0;
 }
 
-.block2 .left {
-  margin-left: -5px
+.block2 select:first-child {
+  width: 51px;
+  margin: 5px 4px 0 -13px;
 }
 
-.left .right {
-  text-align: right;
+.block2 select:nth-child(2) {
+  width: 53px;
+  margin: 3px 0 0 2px;
+}
+
+.block2 select:nth-child(3) {
+  width: 46px;
+  margin: 7px 0 0 -15px;
+}
+
+.left .close {
+  color: black;
+  font-weight: bold;
+}
+
+.radio {
+  margin: 6px 0 0 -15px;
+  vertical-align: middle;
+}
+
+.radio input:nth-child(2) {
+  margin: 0 0 0 0;
+}
+
+.radio input:nth-child(3) {
+  margin: 0 0 0 0;
+}
+
+.radio span {
+  color: black;
+  /*margin: 0 0 0 0;*/
+}
+
+.block2 .find a {
+  margin: -4px 26px 0 0;
 }
 
 /*BLOCK3*/
@@ -362,13 +515,13 @@ select {
   width: 185px;
   float: left;
   margin: 10px 8px 0 0;
-  color: blue;
+  color: #154468;
 }
 
 .leftmenu .category {
   float: left;
   height: 24px;
-  width: 180px;
+  width: 177px;
   border: 1px solid grey;
   border-radius:10px;
   margin: 9px 0 0 3px;
@@ -383,43 +536,53 @@ h5 {
   float: left;
   display: block;
   padding: 4px 0 0 3px;
+  line-height: 19px;
 }
 
 .leftmenu .subcat {
   float: left;
-  height: 27px;
-  width: 146px;
+  height: 25px;
+  width: 143px;
   border: 1px solid grey;
   border-radius:10px;
-  margin: 13px 0 4px 4px;
+  margin: 13px 0 4px 2px;
   padding: 2px 0 0 4px;
 
 }
 
 .leftmenu li {
   clear: both;
-  margin-left: 49px;
-  color: black;
+  margin-left: 53px;
+  color: #154468;
   list-style: circle;
   font-size: 13px;
-  padding: 0 0 11px 0;
+  padding: 0 0 4px 0;
 }
 
 .leftmenu .disk {
-  margin: -7px 0 0 1px;
+  margin: -4px 0 0 2px;
+  width: 143px;
 }
+.leftmenu .bolt {
+  margin: -2px 0 0 2px;
+  width: 143px;
+}
+
+
 
 .leftmenu li:hover {
   text-decoration: underline;
   font-weight: bold;
   font-style: italic;
-  color: blue;
+  color: #154468;
 }
+
+
 
 /*Centermenu*/
 .centermenu {
   float: left;
-  height: 700px;
+  height: 627px;
   width: 525px;
   margin: 15px 10px 0 0;
   background-color: lightblue;
@@ -428,9 +591,149 @@ h5 {
 .tires_all figure {
   float: left;
   width: 139px;
-  margin: 9px 5px 0 23px;
+  margin: 9px 5px 5px 23px;
   text-align: center;
 }
+
+.tires_pic1 {
+  margin: -1px 0 0 -5px;
+}
+
+.tires_pic2 {
+  margin: -1px 0 0 -5px;
+}
+
+.tires_pic4 {
+  margin: -1px 0 0 -5px;
+}
+.tires_pic5 {
+  margin: -1px 0 0 -5px;
+}
+
+.tires_pic6 {
+  margin: -1px 0 0 -5px;
+}
+
+.tires_pic7 {
+  margin: -1px 0 0 -5px;
+}
+
+.tires_pic8 {
+  margin: -2px 0 0 -5px;
+}
+.tires_pic9 {
+  margin: -1px 0 0 -5px;
+}
+
+
+
+.brand a {
+  font-size: 15px;
+  color: #154468;
+  padding: 0 7px 0 0;
+}
+
+.brand2 {
+  margin: 0 0 0 6px;
+}
+
+.brand3 {
+  margin: 0 0 0 7px;
+}
+
+.brand4 {
+  margin: 0 0 0 -1px;
+}
+.brand5 {
+  margin: 0 0 0 2px;
+}
+.brand6 {
+  margin: 0 0 0 7px;
+}
+.brand7 {
+  margin: 0 0 0 -2px;
+  padding: 0 0 0 0;
+}
+.brand8 {
+  margin: 0 0 0 7px;
+}
+.brand9 {
+  margin: 0 0 0 7px;
+}
+
+
+
+.model {
+  font-size: 13px;
+  margin: -8px 0 -3px -2px;
+}
+
+.model4 {
+  margin: -8px 0 -3px 0;
+}
+
+.model7 {
+  margin: -8px 0 -1px 0;
+}
+
+.model8 {
+  margin: -8px 0 -1px 0;
+}
+
+
+.tires_all figure:nth-child(7) {
+  margin: 12px 0 0 23px;
+}
+
+.tires_all figure:nth-child(8) {
+  margin: 14px 0 0 28px;
+}
+
+.tires_all figure:nth-child(9) {
+  margin: 14px 0 0 28px;
+}
+
+
+.price {
+  color: #154468;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.pr1 {
+  margin: -8px 0 0 10px;
+}
+
+.pr2 {
+  margin: -8px 0 0 10px;
+}
+
+.pr3 {
+  margin: -8px 0 0 10px;
+}
+
+.pr4 {
+  margin: -8px 0 0 7px;
+}
+
+.pr5 {
+  margin: -8px 0 0 10px;
+}
+.pr6 {
+  margin: -8px 0 0 10px;
+}
+.pr7 {
+  margin: -8px 0 0 7px;
+}
+.pr8 {
+  margin: -8px 0 0 10px;
+}
+
+.pr9 {
+  margin: -8px 0 0 10px;
+}
+
 
 /*SIDEMENU*/
 .sidemenu {
@@ -478,13 +781,15 @@ h5 {
 }
 
 .logo {
-  margin: 20px 250px 10px 250px;
+  margin: 36px 250px 10px 59px;
 }
 
 /*FOOTER*/
 footer {
   height: 100px;
+  width: 909px;
   clear: both;
+  margin: 0 0 0 1px;
   background-color: blue;
   color: grey;
 }
