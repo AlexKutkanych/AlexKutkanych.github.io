@@ -157,6 +157,7 @@ hr {
   font-size: 12px;
   box-shadow: 0 0 10px #50525e;
   border: 1px solid #0a1030;
+  font-family: Arial, sans-serif;
 }
 
 
@@ -180,19 +181,17 @@ span {
 }
 
 .menu ul li:nth-child(2)  {
-  margin-left: 7px;
+  padding: 0 11px;
 }
 
-.menu ul li:nth-child(3)  {
-  margin-left: 5px;
-}
+
 
 .menu ul li:nth-child(4)  {
-  margin-left: 3px;
+  padding: 0 6px;
 }
 
-.menu ul li:last-child {
-  margin-left: 1px;
+.menu ul li:nth-child(5) {
+  margin: 0 0 0 -2px;
 }
 
 .menu_link {
@@ -218,22 +217,31 @@ span {
   display: inline-block;
   width: 217px;
   color: #8c9599;
-  margin: 0 1px 0 54px;
+  margin: -3px 1px 0 54px;
   font-size: 10px;
   vertical-align: middle;
+  font-family: Arial, sans-serif;
+}
+
+.cart .menu_item {
+  font-size: 12px;
+}
+
+.cart .menu_item:last-child {
+  font-size: 12px;
 }
 
 .cart img {
-  margin: -3px 0;
+  margin: 7px -6px -4px 1px;
 }
 
 .blue {
-  font-size: 11px;
+  font-size: 12px;
   color: #0d5a8f;
 }
 
-.menu_item .space {
-  margin: 0 0 0 12px;
+.space {
+  margin: 0 0 0 5px;
 }
 /*SELECTION*/
 
@@ -374,6 +382,10 @@ select {
   background-repeat: no-repeat;
 }
 
+select img:hover {
+  color: black;
+}
+
 .year {
   width: 60px;
 }
@@ -425,21 +437,26 @@ select {
 
 .block2 select {
   width: 115px;
+  font-size: 11px;
   margin: 0px 0 0 0;
+
 }
 
 .block2 select:first-child {
   width: 51px;
+  height: 16px;
   margin: 5px 4px 0 -13px;
 }
 
 .block2 select:nth-child(2) {
-  width: 53px;
+  width: 52px;
+  height: 16px;
   margin: 3px 0 0 2px;
 }
 
 .block2 select:nth-child(3) {
   width: 46px;
+  height: 17px;
   margin: 7px 0 0 -15px;
 }
 
