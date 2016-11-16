@@ -60,7 +60,7 @@ a {
   float: left;
   width: 494px;
   height: 25px;
-  margin:0 0 10px 8px;
+  margin:0 0 10px 10px;
   background: linear-gradient(to top, #0c3357, #1f6787);
   font-family: 'lucida_sans_unicoderegular', sans-serif;
   box-shadow: 0 0 10px rgb(180,180,180);
@@ -68,7 +68,7 @@ a {
 
 .login_icon {
   float: left;
-  margin: 4px 3px 0 6px;
+  margin: 4px 1px 0 7px;
 }
 
 .forma {
@@ -102,11 +102,11 @@ a {
 }
 
 .enter {
-  margin: 4px 0 0 3px;
+  margin: 3px 0 0 3px;
 }
 
 .reg {
-  margin: 4px 0 0 1px;
+  margin: 3px 0 0 1px;
 }
 
 hr {
@@ -136,24 +136,23 @@ hr {
 /*NAVIGATION*/
 .nav {
   float: left;
-  width: 74px;
-  height: 21px;
-  margin-left: 19px;
-  vertical-align: middle;
+  width: 75px;
+  height: 20px;
+  margin-left: 17px;
   border: 1px solid #c0c7c9;
   border-radius: 10px;
-  box-shadow: 0 0 10px #50525e;
+  box-shadow: 0 0 1px #50525e;
 }
 .nav .homeicon {
   padding: 3px 0 4px 8px;
 }
 
 .nav .navicon {
-  padding: 0 0 4px 3px;
+  padding: 0 0 5px 4px;
 }
 
 .nav .mailicon {
-  padding: 0 0 4px 4px;
+  padding: 0 0 5px 5px;
 }
 
 .main {
@@ -166,6 +165,7 @@ hr {
 .menu {
   height: 32px;
   width: 908px;
+  position: relative;
   clear: both;
   margin-bottom: 11px;
   border-radius: 5px;
@@ -178,8 +178,9 @@ hr {
 
 
 .name {
+  float: left;
   height: 32px;
-  margin-left: 135px;
+  margin: -1px 0 0 135px;
   font-size: 14px;
 }
 
@@ -228,24 +229,36 @@ span {
 }
 
 .cart {
-  display: inline-block;
-  width: 217px;
+  float: left;
+  width: 232px;
   color: #8c9599;
-  margin: -3px 1px 0 54px;
+  margin: -32px 1px 0 681px;
   font-size: 10px;
   vertical-align: middle;
   font-family: Arial, sans-serif;
+}
+
+.cart li {
+  display: inline-block;
+  float: left;
 }
 
 .cart .menu_item {
   font-size: 12px;
 }
 
-.cart .menu_item:last-child {
-  font-size: 12px;
+.cart ul li:first-child {
+  margin: 0px 0 0 14px;
 }
 
+.cart ul li:last-child {
+  margin: 0px 0 0 3px;
+}
+
+
+
 .cart img {
+  float: left;
   margin: 7px -6px -4px 1px;
 }
 
@@ -621,11 +634,13 @@ select img:hover {
   float: left;
 }
 
-h5 {
+.leftmenu p, h5 {
   float: left;
   display: block;
   padding: 4px 0 0 3px;
   line-height: 19px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .leftmenu .subcat {
