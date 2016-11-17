@@ -622,7 +622,7 @@ select img:hover {
   float: left;
   margin: 10px 8px 0 0;
   color: #154468;
-  font-family: 'lucida_sans_unicoderegular';
+  font-family: 'lucida_sans_unicoderegular',sans-serif;
 
 }
 
@@ -668,31 +668,31 @@ select img:hover {
 
 .leftmenu li {
   clear: both;
-  margin-left: 53px;
+  margin-left: 55px;
   color: #154468;
   list-style: circle;
-  font-size: 14px;
+  font-size: 13px;
   text-indent: -7px;
 }
 
 .leftmenu li:nth-child(2) {
-  margin: 3px 0 0 54px;
+  margin: 3px 0 0 55px;
 }
 
 .leftmenu li:nth-child(3) {
-  margin: 2px 0 0 54px;
+  margin: 7px 0 0 55px;
 }
 
 .leftmenu li:nth-child(4) {
-  margin: 4px 0 3px 54px;
+  margin: 4px 0 3px 55px;
 }
 
 .leftmenu .disk {
-  margin: -3px 0 0 2px;
-  width: 143px;
+  margin: -4px 0 0 3px;
+  width: 142px;
 }
 .leftmenu .bolt {
-  margin: -2px 0 1px 2px;
+  margin: -3px 0 1px 2px;
   width: 143px;
 }
 
@@ -752,8 +752,6 @@ select img:hover {
 .tires_pic9 {
   margin: -1px 0 0 -5px;
 }
-
-
 
 .brand a {
   font-size: 15px;
@@ -867,7 +865,10 @@ select img:hover {
 .sidemenu {
   float: left;
   width: 177px;
-  margin: 15px 10px 0 0;
+  margin: 15px 0 0 0;
+  color: #154468;
+  font-family: 'lucida_sans_unicoderegular',sans-serif;
+
 }
 
 .sidemenu .category {
@@ -878,7 +879,16 @@ select img:hover {
   border-radius:10px;
   margin: 3px 0 0 10px;
   box-shadow: 0 0 10px #50525e;
+  font-size: 12px;
 }
+
+.sidemenu p {
+  line-height: 24px;
+}
+
+.sidemenu img {
+  margin: 0 0 0 3px;
+}  
 
 .sidemenu .subcat {
   float: right;
@@ -888,6 +898,7 @@ select img:hover {
   border-radius:10px;
   margin: 8px 29px 0 0;
   padding: 2px 0 0 4px;
+  font-size: 14px;
 }
 
 .checkb {
