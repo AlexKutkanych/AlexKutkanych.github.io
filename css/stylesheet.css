@@ -508,8 +508,22 @@ select img:hover {
   position: relative;
   margin: 8px 0 0 -15px;
 }
+.radio span {
+color: black;
+font-weight: bold;
+}
 
-.radio label:nth-child(2) {
+
+
+.radio .lito {
+  margin: -31px 0 0 0;
+}
+
+.radio .zyma {
+  margin: -15px 0 0 0;
+}
+
+.radio input:nth-child(2) {
   margin: 0 0 0 0;
 }
 
@@ -525,13 +539,13 @@ select img:hover {
 
 .radio span:nth-child(2) {
   position: absolute;
-  top: 12px;
+  top: 30px;
   color: black;
 }
 
 .radio span:last-child {
   position: absolute;
-  top: 26px;
+  top: 35px;
   color: black;
 }
 
@@ -864,7 +878,7 @@ select img:hover {
 /*SIDEMENU*/
 .sidemenu {
   float: left;
-  width: 177px;
+  width: 183px;
   margin: 15px 0 0 0;
   color: #154468;
   font-family: 'lucida_sans_unicoderegular',sans-serif;
@@ -873,11 +887,11 @@ select img:hover {
 
 .sidemenu .category {
   float: right;
-  height: 24px;
-  width: 176px;
+  height: 25px;
+  width: 182px;
   border: 1px solid grey;
-  border-radius:10px;
-  margin: 3px 0 0 10px;
+  border-radius:14px;
+  margin: 1px 0 0 8px;
   box-shadow: 0 0 10px #50525e;
   font-size: 12px;
 }
@@ -886,37 +900,42 @@ select img:hover {
   line-height: 24px;
 }
 
-.sidemenu img {
-  margin: 0 0 0 3px;
-}  
+.sidemenu .category img {
+  margin: 1px 5px 0 3px;
+}
+
+.sidemenu .subcat img {
+  margin: 0 3px 0 1px;
+}
 
 .sidemenu .subcat {
   float: right;
-  height: 27px;
-  width: 128px;
+  height: 25px;
+  width: 129px;
   border: 1px solid grey;
   border-radius:10px;
-  margin: 8px 29px 0 0;
+  margin: 13px 34px 0 0;
   padding: 2px 0 0 4px;
   font-size: 14px;
 }
 
 .checkb {
   float: left;
-  width: 73px;
-  margin: 6px 0 0 23px;
+  width: 76px;
+  margin: 6px 0 3px 23px;
   font-size: 13px;
 }
 
 .downbutton {
-    width: 150px;
-    height: 30px;
-    margin: 10px 0 0 0;
+    width: 81px;
+    height: 29px;
+    margin: 23px 0 0 0;
     color: white;
     background: linear-gradient(to top, #0c3357, #1f6787);
     box-shadow: 0 0 10px rgb(180,180,180);
     border-radius: 10px;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .logo {
