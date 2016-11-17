@@ -274,7 +274,7 @@ span {
 
 .block1, .block2, .block3 {
   height: 134px;
-  /*box-shadow: 0 0 10px #50525e;*/
+  box-shadow: 2px 2px 6px #50525e;
   border: 1px solid #9c9c9d;
   border-radius: 17px;
   font-size: 10px;
@@ -647,7 +647,7 @@ font-weight: bold;
   border: 1px solid grey;
   border-radius:10px;
   margin: 9px 0 0 2px;
-  box-shadow: 0 0 10px #50525e;
+  box-shadow: 1px 1px 6px #50525e;
 }
 
 .category, .category img, .subcat, .subcat img {
@@ -667,8 +667,6 @@ font-weight: bold;
   font-size: 12px;
 }
 
-
-
 .leftmenu .subcat {
   float: left;
   height: 25px;
@@ -677,7 +675,6 @@ font-weight: bold;
   border-radius:10px;
   margin: 13px 0 1px 2px;
   padding: 2px 0 0 4px;
-
 }
 
 .leftmenu li {
@@ -710,8 +707,6 @@ font-weight: bold;
   width: 143px;
 }
 
-
-
 .leftmenu li:hover {
   text-decoration: underline;
   font-weight: bold;
@@ -719,15 +714,14 @@ font-weight: bold;
   color: #154468;
 }
 
-
-
 /*Centermenu*/
 .centermenu {
   float: left;
   height: 627px;
   width: 525px;
   margin: 15px 10px 0 0;
-  background-color: lightblue;
+  background: linear-gradient(to top, #93a7b0, #dfe3e5);
+  font-family: 'lucida_sans_unicoderegular';
 }
 
 .tires_all figure {
@@ -801,11 +795,9 @@ font-weight: bold;
   margin: 0 0 0 7px;
 }
 
-
-
 .model {
   font-size: 13px;
-  margin: -8px 0 -3px -2px;
+  margin: -8px 0 -3px 2px;
 }
 
 .model4 {
@@ -836,21 +828,22 @@ font-weight: bold;
 
 .price {
   color: #154468;
-  font-size: 15px;
+  font-size: 16px;
   font-style: italic;
   font-weight: bold;
+  font-family: Arial;
 }
 
 .pr1 {
-  margin: -8px 0 0 10px;
+  margin: -4px 0 0 10px;
 }
 
 .pr2 {
-  margin: -8px 0 0 10px;
+  margin: -3px 0 0 13px;
 }
 
 .pr3 {
-  margin: -8px 0 0 10px;
+  margin: -5px 0 0 16px;
 }
 
 .pr4 {
@@ -892,7 +885,7 @@ font-weight: bold;
   border: 1px solid grey;
   border-radius:14px;
   margin: 1px 0 0 8px;
-  box-shadow: 0 0 10px #50525e;
+  box-shadow: 1px 1px 6px #50525e;
   font-size: 12px;
 }
 
