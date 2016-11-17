@@ -615,8 +615,6 @@ font-weight: bold;
   margin-top: 20px;
 }
 
-
-
 .dco p:first-child {
   margin: 0 0 0 0;
   color: black;
@@ -776,7 +774,7 @@ margin: 0 0 0 0;
   margin: -2px 0 0 -5px;
 }
 .tires_pic9 {
-  margin: -1px 0 0 -5px;
+  margin: 0 0 0 0;
 }
 
 .brand a {
@@ -810,7 +808,7 @@ margin: 0 0 0 0;
   margin: 0 0 0 7px;
 }
 .brand9 {
-  margin: 0 0 0 7px;
+  margin: 0 0 0 10px;
 }
 
 .model {
@@ -854,7 +852,6 @@ margin: 0 0 0 0;
 .tires_all figure:nth-child(9) {
   margin: 14px 0 0 28px;
 }
-
 
 .price {
   color: #154468;
@@ -911,7 +908,6 @@ margin: 0 0 0 0;
   margin: 15px 0 0 0;
   color: #154468;
   font-family: 'lucida_sans_unicoderegular',sans-serif;
-
 }
 
 .sidemenu .category {
@@ -955,6 +951,10 @@ margin: 0 0 0 0;
   font-size: 13px;
 }
 
+/*.sidemenu input[type=checkbox] {
+  box-shadow: inset 108px 123px 301px -133px #838383;
+}*/
+
 .downbutton {
     width: 81px;
     height: 29px;
@@ -993,7 +993,6 @@ footer p {
 
 footer ul {
   text-align: center;
-
 }
 
 footer li {
@@ -1002,6 +1001,13 @@ footer li {
   font-size: 12px;
 }
 
+footer ul li:first-child {
+  margin: 5px -5px 2px 5px;
+}
+
+footer li:last-child {
+  margin: 5px 0 2px -3px;
+}
 footer a {
   line-height: 28px;
 }
@@ -1014,7 +1020,7 @@ footer hr {
   width: 0px;
   height: 10px;
   color: white;
-  margin: -3px 0;
+  margin: -3px 2px;
   float: none;
   display: inline-block;
 }
