@@ -724,6 +724,24 @@ font-weight: bold;
   font-family: 'lucida_sans_unicoderegular';
 }
 
+.row1, .row3, .row2 {
+  height: 200px;
+  width: 525px;
+}
+
+.row2 {
+  margin: 2px 0 0 0;
+}
+
+.row3 {
+  margin: 3px 0 0 0;
+}
+
+
+.tires_all figure:nth-child(4) {
+margin: 0 0 0 0;
+}
+
 .tires_all figure {
   float: left;
   width: 139px;
@@ -747,7 +765,7 @@ font-weight: bold;
 }
 
 .tires_pic6 {
-  margin: -1px 0 0 -5px;
+  margin: -1px 0 0 0;
 }
 
 .tires_pic7 {
@@ -765,6 +783,7 @@ font-weight: bold;
   font-size: 15px;
   color: #154468;
   padding: 0 7px 0 0;
+  font-weight: bold;
 }
 
 .brand2 {
@@ -772,21 +791,20 @@ font-weight: bold;
 }
 
 .brand3 {
-  margin: 0 0 0 7px;
+  margin: 0 0 0 10px;
 }
 
 .brand4 {
-  margin: 0 0 0 -1px;
+  margin: 0 0 0 3px;
 }
 .brand5 {
-  margin: 0 0 0 2px;
+  margin: 0 0 0 6px;
 }
 .brand6 {
-  margin: 0 0 0 7px;
+  margin: 0 0 0 9px;
 }
 .brand7 {
-  margin: 0 0 0 -2px;
-  padding: 0 0 0 0;
+  margin: -5px 0 0 2px;
 }
 .brand8 {
   margin: 0 0 0 7px;
@@ -800,8 +818,20 @@ font-weight: bold;
   margin: -8px 0 -3px 2px;
 }
 
+.model3 {
+  margin: -8px 0 -3px 1px;
+}
+
 .model4 {
-  margin: -8px 0 -3px 0;
+  margin: -8px 0 -3px 3px;
+}
+
+.model5 {
+  margin: -10px 0 -3px -1px;
+}
+
+.model6 {
+  margin: -9px 0 -3px 3px;
 }
 
 .model7 {
@@ -831,40 +861,46 @@ font-weight: bold;
   font-size: 16px;
   font-style: italic;
   font-weight: bold;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
+}
+
+.currency {
+  font-size: 12px;
+  font-weight: bold;
+  color: #154468;
 }
 
 .pr1 {
-  margin: -4px 0 0 10px;
+  margin: -4px 0 0 2px;
 }
 
 .pr2 {
-  margin: -3px 0 0 13px;
+  margin: -3px 0 0 3px;
 }
 
 .pr3 {
-  margin: -5px 0 0 16px;
+  margin: -5px 0 0 6px;
 }
 
 .pr4 {
-  margin: -8px 0 0 7px;
+  margin: -4px 0 0 2px;
 }
 
 .pr5 {
-  margin: -8px 0 0 10px;
+  margin: -2px 2px 0 4px;
 }
 .pr6 {
-  margin: -8px 0 0 10px;
+  margin: -3px 0 0 7px;
 }
 .pr7 {
-  margin: -8px 0 0 7px;
+  margin: -5px 0 0 2px;
 }
 .pr8 {
-  margin: -8px 0 0 10px;
+  margin: -4px 0 0 4px;
 }
 
 .pr9 {
-  margin: -8px 0 0 10px;
+  margin: -3px 0 0 7px;
 }
 
 
@@ -952,6 +988,7 @@ footer p {
   color: #754542;
   font-size: 10px;
   margin: 7px 0 0 0;
+  font-family: Arial, sans-serif;
 }
 
 footer ul {
@@ -961,7 +998,7 @@ footer ul {
 
 footer li {
   display: inline-block;
-  margin: 3px 0 2px -5px;
+  margin: 5px 0 2px -5px;
   font-size: 12px;
 }
 
