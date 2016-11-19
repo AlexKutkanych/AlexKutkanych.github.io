@@ -705,7 +705,11 @@ font-weight: bold;
   width: 143px;
 }
 
-.leftmenu li:hover {
+.leftmenu a {
+  color: #154468;
+
+}
+.leftmenu a:hover {
   text-decoration: underline;
   font-weight: bold;
   font-style: italic;
@@ -944,6 +948,16 @@ margin: 0 0 0 0;
   font-size: 14px;
 }
 
+.subcat1 {
+  height: 25px;
+  width: 129px;
+  border: 1px solid grey;
+  border-radius:10px;
+  margin: 17px 34px 0 -10px;
+  padding: 2px 0 0 4px;
+  font-size: 14px;
+}
+
 .checkb {
   float: left;
   width: 76px;
@@ -951,20 +965,28 @@ margin: 0 0 0 0;
   font-size: 13px;
 }
 
+.diskr {
+  margin: -29px 0 0 26px;
+}
+
+.down {
+  margin: 10px 0 0 0;
+}
 /*.sidemenu input[type=checkbox] {
   box-shadow: inset 108px 123px 301px -133px #838383;
 }*/
 
 .downbutton {
-    width: 81px;
-    height: 29px;
-    margin: 23px 0 0 0;
+    width: 80px;
+    height: 25px;
+    margin: 22px 0 0 0;
     color: white;
     background: linear-gradient(to top, #0c3357, #1f6787);
     box-shadow: 0 0 10px rgb(180,180,180);
     border-radius: 10px;
     cursor: pointer;
     font-size: 12px;
+    text-align: center;
 }
 
 .logo {
