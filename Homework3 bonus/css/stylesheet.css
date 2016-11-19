@@ -3,13 +3,17 @@
   padding: 0;
 }
 
-
+html {
+  background-color: black;
+}
 
 .wrapper {
     width: 960px;
     height: 881px;
     color: white;
+    margin: 0 auto;
     background-image: url("../pic/layer.jpg");
+    font-family: Arial, sans-serif;
 }
 
 .content {
@@ -19,31 +23,24 @@
 
 .logo {
   border: none;
-  margin-top: 70px;
-  margin-bottom: -5px;
+  float: left;
+  margin: 89px 0 0 0;
+
 }
 
 .contacts {
-    margin-left: 437px;
-    padding: 5px;
-    margin-bottom: 10px;
-
+  float: right;
+  margin: 178px 0 0 0;
+  font-size: 10px;
 }
 
-.img {
-  display: inline-block;
-  margin:0 10px 40px 0;
+.photo {
+  margin: 240px 0 0 0;
 }
-
-
-header {
-    display: inline-block;
-}
-
-
-.footer {
+footer p {
   text-align: center;
-  margin:170px 330px;
-  padding-bottom: 10px;
+  color: white;
+  font-size: 10px;
+  margin-top: 143px;
 
 }
