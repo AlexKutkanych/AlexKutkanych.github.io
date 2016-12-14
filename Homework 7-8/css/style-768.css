@@ -40,6 +40,15 @@
     top: 11.13rem;
   }
 
+  form {
+    display: block;
+    height: 1.25rem;
+    width:  11rem;
+    position: absolute;
+    top: 2.4rem;
+    left: 29.8rem;
+  }
+
   .overlay-text {
     width: 38%;
 

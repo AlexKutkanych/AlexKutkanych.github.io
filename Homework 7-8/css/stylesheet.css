@@ -3,17 +3,6 @@
   padding: 0;
 }
 
-/*@font-face {
-    font-family: 'league_gothic';
-    src: url('../fonts/leaguegothic-regular-webfont.woff2') format('woff2'),
-         url('../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype');
-         url('../fonts/leaguegothic-regular-webfont.woff') format('woff');
-         url('leaguegothic-regular-webfont.ttf') format('truetype');
-         url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}*/
-
 @font-face {
     font-family: 'league_gothic';
     src: url('../fonts/leaguegothic-regular-webfont.eot');
@@ -40,9 +29,11 @@
 
 }
 
+
 html, body {
   overflow-x: hidden;
-  height: 100%
+  height: 100%;
+  width: 100%;
 }
 
 a {
@@ -67,6 +58,7 @@ a {
 
 .center-wrapper {
   height:  30.63rem;
+  width: 100%;
   /*border-top: 1px solid #d8d8d8;*/
   background-color: #f9f9f9;
   background-size: cover;
@@ -99,18 +91,10 @@ a {
   position: relative;
 }
 
-/*@media query (max-width: 1080px){
-  .menu {
-    width: 90%;
-  }
-
-}*/
 header, main, footer,.bottom {
   width: 60rem;
   margin: auto;
 }
-
-
 
 .header__logo  {
   margin: 3.7rem 0 10.4rem 0;
@@ -120,7 +104,7 @@ header, main, footer,.bottom {
   width: 66%;
   height: 1.125px;
   float: right;
-  margin-top: 4.8rem;
+  /*margin-top: 4.8rem;*/
   text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -159,7 +143,7 @@ header, main, footer,.bottom {
 .wrapper1 {
   max-width: 60rem;
   height: 100%;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   position: relative;
 }
 
@@ -205,27 +189,14 @@ header, main, footer,.bottom {
   position: relative;
   top: -1rem;
   left: -4.4rem;
-  /*margin-top: -1.188rem 4.688rem 0 0;*/
   z-index: 1;
-}
-
-.play__icon {
-  display: block;
-  float: right;
-  position: absolute;
-  top: 8.063rem;
-  left: 46.69rem;
-  cursor: pointer;
-  z-index: 2;
 }
 
 .arrow {
   display: block;
-  /*float: left;*/
   width: 28px;
   height: 40px;
   position: absolute;
-  /*background-attachment: fixed;*/
   cursor: pointer;
   background-size: cover;
   background: url(../img/arrows.png) 0 0 no-repeat;
@@ -248,35 +219,33 @@ header, main, footer,.bottom {
   position: absolute;
 }
 
-.slider__top {
-  border: 1px solid red;
-  height: 1.25rem;
-  width:  2.5rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
 
 .slider_bottom, .slider_top {
-  width: 100px;
   height: 10px;
-  margin: 4rem auto;
+  max-width: 960px;
   position: relative;
+  margin: 0 auto;
+}
+
+.slider_bottom form {
+  top: 1.938rem;
+  left: 10.75rem;
 }
 
 form {
-  height: 20px;
-  width: 120px;
+  display: block;
+  height: 1.25rem;
+  width:  11rem;
   position: absolute;
+  top: 5.688rem;
+  left: 44.5rem;
 }
-
-
 
 label {
     display: inline-block;
     cursor: pointer;
     position: relative;
-    padding-left: 25px;
+    padding-left: 4px;
     margin-right: -3px;
     font-size: 13px;
 }
@@ -290,41 +259,32 @@ label:before {
     height: 16px;
     margin-right: -6px;
     position: absolute;
-    left: 0;
-    bottom: 1px;
+    left:-17px;
+    bottom: -2px;
     background-color: #aaa;
     box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
     border-radius: 8px;
 }
 
-input[type=radio]:checked + label:before {
+.slider_top input[type=radio]:checked + label:before {
     content: "\2022";
     color: #f3f3f3;
-    font-size: 30px;
+    font-size: 41px;
     text-align: center;
-    line-height: 16px;
+    line-height: 17px;
 }
 
-input {
-  position: absolute;
-  top: 2rem;
-  left: 10rem;
-  width: 50px;
+.slider_bottom label:before {
+  background-color: white;
 }
 
-input[type=radio] {
-display: none;
+.slider_bottom input[type=radio]:checked + label:before {
+  content: "\2022";
+  font-size: 41px;
+  text-align: center;
+  line-height: 17px;
+  color: black;
 }
-
-/*.slider a {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border: 6px solid black;
-  border-radius: 10px;
-}*/
-
-
 
 /*MAIN*/
 .main-wrapper {

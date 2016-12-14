@@ -5,11 +5,15 @@
   }
 
   .wrapper1 {
-    max-width: 52.94rem;
+    /*max-width: 52.94rem;*/
+    position: relative;
+
   }
 
   header {
+    position: relative;
     max-height: 13.4rem;
+    height: 29.938em;
   }
 
   .header-wrapper {
@@ -17,7 +21,10 @@
   }
 
   .header__logo {
-    margin-left: 34%;
+    position: absolute;
+    top: 14%;
+    left: 46%;
+    transform: translate(-50%, -50%);
   }
 
   .overlay-wrapper {
@@ -27,11 +34,12 @@
 
   /*Dropdown menu*/
   header .menu {
-    position: relative;
-    margin-top: -149px;
-    margin-right: 25%;
+    position: absolute;
+    top: 118%;
+    left: 46%;
+    transform: translate(-50%, -50%);
     width: 245px;
-    height: 100%;
+    height: 14.313em;
     z-index: 100;
     text-align: center;
     background: rgba(43, 34, 49, 0.8);
@@ -43,14 +51,22 @@
 
   header .menu:hover {
     visibility: visible;
+
   }
 
   header .menu__item {
     display: block;
     border-top: 1px solid #523e5a;
     border-bottom: 1px solid #36283e;
+    border-bottom: 2px solid transparent;
     padding-right: 0;
     overflow: hidden;
+    font-size: 23px;
+  }
+
+  .menu__link {
+    border-bottom: 2px solid transparent; /*MENU DOEN'T JUMP WHILE HOVER*/
+    font-size: 23px;
   }
 
   header .menu__link:hover {
@@ -60,6 +76,7 @@
 
   .menu__link-visible {
     visibility: visible;
+    font-size: 23px;
   }
 
   .overlay-text {
@@ -68,8 +85,9 @@
     overflow: hidden;
     position: absolute;
     z-index: 2;
-    top: 5.875rem;
-    left: -0.75rem;
+    top: 51%;
+    left: 17%;
+    transform: translate(-49%, -50%);
   }
 
   .overlay-text p:first-child {
@@ -101,6 +119,15 @@
     max-width: 12rem;
     z-index: 2;
     position: absolute;
+  }
+
+  .slider {
+    max-width: 480px;
+  }
+
+  form {
+    top: 1.8rem;
+    left: 13.0rem;
   }
 
   .main-wrapper {
@@ -135,6 +162,10 @@
     margin: 0.125rem 0 0 23.56rem;
   }
 
+  .center {
+    position: relative;
+  }
+
   .center-wrapper {
     height: 50.2rem;
   }
@@ -142,6 +173,10 @@
   .center__left {
     width: 92%;
     margin: 4rem 0 0 1.188rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%, -1%);
   }
 
   .center__right {
@@ -149,6 +184,10 @@
     margin: 5.875rem 4.688rem 0 1.688rem;
     max-width: 20rem;
     overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, 105%);
   }
 
   .logos {
@@ -199,6 +238,7 @@
   .footer__menu {
     margin: 1px 0 0 0.8125rem;
     height: 2rem;
+    width: 740px;
   }
 
   .menu__item {
