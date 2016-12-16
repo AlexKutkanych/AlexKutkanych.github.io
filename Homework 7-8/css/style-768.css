@@ -18,26 +18,39 @@
   }
 
   .overlay-wrapper {
+    min-width: 48rem;
+    width: 100%;
     margin-top: 8rem;
     height: 25rem;
+    position: relative;
+
   }
   .wrapper1 {
     max-width: 90%;
     margin: 0 auto;
+    position: relative;
+  }
+
+  .div1 {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
   }
 
   .arrow_left {
-  left: -3rem;
-  top: 11.5rem;
+  left: -2.6rem;
+  top: 11.3rem;
  }
 
   .phone {
-    margin-right: 11.7rem;
-    margin-top: -1.3rem;
+    top: 49%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+    position: absolute;
   }
   .arrow_right {
-    left: 38.56rem;
-    top: 11.13rem;
+    left: 102%;
+    top: 11.3rem;
   }
 
   form {
@@ -51,7 +64,9 @@
 
   .overlay-text {
     width: 38%;
-
+    top: 35%;
+    left: 20%;
+    transform: translate(-51%,-50%);
   }
 
   .overlay-text p:first-child{
@@ -171,7 +186,7 @@
   }
 
   .menu__link {
-    font-size: 18px;
+    font-size: 25px;
 
   }
 

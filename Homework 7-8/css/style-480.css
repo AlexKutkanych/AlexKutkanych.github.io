@@ -5,9 +5,10 @@
   }
 
   .wrapper1 {
-    /*max-width: 52.94rem;*/
+    max-width: 52.94rem;
     position: relative;
-
+    margin: 0 auto;
+    max-width: 90%;
   }
 
   header {
@@ -22,23 +23,25 @@
 
   .header__logo {
     position: absolute;
-    top: 14%;
-    left: 46%;
+    top: 16%;
+    left: 50%;
     transform: translate(-50%, -50%);
   }
 
   .overlay-wrapper {
     max-height: 15rem;
     position: relative;
+    width: 100%;
+    min-width: 30em;
   }
 
   /*Dropdown menu*/
   header .menu {
     position: absolute;
-    top: 118%;
-    left: 46%;
+    top: 121%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 245px;
+    width: 15.313em;
     height: 14.313em;
     z-index: 100;
     text-align: center;
@@ -47,6 +50,7 @@
     border: 1px solid #0f1a20;
     visibility: hidden;
     overflow: hidden;
+    margin-top: 0;
   }
 
   header .menu:hover {
@@ -84,9 +88,9 @@
     max-height: 4.7rem;
     overflow: hidden;
     position: absolute;
-    z-index: 2;
-    top: 51%;
-    left: 17%;
+    z-index: 3;
+    top: 52%;
+    left: 28%;
     transform: translate(-49%, -50%);
   }
 
@@ -104,21 +108,23 @@
   }
 
   .arrow_left {
-    left: -3.6rem;
+    left: -1.8rem;
     top: 6.5rem;
   }
 
   .arrow_right {
-    left: 25rem;
-    top: 6.5rem;
+    position: absolute;
+    left: 100%;
+    top: 6.6rem;
   }
 
   .phone {
-    top: -0.9rem;
-    left: 13rem;
+    top: 8.9rem;
+    left: 76%;
     max-width: 12rem;
-    z-index: 2;
+    z-index: 3;
     position: absolute;
+    transform: translate(-50%, -50%);
   }
 
   .slider {
@@ -238,11 +244,11 @@
   .footer__menu {
     margin: 1px 0 0 0.8125rem;
     height: 2rem;
-    width: 740px;
+    max-width: 46.250em;
   }
 
   .menu__item {
-    padding-right: 1.125rem;
+    padding-right: 0.125rem;
   }
   .menu__link {
     font-size: 20px;

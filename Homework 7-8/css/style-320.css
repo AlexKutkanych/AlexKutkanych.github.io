@@ -1,12 +1,13 @@
 @media (min-width: 320px) and (max-width: 479px) {
   header, .wrapper1, main, .center, .logos, .bottom, footer {
     width: 95%;
+    height: 100%;
   }
 
   header {
     position: relative;
     max-height: 13.4rem;
-    height: 300px;
+    height: 18.750em;
   }
 
   .header-wrapper {
@@ -22,7 +23,9 @@
   }
 
   .overlay-wrapper {
-    max-height: 15rem;
+    max-height: 18.3rem;
+    width: 100%;
+    min-width: 20rem;
     position: relative;
     background: none;
   }
@@ -46,6 +49,7 @@
     border: 1px solid #0f1a20;
     visibility: hidden;
     overflow: hidden;
+    margin-top: 0;
   }
   header .menu:hover {
     visibility: visible;
@@ -80,15 +84,16 @@
 
   .wrapper1 {
     position: relative;
-    max-width: 29.938em;
-
+    max-width: 20rem;
+    margin: 0 auto;
   }
+
   .overlay-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 39%;
+    left: 52%;
     transform: translate(-50%, -50%);
-    max-width: 23rem;
+    width: 12rem;
     max-height: 4.7rem;
     overflow: hidden;
     z-index: 2;
@@ -112,18 +117,20 @@
 
 
   .arrow_left {
-    left: -1.4rem;
+    left: -0.5rem;
     top: 5.4rem;
   }
 
   .arrow_right {
-    left: 25rem;
-    top: 6.5rem;
+    left: 18.2rem;
+    top: 5.4rem;
   }
 
   .phone {
     display: none;
   }
+
+
   .main-wrapper {
     height: 37.38rem;
     z-index: 2;
@@ -135,13 +142,25 @@
   .key {
     width: 95%;
     max-width: 16.13rem;
-    max-height: 6.625rem;
+    max-height: 6.3rem;
     overflow: hidden;
-    margin: 72px 0 30px 13px;
+    position: absolute;
+    top: 7%;
+    left: 47%;
+    transform: translate(-50%, -47%);
   }
 
   .key__hidden {
     display: block;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-54%, -50%);
+  }
+
+  .key__hidden__bottom {
+    top: 46%;
+    transform: translate(-54%, 51%);
   }
   .key h2 {
     font-size: 24px;
@@ -150,14 +169,16 @@
 
   .key p {
     font-size: 15px;
+    margin-top: -0.5rem;
   }
 
-  .key__hidden {
-    margin-top: 1.438rem;
-  }
 
   .key a {
     margin: 0.125rem 0 0 23.56rem;
+  }
+
+  .center {
+    position: relative;
   }
 
   .center-wrapper {
@@ -182,9 +203,12 @@
 
   .center__right {
     width: 85%;
-    margin: 5.5rem 2.688rem 0 1.688rem;
     max-width: 20rem;
     overflow: hidden;
+    position: absolute;
+    top: 54%;
+    left: 41%;
+    transform: translate(-50%, -49%);
   }
 
   article {
@@ -211,6 +235,10 @@
 
   .bottom-wrapper {
     display: none;
+  }
+
+  .slider_bottom {
+    margin: -1.25rem 0 0 -4.75rem;
   }
 
   .footer-wrapper {

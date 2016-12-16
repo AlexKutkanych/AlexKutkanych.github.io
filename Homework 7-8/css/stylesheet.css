@@ -104,7 +104,7 @@ header, main, footer,.bottom {
   width: 66%;
   height: 1.125px;
   float: right;
-  /*margin-top: 4.8rem;*/
+  margin-top: 4.8rem;
   text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -128,6 +128,8 @@ header, main, footer,.bottom {
   text-decoration: underline;
   text-decoration-color: violet;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  /*-webkit-text-decoration-color: red;
+        text-decoration-color: red;*/
 }
 
 .opac {
@@ -143,8 +145,12 @@ header, main, footer,.bottom {
 .wrapper1 {
   max-width: 60rem;
   height: 100%;
-  /*margin: 0 auto;*/
+  margin: 0 auto;
   position: relative;
+  /*position: absolute;
+  top: 1%;
+  left: 29%;
+  transform: translate(-50%, -50%);*/
 }
 
 .overlay-text {
@@ -574,10 +580,19 @@ article {
   text-shadow: 1px 1.7px 2px rgba(0,0,0,0.4);
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
+  font-size: 12px;
 }
 
 .footer__design span {
   font-weight: 700;
+}
+
+footer .menu__link {
+  font-size: 19px;
+}
+
+footer .menu__item {
+  margin-left: 1.125em;
 }
 
   .logos__mobile, .logos__mobile1 {
