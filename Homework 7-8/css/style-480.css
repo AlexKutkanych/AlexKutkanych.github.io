@@ -1,4 +1,11 @@
-@media (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
   header, .wrapper1, main, .center, .logos, .bottom, footer {
     width: 95%;
     max-width: 47.94rem;
@@ -18,7 +25,7 @@
   }
 
   .header-wrapper {
-    max-height: 34.9rem;
+    max-height: 38.9rem;
   }
 
   .header__logo {
@@ -133,7 +140,7 @@
 
   form {
     top: 1.8rem;
-    left: 13.0rem;
+    left: 66%;
   }
 
   .main-wrapper {
@@ -197,12 +204,43 @@
   }
 
   .logos {
-    max-width: 24.25rem;
+    max-width: 22.25rem;
     overflow: hidden;
   }
 
+
+
   .logos-wrapper {
     height: 13.3rem;
+  }
+
+  .logo__bottom {
+    margin-right: 1.250rem;
+  }
+
+  .logo1 {
+    margin-right: 2.938rem;
+    margin-left: 0.813rem;
+  }
+
+  .logo3 {
+    margin-left: 1.688em;
+  }
+
+  .logo4 {
+    margin-right: 3.188rem;
+    margin-left: 0.562rem;
+    margin-top: 1.688rem;
+  }
+
+  .logo5 {
+    margin-right: 2.188rem;
+    margin-bottom: 0.188rem;
+  }
+
+  .logo6 {
+    margin-right: 0;
+    margin-bottom: 0.188rem;
   }
 
   .logos__mobile {
@@ -250,8 +288,8 @@
   .menu__item {
     padding-right: 0.125rem;
   }
-  .menu__link {
-    font-size: 20px;
+  footer .menu__link {
+    font-size: 1.125rem;
   }
 
   .footer__design {

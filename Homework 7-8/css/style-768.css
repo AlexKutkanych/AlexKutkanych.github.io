@@ -1,5 +1,5 @@
 /*MEDIA 768PX*/
-@media (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 768px) and (max-width: 959px) {
   header, .wrapper1, main, .center, .logos, .bottom, footer {
     width: 95%;
     max-width: 48rem;
@@ -97,7 +97,7 @@
 
 
   .header-wrapper {
-    height: 50.1rem;
+    height: 51.1rem;
   }
 
   .key, .dial, .music {
@@ -144,7 +144,28 @@
   }
 
   .logos {
-    margin: 0.9375rem 0 0 1.625rem;
+    width: 45.563rem;
+    margin: 1.438em auto;
+  }
+
+  .logo__bottom {
+    margin-right: 3rem;
+  }
+
+  .logo3 {
+    margin-right: 3.5rem;
+  }
+
+  .logo4 {
+    margin-right: 3.063rem;
+  }
+
+  .logo5 {
+    margin-right: 2.813rem;
+  }
+
+  .logo6 {
+    margin-right: 0;
   }
 
   .bottom-wrapper {
