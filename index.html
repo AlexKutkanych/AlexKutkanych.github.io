@@ -1,313 +1,199 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" /> -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=no">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <title>Автомагазин Зазор</title>
-    <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+    <link rel="stylesheet" href="css/stylesheet.css" media="screen" title="no title">
+    <link href="css/style-320.css" rel="stylesheet" media="only screen and (min-width: 320px) and (max-width: 479px)">
+    <link href="css/style-480.css" rel="stylesheet" media="only screen and (min-width: 480px) and (max-width: 767px)">
+    <link href="css/style-768.css" rel="stylesheet" media="only screen and (min-width: 768px) and (max-width: 959px)">
+    <title>Pingbuller</title>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <link rel="stylesheet" href="css/style-ie.css" media="screen" title="no title">
+      <link href="css/style-ie-768.css" rel="stylesheet" media="only screen and (min-width: 768px) and (max-width: 959px)">
+      <link href="css/style-ie-480.css" rel="stylesheet" media="only screen and (min-width: 480px) and (max-width: 767px)">
+      <link href="css/style-ie-320.css" rel="stylesheet" media="only screen and (min-width: 320px) and (max-width: 479px)">
+   <![endif]-->
   </head>
   <body>
-    <div class="wrapper">
+    <div class="header-wrapper">
       <header>
-        <div class="contacts">
-          <img src="img/telephone.png" alt="telephone icon" class="phone">
-          <p>(044) 123-45-67</p> <p class="space">(044)567-89-10</p>
-        </div>
-        <div class="login">
-          <img src="img/login.png" alt="login icon" class="login_icon">
-          <div class="forma">
-          <form action="#" method="post" >
-            <input type="text" name="text" placeholder="логин" class="log_form" style="text-indent:3px">
-            <input type="password" name="password" placeholder="пароль" class="pass_form" style="text-indent:3px">
-            <input type="submit" name="name" value="вход" class="enter"><hr>
-            <input type="button" name="name" value="регистрация" class="reg">
-            <input type="button" name="name" value="забыли пароль?" class="forgot">
-          </form>
-          </div>
-        </div>
-        <div class="nav">
-          <a href="#"><img src="img/home.png" alt="home icon" class="homeicon"></a>
-          <a href="#"><img src="img/nav.png" alt="nav icon" class="navicon"></a>
-          <a href="mailto:"><img src="img/mail.png" alt="mail icon" class="mailicon"></a>
-        </div>
-        <img src="img/main.jpg" alt="zazor.com.ua" class="main">
-        <div class="menu">
-          <div class="name">
-            <ul>
-              <li class="menu_item"><a href="#" class="menu_link">О КОМПАНИ</a></li>
-              <li class="menu_item"><a href="#" class="menu_link">ОПЛАТА</a></li>
-              <li class="menu_item"><a href="#" class="menu_link">ДОСТАВКА</a></li>
-              <li class="menu_item"><a href="#" class="menu_link">СТАТЬИ</a></li>
-              <li class="menu_item"><a href="#" class="menu_link">КОНТАКТЫ</a></li>
-            </ul>
-          </div>
-          <div class="cart">
-            <a href="#"><img src="img/cart.png" alt="cart icon"></a>
-            <ul>
-              <li class="menu_item">товаров: <span class="blue">0</span></li>
-              <li class="menu_item">на сумму: <span class="blue space">0,00 грн.</span></li>
-            </ul>
-          </div>
-        </div>
+          <img src="img/logo.png" alt="Pingbuller logo" class="header__logo">
+          <ul class="menu">
+            <li class="menu__item"><a href="#" class="menu__link menu__link-visible">HOME</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">ABOUT</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">BLOG</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">PRODUCTS</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">LOREM IPSUM</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">DOLOR SIT AMET</a></li>
+          </ul>
       </header>
-      <div class="selection">
-        <div class="block1">
-          <div class="top">
-          <ul>
-            <li class="smaller">Диски:</li>
-            <li class="bigger">Поиск по автомобилю</li>
-            <li class="small">Шины:</li>
-          </ul>
+      <div class="overlay-wrapper">
+        <div class="wrapper1">
+          <a href="#" class="arrow arrow_left"></a>
+          <div class="overlay-text">
+            <p>Lorem Ipsum Dolor</p>
+            <p class="second">IT WILL MAKE ALL OF YOUR DREAMS COME TRUE</p>
+            <p class="third">Semper sollicitudin gravida eget, ves&shy;tibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a.
+            Nam venenatis hendrerit est at vlutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis. </p>
           </div>
-          <div class="left">
-              <p>Марка <span class="grey">авто:</span></p>
-              <p>Модель <span class="grey">автомобиля:</span></p>
-              <p>Год выпуска <span class="grey">автомобиля:</span></p>
-              <p>Комплектация:</p>
-          </div>
-          <div class="select">
-            <select>
-              <option></option>
-              <option></option>
-              <option></option>
-            </select>
-            <select>
-              <option></option>
-              <option></option>
-              <option></option>
-            </select>
-            <select class="year">
-              <option></option>
-              <option></option>
-              <option></option>
-            </select>
-            <select>
-              <option></option>
-              <option></option>
-              <option></option>
-            </select>
-          </div>
-          <div class="right">
-            <p>Марка <span class="grey">авто:</span></p>
-            <p>Модель <span class="grey">автомобиля:</span></p>
-            <p>Год выпуска <span class="grey">автомобиля:</span></p>
-            <p>Комплектация:</p>
-          </div>
-          <div class="select1">
-            <select>
-              <option></option>
-              <option></option>
-              <option></option>
-            </select>
-            <select>
-              <option></option>
-              <option></option>
-              <option></option>
-            </select>
-            <select class="year">
-              <option></option>
-              <option></option>
-              <option></option>
-            </select>
-            <select>
-              <option></option>
-              <option></option>
-              <option></option>
-            </select>
-          </div>
-          <div class="find"><a href="#">ПОИСК...</a></div>
-        </div>
-        <div class="block2">
-          <p>ПОИСК ШИН</p>
-          <div class="left">
-            <p class="close">Размер:</p>
-            <p class="close">R</p>
-            <p class="close">Сезон:</p>
-          </div>
-          <div class="select">
-            <select>
-                <option>145</option>
-                <option>150</option>
-                <option>155</option>
-              </select>/
-              <select>
-                <option></option>
-                <option></option>
-                <option></option>
-              </select>
-              <select>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-              </select>
-              <form class="radio" action="#" method="post">
-                <label><input type="checkbox" name="leto" value=""><span class="lito">лето</span><br></label>
-                <label><input type="checkbox" name="zyma" value=""><span class="zyma">зима</span><br></label>
-                <label><input type="checkbox" name="vsesez" value=""><span>всесез</span></label>
-              </form>
-            </div>
-          <div class="find"><a href="#">ПОИСК...</a></div>
-        </div>
-        <div class="block3">
-          <div class="left">
-            <p>ПОИСК ДИСКОВ</p>
-            <p>Диаметр <span class="grey">диска:</span></p>
-            <p>Количество <span class="grey">крепёжных отверствий:</span></p>
-            <p>Диаметр <span class="grey">расположения крепёжных отверствий:</span></p>
-          </div>
-          <div class="select">
-            <select>
-              <option>14</option>
-              <option>15</option>
-              <option>16</option>
-            </select>
-            <select>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-            <select>
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
-            </select>
-          </div>
-          <!-- <div class="dco">
-            <p>ДЦО <span class="grey">(диаметр центрального отверствия):</span></p>
-              <select>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-              </select>
-              <p>ЕТ <span class="grey">(вылет диска):</span></p>
-              <select>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-          </div> -->
-          <!-- <div class="find"><a href="#">ПОИСК...</a></div> -->
-        </div>
+          <img src="img/iphone.png" alt="iphone 4 image" class="phone">
+          <!-- <img src="img/arrows.png" alt="" class="arrows"> -->
+        <a href="#" class="arrow arrow_right"></a>
       </div>
-      <div class="content">
-        <div class="leftmenu">
-          <figure class="category"><img src="img/list.png" alt="list icon"><p>КАТАЛОГ ПРОДУКЦИИ:</p></figure>
-          <figure class="subcat"><img src="img/disk.png" alt="circle icon"><p>ШИНЫ</p></figure>
-          <ul>
-            <li><a href="#">Наименование 1</a></li>
-            <li><a href="#">Наименование 2</a></li>
-            <li><a href="#">Наименование 3</a></li>
-            <li><a href="#">Наименование 4</a></li>
-          </ul>
-          <section>
-            <figure class="subcat disk"><img src="img/disk.png" alt="circle icon" ><p>ДИСКИ</p></figure>
-            <ul>
-              <li><a href="#">Наименование 1</a></li>
-              <li><a href="#">Наименование 2</a></li>
-              <li><a href="#">Наименование 3</a></li>
-              <li><a href="#">Наименование 4</a></li>
-            </ul>
-          </section>
-          <section class="">
-            <figure class="subcat bolt"><img src="img/disk.png" alt="circle icon"><p>БОЛТЫ</p></figure>
-            <ul>
-              <li><a href="#">Наименование 1</a></li>
-              <li><a href="#">Наименование 2</a></li>
-              <li><a href="#">Наименование 3</a></li>
-              <li><a href="#">Наименование 4</a></li>
-            </ul>
-          </section>
-        </div>
-        <div class="centermenu">
-          <div class="tires_all">
-            <div class="row1">
-            <figure>
-              <figurecaption class="brand"><a href="#">Goodyear</a></figurecaption>
-              <p class="model">Ultra Grip Extreme</p>
-              <a href="#"><img src="img/tire1.png" alt="tire1" class="tires_pic1"></a>
-              <p class="price pr1">90.00 <span class="currency">грн.<span></p>
-            </figure>
-            <figure>
-              <figurecaption class="brand brand2"><a href="#">Nokian</a></figurecaption>
-              <p class="model">Hakkapeliitta R</p>
-              <a href="#"><img src="img/tire2.png" alt="tire2" class="tires_pic2"></a>
-              <p class="price pr2">115.00 <span class="currency">грн.</span></p>
-            </figure>
-            <figure>
-              <figurecaption class="brand brand3"><a href="#">Hankook</a></figurecaption>
-              <p class="model model3">K 708 155/65 R14</p>
-              <a href="#"><img src="img/tire3.png" alt="tire3" class="tires_pic3"></a>
-              <p class="price pr3">393.00 <span class="currency">грн.</span></p>
-            </figure>
-            </div>
-            <div class="row2">
-             <figure>
-              <figurecaption class="brand brand4"><a href="#">Goodyear</a></figurecaption>
-              <p class="model model4">Ultra Grip Extreme</p>
-              <a href="#"><img src="img/tire1.png" alt="tire1" class="tires_pic4"></a>
-              <p class="price pr4">90.00 <span class="currency">грн.</span></p>
-            </figure>
-            <figure>
-              <figurecaption class="brand brand5"><a href="#">Nokian</a></figurecaption>
-              <p class="model model5">Hakkapeliitta R</p>
-              <a href="#"><img src="img/tire2.png" alt="tire2" class="tires_pic5"></a>
-              <p class="price pr5">115.00 <span class="currency">грн.</span></p>
-            </figure>
-            <figure>
-              <figurecaption class="brand brand6"><a href="#">Hankook</a></figurecaption>
-              <p class="model model6">K 708 155/65 R14</p>
-              <a href="#"><img src="img/tire3.png" alt="tire3" class="tires_pic6"></a>
-              <p class="price pr6">393.00 <span class="currency">грн.</span></p>
-            </figure>
-          </div>
-          <div class="row3">
-            <figure>
-              <figurecaption class="brand brand7"><a href="#">Goodyear</a></figurecaption>
-              <p class="model model7">Ultra Grip Extreme</p>
-              <a href="#"><img src="img/tire1.png" alt="tire1" class="tires_pic7"></a>
-              <p class="price pr7">90.00 <span class="currency">грн.</span></p>
-            </figure>
-            <figure>
-              <figurecaption class="brand brand8"><a href="#">Nokian</a></figurecaption>
-              <p class="model model8">Hakkapeliitta R</p>
-              <a href="#"><img src="img/tire2.png" alt="tire2" class="tires_pic8"></a>
-              <p class="price pr8">115.00 <span class="currency">грн.</span></p>
-            </figure>
-            <figure>
-              <figurecaption class="brand brand9"><a href="#">Hankook</a></figurecaption>
-              <p class="model model9">K 708 155/65 R14</p>
-              <a href="#"><img src="img/tire3.png" alt="tire3" class="tires_pic9"></a>
-              <p class="price pr9">393.00 <span class="currency">грн.<span></p>
-            </figure>
-          </div>
-          </div>
-        </div>
-        <div class="sidemenu">
-          <figure class="category"><img src="img/list.png" alt="list icon"><p>БРЕНДЫ:</p></figure>
-          <figure class="subcat"><img src="img/disk.png" alt="circle icon"><p>ШИНЫ</p></figure>
-          <form class="checkb" action="#" method="get">
-            <label><input type="checkbox" name="name" value="Бренд1">&emsp;Бренд1</label>
-            <label><input type="checkbox" name="name" value="Бренд2">&emsp;Бренд2</label>
-            <label><input type="checkbox" name="name" value="Бренд3">&emsp;Бренд3</label>
-            <figure class="subcat1"><img src="img/disk.png" alt="circle icon" class="circle1"><p class="diskr">ДИСКИ</p></figure>
-            <label><input type="checkbox" name="name" value="Бренд1" class="down">&emsp;Бренд1</label>
-            <label><input type="checkbox" name="name" value="Бренд2">&emsp;Бренд2</label>
-            <label><input type="checkbox" name="name" value="Бренд3">&emsp;Бренд3</label>
-            <input type="submit" name="name" value="ВЫБРАТЬ" class="downbutton">
+      <div class="slider">
+        <div class="slider_top">
+          <form class="" action="#" method="post">
+            <input type="radio" id="btn1" name="btn" value="btn1" class="radio">
+            <label for="btn1"></label>
+            <input type="radio" id="btn2" name="btn" value="btn2" class="btn2">
+            <label for="btn2"></label>
+            <input type="radio" id="btn3" name="btn" value="btn3">
+            <label for="btn3"></label>
+            <input type="radio" id="btn4" name="btn" value="btn4">
+            <label for="btn4"></label>
           </form>
         </div>
       </div>
-      <div class="logo">
-        <img src="img/logo.png" alt="logo" class="logo">
+    </div>
+  <div class="main-wrapper">
+    <main>
+      <div class="key">
+        <img src="img/key.png" alt="" >
+        <h2>ABOUT OUR COMPANY</h2>
+        <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pel&shy;lentesque vel lacus eget nisi convallis auctor. Nam</p>
+        <a href="#">READ MORE</a>
       </div>
+      <div class="key key__hidden">
+        <img src="img/key.png" alt="" >
+        <h2>ABOUT OUR COMPANY</h2>
+        <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pel&shy;lentesque vel lacus eget nisi convallis auctor. Nam</p>
+        <a href="#">READ MORE</a>
+      </div>
+      <div class="key key__hidden key__hidden__bottom">
+        <img src="img/key.png" alt="" >
+        <h2>ABOUT OUR COMPANY</h2>
+        <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pel&shy;lentesque vel lacus eget nisi convallis auctor. Nam</p>
+        <a href="#">READ MORE</a>
+      </div>
+      <div class="dial">
+        <img src="img/dial.png" alt="">
+        <h2>ABOUT OUR COMPANY</h2>
+        <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam</p>
+        <a href="#">READ MORE</a>
+      </div>
+      <div class="music">
+        <img src="img/music.png" alt="">
+        <h2>ABOUT OUR COMPANY</h2>
+        <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam</p>
+        <a href="#">READ MORE</a>
+      </div>
+    </main>
+  </div>
+  <div class="center-wrapper">
+    <div class="center">
+      <div class="center__left">
+        <img src="img/ava.png" alt="" class="center__ava">
+        <div class="center__white">
+          <h2>PINGBULLER <span>STARTS HERE</span></h2>
+          <p>"Nunc turpis neque, feu&shy;giat eget eleifend et, lacinia non neque. Prae&shy;sent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi conval&shy;lis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl."</p>
+        </div>
+        <div class="slider">
+          <div class="slider_bottom">
+            <form class="" action="#" method="post">
+              <input type="radio" id="btn5" name="btn" value="btn1" class="radio">
+              <label for="btn5"></label>
+              <input type="radio" id="btn6" name="btn" value="btn2" class="btn2">
+              <label for="btn6"></label>
+              <input type="radio" id="btn7" name="btn" value="btn3">
+              <label for="btn7"></label>
+              <input type="radio" id="btn8" name="btn" value="btn4">
+              <label for="btn8"></label>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="center__right">
+        <h2>RECENT UPDATES</h2>
+        <article>
+          <a href="#" class="post_image post1"></a>
+          <div class="article">
+            <a href="#"><h5>Nunc turpis neque feugiat eget</h5></a>
+            <p>Posted by Admin on March 13 2012 in Recent News</p>
+          </div>
+        </article>
+        <article>
+          <a href="#" class="post_image post2"></a>
+          <div class="article">
+            <a href="#"><h5>Nunc turpis neque feugiat eget</h5></a>
+            <p>Posted by Admin on March 13 2012 in Category</p>
+          </div>
+        </article>
+        <article>
+          <a href="#" class="post_image post3"></a>
+          <div class="article">
+            <a href="#"><h5>Nunc turpis neque feugiat eget</h5></a>
+            <p>Posted by Admin on March 13 2012 in Blog Updates</p>
+          </div>
+        </article>
+        <a href="#" class="readmore">READ MORE HERE</a>
+        <a href="#" class="blog readmore">MORE BLOG POSTS</a>
+      </div>
+    </div>
+  </div>
+  <div class="logos-wrapper">
+    <div class="logos">
+      <a href="#" class="logo__bottom logo1"></a>
+      <a href="#" class="logo__bottom logo2"></a>
+      <a href="#" class="logo__bottom logo3"></a>
+      <a href="#" class="logo__bottom logo4"></a>
+      <a href="#" class="logo__bottom logo5"></a>
+      <a href="#" class="logo__bottom logo6"></a>
+    </div>
+  </div>
+  <div class="bottom-wrapper">
+      <div class="bottom">
+        <div class="bottom__left">
+          <img src="img/logobot.png" alt="" class="bottom__logo">
+          <span>Copyright 2013, Pingbull AS</span>
+          <p>Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor.Nam vitae lectus eu libero pellentesque pul-</p>
+        </div>
+        <div class="bottom__center">
+          <h2>RECENT COMMENTS</h2>
+          <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor.Nam vitae lectus eu libero pellentesque pul-vinar. Quisque urna risus, mattis pulvi&shy;nar bibendum in, venenatis quis</p>
+        </div>
+        <div class="bottom__right">
+          <h2>NEWS CATEGORIES</h2>
+          <p>Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellen&shy;tesque vel lacus eget nisi convallis auctor.Nam vitae lectus eu libero pellentesque pul-vinar. Quisque urna risus, mattis pulvi&shy;nar bibendum in, venenatis quis</p>
+        </div>
+        <div class="bottom__right hidden">
+          <h2>NEWS CATEGORIES</h2>
+          <p>Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellen&shy;tesque vel lacus eget nisi convallis auctor.Nam vitae lectus eu libero pellentesque pul-vinar. Quisque urna risus, mattis pulvi&shy;nar bibendum in, venenatis quis</p>
+        </div>
+        <div class="bottom__right hidden">
+          <h2>NEWS CATEGORIES</h2>
+          <p>Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellen&shy;tesque vel lacus eget nisi convallis auctor.Nam vitae lectus eu libero pellentesque pul-vinar. Quisque urna risus, mattis pulvi&shy;nar bibendum in, venenatis quis</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wrapper">
       <footer>
-        <ul>
-          <li class="menu_item"><a href="#" class="menu_link">О компании</a></li><hr>
-          <li class="menu_item"><a href="#" class="menu_link">Доставка</a></li><hr>
-          <li class="menu_item"><a href="#" class="menu_link">Статьи</a></li><hr>
-          <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
+        <ul class="footer__menu">
+          <li class="menu__item"><a href="#" class="menu__link">HOME</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">ABOUT</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">BLOG</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">PRODUCTS</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">LOREM IPSUM</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">DOLOR SIT AMET</a></li>
         </ul>
-        <p>Создание сайта &copy;&nbsp;Global Vision</p>
+        <div class="footer__design">
+          <p>Designed by <span>Pingbull AS</span></p>
+        </div>
       </footer>
     </div>
   </body>
