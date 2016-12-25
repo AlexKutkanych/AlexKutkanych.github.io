@@ -34,7 +34,7 @@ html, body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
-  background-color: violet;
+  background-color: #C390D4;
 }
 
 html {
@@ -232,12 +232,22 @@ header .menu {
 .slider {
   width: 960px;
 }
+
+
 .slider_bottom, .slider_top {
   height: 10px;
   width: 960px;
   position: relative;
   margin: 0 auto;
   float: none;
+}
+
+.slider_top {
+margin: 100px 0 0 900px;
+}
+
+.slider_bottom {
+margin: 60px 0 0 200px;
 }
 
 .slider_bottom form {
@@ -255,7 +265,7 @@ form {
 }
 
 label {
-    display: inline-block;
+    display: none;
     cursor: pointer;
     position: relative;
     padding-left: 4px;
@@ -311,9 +321,11 @@ label:before {
   position: relative;
   border-bottom: 2px solid black;
   /*filter: progid:DXImageTransform.Microsoft.Shadow(color='red', Direction=100, Strength=13);*/
+  margin-bottom: -4px;
 }
 main {
   max-width: 960px;
+  margin: 0 auto;
 }
 
 main a {
@@ -344,7 +356,7 @@ main p {
 
 .dial {
   float: left;
-  width: 34%;
+  width: 33%;
   margin-top: 79px;
 }
 
@@ -377,20 +389,24 @@ main p {
   margin: 4px 24px 0 30px;
 }
 
+.dial h2 {
+  margin: 0 0 0 -7px;
+}
 .dial p {
-  margin: 0 0 0 86px;
+  margin: 0 0 0 78px;
 }
 
 .dial a {
   margin: 18px 0 0 248px;
 }
+
 /*MUSIC*/
 .music img {
   margin: 0 27px 0 42px;
 }
 
 .music p {
-  margin: 4px 0 0 82px;
+  margin: 4px 0 0 78px;
 }
 
 .music a {
@@ -428,11 +444,11 @@ main a {
   float: left;
   position: relative;
   width: 45%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);*/
   max-width: 428px;
-  max-height: 272px;
-  background-color: white;
+  height: 300px;
   margin: 92px 0 0 25px;
+  background: url(../img/dial-effect.png) 0 0 no-repeat;
 
 }
 
@@ -514,9 +530,23 @@ article {
   font-size: 18px;
 }
 
-.center__right img {
-  background: transparent;
+ .post_image {
+  display: block;
+  width: 50px;
+  height: 50px;
+  float: left;
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE8 */
+}
+.post1 {
+  background: url(../img/post1.png) 0 0 no-repeat;
+}
+
+.post2 {
+  background: url(../img/post2.png) 0 0 no-repeat;
+}
+
+.post3 {
+  background: url(../img/post3.png) 0 0 no-repeat;
 }
 
 /*BOTTOM*/
