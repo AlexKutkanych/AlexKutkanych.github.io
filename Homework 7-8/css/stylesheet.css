@@ -417,12 +417,11 @@ main a {
   float: left;
   position: relative;
   width: 45%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);*/
   max-width: 26.81rem;
-  max-height: 17.06rem;
-  background-color: white;
+  height: 18.75rem;
   margin: 5.75rem 0 0 1.563rem;
-
+  background: url(../img/dial-effect.png) 0 0 no-repeat;
 }
 
 .center__white {
@@ -591,7 +590,7 @@ article {
 .logo5 {
   width: 6.688rem;
   background-position: -17.188rem 0;
-  margin-right: 3rem;
+  margin-right: 2rem;
 }
 
 .logo6 {
@@ -647,234 +646,8 @@ footer .menu__item {
 
 }
 
-
-
-/*MEDIA 480PX*/
-/*@media (min-width: 480px) and (max-width: 767px) {
-  header, .wrapper1, main, .center, .logos, .bottom, footer {
-    width: 95%;
-    max-width: 47.94rem;
-  }
-
-  .wrapper1 {
-    max-width: 52.94rem;
-  }
-
-  header {
-    max-height: 13.4rem;
-  }
-
-  .header-wrapper {
-    max-height: 34.9rem;
-  }
-
-  .header__logo {
-    margin-left: 34%;
-  }
-
-  .overlay-wrapper {
-    max-height: 15rem;
-    position: relative;
-  }
-
-  header .menu {
-    position: relative;
-    margin-top: -149px;
-    margin-right: 25%;
-    width: 245px;
-    height: 100%;
-    z-index: 100;
-    text-align: center;
-    background: rgba(43, 34, 49, 0.8);
-    border-radius: 10px;
-    border: 1px solid #0f1a20;
-    visibility: hidden;
-    overflow: hidden;
-  }
-
-  header .menu:hover {
-    visibility: visible;
-  }
-
-  header .menu__item {
-    display: block;
-    border-top: 1px solid #523e5a;
-    border-bottom: 1px solid #36283e;
-    padding-right: 0;
-    overflow: hidden;
-  }
-
-  header .menu__link:hover {
-    background: rgba(43, 34, 49, 0.9);
-    border-bottom: 2px solid #edbfff;
-  }
-
-  .menu__link-visible {
-    visibility: visible;
-  }
-
-  .overlay-text {
-    max-width: 23rem;
-    max-height: 4.7rem;
-    overflow: hidden;
-    position: absolute;
-    z-index: 2;
-    top: 5.875rem;
-    left: -0.75rem;
-  }
-
-  .overlay-text p:first-child {
-    margin: 0 0 -0.3125rem 0;
-    font-size: 36px;
-  }
-
-  .overlay-text p:nth-child(2) {
-    font-size: 17px;
-  }
-
-  .overlay-text p:last-child {
-    display: none;
-  }
-
-  .arrow_left {
-    left: -3.6rem;
-    top: 6.5rem;
-  }
-
-  .arrow_right {
-    left: 25rem;
-    top: 6.5rem;
-  }
-
-  .phone {
-    top: -0.9rem;
-    left: 13rem;
-    max-width: 12rem;
-    z-index: 2;
-    position: absolute;
-  }
-
-  .main-wrapper {
-    height: 37.38rem;
-    z-index: 2;
-  }
-  .dial, .music {
-    display: none;
-  }
-
-  .key {
-    width: 95%;
-  }
-
-  .key__hidden {
-    display: block;
-  }
-
-  .key h2 {
-    font-size: 24px;
-  }
-
-  .key p {
-    font-size: 15px;
-  }
-
-  .key__hidden {
-    margin-top: 1.438rem;
-  }
-
-  .key a {
-    margin: 0.125rem 0 0 23.56rem;
-  }
-
-  .center-wrapper {
-    height: 50.2rem;
-  }
-
-  .center__left {
-    width: 92%;
-    margin: 4rem 0 0 1.188rem;
-  }
-
-  .center__right {
-    width: 85%;
-    margin: 5.875rem 4.688rem 0 1.688rem;
-    max-width: 20rem;
-    overflow: hidden;
-  }
-
-  .logos {
-    max-width: 24.25rem;
-    overflow: hidden;
-  }
-
-  .logos-wrapper {
-    height: 13.3rem;
-  }
-
-  .logos__mobile {
-    display: inline-block;
-    margin: 1.25rem 0 0 -25.63rem;
-  }
-
-  .logos__mobile1 {
-    display: none;
-  }
-
-  .bottom-wrapper {
-    height: 42rem;
-  }
-
-  .bottom__left, .bottom__center {
-    display: none;
-  }
-
-  .bottom__right {
-    float: left;
-    width: 95%;
-    display: block;
-    margin-top: 4.5rem;
-  }
-
-  .hidden {
-    margin-top: 2.25rem;
-  }
-
-  .bottom__right h2 {
-    font-size: 24px;
-  }
-
-  .footer-wrapper {
-    height: 12.5rem;
-  }
-
-  .footer__menu {
-    margin: 1px 0 0 0.8125rem;
-    height: 2rem;
-  }
-
-  .menu__item {
-    padding-right: 1.125rem;
-  }
-  .menu__link {
-    font-size: 20px;
-  }
-
-  .footer__design {
-    height: 2rem;
-    margin: 1.063rem 10rem 0 8.688rem;
-    font-size: 12px;
-  }
-  .readmore {
-    display: none;
-  }
-
-  .blog {
-    display: block;
-  }
-}*/
-
 /*MEDIA 768PX*/
-/*@media (min-width: 768px) and (max-width: 959px) {
+/*@media only screen and (min-width: 768px) and (max-width: 959px) {
   header, .wrapper1, main, .center, .logos, .bottom, footer {
     width: 95%;
     max-width: 48rem;
@@ -893,31 +666,55 @@ footer .menu__item {
   }
 
   .overlay-wrapper {
+    min-width: 48rem;
+    width: 100%;
     margin-top: 8rem;
     height: 25rem;
+    position: relative;
+
   }
   .wrapper1 {
     max-width: 90%;
     margin: 0 auto;
+    position: relative;
+  }
+
+  .div1 {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
   }
 
   .arrow_left {
-  left: -3rem;
-  top: 11.5rem;
+  left: -2.6rem;
+  top: 11.3rem;
  }
 
   .phone {
-    margin-right: 11.7rem;
-    margin-top: -1.3rem;
+    top: 49%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+    position: absolute;
   }
   .arrow_right {
-    left: 38.56rem;
-    top: 11.13rem;
+    left: 102%;
+    top: 11.3rem;
+  }
+
+  form {
+    display: block;
+    height: 1.25rem;
+    width:  11rem;
+    position: absolute;
+    top: 2.4rem;
+    left: 29.8rem;
   }
 
   .overlay-text {
     width: 38%;
-
+    top: 35%;
+    left: 20%;
+    transform: translate(-51%,-50%);
   }
 
   .overlay-text p:first-child{
@@ -948,7 +745,7 @@ footer .menu__item {
 
 
   .header-wrapper {
-    height: 50.1rem;
+    height: 51.1rem;
   }
 
   .key, .dial, .music {
@@ -995,7 +792,28 @@ footer .menu__item {
   }
 
   .logos {
-    margin: 0.9375rem 0 0 1.625rem;
+    width: 45.563rem;
+    margin: 1.438em auto;
+  }
+
+  .logo__bottom {
+    margin-right: 3rem;
+  }
+
+  .logo3 {
+    margin-right: 3.5rem;
+  }
+
+  .logo4 {
+    margin-right: 3.063rem;
+  }
+
+  .logo5 {
+    margin-right: 2.813rem;
+  }
+
+  .logo6 {
+    margin-right: 0;
   }
 
   .bottom-wrapper {
@@ -1037,7 +855,7 @@ footer .menu__item {
   }
 
   .menu__link {
-    font-size: 18px;
+    font-size: 25px;
 
   }
 
@@ -1059,39 +877,61 @@ footer .menu__item {
   .blog {
     display: block;
   }
-}
-*/
+}*/
 
-/*MEDIA 320PX*/
-/*@media (min-width: 320px) and (max-width: 479px) {
+/*MEDIA 480PX*/
+/*@media only screen and (min-width: 480px) and (max-width: 767px) {
+  html, body {
+  overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+
   header, .wrapper1, main, .center, .logos, .bottom, footer {
     width: 95%;
+    max-width: 47.94rem;
+  }
+
+  .wrapper1 {
+    max-width: 52.94rem;
+    position: relative;
+    margin: 0 auto;
+    max-width: 90%;
   }
 
   header {
+    position: relative;
     max-height: 13.4rem;
+    height: 29.938em;
   }
 
   .header-wrapper {
-    max-height: 32.6rem;
+    max-height: 38.9rem;
   }
 
   .header__logo {
-    margin-left: 25%;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .overlay-wrapper {
     max-height: 15rem;
     position: relative;
-    background: none;
+    width: 100%;
+    min-width: 30em;
   }
 
+
   header .menu {
-    position: relative;
-    margin-top: -149px;
-    margin-right: 10%;
-    width: 245px;
-    height: 100%;
+    position: absolute;
+    top: 121%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15.313em;
+    height: 14.313em;
     z-index: 100;
     text-align: center;
     background: rgba(43, 34, 49, 0.8);
@@ -1099,17 +939,27 @@ footer .menu__item {
     border: 1px solid #0f1a20;
     visibility: hidden;
     overflow: hidden;
+    margin-top: 0;
   }
+
   header .menu:hover {
     visibility: visible;
+
   }
 
   header .menu__item {
     display: block;
     border-top: 1px solid #523e5a;
     border-bottom: 1px solid #36283e;
+    border-bottom: 2px solid transparent;
     padding-right: 0;
     overflow: hidden;
+    font-size: 23px;
+  }
+
+  .menu__link {
+    border-bottom: 2px solid transparent;
+    font-size: 23px;
   }
 
   header .menu__link:hover {
@@ -1119,6 +969,7 @@ footer .menu__item {
 
   .menu__link-visible {
     visibility: visible;
+    font-size: 23px;
   }
 
   .overlay-text {
@@ -1126,9 +977,10 @@ footer .menu__item {
     max-height: 4.7rem;
     overflow: hidden;
     position: absolute;
-    z-index: 2;
-    top: 5.6rem;
-    left: 2.6rem;
+    z-index: 3;
+    top: 52%;
+    left: 28%;
+    transform: translate(-49%, -50%);
   }
 
   .overlay-text p:first-child {
@@ -1145,18 +997,34 @@ footer .menu__item {
   }
 
   .arrow_left {
-    left: -3.6rem;
+    left: -1.8rem;
     top: 6.5rem;
   }
 
   .arrow_right {
-    left: 25rem;
-    top: 6.5rem;
+    position: absolute;
+    left: 100%;
+    top: 6.6rem;
   }
 
   .phone {
-    display: none;
+    top: 8.9rem;
+    left: 76%;
+    max-width: 12rem;
+    z-index: 3;
+    position: absolute;
+    transform: translate(-50%, -50%);
   }
+
+  .slider {
+    max-width: 480px;
+  }
+
+  form {
+    top: 1.8rem;
+    left: 66%;
+  }
+
   .main-wrapper {
     height: 37.38rem;
     z-index: 2;
@@ -1167,18 +1035,14 @@ footer .menu__item {
 
   .key {
     width: 95%;
-    max-width: 16.13rem;
-    max-height: 6.625rem;
-    overflow: hidden;
-    margin: 72px 0 30px 13px;
   }
 
   .key__hidden {
     display: block;
   }
+
   .key h2 {
     font-size: 24px;
-    margin-bottom: 0px;
   }
 
   .key p {
@@ -1193,12 +1057,328 @@ footer .menu__item {
     margin: 0.125rem 0 0 23.56rem;
   }
 
+  .center {
+    position: relative;
+  }
+
+  .center-wrapper {
+    height: 50.2rem;
+  }
+
+  .center__left {
+    width: 92%;
+    margin: 4rem 0 0 1.188rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%, -1%);
+  }
+
+  .center__right {
+    width: 85%;
+    margin: 5.875rem 4.688rem 0 1.688rem;
+    max-width: 20rem;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, 105%);
+  }
+
+  .logos {
+    max-width: 22.25rem;
+    overflow: hidden;
+  }
+
+
+
+  .logos-wrapper {
+    height: 13.3rem;
+  }
+
+  .logo__bottom {
+    margin-right: 1.250rem;
+  }
+
+  .logo1 {
+    margin-right: 2.938rem;
+    margin-left: 0.813rem;
+  }
+
+  .logo3 {
+    margin-left: 1.688em;
+  }
+
+  .logo4 {
+    margin-right: 3.188rem;
+    margin-left: 0.562rem;
+    margin-top: 1.688rem;
+  }
+
+  .logo5 {
+    margin-right: 2.188rem;
+    margin-bottom: 0.188rem;
+  }
+
+  .logo6 {
+    margin-right: 0;
+    margin-bottom: 0.188rem;
+  }
+
+  .logos__mobile {
+    display: inline-block;
+    margin: 1.25rem 0 0 -25.63rem;
+  }
+
+  .logos__mobile1 {
+    display: none;
+  }
+
+  .bottom-wrapper {
+    height: 42rem;
+  }
+
+  .bottom__left, .bottom__center {
+    display: none;
+  }
+
+  .bottom__right {
+    float: left;
+    width: 95%;
+    display: block;
+    margin-top: 4.5rem;
+  }
+
+  .hidden {
+    margin-top: 2.25rem;
+  }
+
+  .bottom__right h2 {
+    font-size: 24px;
+  }
+
+  .footer-wrapper {
+    height: 12.5rem;
+  }
+
+  .footer__menu {
+    margin: 1px 0 0 0.8125rem;
+    height: 2rem;
+    max-width: 46.250em;
+  }
+
+  .menu__item {
+    padding-right: 0.125rem;
+  }
+  footer .menu__link {
+    font-size: 1.125rem;
+  }
+
+  .footer__design {
+    height: 2rem;
+    margin: 1.063rem 10rem 0 8.688rem;
+    font-size: 12px;
+  }
+  .readmore {
+    display: none;
+  }
+
+  .blog {
+    display: block;
+  }
+}*/
+
+/*MEDIA 320PX*/
+/*@media only screen and (min-width: 320px) and (max-width: 479px) {
+  html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
+  header, .wrapper1, main, .center, .logos, .bottom, footer {
+    width: 95%;
+    height: 100%;
+  }
+
+  header {
+    position: relative;
+    max-height: 13.4rem;
+    height: 18.750em;
+  }
+
+  .header-wrapper {
+    max-height: 42.6rem;
+  }
+
+  .header__logo {
+    position: absolute;
+    top: 8%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  .overlay-wrapper {
+    max-height: 18.3rem;
+    width: 100%;
+    min-width: 20rem;
+    position: relative;
+    background: none;
+  }
+
+  header {
+    position: relative;
+  }
+  header .menu {
+    position: absolute;
+    top: 83%;
+    left: 51%;
+    transform: translate(-50%, -20%);
+    width: 245px;
+    height:14.313em;
+    z-index: 100;
+    text-align: center;
+    background: rgba(43, 34, 49, 0.8);
+    border-radius: 10px;
+    border: 1px solid #0f1a20;
+    visibility: hidden;
+    overflow: hidden;
+    margin-top: 0;
+  }
+  header .menu:hover {
+    visibility: visible;
+
+  }
+
+
+  header .menu__item {
+    display: block;
+    border-top: 1px solid #523e5a;
+    border-bottom: 1px solid #36283e;
+    padding-right: 0;
+    overflow: hidden;
+  }
+
+  .menu__link {
+    border-bottom: 2px solid transparent;
+    font-size: 23px;
+
+  }
+
+  header .menu__link:hover {
+    background: rgba(43, 34, 49, 0.9);
+    border-bottom: 2px solid #edbfff;
+  }
+
+  .menu__link-visible {
+    visibility: visible;
+    font-size: 23px;
+
+  }
+
+  .wrapper1 {
+    position: relative;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 39%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 12rem;
+    max-height: 4.7rem;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .overlay-text p:first-child {
+    margin: 0 0 -0.3125rem 0;
+    font-size: 36px;
+  }
+
+  .overlay-text p:nth-child(2) {
+    font-size: 17px;
+  }
+
+  .overlay-text p:last-child {
+    display: none;
+  }
+
+
+  .arrow_left {
+    left: -0.5rem;
+    top: 5.4rem;
+  }
+
+  .arrow_right {
+    left: 18.2rem;
+    top: 5.4rem;
+  }
+
+  .phone {
+    display: none;
+  }
+
+
+  .main-wrapper {
+    height: 37.38rem;
+    z-index: 2;
+  }
+  .dial, .music {
+    display: none;
+  }
+
+  .key {
+    width: 95%;
+    max-width: 16.13rem;
+    max-height: 6.3rem;
+    overflow: hidden;
+    position: absolute;
+    top: 7%;
+    left: 47%;
+    transform: translate(-50%, -47%);
+  }
+
+  .key__hidden {
+    display: block;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-54%, -50%);
+  }
+
+  .key__hidden__bottom {
+    top: 46%;
+    transform: translate(-54%, 51%);
+  }
+  .key h2 {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+
+  .key p {
+    font-size: 15px;
+    margin-top: -0.5rem;
+  }
+
+  .key a {
+    margin: 0.125rem 0 0 23.56rem;
+  }
+
+  .center {
+    position: relative;
+  }
+
   .center-wrapper {
     height: 50.2rem;
   }
 
   .center__white {
-    max-width: 11.88rem;
+    max-width: 80%;
     min-height: 14rem;
     overflow: hidden;
   }
@@ -1215,9 +1395,12 @@ footer .menu__item {
 
   .center__right {
     width: 85%;
-    margin: 5.5rem 2.688rem 0 1.688rem;
     max-width: 20rem;
     overflow: hidden;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -49%);
   }
 
   article {
@@ -1227,6 +1410,7 @@ footer .menu__item {
   .logos {
     max-width: 15.25rem;
     overflow: hidden;
+    margin-top: 52px;
   }
 
   .logos-wrapper {
@@ -1242,8 +1426,47 @@ footer .menu__item {
     margin: 2.3rem 0 0 -32.1rem;
   }
 
+  .logo__bottom {
+    margin-right: 1.25rem;
+  }
+
+  .logo1 {
+    margin-right: 3rem;
+    margin-left: 1.313rem;
+
+  }
+
+  .logo2 {
+    margin-right: 0;
+  }
+
+  .logo3 {
+    margin: 3.5rem 3.5rem 0 1.688rem;
+  }
+
+
+  .logo5 {
+    margin: 2.313rem 2.938em 0 -0.188rem;
+  }
+
+  .logo6 {
+    margin-right: 0;
+  }
+
+
   .bottom-wrapper {
     display: none;
+  }
+
+  .slider_top form {
+    position: absolute;
+    top: -4.375em;
+    left: 67%;
+    transform: translate(-50%, -50%);
+  }
+
+  .slider_bottom {
+    margin: -1.25rem 0 0 -4.75rem;
   }
 
   .footer-wrapper {
@@ -1257,7 +1480,7 @@ footer .menu__item {
   .footer__design {
     height: 2rem;
     width: 9rem;
-    margin: -0.6rem 5.7rem 0 8.688rem;
     font-size: 12px;
+    margin: 0 25%;
   }
 }*/

@@ -1,10 +1,10 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   html, body {
   overflow-x: hidden;
-}
-body {
-  position: relative
-}
+  }
+  body {
+    position: relative
+  }
 
   header, .wrapper1, main, .center, .logos, .bottom, footer {
     width: 95%;
