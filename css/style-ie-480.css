@@ -8,11 +8,11 @@ body {
 
   header, .wrapper1, main, .center, .logos, .bottom, footer {
     width: 95%;
-    max-width: 47.94rem;
+    max-width: 767px;
   }
 
   .wrapper1 {
-    max-width: 52.94rem;
+    max-width: 847px;
     position: relative;
     margin: 0 auto;
     max-width: 90%;
@@ -20,39 +20,40 @@ body {
 
   header {
     position: relative;
-    max-height: 13.4rem;
-    height: 29.938em;
+    max-height: 214px;
+    height: 479px;
   }
 
   .header-wrapper {
-    max-height: 38.9rem;
+    max-height: 652px;
   }
 
   .header__logo {
     position: absolute;
-    top: 16%;
-    left: 50%;
+    top: -5%;
+    left: 35%;
     transform: translate(-50%, -50%);
   }
 
   .overlay-wrapper {
-    max-height: 15rem;
+    max-height: 240px;
     position: relative;
     width: 100%;
-    min-width: 30em;
+    min-width: 480px;
+    margin-top: -260px;
   }
 
   /*Dropdown menu*/
   header .menu {
     position: absolute;
-    top: 121%;
-    left: 50%;
+    top: 71%;
+    left: 25%;
     transform: translate(-50%, -50%);
-    width: 15.313em;
-    height: 14.313em;
+    width: 245px;
+    height: 229px;
     z-index: 100;
     text-align: center;
-    background: rgba(43, 34, 49, 0.8);
+    background: rgb(43, 34, 49);
     border-radius: 10px;
     border: 1px solid #0f1a20;
     visibility: hidden;
@@ -91,13 +92,13 @@ body {
   }
 
   .overlay-text {
-    max-width: 23rem;
-    max-height: 4.7rem;
+    max-width: 368px;
+    max-height: 75px;
     overflow: hidden;
     position: absolute;
     z-index: 3;
-    top: 52%;
-    left: 28%;
+    top: 22%;
+    left: 3%;
     transform: translate(-49%, -50%);
   }
 
@@ -115,36 +116,38 @@ body {
   }
 
   .arrow_left {
-    left: -1.8rem;
-    top: 6.5rem;
+    left: -28px;
+    top: 104px;
   }
 
   .arrow_right {
     position: absolute;
     left: 100%;
-    top: 6.6rem;
+    top: 104px;
   }
 
   .phone {
-    top: 8.9rem;
-    left: 76%;
-    max-width: 12rem;
+    top: -10px;
+    left: 56%;
+    max-width: 192px;
     z-index: 3;
     position: absolute;
     transform: translate(-50%, -50%);
   }
+
+
 
   .slider {
     max-width: 480px;
   }
 
   form {
-    top: 1.8rem;
-    left: 66%;
+    top: 28px;
+    left: 16%;
   }
 
   .main-wrapper {
-    height: 37.38rem;
+    height: 598px;
     z-index: 2;
   }
   .dial, .music {
@@ -168,11 +171,11 @@ body {
   }
 
   .key__hidden {
-    margin-top: 1.438rem;
+    margin-top: 23px;
   }
 
   .key a {
-    margin: 0.125rem 0 0 23.56rem;
+    margin: 2px 0 0 376px;
   }
 
   .center {
@@ -180,51 +183,48 @@ body {
   }
 
   .center-wrapper {
-    height: 50.2rem;
+    height: 803px;
   }
 
   .center__left {
     width: 92%;
-    margin: 4rem 0 0 1.188rem;
+    margin: 64px 0 0 19px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-53%, -1%);
   }
 
   .center__right {
     width: 85%;
-    margin: 5.875rem 4.688rem 0 1.688rem;
-    max-width: 20rem;
+    margin: 494px 75px 0 18px;
+    max-width: 320px;
     overflow: hidden;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-60%, 105%);
   }
 
   .logos {
-    max-width: 22.25rem;
+    max-width: 356px;
     overflow: hidden;
   }
 
 
 
   .logos-wrapper {
-    height: 13.3rem;
+    height: 212px;
   }
 
   .logo__bottom {
-    margin-right: 1.250rem;
+    margin-right: 20px;
   }
 
   .logo1 {
-    margin-right: 2.938rem;
-    margin-left: 0.813rem;
+    margin-right: 47px;
+    margin-left: 13px;
   }
 
   .logo3 {
-    margin-left: 1.688em;
+    margin-left: 27px;
   }
 
   .logo4 {
@@ -253,7 +253,7 @@ body {
   }
 
   .bottom-wrapper {
-    height: 42rem;
+    height: 672px;
   }
 
   .bottom__left, .bottom__center {
@@ -264,7 +264,7 @@ body {
     float: left;
     width: 95%;
     display: block;
-    margin-top: 4.5rem;
+    margin-top: 72px;
   }
 
   .hidden {
@@ -303,5 +303,10 @@ body {
 
   .blog {
     display: block;
+  }
+
+  .second {
+    width: 200px;
+    font-size: 12px;
   }
 }

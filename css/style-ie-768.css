@@ -6,13 +6,13 @@
   }
 
   .header__logo {
-    /*margin: 59px 224px 0 0;*/
+    margin-right: 100px;
   }
 
-  .menu {
-    float: none;
-    /*margin: 25px 50px 16px 0;*/
-    width: 800px;
+  header .menu {
+    float: left;
+    min-width: 600px;
+    margin-top: 20px;
   }
 
   .overlay-wrapper {
@@ -99,22 +99,20 @@
     height: 51.1rem;
   }
 
-  .key, .dial, .music {
-    width: 32%;
-    max-height: 180px;
-    overflow: hidden;
-  }
-
-  main a {
-    display: block;
-  }
-
-  main {
-    height: 342px;
-  }
-
-    main h2 {
+  main h2 {
     font-size: 23px;
+  }
+
+  .key {
+    width: 30%;
+  }
+
+  .key p {
+    margin-bottom: 120px;
+  }
+
+  .key a {
+    margin-left: 160px;
   }
 
   .center__left {
@@ -227,6 +225,10 @@
 
   }
 
+  .footer-wrapper {
+    height: 200px;
+  }
+
   .footer__design {
     max-width: 164px;
     max-height: 16px;
@@ -239,11 +241,12 @@
   }
 
   .readmore {
-    visibility: hidden;
+    display: none;
   }
 
   .blog {
     visibility: visible;
-    margin-top: 130px;
+    display: block;
+    margin: 130px 0 0 120px;
   }
 }

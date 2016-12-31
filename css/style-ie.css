@@ -652,6 +652,7 @@ article {
   height: 112px;
   background: url(../img/bottom.jpg);
   background-size: cover;
+  background-repeat: repeat-x;
 }
 
 .footer__menu {
@@ -688,11 +689,11 @@ footer .menu__item {
 
 
 
-  .blog {
-    visibility: hidden;
-  }
   .readmore {
     display: block;
   }
 
+  .blog {
+    display: none;
+  }
 }
