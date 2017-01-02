@@ -2,11 +2,14 @@
   html, body {
   overflow-x: hidden;
 }
+  html {
+    height: 580%;
+  }
 body {
   position: relative
 }
 
-  header, .wrapper1, main, .center, .logos, .bottom, footer {
+  header, .wrapper1, main, .center, .logos, .bottom, {
     width: 95%;
     max-width: 767px;
   }
@@ -31,8 +34,7 @@ body {
   .header__logo {
     position: absolute;
     top: -5%;
-    left: 35%;
-    transform: translate(-50%, -50%);
+    left: 20%;
   }
 
   .overlay-wrapper {
@@ -47,7 +49,7 @@ body {
   header .menu {
     position: absolute;
     top: 71%;
-    left: 25%;
+    left: 15%;
     transform: translate(-50%, -50%);
     width: 245px;
     height: 229px;
@@ -103,7 +105,6 @@ body {
   }
 
   .overlay-text p:first-child {
-    margin: 0 0 -0.3125rem 0;
     font-size: 36px;
   }
 
@@ -183,32 +184,41 @@ body {
   }
 
   .center-wrapper {
-    height: 803px;
+    height:703px;
   }
 
   .center__left {
-    width: 92%;
-    margin: 64px 0 0 19px;
+    width: 85%;
+    height: 270px;
+    margin: 44px 0 0 19px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    left: 10%;
+    background-image: none;
+    background-color: white;
   }
 
+  .slider_bottom {
+    margin: 0 auto;
+  }
   .center__right {
     width: 85%;
-    margin: 494px 75px 0 18px;
-    max-width: 320px;
+    margin-top: 400px;
+    max-width: 355px;
     overflow: hidden;
     position: absolute;
-    left: 50%;
+    left: 20%;
+  }
+
+  .article p {
+    max-width: 250px;
+    max-height: 25px;
+    overflow: hidden;
   }
 
   .logos {
     max-width: 356px;
     overflow: hidden;
   }
-
-
 
   .logos-wrapper {
     height: 212px;
@@ -228,19 +238,14 @@ body {
   }
 
   .logo4 {
-    margin-right: 3.188rem;
-    margin-left: 0.562rem;
-    margin-top: 1.688rem;
+    margin: 27px 51px 0 8px;
   }
 
   .logo5 {
-    margin-right: 2.188rem;
-    margin-bottom: 0.188rem;
+    margin-right: 15px;
   }
-
   .logo6 {
-    margin-right: 0;
-    margin-bottom: 0.188rem;
+    background-position: -380px 0;
   }
 
   .logos__mobile {
@@ -253,49 +258,60 @@ body {
   }
 
   .bottom-wrapper {
-    height: 672px;
+    height: 572px;
   }
 
   .bottom__left, .bottom__center {
     display: none;
   }
-
+  .bottom {
+    width: 90%;
+  }
   .bottom__right {
     float: left;
     width: 95%;
+    max-height: 120px;
+    overflow: hidden;
     display: block;
     margin-top: 72px;
   }
 
   .hidden {
-    margin-top: 2.25rem;
+    margin-top: 36px;
   }
 
   .bottom__right h2 {
     font-size: 24px;
   }
 
+  footer {
+    max-width: 767px;
+    height: 400px;
+  }
+
   .footer-wrapper {
-    height: 12.5rem;
+    height: 400px;
   }
 
   .footer__menu {
-    margin: 1px 0 0 0.8125rem;
-    height: 2rem;
-    max-width: 46.250em;
+    height: 32px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .menu__item {
-    padding-right: 0.125rem;
+    padding-right: 2px;
   }
   footer .menu__link {
-    font-size: 1.125rem;
+    font-size: 18px;
+    /*margin-right: 1px;*/
   }
 
   .footer__design {
-    height: 2rem;
-    margin: 1.063rem 10rem 0 8.688rem;
+    width: 170px;
+    display: block;
     font-size: 12px;
+    margin: 0px 30%;
   }
   .readmore {
     display: none;
@@ -303,10 +319,11 @@ body {
 
   .blog {
     display: block;
+    margin-right: 20px;
   }
 
   .second {
-    width: 200px;
+    width: 170px;
     font-size: 12px;
   }
 }
