@@ -42,7 +42,6 @@
   .phone {
     top: -8%;
     left: 59%;
-    transform: translate(-50%, -50%);
     position: absolute;
   }
   .arrow_right {
@@ -63,7 +62,6 @@
     width: 53%;
     top: 23%;
     left: 2%;
-    transform: translate(-51%,-50%);
   }
 
   .overlay-text p:first-child{
@@ -108,7 +106,8 @@
   }
 
   .key p {
-    margin-bottom: 120px;
+    max-height: 150px;
+    overflow: hidden;
   }
 
   .key a {
@@ -138,16 +137,21 @@
     max-width: 376px;
   }
 
+
   .article {
     overflow: hidden;
     height: 45px;
     max-width: 270px;
   }
 
+  .article h5 {
+    max-height: 25px;
+    overflow: hidden;
+  }
+
   .article p {
     overflow: hidden;
     max-width: 260px;
-
   }
 
   .slider_bottom {
@@ -176,7 +180,7 @@
   }
 
   .logo5 {
-    margin-right: 45px;
+    margin-right: 40px;
   }
 
   .logo6 {

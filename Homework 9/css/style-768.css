@@ -1,0 +1,236 @@
+/*MEDIA 768PX*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  header, .wrapper1, main, .center, .logos, .bottom, footer {
+    width: 95%;
+    max-width: 48rem;
+  }
+
+  .header__logo {
+    margin-right: 12.5rem;
+    margin: 3.7rem 14rem 0 0;
+
+  }
+
+  .menu {
+    float: left;
+    margin: 1.6rem 0 1rem 0;
+    width: 100%;
+  }
+
+  .overlay-wrapper {
+    min-width: 48rem;
+    width: 100%;
+    margin-top: 8rem;
+    height: 25rem;
+    position: relative;
+
+  }
+  .wrapper1 {
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .div1 {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .arrow_left {
+  left: -2.6rem;
+  top: 11.3rem;
+ }
+
+  .phone {
+    top: 49%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  .arrow_right {
+    left: 102%;
+    top: 11.3rem;
+  }
+
+  form {
+    display: block;
+    height: 1.25rem;
+    width:  11rem;
+    position: absolute;
+    top: 2.4rem;
+    left: 29.8rem;
+  }
+
+  .overlay-text {
+    width: 38%;
+    top: 35%;
+    left: 20%;
+    transform: translate(-51%,-50%);
+  }
+
+  .overlay-text p:first-child{
+    font-size: 48px;
+    margin: 6.5rem 0 0.5rem 0;
+  }
+
+
+  .overlay-text p:nth-child(2){
+    max-height: 2rem;
+    font-size: 21px;
+    overflow: hidden;
+
+  }
+
+  .overlay-text p:last-child{
+    max-height: 6rem;
+    overflow: hidden;
+  }
+
+  .dial, .music {
+    display: none;
+  }
+
+  .key__hidden {
+    display: inline-block;
+  }
+
+
+  .header-wrapper {
+    height: 51.1rem;
+  }
+
+  .key, .dial, .music {
+    width: 32%;
+    max-height: 12.5rem;
+    overflow: hidden;
+  }
+
+    main h2 {
+    font-size: 23px;
+  }
+
+  .center__left {
+    width: 44%;
+    height: 16.5rem;
+    background: none;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .center__white {
+    max-width: 15.63rem;
+    max-height: 12.6rem;
+    overflow: hidden;
+  }
+
+  .center__white h2 {
+    font-size: 25px;
+    width: 6.25rem;
+    margin-bottom: -0.3125rem;
+  }
+
+  .center__right {
+    float: right;
+    width: 44%;
+    margin: 7.44rem 0.5rem 0 0;
+    max-width: 23.5rem;
+  }
+
+  .article {
+    overflow: hidden;
+    height: 2.813rem;
+    max-width: 15.63rem;
+  }
+
+  .logos-wrapper {
+    height: 7.2rem;
+  }
+
+  .logos {
+    width: 46.563rem;
+    margin: 1.438em auto;
+  }
+
+  .logo__bottom {
+    margin-right: 3rem;
+  }
+
+  .logo3 {
+    margin-right: 3.5rem;
+  }
+
+  .logo4 {
+    margin-right: 3.063rem;
+  }
+
+  .logo5 {
+    margin-right: 2.813rem;
+  }
+
+  .logo6 {
+    margin-right: 0;
+  }
+
+  .bottom-wrapper {
+      height: 24.7rem;
+    }
+  .bottom__left {
+    display: none;
+  }
+  .bottom__center {
+    display: none;
+  }
+
+  .bottom__right {
+    float: left;
+    width: 28%;
+    max-width: 14.13rem;
+    max-height: 11.6rem;
+    overflow: hidden;
+    margin-left: 0.4375rem;
+    margin-right: 2.063rem;
+
+  }
+  .bottom__right h2 {
+    font-size: 24px;
+  }
+
+  .hidden {
+    float: left;
+    display: inline-block;
+    margin-right: 1.475rem;
+  }
+
+  .logos img {
+    max-width: 715px;
+  }
+
+  .footer-wrapper {
+    height: 10.94rem;
+  }
+
+  .menu__link {
+    font-size: 25px;
+
+  }
+
+  .footer__design {
+    max-width: 9rem;
+    max-height: 1rem;
+    margin: -3.9rem 4rem 0 0;
+    font-size: 12px;
+  }
+
+  .logos__mobile, .logos__mobile1  {
+    display: none;
+  }
+
+  .readmore {
+    display: none;
+  }
+
+  .blog {
+    display: block;
+  }
+}

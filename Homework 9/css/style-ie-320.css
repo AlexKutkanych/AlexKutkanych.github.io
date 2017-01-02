@@ -2,9 +2,12 @@
   html, body {
   overflow-x: hidden;
 }
-body {
-  position: relative
-}
+  html {
+    height: 410%;
+  }
+  body {
+    position: relative
+  }
 
   header, .wrapper1, main, .center, .logos, .bottom, footer {
     width: 95%;
@@ -13,28 +16,26 @@ body {
 
   header {
     position: relative;
-    max-height: 13.4rem;
-    height: 18.750em;
+    max-height: 208px;
+    height: 299px;
   }
 
   .header-wrapper {
-    max-height: 42.6rem;
+    max-height: 521px;
   }
 
   .header__logo {
     position: absolute;
-    top: 8%;
-    left: 51%;
-    transform: translate(-50%, -50%);
-    display: none;
+    top: -8%;
+    left: 31%;
   }
 
   .overlay-wrapper {
-    max-height: 18.3rem;
+    max-height: 292px;
     width: 100%;
-    min-width: 20rem;
+    min-width: 320px;
     position: relative;
-    background: none;
+    background-image: none;
   }
 
   /*Dropdown menu*/
@@ -44,14 +45,13 @@ body {
   header .menu {
     /*Align block center*/
     position: absolute;
-    top: 83%;
-    left: 51%;
-    transform: translate(-50%, -20%);
+    top: 73%;
+    left: 16%;
     width: 245px;
-    height:14.313em;
+    height: 229px;
     z-index: 100;
     text-align: center;
-    background: rgba(43, 34, 49, 0.8);
+    background: rgb(43, 34, 49);
     border-radius: 10px;
     border: 1px solid #0f1a20;
     visibility: hidden;
@@ -60,9 +60,7 @@ body {
   }
   header .menu:hover {
     visibility: visible;
-
   }
-
 
   header .menu__item {
     display: block;
@@ -75,69 +73,66 @@ body {
   .menu__link {
     border-bottom: 2px solid transparent; /*MENU DOEN'T JUMP WHILE HOVER*/
     font-size: 23px;
-
   }
 
   header .menu__link:hover {
-    background: rgba(43, 34, 49, 0.9);
+    background: rgb(43, 34, 49);
     border-bottom: 2px solid #edbfff;
   }
 
   .menu__link-visible {
     visibility: visible;
     font-size: 23px;
-
   }
 
   .wrapper1 {
     position: relative;
-    max-width: 20rem;
+    max-width: 320px;
     margin: 0 auto;
   }
 
   .overlay-text {
     position: absolute;
-    top: 39%;
-    left: 52%;
-    transform: translate(-50%, -50%);
-    width: 12rem;
-    max-height: 4.7rem;
+    top: -43%;
+    left: 21%;
+    width: 192px;
+    max-height: 75px;
     overflow: hidden;
     z-index: 2;
   }
 
   .overlay-text p:first-child {
-    margin: 0 0 -0.3125rem 0;
+    margin: 0 0 -10px 0;
     font-size: 36px;
   }
 
-  .overlay-text p:nth-child(2) {
-    font-size: 17px;
-  }
-
-  .overlay-text p:last-child {
+  .third {
     display: none;
   }
 
+  .second {
+    font-size: 20px;
+    max-height: 28px;
+  }
 
   .arrow_left {
-    left: -0.5rem;
-    top: 5.4rem;
+    left: -8px;
+    top: -156px;
   }
 
   .arrow_right {
-    left: 18.2rem;
-    top: 5.4rem;
+    left: 291px;
+    top: -156px;
   }
 
   .phone {
     display: none;
   }
 
-
   .main-wrapper {
-    height: 37.38rem;
+    height: 598px;
     z-index: 2;
+    margin-top: -420px;
   }
   .dial, .music {
     display: none;
@@ -145,27 +140,22 @@ body {
 
   .key {
     width: 95%;
-    max-width: 16.13rem;
-    max-height: 6.3rem;
-    overflow: hidden;
     position: absolute;
-    top: 7%;
-    left: 47%;
-    transform: translate(-50%, -47%);
+    left: 10%;
+    top: 0;
   }
 
   .key__hidden {
     display: block;
     position: absolute;
-    top: 34%;
-    left: 50%;
-    transform: translate(-54%, -50%);
+    top: 27%;
+    left: 10%;
   }
 
   .key__hidden__bottom {
-    top: 46%;
-    transform: translate(-54%, 51%);
+    top: 56%;
   }
+
   .key h2 {
     font-size: 24px;
     margin-bottom: 0px;
@@ -173,11 +163,15 @@ body {
 
   .key p {
     font-size: 15px;
-    margin-top: -0.5rem;
+    margin-left: 20px;
+    max-width: 208px;
+    max-height: 78px;
+    overflow: hidden;
   }
 
   .key a {
-    margin: 0.125rem 0 0 23.56rem;
+    display: block;
+    margin-left: 205px;
   }
 
   .center {
@@ -185,66 +179,79 @@ body {
   }
 
   .center-wrapper {
-    height: 50.2rem;
+    height: 720px;
   }
 
   .center__white {
     max-width: 80%;
-    min-height: 14rem;
+    min-height: 210px;
     overflow: hidden;
   }
 
   .center__white h2 {
     font-size: 24px;
-    width: 6.063rem;
+    width: 97px;
   }
 
   .center__left {
     width: 92%;
-    margin: 4rem 0 0 1.188rem;
+    max-height: 270px;
+    margin: 64px 0 0 19px;
+    background-image: none;
+    background-color: white;
   }
 
   .center__right {
-    width: 85%;
-    max-width: 20rem;
+    width: 92%;
+    max-width: 320px;
     overflow: hidden;
     position: absolute;
-    top: 54%;
-    left: 50%;
-    transform: translate(-50%, -49%);
+    top: 38%;
+    left: 5%;
   }
 
   article {
-    width: 23rem;
+    width: 368px;
+  }
+
+  .article h5 {
+    width: 160px;
+    max-height: 20px;
+    overflow: hidden;
+  }
+
+  .article p {
+    width: 220px;
+    max-height: 20px;
+    overflow: hidden;
   }
 
   .logos {
-    max-width: 15.25rem;
+    max-width: 244px;
     overflow: hidden;
     margin-top: 52px;
   }
 
   .logos-wrapper {
-    height: 26.3rem;
+    height: 420px;
   }
 
   .logos__mobile {
     display: inline-block;
-    margin: 3.4rem 0 0 -16.3rem;
+    margin: 54px 0 0 260px;
   }
   .logos__mobile1 {
     display: inline-block;
-    margin: 2.3rem 0 0 -32.1rem;
+    margin: 36px 0 0 -513px;
   }
 
   .logo__bottom {
-    margin-right: 1.25rem;
+    margin-right: 20px;
   }
 
   .logo1 {
-    margin-right: 3rem;
-    margin-left: 1.313rem;
-
+    margin-right: 48px;
+    margin-left: 21px;
   }
 
   .logo2 {
@@ -252,36 +259,33 @@ body {
   }
 
   .logo3 {
-    margin: 3.5rem 3.5rem 0 1.688rem;
+    margin: 56px 56px 0 27px;
   }
 
-
   .logo5 {
-    margin: 2.313rem 2.938em 0 -0.188rem;
+    margin: 37px 34px 0 3px;
   }
 
   .logo6 {
     margin-right: 0;
   }
 
-
   .bottom-wrapper {
     display: none;
   }
 
-  .slider_top form {
-    position: absolute;
-    top: -4.375em;
-    left: 67%;
-    transform: translate(-50%, -50%);
+  .slider_top {
+    /*position: absolute;
+    top: -70px;
+    left: 22%;*/
   }
 
   .slider_bottom {
-    margin: -1.25rem 0 0 -4.75rem;
+    margin: 20px 13%;
   }
 
   .footer-wrapper {
-    height: 12.5rem;
+    height: 200px;
   }
 
   .footer__menu {
@@ -289,10 +293,18 @@ body {
   }
 
   .footer__design {
-    height: 2rem;
-    width: 9rem;
-    /*margin: -0.6rem 5.7rem 0 8.688rem;*/
+    height: 32px;
+    width: 154px;
     font-size: 12px;
     margin: 0 25%;
   }
+  .readmore a {
+    display: none;
+  }
+  .blog a {
+    display: block;
+    margin: 10px 10px 0 40px;
+    color: red;
+  }
+
 }
