@@ -175,7 +175,7 @@ header .menu {
   margin-bottom: 8px;
 }
 
-.overlay-text .second {
+.second {
   color: #edbfff;
   font-family: 'league_gothic', Calibri, sans-serif;
   font-size: 32px;
@@ -402,7 +402,7 @@ main p {
 
 /*MUSIC*/
 .music img {
-  margin: 0 27px 0 42px;
+  margin: 0 17px 0 32px;
 }
 
 .music p {

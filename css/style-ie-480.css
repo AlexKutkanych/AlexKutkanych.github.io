@@ -1,13 +1,13 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   html, body {
-  overflow-x: hidden;
-}
+    overflow-x: hidden;
+  }
   html {
     height: 580%;
   }
-body {
-  position: relative
-}
+  body {
+    position: relative
+  }
 
   header, .wrapper1, main, .center, .logos, .bottom, {
     width: 95%;
@@ -99,20 +99,22 @@ body {
     overflow: hidden;
     position: absolute;
     z-index: 3;
-    top: 22%;
+    top: 25%;
     left: 3%;
-    transform: translate(-49%, -50%);
   }
 
   .overlay-text p:first-child {
-    font-size: 36px;
+    font-size: 40px;
+    margin-bottom: -10px;
   }
 
-  .overlay-text p:nth-child(2) {
-    font-size: 17px;
+  .second {
+    width: 230px;
+    font-size: 20px;
+    max-height: 28px;
   }
 
-  .overlay-text p:last-child {
+  .third {
     display: none;
   }
 
@@ -140,11 +142,11 @@ body {
 
   .slider {
     max-width: 480px;
+    top: 28px;
+    left: 16%;
   }
 
   form {
-    top: 28px;
-    left: 16%;
   }
 
   .main-wrapper {
@@ -198,7 +200,7 @@ body {
   }
 
   .slider_bottom {
-    margin: 0 auto;
+    margin: 70px 40%;
   }
   .center__right {
     width: 85%;
@@ -322,8 +324,5 @@ body {
     margin-right: 20px;
   }
 
-  .second {
-    width: 170px;
-    font-size: 12px;
-  }
+
 }
