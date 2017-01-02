@@ -1491,11 +1491,7 @@ body {
     height: 12.5rem;
   }
 
-  .footer__menu {
-    display: none;
-  }
-
-  .footer__design {
+    .footer__design {
     height: 2rem;
     width: 9rem;
     font-size: 12px;
