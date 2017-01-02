@@ -116,11 +116,11 @@
     background: none;
     background-color: white;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-
   }
+
   .center__white {
     max-width: 15.63rem;
-    max-height: 12.06rem;
+    max-height: 12.6rem;
     overflow: hidden;
   }
 
@@ -186,7 +186,7 @@
     float: left;
     width: 28%;
     max-width: 14.13rem;
-    max-height: 12.19rem;
+    max-height: 11.6rem;
     overflow: hidden;
     margin-left: 0.4375rem;
     margin-right: 2.063rem;
