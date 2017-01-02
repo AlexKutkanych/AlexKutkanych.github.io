@@ -1,24 +1,27 @@
 /*MEDIA 768PX*/
-@media (max-width: 959px) and (min-width: 768px)  {
+@media only screen and (min-width: 768px) and (max-width: 959px) {
   header, .wrapper1, main, .center, .logos, .bottom, footer {
     width: 95%;
-    max-width: 768px;
+    max-width: 48rem;
   }
 
   .header__logo {
-    margin-right: 100px;
+    margin-right: 12.5rem;
+    margin: 3.7rem 14rem 0 0;
+
   }
 
-  header .menu {
+  .menu {
     float: left;
-    min-width: 600px;
-    margin-top: 20px;
+    margin: 1.6rem 0 1rem 0;
+    width: 100%;
   }
 
   .overlay-wrapper {
-    min-width: 768px;
+    min-width: 48rem;
     width: 100%;
-    height: 400px;
+    margin-top: 8rem;
+    height: 25rem;
     position: relative;
 
   }
@@ -35,13 +38,14 @@
   }
 
   .arrow_left {
-  left: -41px;
-  top: 180px;
+  left: -2.6rem;
+  top: 11.3rem;
  }
 
   .phone {
-    top: -8%;
-    left: 59%;
+    top: 49%;
+    left: 79%;
+    transform: translate(-50%, -50%);
     position: absolute;
   }
   .arrow_right {
@@ -59,32 +63,30 @@
   }
 
   .overlay-text {
-    width: 53%;
-    top: 23%;
-    left: 2%;
+    width: 38%;
+    top: 35%;
+    left: 20%;
     transform: translate(-51%,-50%);
   }
 
   .overlay-text p:first-child{
     font-size: 48px;
+    margin: 6.5rem 0 0.5rem 0;
   }
 
 
-  .overlay-text .second {
-    max-height: 32px;
-    max-width: 370px;
+  .overlay-text p:nth-child(2){
+    max-height: 2rem;
+    font-size: 21px;
+    overflow: hidden;
+
+  }
+
+  .overlay-text p:last-child{
+    max-height: 6rem;
     overflow: hidden;
   }
 
-  .overlay-text .third{
-    max-height: 96px;
-    max-width: 310px;
-    overflow: hidden;
-  }
-
-  .slider_top {
-  margin: 30px 0 0 530px;
-  }
   .dial, .music {
     display: none;
   }
@@ -98,84 +100,72 @@
     height: 51.1rem;
   }
 
-  main h2 {
+  .key, .dial, .music {
+    width: 32%;
+    max-height: 12.5rem;
+    overflow: hidden;
+  }
+
+    main h2 {
     font-size: 23px;
-  }
-
-  .key {
-    width: 30%;
-  }
-
-  .key p {
-    margin-bottom: 120px;
-  }
-
-  .key a {
-    margin-left: 160px;
   }
 
   .center__left {
     width: 44%;
-    height: 17.5rem;
+    height: 16.5rem;
+    background: none;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
   }
   .center__white {
-    max-width: 260px;
-    max-height: 195px;
+    max-width: 15.63rem;
+    max-height: 12.06rem;
     overflow: hidden;
   }
 
   .center__white h2 {
     font-size: 25px;
-    width: 100px;
-    margin-bottom: 10px;
+    width: 6.25rem;
+    margin-bottom: -0.3125rem;
   }
 
   .center__right {
     float: right;
     width: 44%;
-    margin: 119px 8px 0 0;
-    max-width: 376px;
+    margin: 7.44rem 0.5rem 0 0;
+    max-width: 23.5rem;
   }
 
   .article {
     overflow: hidden;
-    height: 45px;
-    max-width: 270px;
-  }
-
-  .article p {
-    overflow: hidden;
-    max-width: 260px;
-
-  }
-
-  .slider_bottom {
-  margin: 80px 15%;
+    height: 2.813rem;
+    max-width: 15.63rem;
   }
 
   .logos-wrapper {
-    height: 115px;
+    height: 7.2rem;
   }
 
   .logos {
-    width: 729px;
-    margin: 23px auto;
+    width: 46.563rem;
+    margin: 1.438em auto;
   }
 
   .logo__bottom {
-    margin-right: 48px;
+    margin-right: 3rem;
   }
 
   .logo3 {
-    margin-right: 56px;
+    margin-right: 3.5rem;
   }
 
   .logo4 {
-    margin-right: 49px;
+    margin-right: 3.063rem;
   }
 
   .logo5 {
-    margin-right: 45px;
+    margin-right: 2.813rem;
   }
 
   .logo6 {
@@ -183,7 +173,7 @@
   }
 
   .bottom-wrapper {
-      height: 395px;
+      height: 24.7rem;
     }
   .bottom__left {
     display: none;
@@ -194,12 +184,12 @@
 
   .bottom__right {
     float: left;
-    width: 30%;
-    max-width: 226px;
-    max-height: 180px;
+    width: 28%;
+    max-width: 14.13rem;
+    max-height: 12.19rem;
     overflow: hidden;
-    margin-left: 7px;
-    margin-right: 15px;
+    margin-left: 0.4375rem;
+    margin-right: 2.063rem;
 
   }
   .bottom__right h2 {
@@ -209,6 +199,7 @@
   .hidden {
     float: left;
     display: inline-block;
+    margin-right: 1.875rem;
   }
 
   .logos img {
@@ -216,7 +207,7 @@
   }
 
   .footer-wrapper {
-    height: 150px;
+    height: 10.94rem;
   }
 
   .menu__link {
@@ -224,14 +215,10 @@
 
   }
 
-  .footer-wrapper {
-    height: 200px;
-  }
-
   .footer__design {
-    max-width: 164px;
-    max-height: 16px;
-    margin: -62px 64px 0 0;
+    max-width: 9rem;
+    max-height: 1rem;
+    margin: -3.9rem 4rem 0 0;
     font-size: 12px;
   }
 
@@ -244,8 +231,6 @@
   }
 
   .blog {
-    visibility: visible;
     display: block;
-    margin: 130px 0 0 120px;
   }
 }
