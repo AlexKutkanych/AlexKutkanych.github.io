@@ -1,0 +1,329 @@
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  html, body {
+  overflow-x: hidden;
+}
+  html {
+    height: 580%;
+  }
+body {
+  position: relative
+}
+
+  header, .wrapper1, main, .center, .logos, .bottom, {
+    width: 95%;
+    max-width: 767px;
+  }
+
+  .wrapper1 {
+    max-width: 847px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  header {
+    position: relative;
+    max-height: 214px;
+    height: 479px;
+  }
+
+  .header-wrapper {
+    max-height: 652px;
+  }
+
+  .header__logo {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+  }
+
+  .overlay-wrapper {
+    max-height: 240px;
+    position: relative;
+    width: 100%;
+    min-width: 480px;
+    margin-top: -260px;
+  }
+
+  /*Dropdown menu*/
+  header .menu {
+    position: absolute;
+    top: 71%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 245px;
+    height: 229px;
+    z-index: 100;
+    text-align: center;
+    background: rgb(43, 34, 49);
+    border-radius: 10px;
+    border: 1px solid #0f1a20;
+    visibility: hidden;
+    overflow: hidden;
+    margin-top: 0;
+  }
+
+  header .menu:hover {
+    visibility: visible;
+
+  }
+
+  header .menu__item {
+    display: block;
+    border-top: 1px solid #523e5a;
+    border-bottom: 1px solid #36283e;
+    border-bottom: 2px solid transparent;
+    padding-right: 0;
+    overflow: hidden;
+    font-size: 23px;
+  }
+
+  .menu__link {
+    border-bottom: 2px solid transparent; /*MENU DOEN'T JUMP WHILE HOVER*/
+    font-size: 23px;
+  }
+
+  header .menu__link:hover {
+    background: rgba(43, 34, 49, 0.9);
+    border-bottom: 2px solid #edbfff;
+  }
+
+  .menu__link-visible {
+    visibility: visible;
+    font-size: 23px;
+  }
+
+  .overlay-text {
+    max-width: 368px;
+    max-height: 75px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 3;
+    top: 22%;
+    left: 3%;
+    transform: translate(-49%, -50%);
+  }
+
+  .overlay-text p:first-child {
+    font-size: 36px;
+  }
+
+  .overlay-text p:nth-child(2) {
+    font-size: 17px;
+  }
+
+  .overlay-text p:last-child {
+    display: none;
+  }
+
+  .arrow_left {
+    left: -28px;
+    top: 104px;
+  }
+
+  .arrow_right {
+    position: absolute;
+    left: 100%;
+    top: 104px;
+  }
+
+  .phone {
+    top: -10px;
+    left: 56%;
+    max-width: 192px;
+    z-index: 3;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+  .slider {
+    max-width: 480px;
+  }
+
+  form {
+    top: 28px;
+    left: 16%;
+  }
+
+  .main-wrapper {
+    height: 598px;
+    z-index: 2;
+  }
+  .dial, .music {
+    display: none;
+  }
+
+  .key {
+    width: 95%;
+  }
+
+  .key__hidden {
+    display: block;
+  }
+
+  .key h2 {
+    font-size: 24px;
+  }
+
+  .key p {
+    font-size: 15px;
+  }
+
+  .key__hidden {
+    margin-top: 23px;
+  }
+
+  .key a {
+    margin: 2px 0 0 376px;
+  }
+
+  .center {
+    position: relative;
+  }
+
+  .center-wrapper {
+    height:703px;
+  }
+
+  .center__left {
+    width: 85%;
+    height: 270px;
+    margin: 44px 0 0 19px;
+    position: absolute;
+    left: 10%;
+    background-image: none;
+    background-color: white;
+  }
+
+  .slider_bottom {
+    margin: 0 auto;
+  }
+  .center__right {
+    width: 85%;
+    margin-top: 400px;
+    max-width: 355px;
+    overflow: hidden;
+    position: absolute;
+    left: 20%;
+  }
+
+  .article p {
+    max-width: 250px;
+    max-height: 25px;
+    overflow: hidden;
+  }
+
+  .logos {
+    max-width: 356px;
+    overflow: hidden;
+  }
+
+  .logos-wrapper {
+    height: 212px;
+  }
+
+  .logo__bottom {
+    margin-right: 20px;
+  }
+
+  .logo1 {
+    margin-right: 47px;
+    margin-left: 13px;
+  }
+
+  .logo3 {
+    margin-left: 27px;
+  }
+
+  .logo4 {
+    margin: 27px 51px 0 8px;
+  }
+
+  .logo5 {
+    margin-right: 15px;
+  }
+  .logo6 {
+    background-position: -380px 0;
+  }
+
+  .logos__mobile {
+    display: inline-block;
+    margin: 1.25rem 0 0 -25.63rem;
+  }
+
+  .logos__mobile1 {
+    display: none;
+  }
+
+  .bottom-wrapper {
+    height: 572px;
+  }
+
+  .bottom__left, .bottom__center {
+    display: none;
+  }
+  .bottom {
+    width: 90%;
+  }
+  .bottom__right {
+    float: left;
+    width: 95%;
+    max-height: 120px;
+    overflow: hidden;
+    display: block;
+    margin-top: 72px;
+  }
+
+  .hidden {
+    margin-top: 36px;
+  }
+
+  .bottom__right h2 {
+    font-size: 24px;
+  }
+
+  footer {
+    max-width: 767px;
+    height: 400px;
+  }
+
+  .footer-wrapper {
+    height: 400px;
+  }
+
+  .footer__menu {
+    height: 32px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .menu__item {
+    padding-right: 2px;
+  }
+  footer .menu__link {
+    font-size: 18px;
+    /*margin-right: 1px;*/
+  }
+
+  .footer__design {
+    width: 170px;
+    display: block;
+    font-size: 12px;
+    margin: 0px 30%;
+  }
+  .readmore {
+    display: none;
+  }
+
+  .blog {
+    display: block;
+    margin-right: 20px;
+  }
+
+  .second {
+    width: 170px;
+    font-size: 12px;
+  }
+}
