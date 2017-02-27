@@ -1,0 +1,303 @@
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
+  header, .wrapper1, main, .center, .logos, .bottom, footer {
+    width: 95%;
+    height: 100%;
+  }
+
+  header {
+    position: relative;
+    max-height: 13.4rem;
+    height: 18.750em;
+  }
+
+  .header-wrapper {
+    max-height: 42.6rem;
+  }
+
+  .header__logo {
+    position: absolute;
+    top: 8%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  .overlay-wrapper {
+    max-height: 18.3rem;
+    width: 100%;
+    min-width: 20rem;
+    position: relative;
+    background: none;
+  }
+
+  /*Dropdown menu*/
+  header {
+    position: relative;
+  }
+  header .menu {
+    /*Align block center*/
+    position: absolute;
+    top: 83%;
+    left: 51%;
+    transform: translate(-50%, -20%);
+    width: 245px;
+    height:14.313em;
+    z-index: 100;
+    text-align: center;
+    background: rgba(43, 34, 49, 0.8);
+    border-radius: 10px;
+    border: 1px solid #0f1a20;
+    visibility: hidden;
+    overflow: hidden;
+    margin-top: 0;
+  }
+  header .menu:hover {
+    visibility: visible;
+
+  }
+
+
+  header .menu__item {
+    display: block;
+    border-top: 1px solid #523e5a;
+    border-bottom: 1px solid #36283e;
+    padding-right: 0;
+    overflow: hidden;
+  }
+
+  .menu__link {
+    border-bottom: 2px solid transparent; /*MENU DOEN'T JUMP WHILE HOVER*/
+    font-size: 23px;
+
+  }
+
+  header .menu__link:hover {
+    background: rgba(43, 34, 49, 0.9);
+    border-bottom: 2px solid #edbfff;
+  }
+
+  .menu__link-visible {
+    visibility: visible;
+    font-size: 23px;
+
+  }
+
+  .wrapper1 {
+    position: relative;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 39%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 12rem;
+    max-height: 4.7rem;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .overlay-text p:first-child {
+    margin: 0 0 -0.3125rem 0;
+    font-size: 36px;
+  }
+
+  .overlay-text p:nth-child(2) {
+    font-size: 17px;
+  }
+
+  .overlay-text p:last-child {
+    display: none;
+  }
+
+
+  .arrow_left {
+    left: -0.5rem;
+    top: 5.4rem;
+  }
+
+  .arrow_right {
+    left: 18.2rem;
+    top: 5.4rem;
+  }
+
+  .phone {
+    display: none;
+  }
+
+
+  .main-wrapper {
+    height: 37.38rem;
+    z-index: 2;
+  }
+  .dial, .music {
+    display: none;
+  }
+
+  .key {
+    width: 95%;
+    max-width: 16.13rem;
+    max-height: 6.3rem;
+    overflow: hidden;
+    position: absolute;
+    top: 7%;
+    left: 47%;
+    transform: translate(-50%, -47%);
+  }
+
+  .key__hidden {
+    display: block;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-54%, -50%);
+  }
+
+  .key__hidden__bottom {
+    top: 46%;
+    transform: translate(-54%, 51%);
+  }
+  .key h2 {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+
+  .key p {
+    font-size: 15px;
+    margin-top: -0.5rem;
+  }
+
+  .key a {
+    margin: 0.125rem 0 0 23.56rem;
+  }
+
+  .center {
+    position: relative;
+  }
+
+  .center-wrapper {
+    height: 50.2rem;
+  }
+
+  .center__white {
+    max-width: 80%;
+    min-height: 14rem;
+    overflow: hidden;
+  }
+
+  .center__white h2 {
+    font-size: 24px;
+    width: 6.063rem;
+  }
+
+  .center__left {
+    width: 92%;
+    height: 17.81rem;
+    margin: 4rem 0 0 1.188rem;
+    background: none;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+  }
+
+  .center__right {
+    width: 85%;
+    max-width: 20rem;
+    overflow: hidden;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -49%);
+  }
+
+  article {
+    width: 23rem;
+  }
+
+  .logos {
+    max-width: 15.25rem;
+    overflow: hidden;
+    margin-top: 52px;
+  }
+
+  .logos-wrapper {
+    height: 26.3rem;
+  }
+
+  .logos__mobile {
+    display: inline-block;
+    margin: 3.4rem 0 0 -16.3rem;
+  }
+  .logos__mobile1 {
+    display: inline-block;
+    margin: 2.3rem 0 0 -32.1rem;
+  }
+
+  .logo__bottom {
+    margin-right: 1.25rem;
+  }
+
+  .logo1 {
+    margin-right: 3rem;
+    margin-left: 1.313rem;
+
+  }
+
+  .logo2 {
+    margin-right: 0;
+  }
+
+  .logo3 {
+    margin: 3.5rem 3.5rem 0 1.688rem;
+  }
+
+
+  .logo5 {
+    margin: 2.313rem 2.938em 0 -0.188rem;
+  }
+
+  .logo6 {
+    margin-right: 0;
+  }
+
+
+  .bottom-wrapper {
+    display: none;
+  }
+
+  .slider_top form {
+    position: absolute;
+    top: -4.375em;
+    left: 67%;
+    transform: translate(-50%, -50%);
+  }
+
+  .slider_bottom {
+    margin: -1.25rem 0 0 -4.75rem;
+  }
+
+  .footer-wrapper {
+    height: 12.5rem;
+  }
+
+  .footer__menu {
+    display: none;
+  }
+
+  .footer__design {
+    height: 2rem;
+    width: 9rem;
+    /*margin: -0.6rem 5.7rem 0 8.688rem;*/
+    font-size: 12px;
+    margin: 0 25%;
+  }
+}
