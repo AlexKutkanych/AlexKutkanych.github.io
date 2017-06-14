@@ -1,0 +1,118 @@
+.header {
+  width: 100%;
+  color: #964B00;
+  height: 76px;
+  font-family: "PT Sans Caption", sans-serif; }
+  .header-wrapper {
+    width: 90%;
+    height: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0 auto; }
+
+.menu-top {
+  height: 35px;
+  padding: 30px 0 10px 0;
+  font-weight: bold;
+  line-height: 35px;
+  text-align: center; }
+  .menu-top__menu-item {
+    position: relative;
+    float: left;
+    padding-right: 20px;
+    padding-left: 20px; }
+    .menu-top__menu-item:last-child, .menu-top__menu-item:nth-child(9) {
+      float: right; }
+  .menu-top__menu-link {
+    color: #666666; }
+    .menu-top__menu-link-underline {
+      color: #666666; }
+      .menu-top__menu-link-underline:hover {
+        color: #964B00; }
+  .menu-top__hline {
+    height: 20px;
+    width: 1px;
+    display: inline-block;
+    float: left;
+    margin-top: 8px;
+    background-color: #964B00; }
+
+.menu-top__menu-link-underline::after {
+  content: "";
+  height: 2px;
+  display: block;
+  margin: auto;
+  background-color: #fff;
+  width: 0; }
+
+.menu-top__menu-link-underline:hover::after {
+  width: 100%;
+  background-color: #964B00;
+  -webkit-transition: width .8s ease-in-out, background-color .8s ease;
+  transition: width .8s ease-in-out, background-color .8s ease; }
+
+.menu-top__menu-item #booking_button {
+  background-color: #377BB3;
+  color: white; }
+
+/*submenu*/
+.menu-top__submenu {
+  width: 195px;
+  position: absolute;
+  left: -110px;
+  top: 36px;
+  z-index: 1;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
+  -webkit-transform-origin: 50% 0;
+  -webkit-transition: 350ms;
+  -moz-transition: 350ms;
+  -o-transition: 350ms;
+  transition: 350ms; }
+
+.menu-top__menu-item:nth-of-type(2):hover .menu-top__submenu {
+  max-height: 1000px;
+  -webkit-transform: perspective(400) rotate3d(0, 0, 0, 0); }
+
+.menu-top__submenu .submenu__menu-item:hover {
+  background-color: rgba(255, 0, 0, 0.5); }
+
+.submenu__menu-link {
+  display: block; }
+
+#booking_button, #sign-up_button {
+  width: 80px;
+  height: 33px;
+  border-radius: 20px;
+  color: white;
+  background-color: #E30000; }
+  #booking_button:hover, #sign-up_button:hover {
+    cursor: pointer;
+    opacity: .5;
+    margin-top: 3px; }
+
+.menu-top__menu-link {
+  color: white; }
+
+/**/
+.homepage-hero-module__slogan {
+  position: absolute;
+  top: 200px;
+  left: 47.3%;
+  width: 700px;
+  z-index: 1;
+  color: white;
+  background-color: rgba(122, 122, 122, 0.4);
+  padding: 5px; }
+  .homepage-hero-module__slogan_heading {
+    font-family: "Cookie", cursive;
+    font-size: 80px;
+    color: white; }
+  .homepage-hero-module__slogan_passion {
+    font-size: 30px;
+    margin-bottom: 10px; }
+    .homepage-hero-module__slogan_passion::before {
+      content: url("../img/header/two-quotes.svg"); }
+    .homepage-hero-module__slogan_passion::after {
+      content: url("../img/header/two-quotes.svg"); }

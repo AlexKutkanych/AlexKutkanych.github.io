@@ -1,196 +1,293 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <!-- <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" /> -->
-    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=no">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/stylesheet.css" media="screen" title="no title">
-    <link href="css/style-320.css" rel="stylesheet" media="only screen and (min-width: 320px) and (max-width: 479px)">
-    <link href="css/style-480.css" rel="stylesheet" media="only screen and (min-width: 480px) and (max-width: 767px)">
-    <link href="css/style-768.css" rel="stylesheet" media="only screen and (min-width: 768px) and (max-width: 959px)">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-   <!--[if lt IE 9]>
-   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-   <![endif]-->
-    <title>Pingbuller</title>
+    <title>Restaurant Oasis</title>
+    <link rel="stylesheet" href="css/styles-main.css">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+    <script type="text/javascript" src="js/script.js" defer></script>
+    <script type="text/javascript" src="js/main-page-video.js" defer></script>
+    <script type="text/javascript" src="js/google-map-init.js" defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script>
+    <script type="text/javascript" src="js/tabs.js" defer></script>
+    <script type="text/javascript" src="js/filter-events.js" defer></script>
   </head>
   <body>
-    <div class="header-wrapper">
-      <header>
-          <img src="img/logo.png" alt="Pingbuller logo" class="header__logo">
-          <ul class="menu">
-            <li class="menu__item"><a href="#" class="menu__link menu__link-visible">HOME</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">ABOUT</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">BLOG</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">PRODUCTS</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">LOREM IPSUM</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">DOLOR SIT AMET</a></li>
-          </ul>
+    <header class="header" id="main">
+      <div class="header-wrapper">
+        <nav class="menu-top">
+          <li class="menu-top__menu-item">
+            <a href="#" class="menu-top__menu-link-underline">Home</a>
+          </li>
+          <hr class="menu-top__hline">
+          <li class="menu-top__menu-item">
+            <a href="#our-menu" class="menu-top__menu-link-underline">Menu</a>
+            <ul class="menu-top__submenu">
+              <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Soup &amp; appetizer</a></li>
+              <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Pasta &amp; Main course</a></li>
+              <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Pizza &amp; Second course</a></li>
+              <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Dessert &amp; Beverages</a></li>
+              <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Wine card</a></li>
+            </ul>
+          </li>
+          <hr class="menu-top__hline">
+          <li class="menu-top__menu-item">
+            <a href="#our-services" class="menu-top__menu-link-underline">Services</a>
+          </li>
+          <li class="menu-top__menu-item">
+            <a href="#our-events" class="menu-top__menu-link-underline">Events</a>
+          </li>
+          <hr class="menu-top__hline">
+          <li class="menu-top__menu-item">
+            <a href="#" class="menu-top__menu-link-underline">Contacts</a>
+          </li>
+          <li class="menu-top__menu-item" id="booking_button">
+            <a href="#" class="menu-top__menu-link">Booking</a>
+          </li>
+          <li class="menu-top__menu-item" id="sign-in_button">
+            <a href="#" class="menu-top__menu-link" >Sign-in</a>
+          </li>
+          <li class="menu-top__menu-item" id="sign-up_button">
+            <a href="#" class="menu-top__menu-link">Sign-up</a>
+          </li>
+        </nav>
+
+          <!-- <div class="signin-form">
+            <h3>Sign-in</h3>
+            <label for="signin-field">Login</label><input type="text" class="signin-form__signin-field_login" id="signin-field" placeholder="Enter your login">
+            <label for="signin-field">Password</label><input type="password" class="signin-form__signin-field_password" id="password-field" placeholder="Enter your password">
+            <button class="signin-form__button">Sign in</button>
+          </div>
+          <div class="signup-form">
+            <h3>Sign-up</h3>
+            <label for="signup-field">Name</label><input type="text" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your name">
+            <label for="signup-field">Surname</label><input type="text" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your surname">
+            <label for="signup-field">Telephone</label><input type="tel" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your phone number">
+            <label for="signup-field">Login</label><input type="text" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your login">
+            <label for="signup-field">Email-address</label><input type="email" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your email">
+            <label for="signup-field">Date of birth</label><input type="date" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your date of birth">
+            <label for="signup-field">Password</label><input type="password" class="signup-form__signup-field_password" id="signup-field" placeholder="Enter your password">
+            <label for="signup-field">Repeat password</label><input type="password" class="signup-form__signup-field_password" id="signup-field" placeholder="Repeat your password">
+            <button class="signup-form__button">Sign up</button>
+          </div> -->
+        </div>
+        <div class="homepage-hero-module__slogan">
+          <h2 class="homepage-hero-module__slogan_heading">Welcome</h2>
+          <p class="homepage-hero-module__slogan_passion">Our passion is to deliver a unique dining experience, to explore harmonies of flavours and contrasts in textures</p><span> – Peter Gilmore, Executive Chef</span>
+          <div>
       </header>
-      <div class="overlay-wrapper">
-        <div class="wrapper1">
-          <a href="#" class="arrow arrow_left"></a>
-          <div class="overlay-text">
-            <p>Lorem Ipsum Dolor</p>
-            <p>IT WILL MAKE ALL OF YOUR DREAMS COME TRUE</p>
-            <p>Semper sollicitudin gravida eget, ves&shy;tibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a.
-            Nam venenatis hendrerit est at vlutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis. </p>
-          </div>
-          <img src="img/iphone.png" alt="iphone 4 image" class="phone">
-          <!-- <img src="img/arrows.png" alt="" class="arrows"> -->
-        <a href="#" class="arrow arrow_right"></a>
-      </div>
-      <div class="slider">
-        <div class="slider_top">
-          <form class="" action="#" method="post">
-            <input type="radio" id="btn1" name="btn" value="btn1" class="radio">
-            <label for="btn1"></label>
-            <input type="radio" id="btn2" name="btn" value="btn2" class="btn2">
-            <label for="btn2"></label>
-            <input type="radio" id="btn3" name="btn" value="btn3">
-            <label for="btn3"></label>
-            <input type="radio" id="btn4" name="btn" value="btn4">
-            <label for="btn4"></label>
-          </form>
-        </div>
-      </div>
-    </div>
-  <div class="main-wrapper">
-    <main>
-      <div class="key">
-        <img src="img/key.png" alt="" >
-        <h2>ABOUT OUR COMPANY</h2>
-        <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pel&shy;lentesque vel lacus eget nisi convallis auctor. Nam</p>
-        <a href="#">READ MORE</a>
-      </div>
-      <div class="key key__hidden">
-        <img src="img/key.png" alt="" >
-        <h2>ABOUT OUR COMPANY</h2>
-        <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pel&shy;lentesque vel lacus eget nisi convallis auctor. Nam</p>
-        <a href="#">READ MORE</a>
-      </div>
-      <div class="key key__hidden key__hidden__bottom">
-        <img src="img/key.png" alt="" >
-        <h2>ABOUT OUR COMPANY</h2>
-        <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pel&shy;lentesque vel lacus eget nisi convallis auctor. Nam</p>
-        <a href="#">READ MORE</a>
-      </div>
-      <div class="dial">
-        <img src="img/dial.png" alt="">
-        <h2>ABOUT OUR COMPANY</h2>
-        <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam</p>
-        <a href="#">READ MORE</a>
-      </div>
-      <div class="music">
-        <img src="img/music.png" alt="">
-        <h2>ABOUT OUR COMPANY</h2>
-        <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam</p>
-        <a href="#">READ MORE</a>
-      </div>
-    </main>
-  </div>
-  <div class="center-wrapper">
-    <div class="center">
-      <div class="center__left">
-        <img src="img/ava.png" alt="" class="center__ava">
-        <div class="center__white">
-          <h2>PINGBULLER <span>STARTS HERE</span></h2>
-          <p>"Nunc turpis neque, feu&shy;giat eget eleifend et, lacinia non neque. Prae&shy;sent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi conval&shy;lis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl."</p>
-        </div>
-        <div class="slider">
-          <div class="slider_bottom">
-            <form class="" action="#" method="post">
-              <input type="radio" id="btn5" name="btn" value="btn1" class="radio">
-              <label for="btn5"></label>
-              <input type="radio" id="btn6" name="btn" value="btn2" class="btn2">
-              <label for="btn6"></label>
-              <input type="radio" id="btn7" name="btn" value="btn3">
-              <label for="btn7"></label>
-              <input type="radio" id="btn8" name="btn" value="btn4">
-              <label for="btn8"></label>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="center__right">
-        <h2>RECENT UPDATES</h2>
-        <article>
-          <a href="#" class="post_image post1"></a>
-          <div class="article">
-            <a href="#"><h5>Nunc turpis neque feugiat eget</h5></a>
-            <p>Posted by Admin on March 13 2012 in Recent News</p>
-          </div>
-        </article>
-        <article>
-            <a href="#" class="post_image post2"></a>
-            <div class="article">
-              <a href="#"><h5>Nunc turpis neque feugiat eget</h5></a>
-              <p>Posted by Admin on March 13 2012 in Category</p>
+      <div class="homepage-hero-module">
+        <!-- opacity block with type-in texthttps://css-tricks.com/snippets/css/typewriter-effect/ -->
+        <div class="video-container">
+          <div class="filter"></div>
+            <video autoplay loop class="fillWidth">
+                <source src="vid/588711880.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <div class="poster hidden">
+                <!-- <img src="PATH_TO_JPEG" alt=""> -->
             </div>
-        </article>
-        <article>
-          <a href="#" class="post_image post3"></a>
-            <div class="article">
-              <a href="#"><h5>Nunc turpis neque feugiat eget</h5></a>
-              <p>Posted by Admin on March 13 2012 in Blog Updates</p>
+        </div>
+      </div>
+      <!-- <section class="our-history" id="our-history">
+        <div class="our-history_wrapper">
+          <section class="our-history_description">
+            <h2 class="heading">Discover</h2>
+            <p class="subheading">our history</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#">about us</a>
+          </section>
+          <section class="our-history_photos">
+            <img class="our-history_image" src="img/main/history-1.jpg" alt="some salad">
+            <img class="our-history_image" src="img/main/history-2.jpg" alt="some dessert">
+          </section>
+        </div>
+      </section> -->
+      <section class="our-menu" id="our-menu">
+        <a href="#"><h2 class="our-menu__heading">Our menu</h2></a>
+        <a href="menu/Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__full-menu">Download full menu</a>
+          <div class="our-menu__wrapper">
+            <section class="our-menu__variant menu__soup">
+              <span class="our-menu__desc">
+                <p class="our-menu__title">Soup &amp; appetizer</p>
+              </span>
+              <a href="Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+            </section>
+            <section class="our-menu__variant menu__pasta">
+              <span class="our-menu__desc">
+                <p class="our-menu__title">Pasta &amp; Main course</p>
+              </span>
+              <a href="Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+            </section>
+            <section class="our-menu__variant menu__pizza">
+              <span class="our-menu__desc">
+                <p class="our-menu__title">Pizza &amp; Second course</p>
+              </span>
+              <a href="Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+            </section>
+            <section class="our-menu__variant menu__dessert">
+              <span class="our-menu__desc">
+                <p class="our-menu__title">Dessert &amp; Beverages</p>
+              </span>
+              <a href="Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+            </section>
+          </div>
+      </section>
+
+      <section class="our-services" id="our-services">
+        <a href="#"><h2 class="our-services__heading">Services</h2></a>
+        <div class="our-services__content-block">
+          <div class="our-services__wrapper">
+            <section class="our-services__offer-section">
+              <h2 class="our-services__subheading">What we offer</h2>
+              <ul class="our-services-list">
+                <li class="our-services-list__offer">Authentic Italian food</li>
+                <li class="our-services-list__offer">Experienced and knowledgeable service staff</li>
+                <li class="our-services-list__offer">42 Seated Guests, Standing Buffet / Reception</li>
+                <li class="our-services-list__offer">Free Parking</li>
+                <li class="our-services-list__offer">Audio system with wireless microphones</li>
+                <li class="our-services-list__offer">Projector with Laptop & Wireless Presenter</li>
+                <li class="our-services-list__offer">Free Wi-Fi</li>
+              </ul>
+            </section>
+            <section class="our-services__suitability-section">
+              <h2 class="our-services__subheading">Suitable for:</h2>
+              <ul class="our-suitability-list">
+                <li class="our-suitability-list__offer">Company Meeting and Work Shop</li>
+                <li class="our-suitability-list__offer">Company Function and Business Lunch</li>
+                <li class="our-suitability-list__offer">Private Dinner</li>
+                <li class="our-suitability-list__offer">Standing Buffet</li>
+                <li class="our-suitability-list__offer">Cocktail Party</li>
+                <li class="our-suitability-list__offer">Birthday Party</li>
+                <li class="our-suitability-list__offer">Cooking Classes</li>
+                <li class="our-suitability-list__offer">Wedding</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section class="our-events" id="our-events">
+        <a href="#"><h2 class="our-events__heading">News &amp; Events</h2></a>
+        <div class="our-events__wrapper">
+          <div class="our-events__tabs">
+            <ul>
+              <li class="tabs-heading"><a href="#" class="tab1__heading">News</a></li>
+              <li class="tabs-heading"><a href="#" class="tab2__heading tab-active">Events</a></li>
+            </ul>
+            <div class="tab__content">
+              <div class="news-content">
+                <article class="news-content__block">
+                  <img src="img/events/summer-terrasse.jpg" alt="summer terrasse" class="news-content__block_img">
+                  <img src="img/events/new-icon.svg" alt="new icon" class="new-icon">
+                  <a href="#"><h2 class="news-content__block_head">Summer terrasse is open</h2></a>
+                  <p class="news-block__text">Luckily the summer is coming, so you can spend time with your friends or family having a meal outside.</p>
+                  <a href="#" class="news-content__block_read-more">read more</a><br>
+                  <span class="news-content__posted">Posted 5 hours ago</span>
+                </article>
+                <article class="news-content__block">
+                  <img src="img/events/children-birthday.jpg" alt="birthday cakes" class="news-content__block_img">
+                  <a href="#"><h2 class="news-content__block_head">Make your children happy</h2></a>
+                  <p class="news-block__text">Now you can organize a wonderfull birtday for your children.</p>
+                  <a href="#" class="news-content__block_read-more">read more</a><br>
+                  <span class="news-content__posted">Posted 10 days ago</span>
+                </article>
+                <article class="news-content__block">
+                  <img src="img/events/wedding.jpg" alt="wedding" class="news-content__block_img">
+                  <a href="#"><h2 class="news-content__block_head">Best wedding with us</h2></a>
+                  <p class="news-block__text">Our restaurant can place up to 60 elite guests inside. Let us make the most important day of your life special.</p>
+                  <a href="#" class="news-content__block_read-more">read more</a><br>
+                  <span class="news-content__posted">Posted 28 days ago</span>
+                </article>
+                <article class="news-content__block">
+                  <img src="img/events/birthday.jpg" alt="birthday cakes" class="news-content__block_img">
+                  <a href="#"><h2 class="news-content__block_head">Birthday party can be even better</h2></a>
+                  <p class="news-block__text">Having boring birthday parties? Nah. We can serve you with the best Italian food and drinks. Candy bar is free. </p>
+                  <a href="#" class="news-content__block_read-more">read more</a><br>
+                  <span class="news-content__posted">Posted month ago</span>
+                </article>
+              </div>
+              <section class="event-content show-content">
+                <ul>
+                  <li class="event__filter"><a href="#" class="event__filter_link filter-all">All</a></li>
+                  <li class="event__filter"><a href="#" class="event__filter_link filter-menu">Menu</a></li>
+                  <li class="event__filter"><a href="#" class="event__filter_link filter-music">Music</a></li>
+                </ul>
+                <div class="event-content__section">
+                  <div class="event-content__block event-content__block_menu">
+                    <img src="img/events/events/pizza.jpg" alt="pizza" class="event-content__block_img">
+                    <span class="event-content__block_desc">Pizza Fridays<br> Get <span class="red">-30%</span> for all family pizzas</span>
+                  </div>
+                  <div class="event-content__block event-content__block_menu">
+                    <img src="img/events/events/coffee+croissant.jpg" alt="Coffee and croissant" class="event-content__block_img">
+                    <span class="event-content__block_desc">Before 10 am<br> Buy Coffee, get <span class="red">Free</span> Croissant</span>
+                  </div>
+                  <div class="event-content__block event-content__block_other">
+                    <img src="img/events/events/master-class.jpg" alt="master class" class="event-content__block_img">
+                    <span class="event-content__block_desc">Attend our free master classes<br><a class="event-content__full-schedule">See full schedule</a></span>
+                  </div>
+                  <div class="event-content__block event-content__block_music">
+                    <img src="img/events/events/music-band1.jpg" alt="" class="event-content__block_img">
+                    <span class="event-content__block_desc">Welcome <span class="red">Astronomy Lovers</span> at our restaurant</span>
+                  </div>
+                  <div class="event-content__block event-content__block_music">
+                    <img src="img/events/events/music-band2.jpg" alt="" class="event-content__block_img">
+                    <span class="event-content__block_desc"><span class="red">Sandy Spring</span> is coming!</span>
+                  </div>
+                  <!-- <div class="event-content__block event-content__block_menu">
+                    <img src="img/events/events/pizza.jpg" alt="" class="event-content__block_img">
+                    <span class="event-content__block_desc">Pizza Fridays<br> Get <span class="red">-30%</span> for all family pizzas. </span>
+                  </div> -->
+                </div>
+                <!-- <article class="event-block">
+                  <img src="img/events/cake.jpg" alt="wedding cake" width="300">
+                  <img src="img/events/christmas.jpg" alt="wedding cake" width="300">
+                </article>
+                <article class="event-block">
+                  <img src="img/events/wedding.jpg" alt="" width="300">
+                </article> -->
+              </section>
             </div>
-        </article>
-        <a href="#" class="readmore">READ MORE HERE</a>
-        <a href="#" class="blog readmore">MORE BLOG POSTS</a>
-      </div>
-    </div>
-  </div>
-  <div class="logos-wrapper">
-    <div class="logos">
-      <a href="#" class="logo__bottom logo1"></a>
-      <a href="#" class="logo__bottom logo2"></a>
-      <a href="#" class="logo__bottom logo3"></a>
-      <a href="#" class="logo__bottom logo4"></a>
-      <a href="#" class="logo__bottom logo5"></a>
-      <a href="#" class="logo__bottom logo6"></a>
-    </div>
-  </div>
-  <div class="bottom-wrapper">
-      <div class="bottom">
-        <div class="bottom__left">
-          <img src="img/logobot.png" alt="" class="bottom__logo">
-          <span>Copyright 2013, Pingbull AS</span>
-          <p>Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor.Nam vitae lectus eu libero pellentesque pul-</p>
+          </div>
         </div>
-        <div class="bottom__center">
-          <h2>RECENT COMMENTS</h2>
-          <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor.Nam vitae lectus eu libero pellentesque pul-vinar. Quisque urna risus, mattis pulvi&shy;nar bibendum in, venenatis quis</p>
-        </div>
-        <div class="bottom__right">
-          <h2>NEWS CATEGORIES</h2>
-          <p>Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellen&shy;tesque vel lacus eget nisi convallis auctor.Nam vitae lectus eu libero pellentesque pul-vinar. Quisque urna risus, mattis pulvi&shy;nar bibendum in, venenatis quis</p>
-        </div>
-        <div class="bottom__right hidden">
-          <h2>NEWS CATEGORIES</h2>
-          <p>Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellen&shy;tesque vel lacus eget nisi convallis auctor.Nam vitae lectus eu libero pellentesque pul-vinar. Quisque urna risus, mattis pulvi&shy;nar bibendum in, venenatis quis</p>
-        </div>
-        <div class="bottom__right hidden">
-          <h2>NEWS CATEGORIES</h2>
-          <p>Nunc turpis neque, feugiat eget eleif&shy;end et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellen&shy;tesque vel lacus eget nisi convallis auctor.Nam vitae lectus eu libero pellentesque pul-vinar. Quisque urna risus, mattis pulvi&shy;nar bibendum in, venenatis quis</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-wrapper">
-      <footer>
-        <ul class="footer__menu">
-          <li class="menu__item"><a href="#" class="menu__link">HOME</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">ABOUT</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">BLOG</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">PRODUCTS</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">LOREM IPSUM</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">DOLOR SIT AMET</a></li>
-        </ul>
-        <div class="footer__design">
-          <p>Designed by <span>Pingbull AS</span></p>
+      </section>
+      <section class="contacts-block">
+        <a href="#"><h2 class="contacts-block__heading">How to reach us</h2></a>
+        <section id="contacts-block__google-map"></section>
+      </section>
+      <footer class="footer" id="footer">
+        <div class="footer-wrapper">
+          <section class="footer__contacts">
+            <a href="#"><h4 class="footer__heading">Contact us</h4></a>
+            <ul class="contacts">
+              <li class="contacts__street">
+                <a href="#">Heisenberg Str. 34</a>
+              </li>
+              <li class="contacts__phone">
+                <a href="#">0679402342034</a>
+              </li>
+              <li class="contacts__phone">
+                <a href="#">0679402342034</a>
+              </li>
+              <li class="contacts__email">
+                <a href="mailto:ourrest@gmail.com">ourrest@gmail.com</a>
+              </li>
+            </ul>
+          </section>
+          <a href="#main" class="totop-button"></a>
+          <p>Copyright &copy; 2017 All rights reserved</p>
+          <section class="footer__social-media">
+            <a href="#"><h4 class="footer__heading">Find us</h4></a>
+            <a href="#" class="social-media social-media__facebook"></a>
+            <a href="#" class="social-media social-media__vkontakte"></a>
+            <a href="#" class="social-media social-media__instagram"></a>
+            <a href="#" class="social-media social-media__pinterest"></a>
+          </section>
         </div>
       </footer>
+    </div>
     </div>
   </body>
 </html>

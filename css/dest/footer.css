@@ -1,0 +1,63 @@
+.footer {
+  width: 100%;
+  height: 150px;
+  background: url(../img/footer/pasta-tomato-footer.jpg) 0 0 no-repeat;
+  background-size: cover; }
+  .footer-wrapper {
+    position: relative;
+    background-color: rgba(122, 122, 122, 0.5);
+    width: 90%;
+    color: black;
+    margin: 0 auto;
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .footer__heading {
+    margin-bottom: 5px;
+    color: black; }
+
+.contacts > li a {
+  color: black; }
+
+.totop-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #964B00;
+  border: 3px solid grey;
+  opacity: .5; }
+  .totop-button:hover {
+    opacity: 1; }
+
+.social-media {
+  font-style: "PT Sans Caption", sans-serif;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #964B00;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url(../img/footer/bottom-icons.png);
+  background-repeat: no-repeat; }
+  .social-media__facebook {
+    background-position: 10px 0; }
+    .social-media__facebook:hover {
+      background-color: blue; }
+  .social-media__vkontakte {
+    background-position: 10px 0; }
+    .social-media__vkontakte:hover {
+      background-color: blue; }
+  .social-media__instagram {
+    background-position: 10px 0; }
+    .social-media__instagram:hover {
+      background-color: blue; }
+  .social-media__pinterest {
+    background-position: 10px 0; }
+    .social-media__pinterest:hover {
+      background-color: blue; }
