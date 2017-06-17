@@ -17,6 +17,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('css/dest'));
 });
 
+
 //Watch task
 gulp.task('watch',function() {
     gulp.watch(['css/src/*.scss', 'css/dest/*.css', 'css/*.css'], ['concat-css', 'sass']);

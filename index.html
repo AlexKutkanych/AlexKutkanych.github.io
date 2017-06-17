@@ -2,22 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Restaurant Oasis</title>
     <link rel="stylesheet" href="css/styles-main.css">
-    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
     <script type="text/javascript" src="js/script.js" defer></script>
-    <script type="text/javascript" src="js/main-page-video.js" defer></script>
     <script type="text/javascript" src="js/google-map-init.js" defer></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script>
     <script type="text/javascript" src="js/tabs.js" defer></script>
     <script type="text/javascript" src="js/filter-events.js" defer></script>
+    <script type="text/javascript" src="js/to-top-button.js" defer></script>
+    <script type="text/javascript" src="js/menu-filter.js" defer></script>
   </head>
   <body>
     <header class="header" id="main">
       <div class="header-wrapper">
+        <div class="mobile-menu">
+          <span class="mobile-menu__burger"></span>
+        </div>
         <nav class="menu-top">
           <li class="menu-top__menu-item">
             <a href="#" class="menu-top__menu-link-underline">Home</a>
@@ -37,31 +39,38 @@
           <li class="menu-top__menu-item">
             <a href="#our-services" class="menu-top__menu-link-underline">Services</a>
           </li>
+          <hr class="menu-top__hline">
           <li class="menu-top__menu-item">
-            <a href="#our-events" class="menu-top__menu-link-underline">Events</a>
+            <a href="#our-events" class="menu-top__menu-link-underline">News &amp; Events</a>
           </li>
           <hr class="menu-top__hline">
           <li class="menu-top__menu-item">
-            <a href="#" class="menu-top__menu-link-underline">Contacts</a>
+            <a href="#contacts" class="menu-top__menu-link-underline">Contacts</a>
+            <ul class="menu-top__submenu menu-top__submenu-contacts">
+              <li class="submenu__menu-item"><a href="#contacts" class="submenu__menu-link">Find us on map</a></li>
+              <li class="submenu__menu-item"><a href="#footer" class="submenu__menu-link">Address and Socials</a></li>
+            </ul>
           </li>
-          <li class="menu-top__menu-item" id="booking_button">
-            <a href="#" class="menu-top__menu-link">Booking</a>
-          </li>
-          <li class="menu-top__menu-item" id="sign-in_button">
+
+          <!-- <li class="menu-top__menu-item" id="sign-in_button">
             <a href="#" class="menu-top__menu-link" >Sign-in</a>
-          </li>
+          </li> -->
           <li class="menu-top__menu-item" id="sign-up_button">
             <a href="#" class="menu-top__menu-link">Sign-up</a>
           </li>
+         <li class="menu-top__menu-item" id="booking_button">
+            <a href="#" class="menu-top__menu-link">Booking</a>
+          </li>
         </nav>
+        <a href="#main" id="to-top-button"></a>
 
           <!-- <div class="signin-form">
             <h3>Sign-in</h3>
             <label for="signin-field">Login</label><input type="text" class="signin-form__signin-field_login" id="signin-field" placeholder="Enter your login">
             <label for="signin-field">Password</label><input type="password" class="signin-form__signin-field_password" id="password-field" placeholder="Enter your password">
             <button class="signin-form__button">Sign in</button>
-          </div>
-          <div class="signup-form">
+          </div> -->
+          <!-- <div class="signup-form">
             <h3>Sign-up</h3>
             <label for="signup-field">Name</label><input type="text" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your name">
             <label for="signup-field">Surname</label><input type="text" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your surname">
@@ -73,25 +82,24 @@
             <label for="signup-field">Repeat password</label><input type="password" class="signup-form__signup-field_password" id="signup-field" placeholder="Repeat your password">
             <button class="signup-form__button">Sign up</button>
           </div> -->
+
         </div>
-        <div class="homepage-hero-module__slogan">
-          <h2 class="homepage-hero-module__slogan_heading">Welcome</h2>
-          <p class="homepage-hero-module__slogan_passion">Our passion is to deliver a unique dining experience, to explore harmonies of flavours and contrasts in textures</p><span> – Peter Gilmore, Executive Chef</span>
-          <div>
       </header>
-      <div class="homepage-hero-module">
-        <!-- opacity block with type-in texthttps://css-tricks.com/snippets/css/typewriter-effect/ -->
-        <div class="video-container">
-          <div class="filter"></div>
-            <video autoplay loop class="fillWidth">
-                <source src="vid/588711880.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                <source src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            </video>
-            <div class="poster hidden">
-                <!-- <img src="PATH_TO_JPEG" alt=""> -->
-            </div>
+      <div class="video-block">
+        <div class="video-block__container">
+          <video autoplay loop class="video-block__video">
+            <source type="video/mp4" src="vid/bg-video.mp4">
+            <source type="video/webm" src="vid/bg-video.webm">
+            <source type="video/ogg" src="vid/bg-video.ogv">
+          </video>
+          <div class="video-block__overlay">
+            <h2 class="overlay__slogan_heading">Welcome to Oasis!</h2>
+            <h3>Italian restaurant</h3>
+            <p class="overlay__slogan_passion">Our passion is to deliver a unique dining experience, to explore harmonies of flavours and contrasts in textures</p><span> – Peter Gilmore, Executive Chef</span>
+          </div>
         </div>
       </div>
+
       <!-- <section class="our-history" id="our-history">
         <div class="our-history_wrapper">
           <section class="our-history_description">
@@ -108,34 +116,311 @@
       </section> -->
       <section class="our-menu" id="our-menu">
         <a href="#"><h2 class="our-menu__heading">Our menu</h2></a>
-        <a href="menu/Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__full-menu">Download full menu</a>
+        <a href="menu/menu/Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__full-menu">Download full menu</a>
           <div class="our-menu__wrapper">
             <section class="our-menu__variant menu__soup">
               <span class="our-menu__desc">
                 <p class="our-menu__title">Soup &amp; appetizer</p>
               </span>
-              <a href="Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+              <a href="menu/Pietrasanta_Appetizer_Soup.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
             </section>
             <section class="our-menu__variant menu__pasta">
               <span class="our-menu__desc">
                 <p class="our-menu__title">Pasta &amp; Main course</p>
               </span>
-              <a href="Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+              <a href="menu/Pietrasanta_Pasta.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
             </section>
             <section class="our-menu__variant menu__pizza">
               <span class="our-menu__desc">
                 <p class="our-menu__title">Pizza &amp; Second course</p>
               </span>
-              <a href="Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+              <a href="menu/Pietrasanta_Pizza_Second_Course.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
             </section>
             <section class="our-menu__variant menu__dessert">
               <span class="our-menu__desc">
                 <p class="our-menu__title">Dessert &amp; Beverages</p>
               </span>
-              <a href="Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+              <a href="Pietrasanta_Dessert_Beverage.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
             </section>
           </div>
+          <p class="food-online-heading">Push button to see online menu</p>
+          <span class="hide-food-online-btn"></span>
       </section>
+
+      <div class="buy-food-online" id="buy-food-online">
+        <!-- <section class="benefit-section">
+          <a href="#" class="benefit-section__benefit1">
+            <img src="img/menu-filter/mastercard.svg" alt="">
+            <h3 class="benefit1__title">pay online</h3>
+          </a>
+          <a href="#" class="benefit-section__benefit2"><h3 class="benefit2__title">support</h3></a>
+          <a href="#" class="benefit-section__benefit3"><h3 class="benefit3__title">for order over 900 grn</h3></a>
+          <a href="#" class="benefit-section__benefit4"><h3 class="benefit4__title">bonus program</h3></a>
+        </section> -->
+        <h2>Choose your favourite meal</h2>
+        <aside class="buy-food-online__sidebar">
+          <p class="filter-heading__filter-btn" id="filter-btn">Filters</p>
+          <span class="buy-food-online__filter-heading">
+            <span id="filter-btn-close">Close</span>
+          </span>
+          <form>
+            <section class="food-filter__category">
+              <a href="#"><h2 class="food-filter__heading">Category</h2></a>
+              <input type="checkbox" class="food-filter" id="soup-appetizer"><label class="food-filter__label" for="soup-appetizer">Soup &amp; appetizer</label>
+              <input type="checkbox" class="food-filter" id="pasta"><label class="food-filter__label" for="pasta">Pasta</label>
+              <input type="checkbox" class="food-filter" id="pizza"><label class="food-filter__label" for="pizza">Pizza</label>
+              <input type="checkbox" class="food-filter" id="dessert"><label class="food-filter__label food-filter__label-dessert" for="dessert">Dessert</label>
+              <input type="checkbox" class="food-filter" id="beverages"><label class="food-filter__label" for="beverages">Beverages</label>
+            </section>
+            <section class="food-filter__category">
+              <a href="#"><h2 class="food-filter__heading">Drinks type</h2></a>
+              <input type="checkbox" class="food-filter-radio"  name="drink-type" id="non-alco"><label class="food-filter__label" for="non-alco">non-alco</label>
+              <input type="checkbox" class="food-filter-radio"  name="drink-type" id="alcoholic"><label class="food-filter__label" for="alcoholic">alcoholic</label>
+            </section>
+          <!-- <section class="food-filter__variants">
+            <a href="#"><h2>группы товаров:</h2></a>
+            <input type="radio" class="filter-group" name="filter-group" id="baxter-group"><label for="baxter-group" class="filter-group__label">бритвенные принадлежности</label>
+            <input type="radio" class="filter-group" name="filter-group" id="natty-group"><label for="natty-group" class="filter-group__label">средства для ухода</label>
+            <input type="radio" class="filter-group" name="filter-group" id="suavecito-group"><label for="suavecito-group" class="filter-group__label">аксессуары</label>
+          </section> -->
+          <button type="button" name="button" class="filter-btn">Find</button>
+        </form>
+        </aside>
+        <main class="food-wrapper__result">
+          <!-- <div class="food-result  food-result_dessert">
+            <figure>
+              <a href="#" class="food-result__pic"></a>
+              <figcaption class="food-result__name">Italian Ice-cream</figcaption>
+              <figcaption class="food-result__desc">Vanilla, Coffee, Chocolate flavours available</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_dessert">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_sorbet"></a>
+              <figcaption class="food-result__name">Italian Sorbet</figcaption>
+              <figcaption class="food-result__desc">Orange, Coconut, Strawberry flavours available</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_dessert">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_panna-cotta"></a>
+              <figcaption class="food-result__name">Panna Cotta</figcaption>
+              <figcaption class="food-result__desc">Italian Custard Cream with Caramel</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;70</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_dessert">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_creme-brulee"></a>
+              <figcaption class="food-result__name">Crème Brulee</figcaption>
+              <figcaption class="food-result__desc">Rich custard base topped with a contrasting layer of hard caramel</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;75</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_dessert">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_tiramisu"></a>
+              <figcaption class="food-result__name">Tiramisu</figcaption>
+              <figcaption class="food-result__desc">All-time favourite</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;80</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_dessert">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_tortino"></a>
+              <figcaption class="food-result__name">Tortino caldo di cioccolato</figcaption>
+              <figcaption class="food-result__desc">Melting chocolate cake</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;95</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_dessert">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_castagnaccio"></a>
+              <figcaption class="food-result__name">Il Castagnaccio</figcaption>
+              <figcaption class="food-result__desc">Classic Chestnut Tuscan Dessert. A real classic back home.</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;100</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_dessert">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_crostata"></a>
+              <figcaption class="food-result__name">Crostata di Marmellata</figcaption>
+              <figcaption class="food-result__desc">Home made jam orange tarte</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;110</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_dessert">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_semifreddo"></a>
+              <figcaption class="food-result__name">Semifreddo al Caramello</figcaption>
+              <figcaption class="food-result__desc">Vanilla, Coffee, Chocolate flavours available</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;130</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div> -->
+          <div class="food-result food-result_drinks food-result_drinks-alco">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_red-wine"></a>
+              <figcaption class="food-result__name">Red Wine (by glass)</figcaption>
+              <figcaption class="food-result__desc"></figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_drinks food-result_drinks-non-alco">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_americano"></a>
+              <figcaption class="food-result__name">Americano</figcaption>
+              <figcaption class="food-result__desc">A classic Aperitif cocktail of Campari and Red Vermouth,
+served on the rocks</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_drinks food-result_drinks-alco">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_spritz-royal"></a>
+              <figcaption class="food-result__name">Spritz Royal</figcaption>
+              <figcaption class="food-result__desc">Signature refreshing aperitif cocktail of Gin,
+White Vermouth, Aperol with a dash of Prosecco</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_drinks food-result_drinks-alco">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_negroni"></a>
+              <figcaption class="food-result__name">Negroni</figcaption>
+              <figcaption class="food-result__desc">A classic aperitif cocktail found in Treviso,
+Italy consists of Gin, Red Vermouth and Campari</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+
+
+          <!-- <div class="food-result food-result_pizza">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_margherita"></a>
+              <figcaption class="food-result__name">Margherita</figcaption>
+              <figcaption class="food-result__desc">Tomato sauce, Mozzarella Cheese and Basil leaves.</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;120*</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_pizza">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_napoletana"></a>
+              <figcaption class="food-result__name">Napoletana</figcaption>
+              <figcaption class="food-result__desc">Tomato sauce, Mozzarella Cheese, Anchovies and Capers</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;130</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_pizza">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_verdure"></a>
+              <figcaption class="food-result__name">Verdure</figcaption>
+              <figcaption class="food-result__desc">Rich custard base topped with a contrasting layer of hard caramel</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;150</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_pizza">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_diavola"></a>
+              <figcaption class="food-result__name">Diavola</figcaption>
+              <figcaption class="food-result__desc">Tomato sauce, Mozzarella Cheese and Spicy Salami</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;160</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_pasta">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_lasagna"></a>
+              <figcaption class="food-result__name">Lasagna</figcaption>
+              <figcaption class="food-result__desc">Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;70</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_pasta">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_tortelli"></a>
+              <figcaption class="food-result__name">Tortelli di Salsiccia</figcaption>
+              <figcaption class="food-result__desc">Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;80</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_pasta">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_spaghetti"></a>
+              <figcaption class="food-result__name">Spaghetti ai Frutti di Mare</figcaption>
+              <figcaption class="food-result__desc">Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;130</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_soup">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_frittura"></a>
+              <figcaption class="food-result__name">Frittura mista di Pesce</figcaption>
+              <figcaption class="food-result__desc">Deep fried Prawns, Anchovies, Squid and Zucchini</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;75</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div> -->
+          <div class="food-result food-result_soup">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_farro"></a>
+              <figcaption class="food-result__name">Farro di Mare</figcaption>
+              <figcaption class="food-result__desc">Steamed Spelt with Squid,Prawns, Mussels &amp; Tomatoes, with Olive Oil,
+Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;75</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_soup">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_minestrone"></a>
+              <figcaption class="food-result__name">Minestrone di verdure</figcaption>
+              <figcaption class="food-result__desc">Hearty Vegetable soup</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;75</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_soup">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_zuppa-di-pesce"></a>
+              <figcaption class="food-result__name">Zuppa di pesce</figcaption>
+              <figcaption class="food-result__desc">Seafood soup with Prawns, Squids, Clams &amp; Mussels,
+served with toasted bread</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;75</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+
+        </main>
+        <div class="goods-wrapper__pagination">
+          <a href="#" class="btn-pagination">&laquo;</a>
+          <a href="#" class="btn-pagination btn-pagination__active">1</a>
+          <a href="#" class="btn-pagination">2</a>
+          <a href="#" class="btn-pagination">3</a>
+          <a href="#" class="btn-pagination">4</a>
+          <a href="#" class="btn-pagination">&raquo;</a>
+        </div>
+      </div>
 
       <section class="our-services" id="our-services">
         <a href="#"><h2 class="our-services__heading">Services</h2></a>
@@ -253,7 +538,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts-block">
+      <section class="contacts-block" id="contacts">
         <a href="#"><h2 class="contacts-block__heading">How to reach us</h2></a>
         <section id="contacts-block__google-map"></section>
       </section>
@@ -262,28 +547,33 @@
           <section class="footer__contacts">
             <a href="#"><h4 class="footer__heading">Contact us</h4></a>
             <ul class="contacts">
-              <li class="contacts__street">
-                <a href="#">Heisenberg Str. 34</a>
+              <li>
+                <a href="#" class="contacts__street">64 Lva Tolstoho Str., Kyiv</a>
               </li>
-              <li class="contacts__phone">
-                <a href="#">0679402342034</a>
+              <li>
+                <a href="callto:0679402342" class="contacts__phone">0679402342</a>
               </li>
-              <li class="contacts__phone">
-                <a href="#">0679402342034</a>
+              <li>
+                <a href="callto:0952342109" class="contacts__phone">0952342109</a>
               </li>
-              <li class="contacts__email">
-                <a href="mailto:ourrest@gmail.com">ourrest@gmail.com</a>
+              <li>
+                <a href="mailto:oasis-kyiv@gmail.com" class="contacts__email">oasis-kyiv@gmail.com</a>
               </li>
             </ul>
           </section>
           <a href="#main" class="totop-button"></a>
-          <p>Copyright &copy; 2017 All rights reserved</p>
           <section class="footer__social-media">
-            <a href="#"><h4 class="footer__heading">Find us</h4></a>
-            <a href="#" class="social-media social-media__facebook"></a>
-            <a href="#" class="social-media social-media__vkontakte"></a>
-            <a href="#" class="social-media social-media__instagram"></a>
-            <a href="#" class="social-media social-media__pinterest"></a>
+            <a href="#"><h3 class="footer__heading">Find us</h3></a>
+            <a href="https://www.facebook.com" class="social-media social-media__facebook"></a>
+            <a href="https://www.vk.com" class="social-media social-media__vkontakte"></a>
+            <a href="https://www.instagram.com" class="social-media social-media__instagram"></a>
+            <a href="https://www.pinterest.com" class="social-media social-media__pinterest"></a>
+          </section>
+          <p class="footer__copy">Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
+          <section class="footer__app-link">
+            <a href="#"><h3 class="footer__heading">Coming soon for</h3></a>
+            <a href="https://itunes.apple.com/" class="social-media app-link__apple"></a>
+            <a href="https://play.google.com/store/apps?hl=uk" class="social-media app-link__android"></a>
           </section>
         </div>
       </footer>
