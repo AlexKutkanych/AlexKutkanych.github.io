@@ -5,7 +5,7 @@
   width: 100%;
   height: 660px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 90px;
   font-family: 'PT Sans Caption', sans-serif;
   &__heading {
     display: block;
@@ -28,7 +28,7 @@
     &__full-menu {
       display: block;
       position: absolute;
-      top: 20px;
+      top: 33px;
       right: 0;
       background-color: #E30000;
       width: 190px;
@@ -115,4 +115,68 @@
 
 .menu__dessert {
   background-image: url(../img/menu/dessert.jpg);
+}
+
+.hide-food-online-btn {
+  display: block;
+  float: left;
+  margin-top: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 10;
+  background: $menu-text-color url(../img/header/to-top-arrow.svg) 10px 10px no-repeat;
+  transform: rotate(90deg);
+  &:hover {
+    background-color: $text-hover-color;
+  }
+  &_animate {
+    transform: rotate(0deg);
+    transition: .5s;
+  }
+}
+
+.food-online-heading {
+  width: 400px;
+  height: 50px;
+  display: block;
+  float: left;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .our-menu {
+    height: 500px;
+    margin-bottom: 10px;
+    &__full-menu {
+      top: 64px;
+      width: 26%;
+      font-size: 12px;
+    }
+    &__wrapper {
+      height: 64%;
+    }
+    &__title {
+      vertical-align: middle;
+      font-size: 16px;
+    }
+    &__desc {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 22px;
+    }
+    &__variant:hover .our-menu__title {
+      transform: translateY(60px);
+    }
+    &__separate-menu {
+      font-size: 15px;
+    }
+  }
+
 }

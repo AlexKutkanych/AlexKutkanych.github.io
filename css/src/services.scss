@@ -65,6 +65,7 @@
     vertical-align: -webkit-baseline-middle;
     margin-right: 10px;
   }
+
   &:nth-child(3)::before {
     content: url("../img/services/livingroom.svg");
     vertical-align: middle;
@@ -119,22 +120,47 @@
 }
 .our-suitability-list {
   margin: 30px 0 0 48px;
+  list-style-position: inside;
   &__offer {
     list-style: square;
-    padding: 0 0 10px 30px;
+    padding: 0 0 10px 5px;
     font-size: 20px;
   }
 }
 
-@media screen and (max-width: 900px)  {
-  .our-services-list__offer:first-child::before {
-      content: url("../icons/free-wifi-signal.png");
-      // color: red;
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .our-services {
+    height: 910px;
+    &__wrapper {
+      width: 100%;
+    }
+    &__offer-section {
+      padding-top: 10px;
+      width: 100%;
+      height: 395px;
+    }
+    &__suitability-section {
+      padding-top: 10px;
+      width: 100%;
+    }
+
+    &__subheading {
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+    &-list {
+      width: 480px;
+      margin: 0 auto;
+      &__offer {
+        font-size: 18px;
+        padding-bottom: 5px;
+      }
+    }
   }
-  body {
-    background-color: lightgreen;
+  .our-suitability-list {
+    width: 395px;
+    margin: 0 auto;
+    list-style-position: inside;
+
   }
 }
-
-// @media screen and (max-width: 480px) {
-// }

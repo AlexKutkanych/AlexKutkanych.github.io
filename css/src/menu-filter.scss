@@ -1,0 +1,432 @@
+@import "!variables.scss";
+
+
+.buy-food-online {
+  width: $wrapper-width;
+  height: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.buy-food-online__hide {
+  height: 1px;
+  overflow: hidden;
+}
+
+.benefit-section {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0 20px 0;
+  box-shadow: 2px 2px 6px 6px lightgrey;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  &__benefit1, &__benefit2, &__benefit3, &__benefit4 {
+    width: 25%;
+    height: 100%;
+    display: block;
+    color: black;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+
+.benefit1__title {
+  height: 100%;
+
+}
+
+
+
+
+
+/*aside*/
+
+.buy-food-online__sidebar {
+  width: 25%;
+  float: left;
+  margin-right: 20px;
+}
+
+.buy-food-online__filter-heading {
+  width: 100%;
+  height: 40px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  background-color: $text-hover-color;
+  justify-content: space-between;
+  font-style: 20px;
+  color: #fff;
+}
+
+#filter-btn-close {
+  width: 20%;
+  height: 100%;
+  background-color: $menu-text-color;
+  line-height: 40px;
+  text-align: center;
+
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+}
+
+label {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 25px;
+	margin-right: 15px;
+  font-weight: bold;
+  margin-left: 19px;
+  letter-spacing: .6px;
+  font-family: $main-font;
+}
+
+.food-filter__label:before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+	height: 23px;
+	position: absolute;
+	left: -26px;
+	bottom:-2px;
+  border-radius: 50%;
+  border: 3px solid $text-hover-color;
+}
+
+.food-filter:checked + .food-filter__label::before {
+  content: "";
+  background-image: url(../img/menu-filter/checked.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.food-filter-radio:checked + .food-filter__label::before {
+  content: "\2022";
+  color: $text-hover-color;
+  font-size: 49px;
+  line-height: 18px;
+  text-align: center;
+}
+
+// .filter-group__label:before {
+// 	content: "";
+// 	display: inline-block;
+// 	width: 16px;
+// 	height: 16px;
+// 	margin-right: 10px;
+// 	position: absolute;
+// 	left: -19px;
+// 	bottom: 14px;
+//   border: 2px solid black;
+//   border-radius: 50%;
+// }
+//
+// .filter-group:checked + .filter-group__label::before {
+//   content: "\2022";
+//   color: black;
+//   font-size: 30px;
+//   text-align: center;
+//   line-height: 15px;
+// }
+
+.filter-group:checked + .filter-group__label,
+.filter-group__label:hover,
+.food-filter:checked + .food-filter__label,
+.food-filter__label:hover {
+  color:  #743b09;
+
+}
+
+.food-filter__category {
+  margin-bottom: 50px;
+}
+
+.food-filter__heading {
+  margin-bottom: 29px;
+}
+
+.food-filter__label {
+  margin-bottom: 20px;
+}
+
+// .goods-filter__groups {
+//   margin-bottom: 51px;
+// }
+//
+// .goods-filter__groups h2 {
+//   margin-bottom: 28px;
+//   letter-spacing: .5px;
+// }
+//
+// .filter-group__label {
+//   margin-bottom: 21px;
+// }
+//
+// .filter-group__label:last-child::before {
+//   bottom: -1px;
+// }
+
+.filter-btn {
+  width: 140px;
+  height: 40px;
+  color: white;
+  background-color: $button-color;
+  line-height: 30px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  &:hover{
+    margin-top: 2px;
+    cursor: pointer;
+  }
+}
+
+.filter-group__label:first-child {
+  color: red;
+}
+
+.goods-filter__groups label:nth-child(5)::before {
+  bottom: -4px;
+}
+
+/*food*/
+
+.food-wrapper__result {
+  width: 70%;
+  float: left;
+  text-transform: none;
+  font-family: 'montserrat-bold', sans-serif;
+  font-weight: bold;
+  margin-bottom: 49px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food-result {
+  width: 30%;
+  height: 288px;
+  margin: 5px 20px 14px 0;
+  box-shadow: -1px 2px 23px rgba(0, 0, 0, .44);
+  &:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+}
+
+.food-result:nth-child(3n) {
+  margin-right: 0;
+}
+
+.food-result:nth-child(4) {
+  margin-bottom: 43px;
+}
+
+//food result pictures
+//desserts
+
+.food-result__pic {
+  display: block;
+  width: 100%;
+  height: 165px;
+  background-image: url(../img/menu-filter/ice-cream.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.food-result__pic_sorbet {
+  background-image: url(../img/menu-filter/sorbet.jpg);
+}
+
+.food-result__pic_panna-cotta {
+  background-image: url(../img/menu-filter/panna-cotta.jpg);
+}
+
+.food-result__pic_creme-brulee {
+  background-image: url(../img/menu-filter/creme-brulee.jpg);
+}
+
+.food-result__pic_tiramisu {
+  background-image: url(../img/menu-filter/tiramisu.jpg);
+}
+
+.food-result__pic_tortino {
+  background-image: url(../img/menu-filter/tortino.jpg);
+}
+
+.food-result__pic_castagnaccio {
+  background-image: url(../img/menu-filter/castagnaccio.jpg);
+}
+
+.food-result__pic_crostata {
+  background-image: url(../img/menu-filter/crostata.jpg);
+}
+
+.food-result__pic_semifreddo {
+  background-image: url(../img/menu-filter/semifreddo.jpg);
+}
+
+.food-result__pic_red-wine {
+  background-image: url(../img/menu-filter/red-wine.jpg);
+}
+
+
+//pizza
+
+
+.food-result__pic_margherita {
+  background-image: url(../img/menu-filter/margherita.jpg);
+}
+
+.food-result__pic_napoletana {
+  background-image: url(../img/menu-filter/napoletana.jpg);
+}
+
+.food-result__pic_verdure {
+  background-image: url(../img/menu-filter/verdure.jpg);
+}
+
+.food-result__pic_diavola {
+  background-image: url(../img/menu-filter/diavola.jpg);
+}
+
+.food-result__pic_lasagna {
+  background-image: url(../img/menu-filter/lasagna.jpg);
+}
+
+.food-result__pic_tortelli {
+  background-image: url(../img/menu-filter/tortelli.jpg);
+}
+
+.food-result__pic_spaghetti {
+  background-image: url(../img/menu-filter/spaghetti.jpg);
+}
+
+.food-result__pic_frittura {
+  background-image: url(../img/menu-filter/frittura.jpg);
+}
+
+.food-result__pic_farro {
+  background-image: url(../img/menu-filter/farro.jpg);
+}
+
+.food-result__pic_minestrone {
+  background-image: url(../img/menu-filter/minestrone.jpg);
+}
+
+.food-result__pic_zuppa-di-pesce {
+  background-image: url(../img/menu-filter/zuppa-di-pesce.jpg);
+}
+
+.food-result__pic_americano {
+  background-image: url(../img/menu-filter/americano.jpeg);
+}
+
+.food-result__pic_spritz-royal {
+  background-image: url(../img/menu-filter/spritz-royal.jpg);
+}
+
+.food-result__pic_negroni {
+  background-image: url(../img/menu-filter/negroni.jpg);
+}
+
+
+
+
+
+
+
+
+.food-result__name {
+  font-size: 18px;
+  margin: 10px 0 10px 15px;
+  &:hover {
+    color: $text-hover-color;
+  }
+}
+
+.food-result__desc {
+  font-size: 12px;
+  margin: 0 0 9px 15px;
+  height: 28px;
+  max-height: 28px;
+  overflow: hidden;
+  &:hover {
+    color: $text-hover-color;
+  }
+}
+
+.food-result__buy, .food-result__price {
+  float: left;
+  display: block;
+}
+
+.food-result__price {
+  width: 24%;
+  height: 30px;
+  margin-left: 18px;
+  background-color: #fff;
+  border: 2px solid $text-hover-color;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 30px;
+}
+
+.food-result__buy {
+  width: 54%;
+  height: 34px;
+  padding-left: 0;
+  background-color: $text-hover-color;
+  color: white;
+  border: none;
+  &:hover {
+    opacity: .5;
+    cursor: pointer;
+  }
+}
+
+.goods-wrapper__pagination {
+  clear: both;
+  margin-left: 1px;
+}
+
+.btn-pagination {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  margin-right: 4px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  line-height: 43px;
+}
+
+.btn-pagination:nth-child(3) {
+  margin-right: 3px;
+}
+
+.goods-wrapper__pagination .btn-pagination {
+  color: white;
+  font-size: 13px;
+}
+
+.goods-wrapper__pagination .btn-pagination__active {
+  background-color: #fff;
+  color: black;
+
+}
+
+.btn-pagination:not(.btn-pagination__active):hover {
+  background-color: #743b09;
+  color: white;
+}

@@ -5,6 +5,7 @@
   height: 150px;
   background: url(../img/footer/pasta-tomato-footer.jpg) 0 0 no-repeat;
   background-size: cover;
+  font-family: $main-font;
   &-wrapper {
     position: relative;
     background-color: rgba( 122, 122, 122, 0.5);
@@ -19,63 +20,95 @@
     align-items: center;
   }
   &__heading {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: black;
   }
 }
 
-.contacts > li a {
+.contacts__street:hover, .contacts__phone:hover, .contacts__email:hover {
   color: black;
 }
 
-.totop-button {
+.footer__copy {
   display: block;
-  position: absolute;
-  top: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: $text-hover-color;
-  border: 3px solid grey;
-  opacity: .5;
-  &:hover {
-    opacity: 1;
-  }
+  width: 20%;
 }
 
 //socials
 .social-media {
   font-style: $main-font;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: $text-hover-color;
   display: inline-block;
   margin-right: 10px;
-  background-image: url(../img/footer/bottom-icons.png);
-  background-repeat: no-repeat;
   &__facebook {
-    background-position: 10px 0;
+    background: url(../img/footer/facebook.svg);
     &:hover {
-      background-color: blue;
+      background: url(../img/footer/facebook-hover.svg);
     }
   }
   &__vkontakte {
-    background-position: 10px 0;
+    background: url(../img/footer/vk.svg);
     &:hover {
-      background-color: blue;
+      background: url(../img/footer/vk-hover.svg);
     }
   }
   &__instagram {
-    background-position: 10px 0;
+    background: url(../img/footer/instagram.svg);
+    background-color: #fff;
     &:hover {
-      background-color: blue;
+      background: url(../img/footer/instagram-hover.svg);
+      background-color: #6A453B;
+
     }
   }
   &__pinterest {
-    background-position: 10px 0;
+    background: url(../img/footer/pinterest.svg);
     &:hover {
-      background-color: blue;
+      background: url(../img/footer/pinterest-hover.svg);
     }
   }
+}
+
+//apps
+
+.app-link__apple {
+  background: url(../img/footer/apple.svg);
+}
+
+.app-link__android {
+  background: url(../img/footer/android.svg);
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .footer {
+      height: 250px;
+      &-wrapper {
+        width: 95%;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+      &__contacts {
+        float: left;
+        margin: 10px 10px 0 0;
+      }
+      &__social-media {
+        float: left;
+        margin: 0 10px;
+        margin-top: 10px;
+      }
+      &__app-link {
+        float: left;
+        margin: 10px -10px 0;
+      }
+      &__copy {
+        width: 100%;
+        display: block;
+        clear: both;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
 }

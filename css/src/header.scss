@@ -1,4 +1,6 @@
 @import "!variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
 
 .header {
   width: 100%;
@@ -24,7 +26,7 @@
     float: left;
     padding-right: 20px;
     padding-left: 20px;
-    &:last-child, &:nth-child(9) {
+    &:last-child, &:nth-child(10) {
       float: right;
     }
   }
@@ -66,7 +68,11 @@
 
 .menu-top__menu-item #booking_button {
   background-color: #377BB3;
-  color: white;
+  color: #fff;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 /*submenu*/
@@ -74,7 +80,27 @@
 .menu-top__submenu {
   width: 195px;
   position:absolute;
-  left: -110px;
+  left: 2px;
+  top: 36px;
+  z-index:1;
+  max-height: 0;
+  overflow:hidden;
+  border-radius: 10px;
+  -webkit-transform:perspective(400) rotate3d(1,0,0,-90deg);
+  -webkit-transform-origin:50% 0;
+  -webkit-transition:350ms;
+  -moz-transition:350ms;
+  -o-transition:350ms;
+  transition:350ms;
+  text-align: left;
+  text-indent: 5px;
+  background-color: rgba(150,75,0, .4);
+}
+
+.menu-top__submenu-contacts {
+  width: 195px;
+  position:absolute;
+  left: 2px;
   top: 36px;
   z-index:1;
   max-height: 0;
@@ -87,13 +113,6 @@
   transition:350ms;
 }
 
-
-.menu-top__menu-item:nth-of-type(2):hover .menu-top__submenu  {
-  max-height: 1000px;
-  -webkit-transform:perspective(400) rotate3d(0,0,0,0);
-}
-
-
 .menu-top__submenu .submenu__menu-item:hover {
   // background-color: $text-hover-color;
   background-color: rgba(255, 0, 0, 0.5);
@@ -101,6 +120,12 @@
 
 .submenu__menu-link {
   display: block;
+  text-indent: 10px;
+}
+
+.menu-top__menu-item:hover .menu-top__submenu {
+  max-height: 1000px;
+  -webkit-transform:perspective(400) rotate3d(0,0,0,0);
 }
 
  #booking_button, #sign-up_button {
@@ -128,16 +153,71 @@
 
 }
 
-/**/
+/*to top button*/
 
-.homepage-hero-module__slogan {
+#to-top-button {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 10;
+  background: $menu-text-color url(../img/header/to-top-arrow.svg) 10px 10px no-repeat;
+  &:hover {
+    background-color: $text-hover-color;
+  }
+}
+
+//video
+
+.video-block {
+  position: relative;
+  width: 100%;
+  height: 31.25rem;
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #000;
+  }
+  &__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+
+.video-block__overlay {
+  color: #fff;
+  font-family: 'Oxygen', sans-serif;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  width: 100%;
+  max-width: 45em;
+  box-sizing: border-box;
+  padding: 2em;
+  line-height: 1.5;
+  text-align: center;
+  transform: translateX(-50%);
+  background-color: rgba(122, 122, 122, 0.4);
+
+}
+
+.overlay__slogan {
     position: absolute;
     top: 200px;
     left: 47.3%;
     width: 700px;
     z-index: 1;
     color: white;
-    background-color: rgba(122, 122, 122, 0.4);
     padding: 5px;
     &_heading {
       font-family: $heading-font;
@@ -153,5 +233,89 @@
       &::after {
         content: url("../img/header/two-quotes.svg");
       }
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    //menu
+    .header-wrapper {
+      width: 100%;
+      padding: 0;
+    }
+
+    .menu-top {
+      display: none;
+      padding-top: 0;
+      &__menu-item {
+        display: block;
+        width: 100%;
+        z-index: 10;
+        background-color: rgba(255, 0, 0, .4);
+        border-bottom: 1px solid white;
+        text-align: center;
+        padding-left: 0;
+      }
+      &__menu-link-underline {
+        color: white;
+        display: block;
+          &:hover {
+          color: white;
+          &::after {
+            width: 5%;
+          }
+        }
+      }
+      &__hline {
+        display: none;
+
+      }
+    }
+
+//mobile menu
+
+    .mobile-menu {
+      display: block;
+      position: relative;
+      height: 76px;
+      &__burger {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-image: url("../img/header/mobile-menu.svg");
+        background-repeat: no-repeat;
+        margin: 18px 0 0 10px;
+      }
+    }
+
+    .menu-top__submenu {
+      // display: block;
+      // width: 100%;
+      // position: static;
+    }
+
+    .menu-top__menu-item:hover .menu-top__submenu  {
+      max-height: 0px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    #sign-up_button {
+    display: none;
+    }
+
+    //video-overlay
+
+    .video-block__overlay {
+      width: 80%;
+    }
+
+    .overlay__slogan_heading {
+      font-size: 50px;
+    }
+
+    .overlay__slogan_passion {
+      font-size: 23px;
     }
 }

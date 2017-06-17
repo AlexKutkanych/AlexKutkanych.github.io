@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
 .header {
   width: 100%;
   color: #964B00;
@@ -21,7 +23,7 @@
     float: left;
     padding-right: 20px;
     padding-left: 20px; }
-    .menu-top__menu-item:last-child, .menu-top__menu-item:nth-child(9) {
+    .menu-top__menu-item:last-child, .menu-top__menu-item:nth-child(10) {
       float: right; }
   .menu-top__menu-link {
     color: #666666; }
@@ -53,13 +55,35 @@
 
 .menu-top__menu-item #booking_button {
   background-color: #377BB3;
-  color: white; }
+  color: #fff; }
+
+.mobile-menu {
+  display: none; }
 
 /*submenu*/
 .menu-top__submenu {
   width: 195px;
   position: absolute;
-  left: -110px;
+  left: 2px;
+  top: 36px;
+  z-index: 1;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
+  -webkit-transform-origin: 50% 0;
+  -webkit-transition: 350ms;
+  -moz-transition: 350ms;
+  -o-transition: 350ms;
+  transition: 350ms;
+  text-align: left;
+  text-indent: 5px;
+  background-color: rgba(150, 75, 0, 0.4); }
+
+.menu-top__submenu-contacts {
+  width: 195px;
+  position: absolute;
+  left: 2px;
   top: 36px;
   z-index: 1;
   max-height: 0;
@@ -71,15 +95,16 @@
   -o-transition: 350ms;
   transition: 350ms; }
 
-.menu-top__menu-item:nth-of-type(2):hover .menu-top__submenu {
-  max-height: 1000px;
-  -webkit-transform: perspective(400) rotate3d(0, 0, 0, 0); }
-
 .menu-top__submenu .submenu__menu-item:hover {
   background-color: rgba(255, 0, 0, 0.5); }
 
 .submenu__menu-link {
-  display: block; }
+  display: block;
+  text-indent: 10px; }
+
+.menu-top__menu-item:hover .menu-top__submenu {
+  max-height: 1000px;
+  -webkit-transform: perspective(400) rotate3d(0, 0, 0, 0); }
 
 #booking_button, #sign-up_button {
   width: 80px;
@@ -95,24 +120,117 @@
 .menu-top__menu-link {
   color: white; }
 
-/**/
-.homepage-hero-module__slogan {
+/*to top button*/
+#to-top-button {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 10;
+  background: #666 url(../img/header/to-top-arrow.svg) 10px 10px no-repeat; }
+  #to-top-button:hover {
+    background-color: #964B00; }
+
+.video-block {
+  position: relative;
+  width: 100%;
+  height: 31.25rem; }
+  .video-block__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #000; }
+  .video-block__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); }
+
+.video-block__overlay {
+  color: #fff;
+  font-family: 'Oxygen', sans-serif;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  width: 100%;
+  max-width: 45em;
+  box-sizing: border-box;
+  padding: 2em;
+  line-height: 1.5;
+  text-align: center;
+  transform: translateX(-50%);
+  background-color: rgba(122, 122, 122, 0.4); }
+
+.overlay__slogan {
   position: absolute;
   top: 200px;
   left: 47.3%;
   width: 700px;
   z-index: 1;
   color: white;
-  background-color: rgba(122, 122, 122, 0.4);
   padding: 5px; }
-  .homepage-hero-module__slogan_heading {
+  .overlay__slogan_heading {
     font-family: "Cookie", cursive;
     font-size: 80px;
     color: white; }
-  .homepage-hero-module__slogan_passion {
+  .overlay__slogan_passion {
     font-size: 30px;
     margin-bottom: 10px; }
-    .homepage-hero-module__slogan_passion::before {
+    .overlay__slogan_passion::before {
       content: url("../img/header/two-quotes.svg"); }
-    .homepage-hero-module__slogan_passion::after {
+    .overlay__slogan_passion::after {
       content: url("../img/header/two-quotes.svg"); }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .header-wrapper {
+    width: 100%;
+    padding: 0; }
+  .menu-top {
+    display: none;
+    padding-top: 0; }
+    .menu-top__menu-item {
+      display: block;
+      width: 100%;
+      z-index: 10;
+      background-color: rgba(255, 0, 0, 0.4);
+      border-bottom: 1px solid white;
+      text-align: center;
+      padding-left: 0; }
+    .menu-top__menu-link-underline {
+      color: white;
+      display: block; }
+      .menu-top__menu-link-underline:hover {
+        color: white; }
+        .menu-top__menu-link-underline:hover::after {
+          width: 5%; }
+    .menu-top__hline {
+      display: none; }
+  .mobile-menu {
+    display: block;
+    position: relative;
+    height: 76px; }
+    .mobile-menu__burger {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-image: url("../img/header/mobile-menu.svg");
+      background-repeat: no-repeat;
+      margin: 18px 0 0 10px; }
+  .menu-top__menu-item:hover .menu-top__submenu {
+    max-height: 0px; }
+  .active {
+    display: block; }
+  #sign-up_button {
+    display: none; }
+  .video-block__overlay {
+    width: 80%; }
+  .overlay__slogan_heading {
+    font-size: 50px; }
+  .overlay__slogan_passion {
+    font-size: 23px; } }
