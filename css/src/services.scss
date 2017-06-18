@@ -125,6 +125,10 @@
     list-style: square;
     padding: 0 0 10px 5px;
     font-size: 20px;
+    &:nth-child(n):hover {
+      color: yellow;
+      cursor: pointer;
+    }
   }
 }
 

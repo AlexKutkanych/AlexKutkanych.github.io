@@ -1,0 +1,65 @@
+.our-history {
+  height: 500px; }
+  .our-history__wrapper {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .our-history__description {
+    float: left;
+    width: 50%;
+    text-align: center; }
+  .our-history__text {
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: 23px;
+    margin-bottom: 25px; }
+  .our-history__heading {
+    font-family: "Cookie", cursive;
+    font-size: 80px;
+    margin-bottom: 15px; }
+  .our-history__photos {
+    width: 50%;
+    text-align: center; }
+  .our-history__image {
+    width: 300px; }
+  .our-history__about {
+    font-family: "PT Sans Caption", sans-serif;
+    text-transform: uppercase;
+    color: #964B00;
+    text-decoration: underline;
+    font-size: 18px; }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .our-history {
+    height: 550px;
+    margin: 20px auto; }
+    .our-history__wrapper {
+      flex-direction: column; }
+    .our-history__description {
+      width: 90%;
+      margin-bottom: 30px; }
+    .our-history__photos {
+      display: block;
+      width: 100%; }
+    .our-history__image:last-child {
+      display: none; } }
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .our-history {
+    height: 550px; }
+    .our-history__wrapper {
+      flex-direction: column; }
+    .our-history__description {
+      width: 90%;
+      margin-bottom: 30px; }
+    .our-history__photos {
+      display: block;
+      width: 100%; }
+    .our-history__image:last-child {
+      display: none; }
+    .our-history__heading {
+      font-size: 50px; } }

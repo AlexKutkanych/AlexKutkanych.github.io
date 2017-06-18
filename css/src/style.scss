@@ -29,39 +29,6 @@ li {
 //     bottom: 0;
 //   }
 //
-//   .our-history_wrapper {
-//     width:   $wrapper-width;
-//     margin: 0 auto;
-//     height: 300px;
-//     .our-history_description {
-//       float: left;
-//       width: 45%;
-//       height: 100%;
-//       text-align: center;
-//       .heading {
-//         font-family: $heading-font;
-//         font-size: 70px;
-//       }
-//       .subheading {
-//         font-weight: 900;
-//         font-size: 35px;
-//         color: grey;
-//       }
-//     }
-//     .our-history_photos {
-//       @extend .our-history_description;
-//       width: 55%;
-//       float: right;
-//       display: -webkit-flex;
-//       display: -ms-flex;
-//       display: flex;
-//       justify-content: space-around;
-//       align-items: center;
-//       .our-history_image {
-//       }
-//     }
-//   }
-
 
   // .signin-form, .signup-form  {
   //   display: none;

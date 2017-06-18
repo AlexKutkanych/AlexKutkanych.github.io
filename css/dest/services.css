@@ -110,6 +110,9 @@
     list-style: square;
     padding: 0 0 10px 5px;
     font-size: 20px; }
+    .our-suitability-list__offer:nth-child(n):hover {
+      color: yellow;
+      cursor: pointer; }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .our-services {

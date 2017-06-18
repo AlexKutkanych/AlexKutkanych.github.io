@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/script.js" defer></script>
     <script type="text/javascript" src="js/google-map-init.js" defer></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script>
+    <script type="text/javascript" src="js/bg-video.js" defer></script>
     <script type="text/javascript" src="js/tabs.js" defer></script>
     <script type="text/javascript" src="js/filter-events.js" defer></script>
     <script type="text/javascript" src="js/to-top-button.js" defer></script>
@@ -87,10 +88,14 @@
       </header>
       <div class="video-block">
         <div class="video-block__container">
-          <video autoplay loop class="video-block__video">
-            <source type="video/mp4" src="vid/bg-video.mp4">
+          <video autoplay="true" loop="loop" volume="0" class="video-block__video">
+            <!-- fallback for video tag for IE 11, 10 -->
+            <!--[if lte IE 11]>
+            <video src="vid/bg-video.mp4" autoplay="true" loop="loop" volume="0" class="video-block__video"></video>
+            <![endif]-->
+            <!-- <source type="video/mp4" src="vid/bg-video.mp4">
             <source type="video/webm" src="vid/bg-video.webm">
-            <source type="video/ogg" src="vid/bg-video.ogv">
+            <source type="video/ogg" src="vid/bg-video.ogv"> -->
           </video>
           <div class="video-block__overlay">
             <h2 class="overlay__slogan_heading">Welcome to Oasis!</h2>
@@ -101,20 +106,19 @@
         </div>
       </div>
 
-      <!-- <section class="our-history" id="our-history">
-        <div class="our-history_wrapper">
-          <section class="our-history_description">
-            <h2 class="heading">Discover</h2>
-            <p class="subheading">our history</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="#">about us</a>
+      <section class="our-history" id="our-history">
+        <div class="our-history__wrapper">
+          <section class="our-history__description">
+            <h2 class="our-history__heading">Discover our history</h2>
+            <p class="our-history__text">Oasis is an Italian restaurant located in the central part of Kyiv.</p>
+            <a href="#" class="our-history__about">about us</a>
           </section>
-          <section class="our-history_photos">
-            <img class="our-history_image" src="img/main/history-1.jpg" alt="some salad">
-            <img class="our-history_image" src="img/main/history-2.jpg" alt="some dessert">
+          <section class="our-history__photos">
+            <img class="our-history__image" src="img/history/history-1.jpg" alt="Italian pizza">
+            <img class="our-history__image" src="img/history/history-2.jpg" alt="Italian pasta">
           </section>
         </div>
-      </section> -->
+      </section>
       <section class="our-menu" id="our-menu">
         <a href="#"><h2 class="our-menu__heading">Our menu</h2></a>
         <a href="menu/menu/Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__full-menu">Download full menu</a>
