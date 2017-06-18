@@ -180,3 +180,62 @@
   }
 
 }
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .our-menu {
+    height: 780px;
+    margin-bottom: 10px;
+    &__full-menu {
+      top: 700px;
+      left: 20px;
+      width: 90%;
+      font-size: 16px;
+    }
+    &__wrapper {
+      flex-wrap:wrap;
+      height: 80%;
+    }
+    &__heading {
+      margin-top: 10px;
+      font-size: 50px;
+      &::after {
+        width: 90px;
+        bottom: 0;
+        margin-left: -120px;
+      }
+    }
+    &__title {
+      vertical-align: middle;
+      font-size: 16px;
+    }
+    &__desc {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 22px;
+    }
+    &__variant {
+      width: 50%;
+      height: 50%;
+      &:hover .our-menu__title {
+        transform: translateY(60px);
+      }
+    }
+    &__separate-menu {
+      font-size: 15px;
+    }
+  }
+  .food-online-heading {
+    width: 50%;
+    height: 60px;
+    float: left;
+    margin-top: 50px;
+    line-height: 16px;
+    font-size: 18px;
+  }
+  .hide-food-online-btn {
+    margin-top: 50px;
+  }
+}

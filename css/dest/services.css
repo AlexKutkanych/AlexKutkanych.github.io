@@ -136,3 +136,42 @@
     width: 395px;
     margin: 0 auto;
     list-style-position: inside; } }
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .our-services {
+    height: 840px; }
+    .our-services__content-block {
+      height: 90%; }
+    .our-services__wrapper {
+      width: 100%; }
+    .our-services__offer-section {
+      padding-top: 10px;
+      width: 100%;
+      height: 370px; }
+    .our-services__suitability-section {
+      padding-top: 0;
+      width: 100%; }
+    .our-services__heading {
+      font-size: 50px; }
+      .our-services__heading::after {
+        bottom: 0;
+        width: 80px;
+        margin-left: -98px; }
+    .our-services__subheading {
+      font-size: 30px;
+      margin: 10px 0; }
+    .our-services-list {
+      width: 80%;
+      margin: 0 auto; }
+      .our-services-list__offer {
+        font-size: 18px;
+        padding-bottom: 5px;
+        list-style: disc; }
+        .our-services-list__offer:nth-child(n)::before {
+          content: none; }
+  .our-suitability-list {
+    width: 80%;
+    margin: 0 auto;
+    list-style-position: inside; }
+    .our-suitability-list__offer {
+      font-size: 18px; } }

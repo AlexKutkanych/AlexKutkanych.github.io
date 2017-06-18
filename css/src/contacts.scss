@@ -31,3 +31,22 @@
    height: 80%;
    background-color: grey;
  }
+
+ @media only screen and (min-width: 320px) and (max-width: 479px) {
+  .contacts-block {
+    height: 590px;
+    &__heading {
+      font-size: 50px;
+      &::after {
+        width: 160px;
+        bottom: 0;
+        margin-left: -200px;
+      }
+    }
+  }
+
+  #contacts-block__google-map {
+    height: 90%;
+  }
+
+}

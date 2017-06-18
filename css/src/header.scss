@@ -319,3 +319,99 @@
       font-size: 23px;
     }
 }
+
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  #to-top-button {
+    right: 10px;
+  }
+
+  //menu
+  .header-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .menu-top {
+    display: none;
+    padding-top: 0;
+    &__menu-item {
+      display: block;
+      width: 100%;
+      z-index: 10;
+      background-color: rgba(255, 0, 0, .4);
+      border-bottom: 1px solid white;
+      text-align: center;
+      padding-left: 0;
+    }
+    &__menu-link-underline {
+      color: white;
+      display: block;
+        &:hover {
+        color: white;
+        &::after {
+          width: 5%;
+        }
+      }
+    }
+    &__hline {
+      display: none;
+
+    }
+  }
+
+//mobile menu
+
+  .mobile-menu {
+    display: block;
+    position: relative;
+    height: 76px;
+    &__burger {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-image: url("../img/header/mobile-menu.svg");
+      background-repeat: no-repeat;
+      margin: 18px 0 0 10px;
+    }
+  }
+
+  .menu-top__submenu {
+    // display: block;
+    // width: 100%;
+    // position: static;
+  }
+
+  .menu-top__menu-item:hover .menu-top__submenu  {
+    max-height: 0px;
+  }
+
+  .active {
+    display: block;
+  }
+
+  #sign-up_button {
+  display: none;
+  }
+
+  //video-overlay
+
+  .video-block__overlay {
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    top: 0;
+    padding: 5px;
+    margin: auto;
+
+  }
+
+  .overlay__slogan_heading {
+    font-size: 50px;
+  }
+
+  .overlay__slogan_passion, .overlay__slogan_author {
+    display: none;
+  }
+
+}
