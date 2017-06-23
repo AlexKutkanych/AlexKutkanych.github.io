@@ -667,15 +667,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header-wrapper {
-  width: 90%;
+  width: 95%;
   height: 100%;
-  padding-right: 30px;
-  padding-left: 30px;
   margin: 0 auto;
+  position: relative;
+}
+
+.header-wrapper__btns-section {
+  float: right;
+  position: relative;
+  margin-top: 30px;
+  width: 240px;
 }
 
 .menu-top {
   height: 35px;
+  float: left;
   padding: 30px 0 10px 0;
   font-weight: bold;
   line-height: 35px;
@@ -687,11 +694,6 @@ body::-webkit-scrollbar-thumb {
   float: left;
   padding-right: 20px;
   padding-left: 20px;
-}
-
-.menu-top__menu-item:last-child,
-.menu-top__menu-item:nth-child(10) {
-  float: right;
 }
 
 .menu-top__menu-link {
@@ -715,7 +717,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #964B00;
 }
 
-.menu-top__menu-link-underline::after {
+.menu-top__menu-link::after {
   content: "";
   height: 2px;
   display: block;
@@ -724,16 +726,11 @@ body::-webkit-scrollbar-thumb {
   width: 0;
 }
 
-.menu-top__menu-link-underline:hover::after {
+.menu-top__menu-link:hover::after {
   width: 100%;
   background-color: #964B00;
   -webkit-transition: width .8s ease-in-out, background-color .8s ease;
   transition: width .8s ease-in-out, background-color .8s ease;
-}
-
-.menu-top__menu-item #booking_button {
-  background-color: #377BB3;
-  color: #fff;
 }
 
 .mobile-menu {
@@ -742,43 +739,37 @@ body::-webkit-scrollbar-thumb {
 
 /*submenu*/
 
-.menu-top__submenu {
+.menu__submenu-style {
   width: 195px;
   position: absolute;
+  display: none;
   left: 2px;
   top: 36px;
   z-index: 1;
-  max-height: 0;
+  border-radius: 20px;
   overflow: hidden;
-  border-radius: 10px;
-  -webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-  -webkit-transform-origin: 50% 0;
-  -webkit-transition: 350ms;
-  -moz-transition: 350ms;
-  -o-transition: 350ms;
-  transition: 350ms;
-  text-align: left;
-  text-indent: 5px;
   background-color: rgba(150, 75, 0, 0.4);
+  text-align: left;
+  text-indent: 10px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.menu-top__menu-item:hover .menu__submenu_hover {
+  display: block;
 }
 
 .menu-top__submenu-contacts {
   width: 195px;
+  display: none;
   position: absolute;
   left: 2px;
   top: 36px;
-  z-index: 1;
-  max-height: 0;
+  border-radius: 20px;
   overflow: hidden;
-  -webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-  -webkit-transform-origin: 50% 0;
-  -webkit-transition: 350ms;
-  -moz-transition: 350ms;
-  -o-transition: 350ms;
-  transition: 350ms;
+  background-color: rgba(150, 75, 0, 0.4);
 }
 
-.menu-top__submenu .submenu__menu-item:hover {
+.submenu__menu-item:hover {
   background-color: rgba(255, 0, 0, 0.5);
 }
 
@@ -787,29 +778,37 @@ body::-webkit-scrollbar-thumb {
   text-indent: 10px;
 }
 
-.menu-top__menu-item:hover .menu-top__submenu {
-  max-height: 1000px;
-  -webkit-transform: perspective(400) rotate3d(0, 0, 0, 0);
-}
-
-#booking_button,
-#sign-up_button {
-  width: 80px;
+.join-us__btn,
+.booking__btn {
+  width: 110px;
+  display: inline-block;
+  position: absolute;
   height: 33px;
   border-radius: 20px;
+  line-height: 33px;
+  text-align: center;
   color: white;
   background-color: #E30000;
+  top: 0;
+  left: 0;
+  font-weight: bold;
 }
 
-#booking_button:hover,
-#sign-up_button:hover {
+.join-us__btn:hover,
+.booking__btn:hover {
   cursor: pointer;
   opacity: .5;
   margin-top: 3px;
 }
 
-.menu-top__menu-link {
-  color: white;
+.join-us__btn_active,
+.booking__btn_active {
+  margin-top: 3px;
+  background-color: #964B00;
+}
+
+.booking__btn {
+  left: 115px;
 }
 
 /*to top button*/
@@ -904,59 +903,116 @@ body::-webkit-scrollbar-thumb {
     padding: 0;
   }
 
+  .header-wrapper__btns-section {
+    position: absolute;
+    width: 200px;
+    right: 10px;
+    top: 20px;
+  }
+
   .menu-top {
+    width: 100%;
     display: none;
     padding-top: 0;
   }
 
   .menu-top__menu-item {
     display: block;
-    width: 100%;
-    z-index: 10;
-    background-color: rgba(255, 0, 0, 0.4);
-    border-bottom: 1px solid white;
-    text-align: center;
-    padding-left: 0;
+    float: none;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0;
   }
 
-  .menu-top__menu-link-underline {
-    color: white;
+  .menu-top__menu-item:not(:last-child) {
+    border-bottom: 1px solid #964B00;
+  }
+
+  .menu-top__menu-link {
     display: block;
   }
 
-  .menu-top__menu-link-underline:hover {
-    color: white;
+  .menu-top__menu-link::after {
+    height: 0;
   }
 
-  .menu-top__menu-link-underline:hover::after {
-    width: 5%;
+  .menu-top__active {
+    display: block;
   }
 
-  .menu-top__hline {
+  .menu-top__menu-item:hover .menu__submenu_hover {
     display: none;
+  }
+
+  .menu__submenu-style {
+    border-radius: 0;
+  }
+
+  .menu__submenu-show-menu {
+    display: block;
+    position: static;
+    width: 100%;
+  }
+
+  .submenu__menu-item:not(:last-child) {
+    border-bottom: 1px solid white;
   }
 
   .mobile-menu {
     display: block;
-    position: relative;
-    height: 76px;
+    width: 100%;
+    height: 73px;
+    border-bottom: 3px solid #666;
   }
 
   .mobile-menu__burger {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-image: url("../img/header/mobile-menu.svg");
-    background-repeat: no-repeat;
-    margin: 18px 0 0 10px;
-  }
-
-  .menu-top__menu-item:hover .menu-top__submenu {
-    max-height: 0px;
-  }
-
-  .active {
     display: block;
+    float: left;
+    width: 76px;
+    height: 76px;
+    background: url("../img/header/mobile-menu.svg") center center no-repeat;
+    transition-duration: 1s;
+  }
+
+  .mobile-menu__burger_open {
+    background: url("../img/header/close.svg") center center no-repeat;
+    width: 30px;
+    margin-left: 25px;
+    transition-duration: 1s;
+    transform: rotate(90deg);
+  }
+
+  .join-us__btn {
+    width: 100px;
+    display: block;
+    position: absolute;
+    top: -26px;
+    right: 0;
+    width: 80px;
+    height: 33px;
+    border-radius: 20px;
+    color: white;
+    background-color: #E30000;
+  }
+
+  .join-us__btn_active {
+    margin-top: 3px;
+    background-color: #964B00;
+  }
+
+  .booking__btn_active {
+    margin-top: 3px;
+    background-color: #964B00;
+  }
+
+  .header-wrapper__registration_show {
+    right: 0;
+    width: 100%;
+  }
+
+  #booking__btn {
+    top: -26px;
+    left: 90px;
   }
 
   #sign-up_button {
@@ -986,63 +1042,111 @@ body::-webkit-scrollbar-thumb {
     padding: 0;
   }
 
+  .header-wrapper__btns-section {
+    position: absolute;
+    width: 200px;
+    right: 10px;
+    top: 20px;
+  }
+
   .menu-top {
+    width: 100%;
     display: none;
     padding-top: 0;
   }
 
   .menu-top__menu-item {
     display: block;
-    width: 100%;
-    z-index: 10;
-    background-color: rgba(255, 0, 0, 0.4);
-    border-bottom: 1px solid white;
-    text-align: center;
-    padding-left: 0;
+    float: none;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0;
   }
 
-  .menu-top__menu-link-underline {
-    color: white;
+  .menu-top__menu-item:not(:last-child) {
+    border-bottom: 1px solid #964B00;
+  }
+
+  .menu-top__menu-link {
     display: block;
   }
 
-  .menu-top__menu-link-underline:hover {
-    color: white;
+  .menu-top__menu-link::after {
+    height: 0;
   }
 
-  .menu-top__menu-link-underline:hover::after {
-    width: 5%;
+  .menu-top__active {
+    display: block;
   }
 
-  .menu-top__hline {
+  .menu-top__menu-item:hover .menu__submenu_hover {
     display: none;
+  }
+
+  .menu__submenu-style {
+    border-radius: 0;
+  }
+
+  .menu__submenu-show-menu {
+    display: block;
+    position: static;
+    width: 100%;
+  }
+
+  .submenu__menu-item:not(:last-child) {
+    border-bottom: 1px solid white;
   }
 
   .mobile-menu {
     display: block;
-    position: relative;
-    height: 76px;
+    width: 100%;
+    height: 73px;
+    border-bottom: 3px solid #666;
   }
 
   .mobile-menu__burger {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-image: url("../img/header/mobile-menu.svg");
-    background-repeat: no-repeat;
-    margin: 18px 0 0 10px;
-  }
-
-  .menu-top__menu-item:hover .menu-top__submenu {
-    max-height: 0px;
-  }
-
-  .active {
     display: block;
+    float: left;
+    width: 76px;
+    height: 76px;
+    background: url("../img/header/mobile-menu.svg") center center no-repeat;
+    transition-duration: 1s;
   }
 
-  #sign-up_button {
-    display: none;
+  .mobile-menu__burger_open {
+    background: url("../img/header/close.svg") center center no-repeat;
+    width: 30px;
+    margin-left: 25px;
+    transition-duration: 1s;
+    transform: rotate(90deg);
+  }
+
+  .join-us__btn {
+    width: 100px;
+    display: block;
+    position: absolute;
+    top: -26px;
+    right: 0;
+    width: 80px;
+    height: 33px;
+    border-radius: 20px;
+    color: white;
+    background-color: #E30000;
+  }
+
+  .join-us__btn_active {
+    margin-top: 3px;
+    background-color: #964B00;
+  }
+
+  .booking__btn_active {
+    margin-top: 3px;
+    background-color: #964B00;
+  }
+
+  #booking__btn {
+    top: -26px;
+    left: 90px;
   }
 
   .video-block__overlay {
@@ -1061,6 +1165,12 @@ body::-webkit-scrollbar-thumb {
   .overlay__slogan_passion,
   .overlay__slogan_author {
     display: none;
+  }
+
+  .menu__submenu-show-menu {
+    display: block;
+    position: static;
+    width: 100%;
   }
 }
 .our-history {
@@ -1278,23 +1388,6 @@ body::-webkit-scrollbar-thumb {
   background-color: #666;
   line-height: 40px;
   text-align: center;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  display: none;
-}
-
-label {
-  display: block;
-  cursor: pointer;
-  position: relative;
-  padding-left: 25px;
-  margin-right: 15px;
-  font-weight: bold;
-  margin-left: 19px;
-  letter-spacing: .6px;
-  font-family: "PT Sans Caption", sans-serif;
 }
 
 .food-filter__label:before {
@@ -1857,6 +1950,235 @@ label {
 
   .hide-food-online-btn {
     margin-top: 50px;
+  }
+}
+.header-wrapper__registration {
+  display: none;
+  position: absolute;
+  right: 123px;
+  top: 76px;
+  width: 300px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 1;
+  background-color: rgba(122, 122, 122, 0.7);
+}
+
+.header-wrapper__registration_show {
+  display: block;
+}
+
+.registration__form-tabs {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  position: relative;
+  margin: 6px 0 13px 0;
+}
+
+.registration__close-btn {
+  position: absolute;
+  display: block;
+  top: 20px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  background-image: url("../img/header/cancel.svg");
+  background-repeat: no-repeat;
+  transition: transform .5s;
+}
+
+.registration__close-btn:hover {
+  background-image: url("../img/header/cancel-hover.svg");
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+.user-form-switch__new,
+.user-form-switch__existing {
+  display: block;
+  color: #fff;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 19px;
+  margin: 10px 15px;
+}
+
+.user-form-switch__new:hover,
+.user-form-switch__existing:hover {
+  color: #E30000;
+}
+
+.user-form-switch__new_active,
+.user-form-switch__existing_active {
+  color: black;
+  font-weight: bold;
+}
+
+.registration__signup-form {
+  height: 250px;
+  text-align: left;
+  display: none;
+  background-color: rgba(122, 122, 122, 0.7);
+  padding: 15px 10px;
+  border-radius: 20px;
+}
+
+.signup-form__label {
+  display: block;
+  float: left;
+  margin-left: 10px;
+  width: 34px;
+  height: 34px;
+  background-color: #964B00;
+  position: relative;
+}
+
+.signup-form__phone-field,
+.signup-form__pass-field,
+.signup-form__email-field,
+.signup-form__pass-repeat-field {
+  width: 70%;
+  display: block;
+  float: left;
+  height: 30px;
+  border: 2px solid #964B00;
+  text-indent: 10px;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.signup-form__button {
+  display: block;
+  width: 50%;
+  height: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: #E30000;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.signup-form__button:hover {
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.registration__icon {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
+
+.registration__login-form {
+  display: none;
+  height: 150px;
+  padding: 15px 10px;
+  background-color: rgba(122, 122, 122, 0.7);
+  border-radius: 20px;
+}
+
+.login-form__label {
+  display: block;
+  float: left;
+  margin-left: 10px;
+  width: 34px;
+  height: 34px;
+  background-color: #964B00;
+  position: relative;
+}
+
+.login-form__pass-field {
+  width: 70%;
+  display: block;
+  float: left;
+  height: 30px;
+  border: 2px solid #964B00;
+  text-indent: 10px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.login-form__phone-field {
+  width: 70%;
+  height: 20px;
+  float: left;
+  height: 30px;
+  border: 2px solid #964B00;
+  text-indent: 10px;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.login-form__button {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: #E30000;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.login-form__button:hover {
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.login-form__label-remember {
+  margin-left: 10px;
+  color: #fff;
+}
+
+.login-form__label-remember:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.login-form__forgot-pass {
+  display: block;
+  float: right;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.login-form__forgot-pass:hover {
+  color: blue;
+}
+
+#login__remember-me {
+  margin: 0 0 17px 10px;
+}
+
+.show-user-form {
+  display: block;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .header-wrapper__registration_show {
+    right: 123px;
+    width: 300px;
+  }
+
+  .user-form-switch__new:hover,
+  .user-form-switch__existing:hover {
+    color: white;
+  }
+
+  .registration__signup-form {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .header-wrapper__registration_show {
+    right: 10px;
+    width: 300px;
   }
 }
 .our-services {

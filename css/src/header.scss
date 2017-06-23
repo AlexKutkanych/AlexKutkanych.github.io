@@ -9,15 +9,22 @@
   height: 76px;
   font-family: $main-font;
   &-wrapper {
-    width: $wrapper-width;
+    width: 95%;
     height: 100%;
-    padding-right: 30px;
-    padding-left: 30px;
     margin: 0 auto;
+    position: relative;
+    &__btns-section {
+      float: right;
+      position: relative;
+      margin-top: 30px;
+      width: 240px;
+    }
   }
 }
+
 .menu-top  {
   height: 35px;
+  float: left;
   padding: 30px 0 10px 0;
   font-weight: bold;
   line-height: 35px;
@@ -27,9 +34,6 @@
     float: left;
     padding-right: 20px;
     padding-left: 20px;
-    &:last-child, &:nth-child(10) {
-      float: right;
-    }
   }
   &__menu-link {
     color: #666666;
@@ -51,7 +55,7 @@
 
 }
 
-.menu-top__menu-link-underline::after {
+.menu-top__menu-link::after {
   content: "";
   height: 2px;
   display: block;
@@ -60,16 +64,11 @@
   width: 0;
 }
 
-.menu-top__menu-link-underline:hover::after  {
+.menu-top__menu-link:hover::after  {
   width: 100%;
   background-color: $text-hover-color;
   -webkit-transition: width .8s ease-in-out, background-color .8s ease;
   transition: width .8s ease-in-out, background-color .8s ease;
-}
-
-.menu-top__menu-item #booking_button {
-  background-color: #377BB3;
-  color: #fff;
 }
 
 .mobile-menu {
@@ -78,44 +77,38 @@
 
 /*submenu*/
 
-.menu-top__submenu {
+.menu__submenu-style {
   width: 195px;
-  position:absolute;
+  position: absolute;
+  display: none;
   left: 2px;
   top: 36px;
   z-index:1;
-  max-height: 0;
-  overflow:hidden;
-  border-radius: 10px;
-  -webkit-transform:perspective(400) rotate3d(1,0,0,-90deg);
-  -webkit-transform-origin:50% 0;
-  -webkit-transition:350ms;
-  -moz-transition:350ms;
-  -o-transition:350ms;
-  transition:350ms;
-  text-align: left;
-  text-indent: 5px;
+  border-radius: 20px;
+  overflow: hidden;
   background-color: rgba(150,75,0, .4);
+  text-align: left;
+  text-indent: 10px;
+  transition: all 0.3s ease-in-out 0s;
 }
+
+.menu-top__menu-item:hover .menu__submenu_hover {
+  display: block;
+}
+
 
 .menu-top__submenu-contacts {
   width: 195px;
+  display: none;
   position:absolute;
   left: 2px;
   top: 36px;
-  z-index:1;
-  max-height: 0;
-  overflow:hidden;
-  -webkit-transform:perspective(400) rotate3d(1,0,0,-90deg);
-  -webkit-transform-origin:50% 0;
-  -webkit-transition:350ms;
-  -moz-transition:350ms;
-  -o-transition:350ms;
-  transition:350ms;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(150,75,0, .4);
 }
 
-.menu-top__submenu .submenu__menu-item:hover {
-  // background-color: $text-hover-color;
+ .submenu__menu-item:hover {
   background-color: rgba(255, 0, 0, 0.5);
 }
 
@@ -124,34 +117,34 @@
   text-indent: 10px;
 }
 
-.menu-top__menu-item:hover .menu-top__submenu {
-  max-height: 1000px;
-  -webkit-transform:perspective(400) rotate3d(0,0,0,0);
-}
+//menu__submenu
 
- #booking_button, #sign-up_button {
-  width: 80px;
+.join-us__btn, .booking__btn {
+  width: 110px;
+  display: inline-block;
+  position: absolute;
   height: 33px;
   border-radius: 20px;
+  line-height: 33px;
+  text-align: center;
   color: white;
   background-color: $button-color;
+  top: 0;
+  left: 0;
+  font-weight: bold;
   &:hover {
     cursor: pointer;
     opacity: .5;
     margin-top: 3px;
   }
+  &_active {
+    margin-top: 3px;
+    background-color: $text-hover-color;
+  }
 }
 
-.menu-top__menu-link {
-  color: white;
-}
-
-// .menu-top__menu-item:first-child::before {
-//   content: url(../icons/home.svg);
-// }
-
-#sign-in_button,  {
-
+.booking__btn {
+  left: 115px;
 }
 
 /*to top button*/
@@ -242,64 +235,112 @@
     .header-wrapper {
       width: 100%;
       padding: 0;
+      &__btns-section {
+        position: absolute;
+        width: 200px;
+        right: 10px;
+        top: 20px;
+      }
     }
 
     .menu-top {
+      width: 100%;
       display: none;
       padding-top: 0;
       &__menu-item {
         display: block;
-        width: 100%;
-        z-index: 10;
-        background-color: rgba(255, 0, 0, .4);
-        border-bottom: 1px solid white;
-        text-align: center;
-        padding-left: 0;
-      }
-      &__menu-link-underline {
-        color: white;
-        display: block;
-          &:hover {
-          color: white;
-          &::after {
-            width: 5%;
-          }
+        float: none;
+        background-color: #fff;
+        z-index: 1;
+        padding: 0;
+        &:not(:last-child){
+          border-bottom: 1px solid $text-hover-color;
         }
       }
-      &__hline {
-        display: none;
-
+      &__menu-link {
+        display: block;
+        &::after {
+          height: 0;
+        }
+      }
+      &__active {
+        display: block;
       }
     }
 
-//mobile menu
+    .menu-top__menu-item:hover .menu__submenu_hover {
+        display: none;
+    }
+
+    .menu__submenu {
+      &-style {
+        border-radius: 0;
+      }
+      &-show-menu {
+        display: block;
+        position: static;
+        width: 100%;
+      }
+    }
+
+    .submenu__menu-item:not(:last-child) {
+      border-bottom: 1px solid white;
+    }
 
     .mobile-menu {
       display: block;
-      position: relative;
-      height: 76px;
+      width: 100%;
+      height: 73px;
+      border-bottom: 3px solid $menu-text-color;
       &__burger {
-        display: inline-block;
-        width: 32px;
-        height: 32px;
-        background-image: url("../img/header/mobile-menu.svg");
-        background-repeat: no-repeat;
-        margin: 18px 0 0 10px;
+        display: block;
+        float: left;
+        width: 76px;
+        height: 76px;
+        background: url(../img/header/mobile-menu.svg) center center no-repeat;
+        transition-duration: 1s;
+        &_open {
+          background: url(../img/header/close.svg) center center no-repeat;
+          width: 30px;
+          margin-left: 25px;
+          transition-duration: 1s;
+          transform: rotate(90deg);
+        }
       }
     }
 
-    .menu-top__submenu {
-      // display: block;
-      // width: 100%;
-      // position: static;
-    }
-
-    .menu-top__menu-item:hover .menu-top__submenu  {
-      max-height: 0px;
-    }
-
-    .active {
+    .join-us__btn {
+      width: 100px;
       display: block;
+      position: absolute;
+      top: -26px;
+      right: 0;
+      width: 80px;
+      height: 33px;
+      border-radius: 20px;
+      color: white;
+      background-color: $button-color;
+      &_active {
+        margin-top: 3px;
+        background-color: $text-hover-color;
+      }
+    }
+
+    .booking__btn {
+      &_active {
+        margin-top: 3px;
+        background-color: $text-hover-color;
+      }
+    }
+
+    .header-wrapper__registration_show {
+      right: 0;
+      width: 100%;
+    }
+
+    #booking__btn {
+      top: -26px;
+      left: 90px;
     }
 
     #sign-up_button {
@@ -319,6 +360,8 @@
     .overlay__slogan_passion {
       font-size: 23px;
     }
+
+
 }
 
 
@@ -331,70 +374,108 @@
   .header-wrapper {
     width: 100%;
     padding: 0;
+    &__btns-section {
+      position: absolute;
+      width: 200px;
+      right: 10px;
+      top: 20px;
+    }
   }
 
   .menu-top {
+    width: 100%;
     display: none;
     padding-top: 0;
     &__menu-item {
       display: block;
-      width: 100%;
-      z-index: 10;
-      background-color: rgba(255, 0, 0, .4);
-      border-bottom: 1px solid white;
-      text-align: center;
-      padding-left: 0;
-    }
-    &__menu-link-underline {
-      color: white;
-      display: block;
-        &:hover {
-        color: white;
-        &::after {
-          width: 5%;
-        }
+      float: none;
+      background-color: #fff;
+      z-index: 1;
+      padding: 0;
+      &:not(:last-child){
+        border-bottom: 1px solid $text-hover-color;
       }
     }
-    &__hline {
-      display: none;
-
+    &__menu-link {
+      display: block;
+      &::after {
+        height: 0;
+      }
+    }
+    &__active {
+      display: block;
     }
   }
 
-//mobile menu
+  .menu-top__menu-item:hover .menu__submenu_hover {
+      display: none;
+  }
+
+  .menu__submenu {
+    &-style {
+      border-radius: 0;
+    }
+    &-show-menu {
+      display: block;
+      position: static;
+      width: 100%;
+    }
+  }
+
+  .submenu__menu-item:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
 
   .mobile-menu {
     display: block;
-    position: relative;
-    height: 76px;
+    width: 100%;
+    height: 73px;
+    border-bottom: 3px solid $menu-text-color;
     &__burger {
-      display: inline-block;
-      width: 32px;
-      height: 32px;
-      background-image: url("../img/header/mobile-menu.svg");
-      background-repeat: no-repeat;
-      margin: 18px 0 0 10px;
+      display: block;
+      float: left;
+      width: 76px;
+      height: 76px;
+      background: url(../img/header/mobile-menu.svg) center center no-repeat;
+      transition-duration: 1s;
+      &_open {
+        background: url(../img/header/close.svg) center center no-repeat;
+        width: 30px;
+        margin-left: 25px;
+        transition-duration: 1s;
+        transform: rotate(90deg);
+      }
     }
   }
 
-  .menu-top__submenu {
-    // display: block;
-    // width: 100%;
-    // position: static;
-  }
-
-  .menu-top__menu-item:hover .menu-top__submenu  {
-    max-height: 0px;
-  }
-
-  .active {
+  .join-us__btn {
+    width: 100px;
     display: block;
+    position: absolute;
+    top: -26px;
+    right: 0;
+    width: 80px;
+    height: 33px;
+    border-radius: 20px;
+    color: white;
+    background-color: $button-color;
+    &_active {
+      margin-top: 3px;
+      background-color: $text-hover-color;
+    }
   }
 
-  #sign-up_button {
-  display: none;
+  .booking__btn {
+    &_active {
+      margin-top: 3px;
+      background-color: $text-hover-color;
+    }
   }
 
+  #booking__btn {
+    top: -26px;
+    left: 90px;
+  }
   //video-overlay
 
   .video-block__overlay {
@@ -414,5 +495,9 @@
   .overlay__slogan_passion, .overlay__slogan_author {
     display: none;
   }
-
+  .menu__submenu-show-menu {
+    display: block;
+    position: static;
+    width: 100%;
+  }
 }

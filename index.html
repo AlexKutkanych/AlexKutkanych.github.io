@@ -10,10 +10,12 @@
     <script type="text/javascript" src="js/google-map-init.js" defer></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script>
     <script type="text/javascript" src="js/bg-video.js" defer></script>
+    <script type="text/javascript" src="js/mobile-menu.js" defer></script>
     <script type="text/javascript" src="js/tabs.js" defer></script>
     <script type="text/javascript" src="js/filter-events.js" defer></script>
     <script type="text/javascript" src="js/to-top-button.js" defer></script>
     <script type="text/javascript" src="js/menu-filter.js" defer></script>
+
   </head>
   <body>
     <header class="header" id="main">
@@ -22,69 +24,70 @@
           <span class="mobile-menu__burger"></span>
         </div>
         <nav class="menu-top">
-          <li class="menu-top__menu-item">
-            <a href="#" class="menu-top__menu-link-underline">Home</a>
-          </li>
-          <hr class="menu-top__hline">
-          <li class="menu-top__menu-item">
-            <a href="#our-menu" class="menu-top__menu-link-underline">Menu</a>
-            <ul class="menu-top__submenu">
-              <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Soup &amp; appetizer</a></li>
-              <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Pasta &amp; Main course</a></li>
-              <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Pizza &amp; Second course</a></li>
-              <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Dessert &amp; Beverages</a></li>
-              <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Wine card</a></li>
-            </ul>
-          </li>
-          <hr class="menu-top__hline">
-          <li class="menu-top__menu-item">
-            <a href="#our-services" class="menu-top__menu-link-underline">Services</a>
-          </li>
-          <hr class="menu-top__hline">
-          <li class="menu-top__menu-item">
-            <a href="#our-events" class="menu-top__menu-link-underline">News &amp; Events</a>
-          </li>
-          <hr class="menu-top__hline">
-          <li class="menu-top__menu-item">
-            <a href="#contacts" class="menu-top__menu-link-underline">Contacts</a>
-            <ul class="menu-top__submenu menu-top__submenu-contacts">
-              <li class="submenu__menu-item"><a href="#contacts" class="submenu__menu-link">Find us on map</a></li>
-              <li class="submenu__menu-item"><a href="#footer" class="submenu__menu-link">Address and Socials</a></li>
-            </ul>
-          </li>
-
-          <!-- <li class="menu-top__menu-item" id="sign-in_button">
-            <a href="#" class="menu-top__menu-link" >Sign-in</a>
-          </li> -->
-          <li class="menu-top__menu-item" id="sign-up_button">
-            <a href="#" class="menu-top__menu-link">Sign-up</a>
-          </li>
-         <li class="menu-top__menu-item" id="booking_button">
-            <a href="#" class="menu-top__menu-link">Booking</a>
-          </li>
+          <ul class="">
+            <li class="menu-top__menu-item">
+              <a href="#" class="menu-top__menu-link">Home</a>
+            </li>
+            <li class="menu-top__menu-item">
+              <a href="#our-menu" class="menu-top__menu-link menu-top__menu-link-menu" id="menu-top__menu">Menu</a>
+              <ul class="menu__submenu-style menu__submenu_hover" id="menu-top__submenu-menu">
+                <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Soup &amp; appetizer</a></li>
+                <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Pasta &amp; Main course</a></li>
+                <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Pizza &amp; Second course</a></li>
+                <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Dessert &amp; Beverages</a></li>
+              </ul>
+            </li>
+            <li class="menu-top__menu-item">
+              <a href="#our-services" class="menu-top__menu-link">Services</a>
+            </li>
+            <li class="menu-top__menu-item">
+              <a href="#our-events" class="menu-top__menu-link">News &amp; Events</a>
+            </li>
+            <li class="menu-top__menu-item">
+              <a href="#our-contacts" class="menu-top__menu-link" id="menu-top__contacts">Contacts</a>
+              <ul class="menu__submenu-style menu__submenu_hover" id="menu-top__submenu-contacts">
+                <li class="submenu__menu-item"><a href="#our-contacts" class="submenu__menu-link">See us on map</a></li>
+                <li class="submenu__menu-item"><a href="#footer" class="submenu__menu-link">Social networks</a></li>
+              </ul>
+            </li>
+          </ul>
         </nav>
-        <a href="#main" id="to-top-button"></a>
-
-          <!-- <div class="signin-form">
-            <h3>Sign-in</h3>
-            <label for="signin-field">Login</label><input type="text" class="signin-form__signin-field_login" id="signin-field" placeholder="Enter your login">
-            <label for="signin-field">Password</label><input type="password" class="signin-form__signin-field_password" id="password-field" placeholder="Enter your password">
-            <button class="signin-form__button">Sign in</button>
-          </div> -->
-          <!-- <div class="signup-form">
-            <h3>Sign-up</h3>
-            <label for="signup-field">Name</label><input type="text" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your name">
-            <label for="signup-field">Surname</label><input type="text" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your surname">
-            <label for="signup-field">Telephone</label><input type="tel" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your phone number">
-            <label for="signup-field">Login</label><input type="text" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your login">
-            <label for="signup-field">Email-address</label><input type="email" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your email">
-            <label for="signup-field">Date of birth</label><input type="date" class="signup-form__signup-field_login" id="signup-field" placeholder="Enter your date of birth">
-            <label for="signup-field">Password</label><input type="password" class="signup-form__signup-field_password" id="signup-field" placeholder="Enter your password">
-            <label for="signup-field">Repeat password</label><input type="password" class="signup-form__signup-field_password" id="signup-field" placeholder="Repeat your password">
-            <button class="signup-form__button">Sign up</button>
-          </div> -->
-
+        <div class="header-wrapper__btns-section">
+          <a href="#" class="join-us__btn" id="join-us__btn">Join us!</a>
+          <a href="#" class="booking__btn" id="booking__btn">Booking</a>
         </div>
+        <div class="header-wrapper__registration">
+          <span class="registration__close-btn"></span>
+          <div class="registration__form-tabs">
+              <a href="#" class="user-form-switch__new">New user</a>
+              <a href="#" class="user-form-switch__existing">Have account</a>
+          </div>
+          <div class="registration__signup-form">
+            <form action="" method="post">
+              <label class="signup-form__label" for="signup__phone-field"><img src="img/header/phone.svg" alt="phone icon" class="registration__icon"></label>
+              <input type="tel" class="signup-form__phone-field" id="signup__phone-field" pattern="\(?[0-9]{3}[\)\-\s]?(\s)?[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{3}" placeholder="+380952411960" required>
+              <label class="signup-form__label" for="signup__email-field"><img src="img/header/email.svg" width="20" alt="email icon" class="registration__icon"></label>
+              <input type="email" class="signup-form__email-field" id="signup__email-field" placeholder="Email" required>
+              <label class="signup-form__label" for="signup__pass-field"><img src="img/header/password.svg" width="20" alt="email icon" class="registration__icon"></label>
+              <input type="pass" class="signup-form__pass-field" id="signup__pass-field" placeholder="Enter your password" required>
+              <label class="signup-form__label" for="signup__pass-repeat-field"><img src="img/header/password.svg" width="20" alt="email icon" class="registration__icon"></label>
+              <input type="pass" class="signup-form__pass-repeat-field" id="signup__pass-repeat-field" placeholder="Repeat your password" required>
+              <button class="signup-form__button">Sign up</button>
+            </form>
+          </div>
+          <div class="registration__login-form">
+            <form action="" method="post">
+              <label class="login-form__label" for="login__phone-field"><img src="img/header/phone.svg" alt="phone icon" class="registration__icon"></label>
+              <input type="tel" class="login-form__phone-field" id="login__phone-field" placeholder="Phone number">
+              <label class="login-form__label" for="login__pass-field"><img src="img/header/password.svg" width="20" alt="password icon" class="registration__icon"></label>
+              <input type="pass" class="login-form__pass-field" id="login__pass-field" placeholder="Password">
+              <label class="login-form__label-remember" for="login__remember-me">Remember me</label><input type="checkbox" id="login__remember-me">
+              <button class="login-form__button">Login</button>
+              <a href="#" class="login-form__forgot-pass">forgot password</a>
+            </form>
+          </div>
+        </div>
+        <a href="#main" id="to-top-button"></a>
       </header>
       <div class="video-block">
         <div class="video-block__container">
@@ -93,9 +96,9 @@
             <!--[if lte IE 11]>
             <video src="vid/bg-video.mp4" autoplay="true" loop="loop" volume="0" class="video-block__video"></video>
             <![endif]-->
-            <!-- <source type="video/mp4" src="vid/bg-video.mp4">
+            <source type="video/mp4" src="vid/bg-video.mp4">
             <source type="video/webm" src="vid/bg-video.webm">
-            <source type="video/ogg" src="vid/bg-video.ogv"> -->
+            <source type="video/ogg" src="vid/bg-video.ogv">
           </video>
           <div class="video-block__overlay">
             <h2 class="overlay__slogan_heading">Welcome to Oasis!</h2>
@@ -556,7 +559,7 @@ served with toasted bread</figcaption>
           </div>
         </div>
       </section>
-      <section class="contacts-block" id="contacts">
+      <section class="contacts-block" id="our-contacts">
         <a href="#"><h2 class="contacts-block__heading">How to reach us</h2></a>
         <section id="contacts-block__google-map"></section>
       </section>
