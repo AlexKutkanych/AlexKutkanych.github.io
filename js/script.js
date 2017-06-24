@@ -5,10 +5,10 @@ var joinUsBtn = document.querySelector("#join-us__btn"),
     closeJoinUsModalBtn = document.querySelector(".registration__close-btn"),
     newUserTabBtn = document.querySelector(".user-form-switch__new"),
     existingUserTabBtn = document.querySelector(".user-form-switch__existing"),
-    newUserForm = document.querySelector(".registration__login-form"),
-    existingUserForm = document.querySelector(".registration__signup-form");
+    existingUserForm = document.querySelector(".registration__login-form"),
+    newUserForm = document.querySelector(".registration__signup-form");
 
-console.log(newUserTabBtn);
+console.log(newUserForm);
 
 function showJoinUsModal(){
     joinUsModal.classList.toggle("header-wrapper__registration_show");
@@ -26,23 +26,23 @@ function closeJoinUsModal(){
 
 function showNewUserForm() {
   newUserForm.classList.toggle("show-user-form");
-  newUserTabBtn.classList.add("user-form-switch__new_active");
   existingUserForm.classList.remove("show-user-form");
-  // existingUserTabBtn.classList.remove("user-form-switch__existing_active");
+  newUserTabBtn.classList.toggle("user-form-switch__new_active");
+  existingUserTabBtn.classList.remove("user-form-switch__existing_active");
 }
 
 function showExistingUserForm() {
   existingUserForm.classList.toggle("show-user-form");
-  // existingUserTabBtn.classList.toggle("user-form-switch__existing_active");
+  existingUserTabBtn.classList.toggle("user-form-switch__existing_active");
   newUserForm.classList.remove("show-user-form");
-  // newUserTabBtn.classList.remove("user-form-switch__new_active");
+  newUserTabBtn.classList.remove("user-form-switch__new_active");
 }
 
 joinUsBtn.addEventListener("click", showJoinUsModal);
 closeJoinUsModalBtn.addEventListener("click", closeJoinUsModal);
 
-existingUserTabBtn.addEventListener("click",showNewUserForm);
-newUserTabBtn.addEventListener("click",showExistingUserForm);
+existingUserTabBtn.addEventListener("click", showExistingUserForm);
+newUserTabBtn.addEventListener("click", showNewUserForm);
 
 // //form vakidation
 //

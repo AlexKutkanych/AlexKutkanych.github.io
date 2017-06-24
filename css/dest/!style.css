@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  color: black;
+  overflow-x: hidden; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+li {
+  list-style: none; }

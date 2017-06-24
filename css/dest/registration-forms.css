@@ -1,3 +1,12 @@
+.typical-btn {
+  height: 33px;
+  border-radius: 20px;
+  line-height: 33px;
+  text-align: center;
+  color: white;
+  background-color: #E30000;
+  font-weight: bold; }
+
 .header-wrapper__registration {
   display: none;
   position: absolute;
@@ -47,6 +56,16 @@
     color: black;
     font-weight: bold; }
 
+.registration-form__field {
+  width: 70%;
+  display: block;
+  float: left;
+  height: 30px;
+  border: 2px solid #964B00;
+  text-indent: 10px;
+  font-size: 17px;
+  margin-bottom: 20px; }
+
 .registration__signup-form {
   height: 250px;
   text-align: left;
@@ -63,16 +82,6 @@
   height: 34px;
   background-color: #964B00;
   position: relative; }
-
-.signup-form__phone-field, .signup-form__pass-field, .signup-form__email-field, .signup-form__pass-repeat-field {
-  width: 70%;
-  display: block;
-  float: left;
-  height: 30px;
-  border: 2px solid #964B00;
-  text-indent: 10px;
-  font-size: 17px;
-  margin-bottom: 20px; }
 
 .signup-form__button {
   display: block;
@@ -172,9 +181,19 @@
   .user-form-switch__new:hover, .user-form-switch__existing:hover {
     color: white; }
   .registration__signup-form {
-    width: 300px; } }
+    width: 280px; } }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   .header-wrapper__registration_show {
-    right: 10px;
-    width: 300px; } }
+    right: 0;
+    width: 100%; }
+  .login-form__wrapper, .signup-form__wrapper {
+    max-width: 90%;
+    margin: 5px auto; }
+  .registration__signup-form, .registration__login-form {
+    width: 100%;
+    padding: 15px 0; }
+  .registration__form-tabs {
+    width: 100%; }
+  .registration-form__field {
+    width: 80%; } }

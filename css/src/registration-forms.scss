@@ -60,6 +60,19 @@
   }
 }
 
+//inputs styles
+
+.registration-form__field {
+  width: 70%;
+  display: block;
+  float: left;
+  height: 30px;
+  border: 2px solid $text-hover-color;
+  text-indent: 10px;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
 //sign-up
 
 .registration__signup-form {
@@ -81,19 +94,6 @@
     height: 34px;
     background-color: $text-hover-color;
     position: relative;
-  }
-  &__phone-field,
-  &__pass-field,
-  &__email-field,
-  &__pass-repeat-field {
-    width: 70%;
-    display: block;
-    float: left;
-    height: 30px;
-    border: 2px solid $text-hover-color;
-    text-indent: 10px;
-    font-size: 17px;
-    margin-bottom: 20px;
   }
   &__button {
     display: block;
@@ -214,14 +214,32 @@
   }
 
   .registration__signup-form {
-    width: 300px;
+    width: 280px;
   }
 
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   .header-wrapper__registration_show {
-    right: 10px;
-    width: 300px;
+    right: 0;
+    width: 100%;
+  }
+
+  .login-form__wrapper, .signup-form__wrapper {
+    max-width: 90%;
+    margin: 5px auto;
+  }
+
+  .registration__signup-form, .registration__login-form,  {
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .registration__form-tabs {
+    width: 100%;
+  }
+
+  .registration-form__field {
+    width: 80%;
   }
 }

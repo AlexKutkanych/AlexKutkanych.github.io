@@ -15,7 +15,6 @@
     <script type="text/javascript" src="js/filter-events.js" defer></script>
     <script type="text/javascript" src="js/to-top-button.js" defer></script>
     <script type="text/javascript" src="js/menu-filter.js" defer></script>
-
   </head>
   <body>
     <header class="header" id="main">
@@ -28,6 +27,7 @@
             <li class="menu-top__menu-item">
               <a href="#" class="menu-top__menu-link">Home</a>
             </li>
+            <hr class="menu-top__vertical-line">
             <li class="menu-top__menu-item">
               <a href="#our-menu" class="menu-top__menu-link menu-top__menu-link-menu" id="menu-top__menu">Menu</a>
               <ul class="menu__submenu-style menu__submenu_hover" id="menu-top__submenu-menu">
@@ -37,12 +37,15 @@
                 <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Dessert &amp; Beverages</a></li>
               </ul>
             </li>
+            <hr class="menu-top__vertical-line">
             <li class="menu-top__menu-item">
               <a href="#our-services" class="menu-top__menu-link">Services</a>
             </li>
+            <hr class="menu-top__vertical-line">
             <li class="menu-top__menu-item">
               <a href="#our-events" class="menu-top__menu-link">News &amp; Events</a>
             </li>
+            <hr class="menu-top__vertical-line">
             <li class="menu-top__menu-item">
               <a href="#our-contacts" class="menu-top__menu-link" id="menu-top__contacts">Contacts</a>
               <ul class="menu__submenu-style menu__submenu_hover" id="menu-top__submenu-contacts">
@@ -53,8 +56,8 @@
           </ul>
         </nav>
         <div class="header-wrapper__btns-section">
-          <a href="#" class="join-us__btn" id="join-us__btn">Join us!</a>
-          <a href="#" class="booking__btn" id="booking__btn">Booking</a>
+          <a href="#" class="typical-btn join-us__btn" id="join-us__btn">Join us!</a>
+          <a href="#" class="typical-btn booking__btn" id="booking__btn">Booking</a>
         </div>
         <div class="header-wrapper__registration">
           <span class="registration__close-btn"></span>
@@ -63,24 +66,24 @@
               <a href="#" class="user-form-switch__existing">Have account</a>
           </div>
           <div class="registration__signup-form">
-            <form action="" method="post">
+            <form action="" method="post" class="signup-form__wrapper">
               <label class="signup-form__label" for="signup__phone-field"><img src="img/header/phone.svg" alt="phone icon" class="registration__icon"></label>
-              <input type="tel" class="signup-form__phone-field" id="signup__phone-field" pattern="\(?[0-9]{3}[\)\-\s]?(\s)?[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{3}" placeholder="+380952411960" required>
+              <input type="tel" class="registration-form__field signup-form__phone-field" id="signup__phone-field" pattern="\(?[0-9]{3}[\)\-\s]?(\s)?[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{3}" placeholder="+380952411960" required>
               <label class="signup-form__label" for="signup__email-field"><img src="img/header/email.svg" width="20" alt="email icon" class="registration__icon"></label>
-              <input type="email" class="signup-form__email-field" id="signup__email-field" placeholder="Email" required>
+              <input type="email" class="registration-form__field signup-form__email-field" id="signup__email-field" placeholder="Email" required>
               <label class="signup-form__label" for="signup__pass-field"><img src="img/header/password.svg" width="20" alt="email icon" class="registration__icon"></label>
-              <input type="pass" class="signup-form__pass-field" id="signup__pass-field" placeholder="Enter your password" required>
+              <input type="pass" class="registration-form__field signup-form__pass-field" id="signup__pass-field" placeholder="Enter your password" required>
               <label class="signup-form__label" for="signup__pass-repeat-field"><img src="img/header/password.svg" width="20" alt="email icon" class="registration__icon"></label>
-              <input type="pass" class="signup-form__pass-repeat-field" id="signup__pass-repeat-field" placeholder="Repeat your password" required>
+              <input type="pass" class="registration-form__field signup-form__pass-repeat-field" id="signup__pass-repeat-field" placeholder="Repeat your password" required>
               <button class="signup-form__button">Sign up</button>
             </form>
           </div>
           <div class="registration__login-form">
-            <form action="" method="post">
+            <form action="" method="post" class="login-form__wrapper">
               <label class="login-form__label" for="login__phone-field"><img src="img/header/phone.svg" alt="phone icon" class="registration__icon"></label>
-              <input type="tel" class="login-form__phone-field" id="login__phone-field" placeholder="Phone number">
+              <input type="tel" class="registration-form__field login-form__phone-field" id="login__phone-field" placeholder="Phone number">
               <label class="login-form__label" for="login__pass-field"><img src="img/header/password.svg" width="20" alt="password icon" class="registration__icon"></label>
-              <input type="pass" class="login-form__pass-field" id="login__pass-field" placeholder="Password">
+              <input type="pass" class="registration-form__field login-form__pass-field" id="login__pass-field" placeholder="Password">
               <label class="login-form__label-remember" for="login__remember-me">Remember me</label><input type="checkbox" id="login__remember-me">
               <button class="login-form__button">Login</button>
               <a href="#" class="login-form__forgot-pass">forgot password</a>
@@ -124,31 +127,31 @@
       </section>
       <section class="our-menu" id="our-menu">
         <a href="#"><h2 class="our-menu__heading">Our menu</h2></a>
-        <a href="menu/menu/Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="our-menu__full-menu">Download full menu</a>
+        <a href="menu/menu/Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="typical-btn our-menu__full-menu">Download full menu</a>
           <div class="our-menu__wrapper">
             <section class="our-menu__variant menu__soup">
               <span class="our-menu__desc">
                 <p class="our-menu__title">Soup &amp; appetizer</p>
               </span>
-              <a href="menu/Pietrasanta_Appetizer_Soup.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+              <a href="menu/Pietrasanta_Appetizer_Soup.pdf" target="_blank" class="typical-btn our-menu__separate-menu">Download menu</a>
             </section>
             <section class="our-menu__variant menu__pasta">
               <span class="our-menu__desc">
                 <p class="our-menu__title">Pasta &amp; Main course</p>
               </span>
-              <a href="menu/Pietrasanta_Pasta.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+              <a href="menu/Pietrasanta_Pasta.pdf" target="_blank" class="typical-btn our-menu__separate-menu">Download menu</a>
             </section>
             <section class="our-menu__variant menu__pizza">
               <span class="our-menu__desc">
                 <p class="our-menu__title">Pizza &amp; Second course</p>
               </span>
-              <a href="menu/Pietrasanta_Pizza_Second_Course.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+              <a href="menu/Pietrasanta_Pizza_Second_Course.pdf" target="_blank" class="typical-btn our-menu__separate-menu">Download menu</a>
             </section>
             <section class="our-menu__variant menu__dessert">
               <span class="our-menu__desc">
                 <p class="our-menu__title">Dessert &amp; Beverages</p>
               </span>
-              <a href="Pietrasanta_Dessert_Beverage.pdf" target="_blank" class="our-menu__separate-menu">Download menu</a>
+              <a href="Pietrasanta_Dessert_Beverage.pdf" target="_blank" class="typical-btn our-menu__separate-menu">Download menu</a>
             </section>
           </div>
           <p class="food-online-heading">Push button to discover online menu</p>
@@ -191,7 +194,7 @@
             <input type="radio" class="filter-group" name="filter-group" id="natty-group"><label for="natty-group" class="filter-group__label">средства для ухода</label>
             <input type="radio" class="filter-group" name="filter-group" id="suavecito-group"><label for="suavecito-group" class="filter-group__label">аксессуары</label>
           </section> -->
-          <button type="button" name="button" class="filter-btn">Find</button>
+          <button type="button" name="button" class="typical-btn filter-btn">Find</button>
         </form>
         </aside>
         <main class="food-wrapper__result">

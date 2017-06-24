@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Cookie");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+.typical-btn {
+  height: 33px;
+  border-radius: 20px;
+  line-height: 33px;
+  text-align: center;
+  color: white;
+  background-color: #E30000;
+  font-weight: bold; }
+
 .header {
   width: 100%;
   color: #964B00;
@@ -14,7 +23,7 @@
       float: right;
       position: relative;
       margin-top: 30px;
-      width: 240px; }
+      width: 175px; }
 
 .menu-top {
   height: 35px;
@@ -34,7 +43,7 @@
       color: #666666; }
       .menu-top__menu-link-underline:hover {
         color: #964B00; }
-  .menu-top__hline {
+  .menu-top__vertical-line {
     height: 20px;
     width: 1px;
     display: inline-block;
@@ -95,18 +104,12 @@
   text-indent: 10px; }
 
 .join-us__btn, .booking__btn {
-  width: 110px;
+  width: 80px;
   display: inline-block;
   position: absolute;
   height: 33px;
-  border-radius: 20px;
-  line-height: 33px;
-  text-align: center;
-  color: white;
-  background-color: #E30000;
   top: 0;
-  left: 0;
-  font-weight: bold; }
+  left: 0; }
   .join-us__btn:hover, .booking__btn:hover {
     cursor: pointer;
     opacity: .5;
@@ -116,7 +119,7 @@
     background-color: #964B00; }
 
 .booking__btn {
-  left: 115px; }
+  left: 85px; }
 
 /*to top button*/
 #to-top-button {
@@ -131,59 +134,6 @@
   background: #666 url(../img/header/to-top-arrow.svg) 10px 10px no-repeat; }
   #to-top-button:hover {
     background-color: #964B00; }
-
-.video-block {
-  position: relative;
-  width: 100%;
-  height: 31.25rem; }
-  .video-block__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    background: #000; }
-  .video-block__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%); }
-
-.video-block__overlay {
-  color: #fff;
-  font-family: 'Oxygen', sans-serif;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  width: 100%;
-  max-width: 45em;
-  box-sizing: border-box;
-  padding: 2em;
-  line-height: 1.5;
-  text-align: center;
-  transform: translateX(-50%);
-  background-color: rgba(122, 122, 122, 0.4); }
-
-.overlay__slogan {
-  position: absolute;
-  top: 200px;
-  left: 47.3%;
-  width: 700px;
-  z-index: 1;
-  color: white;
-  padding: 5px; }
-  .overlay__slogan_heading {
-    font-family: "Cookie", cursive;
-    font-size: 80px;
-    color: white; }
-  .overlay__slogan_passion {
-    font-size: 30px;
-    margin-bottom: 10px; }
-    .overlay__slogan_passion::before {
-      content: url("../img/header/two-quotes.svg"); }
-    .overlay__slogan_passion::after {
-      content: url("../img/header/two-quotes.svg"); }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .header-wrapper {
@@ -260,17 +210,9 @@
   .header-wrapper__registration_show {
     right: 0;
     width: 100%; }
-  #booking__btn {
+  .booking__btn {
     top: -26px;
-    left: 90px; }
-  #sign-up_button {
-    display: none; }
-  .video-block__overlay {
-    width: 80%; }
-  .overlay__slogan_heading {
-    font-size: 50px; }
-  .overlay__slogan_passion {
-    font-size: 23px; } }
+    left: 90px; } }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   #to-top-button {
@@ -343,23 +285,12 @@
     .join-us__btn_active {
       margin-top: 3px;
       background-color: #964B00; }
-  .booking__btn_active {
-    margin-top: 3px;
-    background-color: #964B00; }
-  #booking__btn {
+  .booking__btn {
     top: -26px;
     left: 90px; }
-  .video-block__overlay {
-    width: 100%;
-    height: 25%;
-    bottom: 0;
-    top: 0;
-    padding: 5px;
-    margin: auto; }
-  .overlay__slogan_heading {
-    font-size: 50px; }
-  .overlay__slogan_passion, .overlay__slogan_author {
-    display: none; }
+    .booking__btn_active {
+      margin-top: 3px;
+      background-color: #964B00; }
   .menu__submenu-show-menu {
     display: block;
     position: static;

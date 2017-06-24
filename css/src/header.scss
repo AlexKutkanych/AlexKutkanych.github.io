@@ -17,7 +17,7 @@
       float: right;
       position: relative;
       margin-top: 30px;
-      width: 240px;
+      width: 175px;
     }
   }
 }
@@ -44,7 +44,7 @@
       }
     }
   }
-  &__hline {
+  &__vertical-line {
     height: 20px;
     width: 1px;
     display: inline-block;
@@ -52,7 +52,6 @@
     margin-top: 8px;
     background-color: $text-hover-color;
   }
-
 }
 
 .menu-top__menu-link::after {
@@ -96,7 +95,6 @@
   display: block;
 }
 
-
 .menu-top__submenu-contacts {
   width: 195px;
   display: none;
@@ -120,18 +118,12 @@
 //menu__submenu
 
 .join-us__btn, .booking__btn {
-  width: 110px;
+  width: 80px;
   display: inline-block;
   position: absolute;
   height: 33px;
-  border-radius: 20px;
-  line-height: 33px;
-  text-align: center;
-  color: white;
-  background-color: $button-color;
   top: 0;
   left: 0;
-  font-weight: bold;
   &:hover {
     cursor: pointer;
     opacity: .5;
@@ -144,7 +136,7 @@
 }
 
 .booking__btn {
-  left: 115px;
+  left: 85px;
 }
 
 /*to top button*/
@@ -164,203 +156,121 @@
   }
 }
 
-//video
-
-.video-block {
-  position: relative;
-  width: 100%;
-  height: 31.25rem;
-  &__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    background: #000;
-  }
-  &__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-}
-
-
-.video-block__overlay {
-  color: #fff;
-  font-family: 'Oxygen', sans-serif;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  width: 100%;
-  max-width: 45em;
-  box-sizing: border-box;
-  padding: 2em;
-  line-height: 1.5;
-  text-align: center;
-  transform: translateX(-50%);
-  background-color: rgba(122, 122, 122, 0.4);
-
-}
-
-.overlay__slogan {
-    position: absolute;
-    top: 200px;
-    left: 47.3%;
-    width: 700px;
-    z-index: 1;
-    color: white;
-    padding: 5px;
-    &_heading {
-      font-family: $heading-font;
-      font-size: 80px;
-      color: white;
-    }
-    &_passion {
-      font-size: 30px;
-      margin-bottom: 10px;
-      &::before {
-        content: url("../img/header/two-quotes.svg");
-      }
-      &::after {
-        content: url("../img/header/two-quotes.svg");
-      }
-    }
-}
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-    //menu
-    .header-wrapper {
-      width: 100%;
-      padding: 0;
-      &__btns-section {
-        position: absolute;
-        width: 200px;
-        right: 10px;
-        top: 20px;
-      }
-    }
 
-    .menu-top {
-      width: 100%;
-      display: none;
-      padding-top: 0;
-      &__menu-item {
-        display: block;
-        float: none;
-        background-color: #fff;
-        z-index: 1;
-        padding: 0;
-        &:not(:last-child){
-          border-bottom: 1px solid $text-hover-color;
-        }
-      }
-      &__menu-link {
-        display: block;
-        &::after {
-          height: 0;
-        }
-      }
-      &__active {
-        display: block;
-      }
-    }
-
-    .menu-top__menu-item:hover .menu__submenu_hover {
-        display: none;
-    }
-
-    .menu__submenu {
-      &-style {
-        border-radius: 0;
-      }
-      &-show-menu {
-        display: block;
-        position: static;
-        width: 100%;
-      }
-    }
-
-    .submenu__menu-item:not(:last-child) {
-      border-bottom: 1px solid white;
-    }
-
-    .mobile-menu {
-      display: block;
-      width: 100%;
-      height: 73px;
-      border-bottom: 3px solid $menu-text-color;
-      &__burger {
-        display: block;
-        float: left;
-        width: 76px;
-        height: 76px;
-        background: url(../img/header/mobile-menu.svg) center center no-repeat;
-        transition-duration: 1s;
-        &_open {
-          background: url(../img/header/close.svg) center center no-repeat;
-          width: 30px;
-          margin-left: 25px;
-          transition-duration: 1s;
-          transform: rotate(90deg);
-        }
-      }
-    }
-
-    .join-us__btn {
-      width: 100px;
-      display: block;
+  .header-wrapper {
+    width: 100%;
+    padding: 0;
+    &__btns-section {
       position: absolute;
-      top: -26px;
-      right: 0;
-      width: 80px;
-      height: 33px;
-      border-radius: 20px;
-      color: white;
-      background-color: $button-color;
-      &_active {
-        margin-top: 3px;
-        background-color: $text-hover-color;
+      width: 200px;
+      right: 10px;
+      top: 20px;
+    }
+  }
+
+//menu
+
+  .menu-top {
+    width: 100%;
+    display: none;
+    padding-top: 0;
+    &__menu-item {
+      display: block;
+      float: none;
+      background-color: #fff;
+      z-index: 1;
+      padding: 0;
+      &:not(:last-child){
+        border-bottom: 1px solid $text-hover-color;
       }
     }
-
-    .booking__btn {
-      &_active {
-        margin-top: 3px;
-        background-color: $text-hover-color;
+    &__menu-link {
+      display: block;
+      &::after {
+        height: 0;
       }
     }
+    &__active {
+      display: block;
+    }
+  }
 
-    .header-wrapper__registration_show {
-      right: 0;
+  .menu-top__menu-item:hover .menu__submenu_hover {
+      display: none;
+  }
+
+  .menu__submenu {
+    &-style {
+      border-radius: 0;
+    }
+    &-show-menu {
+      display: block;
+      position: static;
       width: 100%;
     }
+  }
 
-    #booking__btn {
-      top: -26px;
-      left: 90px;
+  .submenu__menu-item:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+
+  .mobile-menu {
+    display: block;
+    width: 100%;
+    height: 73px;
+    border-bottom: 3px solid $menu-text-color;
+    &__burger {
+      display: block;
+      float: left;
+      width: 76px;
+      height: 76px;
+      background: url(../img/header/mobile-menu.svg) center center no-repeat;
+      transition-duration: 1s;
+      &_open {
+        background: url(../img/header/close.svg) center center no-repeat;
+        width: 30px;
+        margin-left: 25px;
+        transition-duration: 1s;
+        transform: rotate(90deg);
+      }
     }
+  }
 
-    #sign-up_button {
-    display: none;
+  .join-us__btn {
+    width: 100px;
+    display: block;
+    position: absolute;
+    top: -26px;
+    right: 0;
+    width: 80px;
+    height: 33px;
+    border-radius: 20px;
+    color: white;
+    background-color: $button-color;
+    &_active {
+      margin-top: 3px;
+      background-color: $text-hover-color;
     }
+  }
 
-    //video-overlay
-
-    .video-block__overlay {
-      width: 80%;
+  .booking__btn {
+    &_active {
+      margin-top: 3px;
+      background-color: $text-hover-color;
     }
+  }
 
-    .overlay__slogan_heading {
-      font-size: 50px;
-    }
+  .header-wrapper__registration_show {
+    right: 0;
+    width: 100%;
+  }
 
-    .overlay__slogan_passion {
-      font-size: 23px;
-    }
-
+  .booking__btn {
+    top: -26px;
+    left: 90px;
+  }
 
 }
 
@@ -466,35 +376,15 @@
   }
 
   .booking__btn {
+    top: -26px;
+    left: 90px;
     &_active {
       margin-top: 3px;
       background-color: $text-hover-color;
     }
   }
 
-  #booking__btn {
-    top: -26px;
-    left: 90px;
-  }
-  //video-overlay
 
-  .video-block__overlay {
-    width: 100%;
-    height: 25%;
-    bottom: 0;
-    top: 0;
-    padding: 5px;
-    margin: auto;
-
-  }
-
-  .overlay__slogan_heading {
-    font-size: 50px;
-  }
-
-  .overlay__slogan_passion, .overlay__slogan_author {
-    display: none;
-  }
   .menu__submenu-show-menu {
     display: block;
     position: static;
