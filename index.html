@@ -10,11 +10,14 @@
     <script type="text/javascript" src="js/google-map-init.js" defer></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script>
     <script type="text/javascript" src="js/bg-video.js" defer></script>
+    <script type="text/javascript" src="js/registration-form.js" defer></script>
+    <script type="text/javascript" src="js/login-form.js" defer></script>
     <script type="text/javascript" src="js/mobile-menu.js" defer></script>
     <script type="text/javascript" src="js/tabs.js" defer></script>
     <script type="text/javascript" src="js/filter-events.js" defer></script>
     <script type="text/javascript" src="js/to-top-button.js" defer></script>
     <script type="text/javascript" src="js/menu-filter.js" defer></script>
+
   </head>
   <body>
     <header class="header" id="main">
@@ -68,14 +71,15 @@
           <div class="registration__signup-form">
             <form action="" method="post" class="signup-form__wrapper">
               <label class="signup-form__label" for="signup__phone-field"><img src="img/header/phone.svg" alt="phone icon" class="registration__icon"></label>
-              <input type="tel" class="registration-form__field signup-form__phone-field" id="signup__phone-field" pattern="\(?[0-9]{3}[\)\-\s]?(\s)?[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{3}" placeholder="+380952411960" required>
+              <input type="tel" class="registration-form__field signup-form__phone-field" id="signup__phone-field" placeholder="+380952411960" required>
+              <!-- <input type="tel" class="registration-form__field signup-form__phone-field" id="signup__phone-field" pattern="\(?[0-9]{3}[\)\-\s]?(\s)?[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{3}" placeholder="+380952411960" required> -->
               <label class="signup-form__label" for="signup__email-field"><img src="img/header/email.svg" width="20" alt="email icon" class="registration__icon"></label>
               <input type="email" class="registration-form__field signup-form__email-field" id="signup__email-field" placeholder="Email" required>
               <label class="signup-form__label" for="signup__pass-field"><img src="img/header/password.svg" width="20" alt="email icon" class="registration__icon"></label>
               <input type="pass" class="registration-form__field signup-form__pass-field" id="signup__pass-field" placeholder="Enter your password" required>
               <label class="signup-form__label" for="signup__pass-repeat-field"><img src="img/header/password.svg" width="20" alt="email icon" class="registration__icon"></label>
               <input type="pass" class="registration-form__field signup-form__pass-repeat-field" id="signup__pass-repeat-field" placeholder="Repeat your password" required>
-              <button class="signup-form__button">Sign up</button>
+              <button class="signup-form__button" id="signup__btn">Sign up</button>
             </form>
           </div>
           <div class="registration__login-form">
@@ -85,7 +89,7 @@
               <label class="login-form__label" for="login__pass-field"><img src="img/header/password.svg" width="20" alt="password icon" class="registration__icon"></label>
               <input type="pass" class="registration-form__field login-form__pass-field" id="login__pass-field" placeholder="Password">
               <label class="login-form__label-remember" for="login__remember-me">Remember me</label><input type="checkbox" id="login__remember-me">
-              <button class="login-form__button">Login</button>
+              <button class="login-form__button" id="login__btn">Login</button>
               <a href="#" class="login-form__forgot-pass">forgot password</a>
             </form>
           </div>

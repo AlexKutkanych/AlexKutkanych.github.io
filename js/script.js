@@ -1,48 +1,48 @@
 
 //sign-in form
-var joinUsBtn = document.querySelector("#join-us__btn"),
-    joinUsModal = document.querySelector(".header-wrapper__registration"),
-    closeJoinUsModalBtn = document.querySelector(".registration__close-btn"),
-    newUserTabBtn = document.querySelector(".user-form-switch__new"),
-    existingUserTabBtn = document.querySelector(".user-form-switch__existing"),
-    existingUserForm = document.querySelector(".registration__login-form"),
-    newUserForm = document.querySelector(".registration__signup-form");
-
-console.log(newUserForm);
-
-function showJoinUsModal(){
-    joinUsModal.classList.toggle("header-wrapper__registration_show");
-    joinUsBtn.classList.toggle("join-us__btn_active");
-}
-
-function closeJoinUsModal(){
-  joinUsModal.classList.remove("header-wrapper__registration_show");
-  joinUsBtn.classList.remove("join-us__btn_active");
-  existingUserForm.classList.remove("show-user-form");
-  existingUserTabBtn.classList.remove("user-form-switch__existing_active");
-  newUserForm.classList.remove("show-user-form");
-  newUserTabBtn.classList.remove("user-form-switch__new_active");
-}
-
-function showNewUserForm() {
-  newUserForm.classList.toggle("show-user-form");
-  existingUserForm.classList.remove("show-user-form");
-  newUserTabBtn.classList.toggle("user-form-switch__new_active");
-  existingUserTabBtn.classList.remove("user-form-switch__existing_active");
-}
-
-function showExistingUserForm() {
-  existingUserForm.classList.toggle("show-user-form");
-  existingUserTabBtn.classList.toggle("user-form-switch__existing_active");
-  newUserForm.classList.remove("show-user-form");
-  newUserTabBtn.classList.remove("user-form-switch__new_active");
-}
-
-joinUsBtn.addEventListener("click", showJoinUsModal);
-closeJoinUsModalBtn.addEventListener("click", closeJoinUsModal);
-
-existingUserTabBtn.addEventListener("click", showExistingUserForm);
-newUserTabBtn.addEventListener("click", showNewUserForm);
+// var joinUsBtn = document.querySelector("#join-us__btn"),
+//     joinUsModal = document.querySelector(".header-wrapper__registration"),
+//     closeJoinUsModalBtn = document.querySelector(".registration__close-btn"),
+//     newUserTabBtn = document.querySelector(".user-form-switch__new"),
+//     existingUserTabBtn = document.querySelector(".user-form-switch__existing"),
+//     existingUserForm = document.querySelector(".registration__login-form"),
+//     newUserForm = document.querySelector(".registration__signup-form");
+//
+// console.log(newUserForm);
+//
+// function showJoinUsModal(){
+//     joinUsModal.classList.toggle("header-wrapper__registration_show");
+//     joinUsBtn.classList.toggle("join-us__btn_active");
+// }
+//
+// function closeJoinUsModal(){
+//   joinUsModal.classList.remove("header-wrapper__registration_show");
+//   joinUsBtn.classList.remove("join-us__btn_active");
+//   existingUserForm.classList.remove("show-user-form");
+//   existingUserTabBtn.classList.remove("user-form-switch__existing_active");
+//   newUserForm.classList.remove("show-user-form");
+//   newUserTabBtn.classList.remove("user-form-switch__new_active");
+// }
+//
+// function showNewUserForm() {
+//   newUserForm.classList.toggle("show-user-form");
+//   existingUserForm.classList.remove("show-user-form");
+//   newUserTabBtn.classList.toggle("user-form-switch__new_active");
+//   existingUserTabBtn.classList.remove("user-form-switch__existing_active");
+// }
+//
+// function showExistingUserForm() {
+//   existingUserForm.classList.toggle("show-user-form");
+//   existingUserTabBtn.classList.toggle("user-form-switch__existing_active");
+//   newUserForm.classList.remove("show-user-form");
+//   newUserTabBtn.classList.remove("user-form-switch__new_active");
+// }
+//
+// joinUsBtn.addEventListener("click", showJoinUsModal);
+// closeJoinUsModalBtn.addEventListener("click", closeJoinUsModal);
+//
+// existingUserTabBtn.addEventListener("click", showExistingUserForm);
+// newUserTabBtn.addEventListener("click", showNewUserForm);
 
 // //form vakidation
 //
@@ -64,7 +64,7 @@ newUserTabBtn.addEventListener("click", showNewUserForm);
 
 
 
-// var signInButton = document.getElementById("sign-in_button");
+
 // var signInForm = document.getElementsByClassName("signin-form")[0];
 // signInButton.addEventListener("click", function(){
 //     signInForm.style.display = "block";
@@ -82,3 +82,52 @@ newUserTabBtn.addEventListener("click", showNewUserForm);
 //
 //   console.log(signInField);
 // });
+
+//login
+
+var loginPhoneField = document.querySelector("#login__phone-field");
+var loginPassField = document.querySelector("#login__pass-field");
+var loginBtn = document.querySelector("#login__btn");
+
+
+//create array for users info
+// var userInfo = [];
+//
+// function addNewUser(e){
+//   e.preventDefault();
+//
+//   // var user = {
+//   //   // id: userInfo.length,
+//   //   phone: loginPhoneField.value,
+//   //   password: loginPassField.value
+//   // };
+//   //
+//   // userInfo.push(user);
+//   //
+//   // var str = JSON.stringify(userInfo);
+//   // localStorage.setItem("usersInfo", userInfo);
+//   // console.log(str);
+//   //
+//   // var info = JSON.parse(str);
+//   // console.log(info[0].phone);
+//
+//   for (var i = 0; i < info.length; i++){
+//     if(loginPhoneField.value === info[i].phone) {
+//       console.log("hello " + loginPhoneField.value);
+//     } else {
+//       console.log("goodbye");
+//     }
+//   }
+// }
+//
+//
+// loginBtn.addEventListener("click", addNewUser);
+
+
+
+
+
+//sign-up
+
+var signupPhoneField = document.querySelector("#signup__phone-field");
+var signupBtn = document.getElementById("#sign-in_btn");
