@@ -1,10 +1,5 @@
 //registration
-Storage.prototype.setObj = function(key, obj) {
-    return this.setItem(key, JSON.stringify(obj));
-};
-Storage.prototype.getObj = function(key) {
-    return JSON.parse(this.getItem(key));
-};
+
 //appearance
 
 var joinUsBtn = document.querySelector("#join-us__btn"),

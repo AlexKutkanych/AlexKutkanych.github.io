@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles-main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/script.js" defer></script>
-    <script type="text/javascript" src="js/google-map-init.js" defer></script>
+    <!-- <script type="text/javascript" src="js/google-map-init.js" defer></script> -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script>
     <script type="text/javascript" src="js/bg-video.js" defer></script>
     <script type="text/javascript" src="js/registration-form.js" defer></script>
@@ -17,7 +17,7 @@
     <script type="text/javascript" src="js/filter-events.js" defer></script>
     <script type="text/javascript" src="js/to-top-button.js" defer></script>
     <script type="text/javascript" src="js/menu-filter.js" defer></script>
-
+    <script type="text/javascript" src="js/booking.js" defer></script>
   </head>
   <body>
     <header class="header" id="main">
@@ -95,6 +95,93 @@
           </div>
         </div>
         <a href="#main" id="to-top-button"></a>
+        <section class="header-wrapper__booking-section">
+          <a href="#" class="booking-section__heading"><h2>Book a table online</h2></a>
+          <span class="booking-section__close-btn"></span>
+          <section class="booking-section__info-block">
+            <a href="#" class="info-block__heading"><h3>Select date and time</h3></a>
+            <select name="people-amount" id="info-block__people-amount" class="info-block__people-amount">
+              <option value="1 person">1 person</option>
+              <option value="2 people">2 people</option>
+              <option value="3 people">3 people</option>
+              <option value="4 people">4 people</option>
+              <option value="5 people">5 people</option>
+              <option value="6 people">6 people</option>
+              <option value="7 people">7 people</option>
+              <option value="8 people">8 people</option>
+              <option value="9 people">9 people</option>
+            </select>
+            <span class="info-block__date-btn">Today</span>
+            <select size="10" name="select-time" id="info-block__select-time" class="info-block__select-time">
+              <option value="9:00">9:00 <span class="time-available">available</span></option>
+              <option value="9:30">9:30 <span class="time-available">available</span></option>
+              <option value="10:00">10:00 <span class="time-available">available</span></option>
+              <option value="10:30">10:30 <span class="time-available">available</span></option>
+              <option value="11:00">11:00 <span class="time-available">available</span></option>
+              <option value="11:30">11:30 <span class="time-available">available</span></option>
+              <option value="12:00">12:00 <span class="time-available">available</span></option>
+              <option value="12:30">12:30 <span class="time-available">available</span></option>
+              <option value="13:00">13:00 <span class="time-available">available</span></option>
+              <option value="13:30">13:30 <span class="time-available">available</span></option>
+              <option value="14:00">14:00 <span class="time-available">available</span></option>
+              <option value="14:30">14:30 <span class="time-available">available</span></option>
+              <option value="15:00">15:00 <span class="time-available">available</span></option>
+              <option value="15:30">15:30 <span class="time-available">available</span></option>
+              <option value="16:00">16:00 <span class="time-available">available</span></option>
+              <option value="16:30">16:30 <span class="time-available">available</span></option>
+              <option value="17:00">17:00 <span class="time-available">available</span></option>
+              <option value="17:30">17:30 <span class="time-available">available</span></option>
+              <option value="18:00">18:00 <span class="time-available">available</span></option>
+              <option value="18:30">18:30 <span class="time-available">available</span></option>
+              <option value="19:00">19:00 <span class="time-available">available</span></option>
+              <option value="19:30">19:30 <span class="time-available">available</span></option>
+              <option value="20:00">20:00 <span class="time-available">available</span></option>
+              <option value="20:30">20:30 <span class="time-available">available</span></option>
+              <option value="21:00">21:00 <span class="time-available">available</span></option>
+              <option value="21:30">21:30 <span class="time-available">available</span></option>
+              <option value="22:00">22:00 <span class="time-available">available</span></option>
+              <option value="22:30">22:30 <span class="time-available">available</span></option>
+              <option value="23:00">23:00 <span class="time-available">available</span></option>
+              <option value="23:30">23:30 <span class="time-available">available</span></option>
+            </select>
+            <button class="info-block__submit-booking typical-btn" id="submit-booking">Submit booking</button>
+          </section>
+          <section class="booking-section__table-block">
+            <a href="#" class="table-block__heading"><h3>Select your table</h3></a>
+            <div class="table-block__table-scheme">
+              <div class="table-scheme__table table-scheme__table_table1">
+                <span class="table-scheme__table-number" id="table-number1">1</span>
+              </div>
+              <div class="table-scheme__table table-scheme__table_table2">
+                <span class="table-scheme__table-number" id="table-number2">2</span>
+              </div>
+              <div class="table-scheme__table table-scheme__table_table3">
+                <span class="table-scheme__table-number" id="table-number3">3</span>
+              </div>
+              <div class="table-scheme__table table-scheme__table_table4">
+                <span class="table-scheme__table-number" id="table-number4">4</span>
+            </div>
+                <div class="table-scheme__table table-scheme__table_table5">
+                <span class="table-scheme__table-number" id="table-number5">5</span>
+              </div>
+              <div class="table-scheme__table table-scheme__table_table6">
+                <span class="table-scheme__table-number" id="table-number6">6</span>
+              </div>
+              <div class="table-scheme__table table-scheme__table_table7">
+                <span class="table-scheme__table-number" id="table-number7">7</span>
+              </div>
+              <div class="table-scheme__table table-scheme__table_table8">
+                <span class="table-scheme__table-number" id="table-number8">8</span>
+              </div>
+              <div class="table-scheme__table table-scheme__table_table9">
+                <span class="table-scheme__table-number" id="table-number9">9</span>
+              </div>
+              <div class="table-scheme__table table-scheme__table_table10">
+                <span class="table-scheme__table-number" id="table-number10">10</span>
+              </div>
+            </div>
+          </section>
+        </section>
       </header>
       <div class="video-block">
         <div class="video-block__container">
@@ -103,9 +190,9 @@
             <!--[if lte IE 11]>
             <video src="vid/bg-video.mp4" autoplay="true" loop="loop" volume="0" class="video-block__video"></video>
             <![endif]-->
-            <source type="video/mp4" src="vid/bg-video.mp4">
-            <source type="video/webm" src="vid/bg-video.webm">
-            <source type="video/ogg" src="vid/bg-video.ogv">
+            <!-- <source type="video/mp4" src="vid/bg-video.mp4"> -->
+            <!-- <source type="video/webm" src="vid/bg-video.webm"> -->
+            <!-- <source type="video/ogg" src="vid/bg-video.ogv"> -->
           </video>
           <div class="video-block__overlay">
             <h2 class="overlay__slogan_heading">Welcome to Oasis!</h2>
