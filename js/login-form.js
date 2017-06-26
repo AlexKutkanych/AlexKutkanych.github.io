@@ -13,22 +13,21 @@ function loginUser(e){
   e.preventDefault();
   var loggedUser = localStorage.getItem("user");
   var parseUserInfo = JSON.parse(loggedUser);
-  console.log(parseUserInfo.name);
 
   if(loginNameField.value === parseUserInfo.name && loginPassField.value === parseUserInfo.password) {
     alert("hello "+ loginNameField.value);
     loggedUserGreetings.innerHTML = "hi, "+ loginNameField.value;
     loggedUserBlock.style.display = "block";
-
     loginNameField.value = "";
-  } else {
-    console.log("bye");
-    loginNameField.value = "";
+    clearLoginInputs();
+    clearSignupInputs();
+    closeJoinUsModal();
+  } else if (loginNameField.value !== parseUserInfo.name) {
+    alert("You entered wrong username");
+  } else if (loginPassField.value !== parseUserInfo.password) {
+    alert("You entered wrong password");
   }
 
-  clearSignupInputs();
-  clearLoginInputs();
-  closeJoinUsModal();
 }
 
 

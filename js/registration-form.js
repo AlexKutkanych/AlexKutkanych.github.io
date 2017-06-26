@@ -106,14 +106,19 @@ function validateSignupForm(e){
     // checkPassRepeat();
 
     addNewUser();
-    clearSignupInputs();
 
   if (errors.length > 0) {
     reportErrors(errors);
     return false;
-   }
+  } else {
+    closeJoinUsModal();
+    clearSignupInputs();
+    alert("We sent you a link to prove email address. Check your email "+ signupEmailField.value);
+  }
+  errors = [];
    return true;
 }
+
 
 function reportErrors(errors){
   var msg = "Please Enter Valide Data...\n";
@@ -124,10 +129,15 @@ function reportErrors(errors){
   alert(msg);
 }
 
+//clear signup inputs after registration
 function clearSignupInputs(){
   for (var i = 0; i < allSignupInputs.length; i++){
     allSignupInputs[i].value = "";
   }
+}
+
+function showSentEmailModal(){
+
 }
 
 
