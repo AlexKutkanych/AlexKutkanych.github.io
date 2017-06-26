@@ -18,13 +18,17 @@
     <script type="text/javascript" src="js/to-top-button.js" defer></script>
     <script type="text/javascript" src="js/menu-filter.js" defer></script>
     <script type="text/javascript" src="js/booking.js" defer></script>
+    <!-- <script type="text/javascript" src="js/search.js" defer></script> -->
+
   </head>
   <body>
     <header class="header" id="main">
       <div class="header-wrapper">
+        <!-- mobile menu -->
         <div class="mobile-menu">
           <span class="mobile-menu__burger"></span>
         </div>
+        <!-- menu -->
         <nav class="menu-top">
           <ul class="">
             <li class="menu-top__menu-item">
@@ -58,10 +62,24 @@
             </li>
           </ul>
         </nav>
+        <!-- <div class="header-wrapper__search-section">
+          <form>
+            <input class="place_for_search" type="text" id="text-to-find" value="" placeholder="Search" autofocus>
+            <input class="button_for_turn_back" type="button" onclick="javascript: FindOnPage('text-to-find',false); return false;" value=" " title="Отменить поиск">
+            <input class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;" value=" " title="Начать поиск">
+          </form>
+        </div> -->
+        <div class="header-wrapper__logged-user-section">
+            <img src="img/header/logged-user.svg" alt="logged user icon" class="logged-user__icon">
+            <p class="logged-user__greetings">some text</p>
+        </div>
+
+        <!-- login, booking btns -->
         <div class="header-wrapper__btns-section">
           <a href="#" class="typical-btn join-us__btn" id="join-us__btn">Join us!</a>
           <a href="#" class="typical-btn booking__btn" id="booking__btn">Booking</a>
         </div>
+        <!-- registration modal -->
         <div class="header-wrapper__registration">
           <span class="registration__close-btn"></span>
           <div class="registration__form-tabs">
@@ -70,31 +88,37 @@
           </div>
           <div class="registration__signup-form">
             <form action="" method="post" class="signup-form__wrapper">
-              <label class="signup-form__label" for="signup__phone-field"><img src="img/header/phone.svg" alt="phone icon" class="registration__icon"></label>
-              <input type="tel" class="registration-form__field signup-form__phone-field" id="signup__phone-field" placeholder="+380952411960" required>
-              <!-- <input type="tel" class="registration-form__field signup-form__phone-field" id="signup__phone-field" pattern="\(?[0-9]{3}[\)\-\s]?(\s)?[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{3}" placeholder="+380952411960" required> -->
+              <label class="signup-form__label" for="signup__name-field"><img src="img/header/user.svg" alt="user icon" class="registration__icon"></label>
+              <input type="text" class="registration-form__field signup-form__name-field" id="signup__name-field" placeholder="Enter your username" title="From 3 to 20 characters" required>
               <label class="signup-form__label" for="signup__email-field"><img src="img/header/email.svg" width="20" alt="email icon" class="registration__icon"></label>
               <input type="email" class="registration-form__field signup-form__email-field" id="signup__email-field" placeholder="Email" required>
               <label class="signup-form__label" for="signup__pass-field"><img src="img/header/password.svg" width="20" alt="email icon" class="registration__icon"></label>
-              <input type="pass" class="registration-form__field signup-form__pass-field" id="signup__pass-field" placeholder="Enter your password" required>
+              <input type="pass" class="registration-form__field signup-form__pass-field" id="signup__pass-field" placeholder="Enter your password"
+              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
               <label class="signup-form__label" for="signup__pass-repeat-field"><img src="img/header/password.svg" width="20" alt="email icon" class="registration__icon"></label>
-              <input type="pass" class="registration-form__field signup-form__pass-repeat-field" id="signup__pass-repeat-field" placeholder="Repeat your password" required>
+              <input type="pass" class="registration-form__field signup-form__pass-repeat-field" id="signup__pass-repeat-field" placeholder="Repeat your password"
+               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
               <button class="signup-form__button" id="signup__btn">Sign up</button>
             </form>
           </div>
           <div class="registration__login-form">
             <form action="" method="post" class="login-form__wrapper">
-              <label class="login-form__label" for="login__phone-field"><img src="img/header/phone.svg" alt="phone icon" class="registration__icon"></label>
-              <input type="tel" class="registration-form__field login-form__phone-field" id="login__phone-field" placeholder="Phone number">
+              <label class="login-form__label" for="login__name-field"><img src="img/header/user.svg" alt="user icon" class="registration__icon"></label>
+              <input type="text" class="registration-form__field login-form__name-field" id="login__name-field" placeholder="Enter your username" title="From 3 to 20 characters" required>
               <label class="login-form__label" for="login__pass-field"><img src="img/header/password.svg" width="20" alt="password icon" class="registration__icon"></label>
-              <input type="pass" class="registration-form__field login-form__pass-field" id="login__pass-field" placeholder="Password">
+              <input type="password" class="registration-form__field login-form__pass-field" id="login__pass-field" placeholder="Password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
               <label class="login-form__label-remember" for="login__remember-me">Remember me</label><input type="checkbox" id="login__remember-me">
               <button class="login-form__button" id="login__btn">Login</button>
               <a href="#" class="login-form__forgot-pass">forgot password</a>
             </form>
           </div>
         </div>
+
+        <!-- to top btn -->
+
         <a href="#main" id="to-top-button"></a>
+
+        <!-- booking modal -->
         <section class="header-wrapper__booking-section">
           <a href="#" class="booking-section__heading"><h2>Book a table online</h2></a>
           <span class="booking-section__close-btn"></span>
@@ -183,6 +207,9 @@
           </section>
         </section>
       </header>
+
+      <!-- main video -->
+
       <div class="video-block">
         <div class="video-block__container">
           <video autoplay="true" loop="loop" volume="0" class="video-block__video">

@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Cookie');
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
 
+span.highlight {
+background-color: yellow; cursor: pointer; }
+
+span.splink {
+color: #0A5794; cursor: pointer; }
 
 .header {
   width: 100%;
@@ -18,6 +23,20 @@
       position: relative;
       margin-top: 30px;
       width: 175px;
+    }
+    &__search-section {
+      float: right;
+      margin-top: 30px;
+    }
+    &__logged-user-section {
+      display: none;
+      width: 60px;
+      height: 65px;
+      float: right;
+      margin-top: 10px;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -137,6 +156,25 @@
 
 .booking__btn {
   left: 85px;
+}
+
+/*logged user*/
+
+.logged-user {
+  &__icon {
+    display: block;
+    width: 30px;
+    margin: 0 auto;
+  }
+  &__greetings {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    &:hover {
+      cursor: pointer;
+      color: $text-hover-color;
+    }
+  }
 }
 
 /*to top button*/

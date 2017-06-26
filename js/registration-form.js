@@ -23,6 +23,8 @@ function closeJoinUsModal(){
   existingUserTabBtn.classList.remove("user-form-switch__existing_active");
   newUserForm.classList.remove("show-user-form");
   newUserTabBtn.classList.remove("user-form-switch__new_active");
+  clearSignupInputs();
+  clearLoginInputs();
 }
 
 function showNewUserForm() {
@@ -47,51 +49,87 @@ newUserTabBtn.addEventListener("click", showNewUserForm);
 
 //sign-up
 
-var signupPhoneField = document.querySelector("#signup__phone-field");
-var signupEmailField = document.querySelector("#signup__email-field");
-var signupPassField = document.querySelector("#signup__pass-field");
-var signupPassRepeatField = document.querySelector("#signup__pass-repeat-field");
-var signupBtn = document.querySelector("#signup__btn");
+var signupNameField = document.querySelector("#signup__name-field"),
+    signupEmailField = document.querySelector("#signup__email-field"),
+    signupPassField = document.querySelector("#signup__pass-field"),
+    signupPassRepeatField = document.querySelector("#signup__pass-repeat-field"),
+    signupBtn = document.querySelector("#signup__btn"),
+    regexpUsername = /^[A-Za-z0-9_]{3,20}$/,
+    regexpEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
+    regexpPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/,
+    errors = [],
+    allSignupInputs = document.querySelectorAll(".signup-form__wrapper > input"),
+    user;
 
-//create array for users info
-var userInfo = [];
 
 //check if password entered two time
-function checkPassRepeat(){
-    if(signupPassField.value !== signupPassRepeatField.value) {
-      alert("wrong");
-    }
-}
-var user;
+// function checkPassRepeat(){
+//     if(signupPassField.value !== signupPassRepeatField.value) {
+//       signupPassField.style.border = "2px solid red";
+//       signupPassRepeatField.style.border = "2px solid red";
+//       alert("Password fields don't match");
+//     }
+// }
 
-function addNewUser(e){
-  e.preventDefault();
-  // checkPassRepeat();
+
+
+function addNewUser(){
   //create new user
-    user = {
-      phone: signupPhoneField.value,
-      email: signupEmailField.value,
-      password: signupPassField.value
-    };
+  user = {
+    name: signupNameField.value,
+    email: signupEmailField.value,
+    password: signupPassField.value
+  };
 
-    userInfo.push(user);
-    console.log(userInfo);
-    // var counter = 0;
-    for (var i =0; i < 10; i++){
-      localStorage.setItem("user"+i, JSON.stringify(userInfo[i]));
-
-    }
-    // counter++;
-  // counter++;
-
-  //push to userInfo array
   //write to localStorage
-  // var parseO = JSON.parse(str);
-  // console.log(parseO);
+  var local = localStorage.setItem("user", JSON.stringify(user));
+  console.log(local);
+}
 
-  // var info = JSON.parse(str);
-  // console.log(info);
+function validateSignupForm(e){
+    e.preventDefault();
+    if (!regexpUsername.test(signupNameField.value)) {
+      errors[errors.length] = "You must enter valid Name .";
+    }
+
+    if (!regexpEmail.test(signupEmailField.value)) {
+      errors[errors.length] = "You must enter a valid email address.";
+   }
+
+   if (!regexpPassword.test(signupPassField.value)) {
+      errors[errors.length] = "You must enter a valid Password ";
+   }
+
+   if (!regexpPassword.test(signupPassRepeatField.value)) {
+      errors[errors.length] = "You must enter similar Password ";
+   }
+    // checkPassRepeat();
+
+    addNewUser();
+    clearSignupInputs();
+
+  if (errors.length > 0) {
+    reportErrors(errors);
+    return false;
+   }
+   return true;
+}
+
+function reportErrors(errors){
+  var msg = "Please Enter Valide Data...\n";
+  for (var i = 0; i<errors.length; i++) {
+   var numError = i + 1;
+    msg += "\n" + numError + ". " + errors[i];
+  }
+  alert(msg);
+}
+
+function clearSignupInputs(){
+  for (var i = 0; i < allSignupInputs.length; i++){
+    allSignupInputs[i].value = "";
+  }
 }
 
 
-signupBtn.addEventListener("click", addNewUser);
+
+signupBtn.addEventListener("click", validateSignupForm);

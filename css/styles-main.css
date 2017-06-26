@@ -40,6 +40,7 @@ li {
   box-shadow: 2px 2px 0 4px #000;
   text-align: center;
   font-family: "PT Sans Caption", sans-serif;
+  display: none;
 }
 
 .booking-section__heading {
@@ -877,6 +878,16 @@ body::-webkit-scrollbar-thumb {
     margin: 10px auto;
   }
 }
+span.highlight {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+span.splink {
+  color: #0A5794;
+  cursor: pointer;
+}
+
 .header {
   width: 100%;
   color: #964B00;
@@ -896,6 +907,23 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   margin-top: 30px;
   width: 175px;
+}
+
+.header-wrapper__search-section {
+  float: right;
+  margin-top: 30px;
+}
+
+.header-wrapper__logged-user-section {
+  display: none;
+  width: 60px;
+  height: 65px;
+  float: right;
+  margin-top: 10px;
+}
+
+.header-wrapper__logged-user-section:hover {
+  cursor: pointer;
 }
 
 .menu-top {
@@ -1021,6 +1049,25 @@ body::-webkit-scrollbar-thumb {
 
 .booking__btn {
   left: 85px;
+}
+
+/*logged user*/
+
+.logged-user__icon {
+  display: block;
+  width: 30px;
+  margin: 0 auto;
+}
+
+.logged-user__greetings {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+}
+
+.logged-user__greetings:hover {
+  cursor: pointer;
+  color: #964B00;
 }
 
 /*to top button*/
@@ -2303,7 +2350,7 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 10px;
 }
 
-.login-form__phone-field {
+.login-form__name-field {
   width: 70%;
   height: 20px;
   float: left;
