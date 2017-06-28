@@ -2,17 +2,26 @@ var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
     buyFoodOnline = document.querySelector(".buy-food-online"),
     buyFoodSidebar = document.querySelector(".buy-food-online__sidebar"),
     buyFoodFilter = document.querySelector("#filter-btn-close"),
-    foodSoups = document.querySelectorAll(".food-result_soup"),
-    notSoups = document.querySelectorAll(".food-wrapper__result > :not(.food-result_soup)"),
-    notDesserts = document.querySelectorAll(".food-wrapper__result > :not(.food-result_dessert)"),
-    foodDesserts = document.querySelectorAll(".food-result_dessert"),
-    inputDesserts = document.querySelector("#soup-appetizer"),
+    allFood = document.querySelectorAll(".food-result"),
+    //soup
+    inputSoup = document.querySelector("#soup-appetizer"),
+    foodSoups = document.querySelectorAll(".food-result__soup"),
+    //pasta
+    inputPasta = document.querySelector("#pasta"),
+    foodPasta = document.querySelectorAll(".food-result__pasta"),
+    //desserts
+    foodDesserts = document.querySelectorAll(".food-result__dessert"),
     inputDesserts = document.querySelector("#dessert"),
+    //beverages
     inputBeverages = document.querySelector("#beverages");
+    beverages = document.querySelectorAll(".food-result__drinks"),
+    //pizza
+    inputPizza = document.querySelector("#pizza"),
+    foodPizza = document.querySelectorAll(".food-result__pizza"),
     allInputCategory = document.querySelectorAll(".food-filter"),
     allRadioBeverages = document.querySelector(".food-filter-radio");
 
-console.log(notSoups);
+console.log(inputSoup);
 //open-close block
 
 function closeFoodOnlineBlock(){
@@ -24,23 +33,39 @@ closeFoodOnlineBtn.addEventListener("click", closeFoodOnlineBlock);
 
 //filter soups
 
-
-//filter desserts
-
-inputDesserts.addEventListener("click", function(){
-  if (inputDesserts.checked === true) {
-    for (var k = 0; k < foodDesserts.length; k++ ){
-      foodDesserts[k].style.display = "block";
-    }
-    for (var j = 0; j < notDesserts.length; j++ ){
-      notDesserts[j].style.display = "none";
-    }
+inputSoup.addEventListener("click", function(){
+  if(inputSoup.checked === true){
+    // for(var i = 0; i < foodPasta.length; i++) {
+      foodPasta[0].classList.add("hide");
+      foodSoups[0].classList.remove("hide");
+    // }
   } else {
-    for (var i = 0; i < foodDesserts.length; i++ ){
-      foodDesserts[i].style.display = "none";
+    // for(var k = 0; k < foodPasta.length; i++) {
+      foodPasta[0].classList.remove("hide");
+    // }
+  }
+});
+
+//filter pasta
+
+inputPasta.addEventListener("click", function(){
+  if(inputPasta.checked === true){
+    
+    for(var i = 0; i < foodSoups.length; i++) {
+      foodSoups[0].classList.add("hide");
+    }
+
+  } else {
+    for(var k = 0; k < foodSoups.length; k++) {
+      foodSoups[0].classList.remove("hide");
     }
   }
 });
+
+
+//filter desserts
+
+
 
 //disable alco|non-alco
 // console.log(inputBeverages);

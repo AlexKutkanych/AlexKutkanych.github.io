@@ -1589,6 +1589,10 @@ span.splink {
     display: none;
   }
 }
+.hide {
+  display: none;
+}
+
 .buy-food-online {
   width: 95%;
   height: 900px;

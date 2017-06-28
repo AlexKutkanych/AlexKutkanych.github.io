@@ -18,6 +18,7 @@
     <script type="text/javascript" src="js/to-top-button.js" defer></script>
     <script type="text/javascript" src="js/menu-filter.js" defer></script>
     <script type="text/javascript" src="js/booking.js" defer></script>
+    <script type="text/javascript" src="js/menu-sort.js" defer></script>
     <!-- <script type="text/javascript" src="js/search.js" defer></script> -->
   </head>
   <body>
@@ -305,17 +306,11 @@
               <input type="radio" class="food-filter" name="drink-type" id="non-alco"><label class="food-filter__label" for="non-alco">non-alco</label>
               <input type="radio" class="food-filter" name="drink-type" id="alcoholic"><label class="food-filter__label" for="alcoholic">alcoholic</label>
             </section>
-          <!-- <section class="food-filter__variants">
-            <a href="#"><h2>группы товаров:</h2></a>
-            <input type="radio" class="filter-group" name="filter-group" id="baxter-group"><label for="baxter-group" class="filter-group__label">бритвенные принадлежности</label>
-            <input type="radio" class="filter-group" name="filter-group" id="natty-group"><label for="natty-group" class="filter-group__label">средства для ухода</label>
-            <input type="radio" class="filter-group" name="filter-group" id="suavecito-group"><label for="suavecito-group" class="filter-group__label">аксессуары</label>
-          </section> -->
           <button type="button" name="button" class="typical-btn filter-btn">Find</button>
         </form>
         </aside>
         <main class="food-wrapper__result">
-          <div class="food-result  food-result_dessert">
+          <!-- <div class="food-result  food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic"></a>
               <figcaption class="food-result__name">Italian Ice-cream</figcaption>
@@ -324,7 +319,7 @@
             <span class="food-result__price">&#x20B4;55</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-           <div class="food-result food-result_dessert">
+           <div class="food-result food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_sorbet"></a>
               <figcaption class="food-result__name">Italian Sorbet</figcaption>
@@ -332,8 +327,8 @@
             </figure>
             <span class="food-result__price">&#x20B4;55</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <!--<div class="food-result food-result_dessert">
+          </div> -->
+          <!--<div class="food-result food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_panna-cotta"></a>
               <figcaption class="food-result__name">Panna Cotta</figcaption>
@@ -342,7 +337,7 @@
             <span class="food-result__price">&#x20B4;70</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result_dessert">
+          <div class="food-result food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_creme-brulee"></a>
               <figcaption class="food-result__name">Crème Brulee</figcaption>
@@ -351,7 +346,7 @@
             <span class="food-result__price">&#x20B4;75</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result_dessert">
+          <div class="food-result food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_tiramisu"></a>
               <figcaption class="food-result__name">Tiramisu</figcaption>
@@ -360,7 +355,7 @@
             <span class="food-result__price">&#x20B4;80</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result_dessert">
+          <div class="food-result food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_tortino"></a>
               <figcaption class="food-result__name">Tortino caldo di cioccolato</figcaption>
@@ -369,7 +364,7 @@
             <span class="food-result__price">&#x20B4;95</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result_dessert">
+          <div class="food-result food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_castagnaccio"></a>
               <figcaption class="food-result__name">Il Castagnaccio</figcaption>
@@ -378,7 +373,7 @@
             <span class="food-result__price">&#x20B4;100</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result_dessert">
+          <div class="food-result food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_crostata"></a>
               <figcaption class="food-result__name">Crostata di Marmellata</figcaption>
@@ -387,7 +382,7 @@
             <span class="food-result__price">&#x20B4;110</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div> -->
-          <div class="food-result food-result_dessert">
+          <!-- <div class="food-result food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_semifreddo"></a>
               <figcaption class="food-result__name">Semifreddo al Caramello</figcaption>
@@ -396,7 +391,7 @@
             <span class="food-result__price">&#x20B4;130</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result_drinks food-result_drinks-alco">
+          <div class="food-result food-result__drinks food-result__drinks-alco">
             <figure>
               <a href="#" class="food-result__pic">
                 <img src="img/menu-filter/red-wine.jpg" alt="" class="food-result__pic_red-wine">
@@ -407,7 +402,7 @@
             <span class="food-result__price">&#x20B4;55</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result_drinks food-result_drinks-non-alco">
+          <div class="food-result food-result__drinks food-result__drinks-non-alco">
             <figure>
               <a href="#" class="food-result__pic ">
                 <img src="img/menu-filter/sorbet.jpg" alt="" class="food-result__pic_americano">
@@ -418,8 +413,8 @@ served on the rocks</figcaption>
             </figure>
             <span class="food-result__price">&#x20B4;55</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <!-- <div class="food-result food-result_drinks food-result_drinks-alco">
+          </div> -->
+          <!-- <div class="food-result food-result__drinks food-result__drinks-alco">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_spritz-royal"></a>
               <figcaption class="food-result__name">Spritz Royal</figcaption>
@@ -429,7 +424,7 @@ White Vermouth, Aperol with a dash of Prosecco</figcaption>
             <span class="food-result__price">&#x20B4;55</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result_drinks food-result_drinks-alco">
+          <div class="food-result food-result__drinks food-result__drinks-alco">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_negroni"></a>
               <figcaption class="food-result__name">Negroni</figcaption>
@@ -441,7 +436,7 @@ Italy consists of Gin, Red Vermouth and Campari</figcaption>
           </div> -->
 
 
-         <div class="food-result food-result_pizza">
+         <!-- <div class="food-result food-result__pizza">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_margherita"></a>
               <figcaption class="food-result__name">Margherita</figcaption>
@@ -449,8 +444,8 @@ Italy consists of Gin, Red Vermouth and Campari</figcaption>
             </figure>
             <span class="food-result__price">&#x20B4;120*</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-            <!--<div class="food-result food-result_pizza">
+          </div> -->
+            <div class="food-result food-result__pizza">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_napoletana"></a>
               <figcaption class="food-result__name">Napoletana</figcaption>
@@ -459,16 +454,7 @@ Italy consists of Gin, Red Vermouth and Campari</figcaption>
             <span class="food-result__price">&#x20B4;130</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result_pizza">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_verdure"></a>
-              <figcaption class="food-result__name">Verdure</figcaption>
-              <figcaption class="food-result__desc">Rich custard base topped with a contrasting layer of hard caramel</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;150</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <div class="food-result food-result_pizza">
+          <div class="food-result food-result__pizza">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_diavola"></a>
               <figcaption class="food-result__name">Diavola</figcaption>
@@ -476,35 +462,8 @@ Italy consists of Gin, Red Vermouth and Campari</figcaption>
             </figure>
             <span class="food-result__price">&#x20B4;160</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> -->
-          <div class="food-result food-result_pasta">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_lasagna"></a>
-              <figcaption class="food-result__name">Lasagna</figcaption>
-              <figcaption class="food-result__desc">Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;70</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-        <!--  <div class="food-result food-result_pasta">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_tortelli"></a>
-              <figcaption class="food-result__name">Tortelli di Salsiccia</figcaption>
-              <figcaption class="food-result__desc">Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;80</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <div class="food-result food-result_pasta">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_spaghetti"></a>
-              <figcaption class="food-result__name">Spaghetti ai Frutti di Mare</figcaption>
-              <figcaption class="food-result__desc">Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;130</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> -->
-          <div class="food-result food-result_soup">
+          </div> 
+          <div class="food-result food-result__soup">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_frittura"></a>
               <figcaption class="food-result__name">Frittura mista di Pesce</figcaption>
@@ -513,7 +472,44 @@ Italy consists of Gin, Red Vermouth and Campari</figcaption>
             <span class="food-result__price">&#x20B4;75</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <!-- <div class="food-result food-result_soup">
+          <div class="food-result food-result__pizza">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_verdure"></a>
+              <figcaption class="food-result__name">Verdure</figcaption>
+              <figcaption class="food-result__desc">Rich custard base topped with a contrasting layer of hard caramel</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;150</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <!-- <div class="food-result food-result__pasta">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_lasagna"></a>
+              <figcaption class="food-result__name">Lasagna</figcaption>
+              <figcaption class="food-result__desc">Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;70</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div> -->
+        <!--  <div class="food-result food-result__pasta">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_tortelli"></a>
+              <figcaption class="food-result__name">Tortelli di Salsiccia</figcaption>
+              <figcaption class="food-result__desc">Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;80</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__pasta">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_spaghetti"></a>
+              <figcaption class="food-result__name">Spaghetti ai Frutti di Mare</figcaption>
+              <figcaption class="food-result__desc">Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;130</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div> -->
+          
+           <div class="food-result food-result__soup">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_farro"></a>
               <figcaption class="food-result__name">Farro di Mare</figcaption>
@@ -523,7 +519,7 @@ Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket</figcaption>
             <span class="food-result__price">&#x20B4;75</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result_soup">
+          <div class="food-result food-result__soup">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_minestrone"></a>
               <figcaption class="food-result__name">Minestrone di verdure</figcaption>
@@ -541,8 +537,8 @@ served with toasted bread</figcaption>
             </figure>
             <span class="food-result__price">&#x20B4;75</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> -->
-
+          </div> 
+          <button onclick="sortByPriceDescending()">Sort</button>
         </main>
         <div class="goods-wrapper__pagination">
           <a href="#" class="btn-pagination">&laquo;</a>

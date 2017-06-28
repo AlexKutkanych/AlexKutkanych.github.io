@@ -1,5 +1,8 @@
+.hide {
+  display: none; }
+
 .buy-food-online {
-  width: 90%;
+  width: 95%;
   height: 900px;
   margin: 0 auto;
   position: relative; }
@@ -32,36 +35,52 @@
 .buy-food-online__sidebar {
   width: 25%;
   float: left;
-  margin-right: 20px; }
+  margin-right: 20px;
+  box-sizing: border-box;
+  border: 3px solid #964B00;
+  font-family: "PT Sans Caption", sans-serif; }
+
+.buy-food-online__form {
+  padding: 10px; }
 
 .buy-food-online__filter-heading {
   width: 100%;
   height: 40px;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
+  display: block;
   background-color: #964B00;
-  justify-content: space-between;
-  font-style: 20px;
-  color: #fff; }
-
-#filter-btn-close {
-  width: 20%;
-  height: 100%;
-  background-color: #666;
+  font-size: 25px;
+  color: #fff;
   line-height: 40px;
-  text-align: center; }
+  text-align: center;
+  font-weight: bold; }
 
-.food-filter__label:before {
-  content: "";
-  display: inline-block;
-  width: 23px;
-  height: 23px;
-  position: absolute;
-  left: -26px;
-  bottom: -2px;
-  border-radius: 50%;
-  border: 3px solid #964B00; }
+.food-filter {
+  display: none; }
+  .food-filter__category {
+    margin-bottom: 50px; }
+  .food-filter__heading {
+    color: #666;
+    margin-bottom: 29px; }
+  .food-filter__label {
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 60px;
+    font-weight: bold;
+    margin: 15px auto;
+    letter-spacing: .6px;
+    font-family: "PT Sans Caption", sans-serif;
+    color: black; }
+    .food-filter__label:before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 10px;
+      bottom: -5px;
+      border: 3px solid #964B00; }
 
 .food-filter:checked + .food-filter__label::before {
   content: "";
@@ -77,20 +96,33 @@
   line-height: 18px;
   text-align: center; }
 
-.filter-group:checked + .filter-group__label,
+.filter-group__label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  position: absolute;
+  left: -19px;
+  bottom: 14px;
+  border: 2px solid black; }
+
+.filter-group:checked + .filter-group__label::before {
+  content: "\2022";
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  line-height: 15px; }
+
 .filter-group__label:hover,
-.food-filter:checked + .food-filter__label,
 .food-filter__label:hover {
   color: #743b09; }
 
-.food-filter__category {
-  margin-bottom: 50px; }
+.food-filter__drink-type > .food-filter__label::before {
+  border-radius: 50%; }
 
-.food-filter__heading {
-  margin-bottom: 29px; }
-
-.food-filter__label {
-  margin-bottom: 20px; }
+.food-filter__drink-type > .food-filter__label::before {
+  border-radius: 50%; }
 
 .filter-btn {
   width: 140px;
@@ -141,13 +173,10 @@
   margin-bottom: 43px; }
 
 .food-result__pic {
-  display: block;
+  display: inline-block;
   width: 100%;
   height: 165px;
-  background-image: url(../img/menu-filter/ice-cream.jpg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  position: relative; }
 
 .food-result__pic_sorbet {
   background-image: url(../img/menu-filter/sorbet.jpg); }
@@ -174,7 +203,14 @@
   background-image: url(../img/menu-filter/semifreddo.jpg); }
 
 .food-result__pic_red-wine {
-  background-image: url(../img/menu-filter/red-wine.jpg); }
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
 
 .food-result__pic_margherita {
   background-image: url(../img/menu-filter/margherita.jpg); }
@@ -210,7 +246,14 @@
   background-image: url(../img/menu-filter/zuppa-di-pesce.jpg); }
 
 .food-result__pic_americano {
-  background-image: url(../img/menu-filter/americano.jpeg); }
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
 
 .food-result__pic_spritz-royal {
   background-image: url(../img/menu-filter/spritz-royal.jpg); }
