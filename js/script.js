@@ -1,133 +1,81 @@
-
-//sign-in form
-// var joinUsBtn = document.querySelector("#join-us__btn"),
-//     joinUsModal = document.querySelector(".header-wrapper__registration"),
-//     closeJoinUsModalBtn = document.querySelector(".registration__close-btn"),
-//     newUserTabBtn = document.querySelector(".user-form-switch__new"),
-//     existingUserTabBtn = document.querySelector(".user-form-switch__existing"),
-//     existingUserForm = document.querySelector(".registration__login-form"),
-//     newUserForm = document.querySelector(".registration__signup-form");
-//
-// console.log(newUserForm);
-//
-// function showJoinUsModal(){
-//     joinUsModal.classList.toggle("header-wrapper__registration_show");
-//     joinUsBtn.classList.toggle("join-us__btn_active");
-// }
-//
-// function closeJoinUsModal(){
-//   joinUsModal.classList.remove("header-wrapper__registration_show");
-//   joinUsBtn.classList.remove("join-us__btn_active");
-//   existingUserForm.classList.remove("show-user-form");
-//   existingUserTabBtn.classList.remove("user-form-switch__existing_active");
-//   newUserForm.classList.remove("show-user-form");
-//   newUserTabBtn.classList.remove("user-form-switch__new_active");
-// }
-//
-// function showNewUserForm() {
-//   newUserForm.classList.toggle("show-user-form");
-//   existingUserForm.classList.remove("show-user-form");
-//   newUserTabBtn.classList.toggle("user-form-switch__new_active");
-//   existingUserTabBtn.classList.remove("user-form-switch__existing_active");
-// }
-//
-// function showExistingUserForm() {
-//   existingUserForm.classList.toggle("show-user-form");
-//   existingUserTabBtn.classList.toggle("user-form-switch__existing_active");
-//   newUserForm.classList.remove("show-user-form");
-//   newUserTabBtn.classList.remove("user-form-switch__new_active");
-// }
-//
-// joinUsBtn.addEventListener("click", showJoinUsModal);
-// closeJoinUsModalBtn.addEventListener("click", closeJoinUsModal);
-//
-// existingUserTabBtn.addEventListener("click", showExistingUserForm);
-// newUserTabBtn.addEventListener("click", showNewUserForm);
-
-// //form vakidation
-//
-// var signupBtn = document.querySelector(".signup-form__button"),
-//     signupPhoneField = document.querySelector("#signup__pass-field");
-//
-// console.log(signupPhoneField);
-//
-// function check(){
-//
-//
-// if(signupPhoneField.value == "hi") {
-//   // signupBtn.classList.remove("disabled-btn");
-//   alert("sdf");
-// }
-// }
-//
-// signupBtn.addEventListener("click", check);
-
-
-
-
-// var signInForm = document.getElementsByClassName("signin-form")[0];
-// signInButton.addEventListener("click", function(){
-//     signInForm.style.display = "block";
-// });
-// var signInFormButton = document.getElementsByClassName("signin-form__button")[0];
-// var signInField = document.getElementById("signin-field");
-// var passwordField = document.getElementById("password-field");
-// signInFormButton.addEventListener("click", function(){
-//   if (signInField.value === "sasha" && passwordField.value == 12345) {
-//     alert("hello, Sasha");
-//   } else {
-//     alert('you are '+ signInField.value);
-//   }
-//
-//
-//   console.log(signInField);
-// });
-
-//login
-
-var loginPhoneField = document.querySelector("#login__phone-field");
-var loginPassField = document.querySelector("#login__pass-field");
-var loginBtn = document.querySelector("#login__btn");
-
-
-//create array for users info
-// var userInfo = [];
-//
-// function addNewUser(e){
+// function toLocalStorage(e){
 //   e.preventDefault();
+//   validateSignupForm();
+//   addNewUser();
+//   // for(var i = 0; i < 5; i++) {
+//     allusers.push(addNewUser());
 //
-//   // var user = {
-//   //   // id: userInfo.length,
-//   //   phone: loginPhoneField.value,
-//   //   password: loginPassField.value
-//   // };
-//   //
-//   // userInfo.push(user);
-//   //
-//   // var str = JSON.stringify(userInfo);
-//   // localStorage.setItem("usersInfo", userInfo);
-//   // console.log(str);
-//   //
-//   // var info = JSON.parse(str);
-//   // console.log(info[0].phone);
-//
-//   for (var i = 0; i < info.length; i++){
-//     if(loginPhoneField.value === info[i].phone) {
-//       console.log("hello " + loginPhoneField.value);
-//     } else {
-//       console.log("goodbye");
-//     }
+//     console.log(allusers);
+//   // }
+//   //write to localStorage
+//   for (var i =0; i < allusers.length; i++){
+//     var savedUser = localStorage.setItem("user"+[i], JSON.stringify(allusers[i]));
 //   }
 // }
 //
 //
-// loginBtn.addEventListener("click", addNewUser);
-
-
-
-
-
-//sign-up
-
-var signupPhoneField = document.querySelector("#signup__phone-field");
-var signupBtn = document.getElementById("#sign-in_btn");
+// function addNewUser(){
+//   //create new user
+//   user = {
+//     name: signupNameField.value,
+//     email: signupEmailField.value,
+//     password: signupPassField.value
+//   };
+//
+//   return user;
+//
+// }
+//
+//
+// function validateSignupForm(e){
+//     // e.preventDefault();
+//     if (!regexpUsername.test(signupNameField.value)) {
+//       errors[errors.length] = "You must enter valid Name .";
+//     }
+//
+//     if (!regexpEmail.test(signupEmailField.value)) {
+//       errors[errors.length] = "You must enter a valid email address.";
+//    }
+//
+//    if (!regexpPassword.test(signupPassField.value)) {
+//       errors[errors.length] = "You must enter a valid Password ";
+//    }
+//
+//    if (!regexpPassword.test(signupPassRepeatField.value)) {
+//       errors[errors.length] = "You must enter similar Password ";
+//    }
+//     // checkPassRepeat();
+//     addNewUser();
+//
+//   if (errors.length > 0) {
+//     reportErrors(errors);
+//     return false;
+//   } else {
+//     closeJoinUsModal();
+//     clearSignupInputs();
+//     alert("We sent you a link to prove email address. Check your email "+ signupEmailField.value);
+//   }
+//   errors = [];
+//    return true;
+// }
+//
+//
+// function reportErrors(errors){
+//   var msg = "Please Enter Valide Data...\n";
+//   for (var i = 0; i<errors.length; i++) {
+//    var numError = i + 1;
+//     msg += "\n" + numError + ". " + errors[i];
+//   }
+//   alert(msg);
+// }
+//
+// //clear signup inputs after registration
+// function clearSignupInputs(){
+//   for (var i = 0; i < allSignupInputs.length; i++){
+//     allSignupInputs[i].value = "";
+//   }
+// }
+//
+// function showSentEmailModal(){
+//
+// }

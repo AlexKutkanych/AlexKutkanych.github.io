@@ -59,9 +59,10 @@ var signupNameField = document.querySelector("#signup__name-field"),
     regexpPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/,
     errors = [],
     allSignupInputs = document.querySelectorAll(".signup-form__wrapper > input"),
-    user;
+    user,
+    allusers = [];
 
-
+console.log(allusers);
 //check if password entered two time
 // function checkPassRepeat(){
 //     if(signupPassField.value !== signupPassRepeatField.value) {
@@ -71,6 +72,20 @@ var signupNameField = document.querySelector("#signup__name-field"),
 //     }
 // }
 
+function toLocalStorage(e){
+  e.preventDefault();
+  validateSignupForm();
+  addNewUser();
+  // for(var i = 0; i < 5; i++) {
+    allusers.push(addNewUser());
+
+    // console.log(allusers);
+  // }
+  //write to localStorage
+  for (var i =0; i < allusers.length; i++){
+    var savedUser = localStorage.setItem("user" + [i], JSON.stringify(allusers[i]));
+  }
+}
 
 
 function addNewUser(){
@@ -81,13 +96,12 @@ function addNewUser(){
     password: signupPassField.value
   };
 
-  //write to localStorage
-  var local = localStorage.setItem("user", JSON.stringify(user));
-  console.log(local);
+  return user;
 }
 
+
 function validateSignupForm(e){
-    e.preventDefault();
+    // e.preventDefault();
     if (!regexpUsername.test(signupNameField.value)) {
       errors[errors.length] = "You must enter valid Name .";
     }
@@ -104,8 +118,6 @@ function validateSignupForm(e){
       errors[errors.length] = "You must enter similar Password ";
    }
     // checkPassRepeat();
-
-    addNewUser();
 
   if (errors.length > 0) {
     reportErrors(errors);
@@ -142,4 +154,4 @@ function showSentEmailModal(){
 
 
 
-signupBtn.addEventListener("click", validateSignupForm);
+signupBtn.addEventListener("click", toLocalStorage);
