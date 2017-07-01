@@ -1,5 +1,9 @@
 @import "!variables.scss";
 
+body.modal-open {
+    overflow: hidden;
+}
+
 .typical-btn {
   height: 33px;
   border-radius: 20px;
@@ -22,6 +26,9 @@
   text-align: center;
   font-family: $main-font;
   display: none;
+  &_show {
+    display: block;
+  }
 }
 
 .booking-section {
@@ -125,6 +132,35 @@
       opacity: .5;
     }
   }
+  &__continue-booking {
+    background-color: green;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    display: none;
+    &:hover {
+      cursor: pointer;
+      opacity: .5;
+    }
+  }
+}
+
+.booking__alert-message {
+  position: absolute;
+  font-size: 12px;
+  color:red;
+  display: none;
+  &_date {
+    left: 154px;
+    top: 141px;
+  }
+  &_people {
+    left: 20px;
+    top: 141px;
+  }
+  &_time {
+    left: 31px;
+  }
 }
 
 .table-block {
@@ -147,6 +183,23 @@
   }
 }
 
+
+.table-scheme__table-description {
+    display: none;
+    width: 90px;
+    height: 35px;
+    padding: 10px;
+    background-color: rgba(122, 122, 122, .5);
+    z-index: 1;
+    position: absolute;
+    font-size: 12px;
+    text-align: left;
+    border-right: 20px;
+    background-color: rgba(30,144,255, .5);
+    color: white;
+    font-weight: bold;
+}
+
 .table-scheme__table {
   width: 75px;
   height: 75px;
@@ -157,29 +210,110 @@
     cursor: pointer;
   }
   &-number {
+    display: block;
     text-align: center;
     line-height: 75px;
   }
   &_table1 {
     width: 400px;
+    &:hover .table-scheme__table-description_table1 {
+      display: block;
+      top: 42px;
+      left: 220px;
+    }
   }
   &_table2 {
     width: 150px;
+    &:hover .table-scheme__table-description_table2 {
+      display: block;
+      top: 50px;
+      left: 60px;
+    }
   }
   &_table3 {
     height: 150px;
+    &:hover .table-scheme__table-description_table3 {
+      display: block;
+      top: 0;
+      left: 30px;
+    }
   }
-  &_table4, &_table5 {
+  &_table4 {
     width: 150px;
     height: 100px;
     margin-top: 30px;
+    &:hover .table-scheme__table-description_table4 {
+      display: block;
+      top: 70px;
+      left: 50px;
+    }
+  }
+  &_table5 {
+    width: 150px;
+    height: 100px;
+    margin-top: 30px;
+    &:hover .table-scheme__table-description_table5 {
+      display: block;
+      top: 70px;
+      left: 50px;
+    }
   }
   &_table6 {
     height: 150px;
     margin-left: 51px;
+    &:hover .table-scheme__table-description_table6 {
+      display: block;
+      top: 0;
+      left: 60px;
+    }
   }
-  &_table7, &_table8, &_table9, &_table10 {
+  &_table7 {
     margin-left: 30px;
-    border-radius: 50%;
+    // border-radius: 50%;
+    &:hover .table-scheme__table-description_table7 {
+      display: block;
+      top: -33px;
+      left: 40px;
+    }
   }
+  &_table8 {
+     margin-left: 30px;
+    //  border-radius: 50%;
+     &:hover .table-scheme__table-description_table8 {
+       display: block;
+       top: -33px;
+       left: 40px;
+     }
+   }
+   &_table9 {
+    margin-left: 30px;
+    // border-radius: 50%;
+    &:hover .table-scheme__table-description_table9 {
+      display: block;
+      top: -33px;
+      left: 40px;
+    }
+  }
+  &_table10 {
+     margin-left: 30px;
+    //  border-radius: 50%;
+     &:hover .table-scheme__table-description_table10 {
+       display: block;
+       top: -33px;
+       left: 40px;
+     }
+  }
+}
+
+#table-number3, #table-number6 {
+  line-height: 150px;
+}
+
+#table-number4, #table-number5 {
+  line-height: 100px;
+}
+
+.table-chosen {
+  background-color: red;
+  color: white;
 }
