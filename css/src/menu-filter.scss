@@ -6,15 +6,14 @@
 
 
 .buy-food-online {
-  width: 95%;
-  height: 900px;
+  width: 1280px;
+  height: 800px;
   margin: 0 auto;
   position: relative;
-}
-
-.buy-food-online__hide {
-  height: 1px;
-  overflow: hidden;
+  &__hide {
+    height: 1px;
+    overflow: hidden;
+  }
 }
 
 .benefit-section {
@@ -51,7 +50,7 @@
   &__sidebar {
     width: 25%;
     float: left;
-    margin-right: 20px;
+    margin: 47px 20px 0 0;
     box-sizing: border-box;
     border: 3px solid $text-hover-color;
     font-family: $main-font;
@@ -105,6 +104,29 @@
       border: 3px solid $text-hover-color;
     }
   }
+  &__label-radio {
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 60px;
+    font-weight: bold;
+    margin: 15px auto;
+    letter-spacing: .6px;
+    font-family: $main-font;
+    color: black;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 10px;
+      bottom:-5px;
+      border-radius: 50%;
+      border: 3px solid $text-hover-color;
+    }
+  }
 }
 
 .food-filter:checked + .food-filter__label::before {
@@ -115,12 +137,13 @@
   position: absolute;
 }
 
-.food-filter-radio:checked + .food-filter__label::before {
+.food-filter__radio:checked + .food-filter__label-radio::before {
   content: "\2022";
   color: $text-hover-color;
-  font-size: 49px;
-  line-height: 18px;
+  font-size: 42px;
+  line-height: 16px;
   text-align: center;
+  backgroung-image: url(../img);
 }
 
 .filter-group__label:before {
@@ -183,15 +206,51 @@
   bottom: -4px;
 }
 
-/*food*/
+
+/*food sorting*/
+
+.buy-food-online__sort-block {
+  float: right;
+  margin-bottom: 20px;
+}
+
+.sort-block {
+  &__sorting {
+    display: block;
+    float: left;
+    font-family: $main-font;
+    color: $text-hover-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__option {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__heading {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    font-family: $main-font;
+    color: $text-hover-color;
+    font-weight: bold;
+  }
+}
+
+
+/*food result*/
 
 .food-wrapper__result {
   width: 70%;
+  height: 700px; 
   float: left;
+  position: relative;
   text-transform: none;
   font-family: 'montserrat-bold', sans-serif;
   font-weight: bold;
-  margin-bottom: 49px;
+  margin-bottom: 20px;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -200,21 +259,56 @@
 
 .food-result {
   width: 30%;
-  height: 288px;
+  height: 320px;
+  display: inline-block;
   margin: 5px 20px 14px 0;
   box-shadow: -1px 2px 23px rgba(0, 0, 0, .44);
   &:hover {
     transform: scale(1.1);
     z-index: 1;
   }
-}
-
-.food-result:nth-child(3n) {
-  margin-right: 0;
-}
-
-.food-result:nth-child(4) {
-  margin-bottom: 43px;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  &:nth-child(4) {
+    // margin-bottom: 43px;
+  }
+  &__name {
+    font-size: 18px;
+    margin: 10px 0 5px 15px;
+    &:hover {
+      color: $text-hover-color;
+      cursor: pointer;
+    }
+  }
+  &__rating {
+    display: block;
+    height: 14px;
+    font-size: 12px;
+    margin: 10px 0 10px 15px;
+    &-stars-amount {
+      display: block;
+      height:100%;
+      width: 66px;
+      background-image: url("../img/menu-filter/star-rating.svg");
+    }
+    &:hover {
+      color: $text-hover-color;
+      cursor: pointer;
+    }
+  }
+  &__desc {
+    font-size: 12px;
+    margin: 10px 0 9px 15px;
+    height: 28px;
+    max-width: 245px;
+    max-height: 28px;
+    overflow: hidden;
+    &:hover {
+      color: $text-hover-color;
+      cursor: pointer;
+    }
+  }
 }
 
 //food result pictures
@@ -225,54 +319,45 @@
   width: 100%;
   height: 165px;
   position: relative;
-  // background-image: url(../img/menu-filter/ice-cream.jpg);
-  // background-position: 50% 50%;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-}
-
-.food-result__pic_sorbet {
-  background-image: url(../img/menu-filter/sorbet.jpg);
-}
-
-.food-result__pic_panna-cotta {
-  background-image: url(../img/menu-filter/panna-cotta.jpg);
-}
-
-.food-result__pic_creme-brulee {
-  background-image: url(../img/menu-filter/creme-brulee.jpg);
-}
-
-.food-result__pic_tiramisu {
-  background-image: url(../img/menu-filter/tiramisu.jpg);
-}
-
-.food-result__pic_tortino {
-  background-image: url(../img/menu-filter/tortino.jpg);
-}
-
-.food-result__pic_castagnaccio {
-  background-image: url(../img/menu-filter/castagnaccio.jpg);
-}
-
-.food-result__pic_crostata {
-  background-image: url(../img/menu-filter/crostata.jpg);
-}
-
-.food-result__pic_semifreddo {
-  background-image: url(../img/menu-filter/semifreddo.jpg);
-}
-
-.food-result__pic_red-wine {
-  // background-image: url(../img/menu-filter/red-wine.jpg);
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  background-image: url(../img/menu-filter/ice-cream.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &_sorbet {
+    background-image: url(../img/menu-filter/sorbet.jpg);
+  }
+  &_panna-cotta {
+    background-image: url(../img/menu-filter/panna-cotta.jpg);
+  }
+  &_creme-brulee {
+    background-image: url(../img/menu-filter/creme-brulee.jpg);
+  }
+  &_tiramisu {
+    background-image: url(../img/menu-filter/tiramisu.jpg);
+  }
+  &_tortino {
+    background-image: url(../img/menu-filter/tortino.jpg);
+  }
+  &_castagnaccio {
+    background-image: url(../img/menu-filter/castagnaccio.jpg);
+  }
+  &_crostata {
+    background-image: url(../img/menu-filter/crostata.jpg);
+  }
+  &_semifreddo {
+    background-image: url(../img/menu-filter/semifreddo.jpg);
+  }
+  &_red-wine {
+    background-image: url(../img/menu-filter/red-wine.jpg);
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
 }
 
 
@@ -344,31 +429,6 @@
 }
 
 
-
-
-
-
-
-
-.food-result__name {
-  font-size: 18px;
-  margin: 10px 0 10px 15px;
-  &:hover {
-    color: $text-hover-color;
-  }
-}
-
-.food-result__desc {
-  font-size: 12px;
-  margin: 0 0 9px 15px;
-  height: 28px;
-  max-height: 28px;
-  overflow: hidden;
-  &:hover {
-    color: $text-hover-color;
-  }
-}
-
 .food-result__buy, .food-result__price {
   float: left;
   display: block;
@@ -433,4 +493,17 @@
 .btn-pagination:not(.btn-pagination__active):hover {
   background-color: #743b09;
   color: white;
+}
+
+
+#page_navigation a{
+  padding:3px;
+  border:1px solid gray;
+  margin:2px;
+  color:black;
+  text-decoration:none
+}
+.active_page{
+  background:darkblue;
+  color:white !important;
 }

@@ -6,10 +6,9 @@
     <title>Restaurant Oasis</title>
     <link rel="stylesheet" href="css/styles-main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/script.js" defer></script>
     <!-- <script type="text/javascript" src="js/google-map-init.js" defer></script> -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script>
-    <script type="text/javascript" src="js/bg-video.js" defer></script>
+<!--     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script>
+ -->    <script type="text/javascript" src="js/bg-video.js" defer></script>
     <script type="text/javascript" src="js/registration-form.js" defer></script>
     <script type="text/javascript" src="js/login-form.js" defer></script>
     <script type="text/javascript" src="js/mobile-menu.js" defer></script>
@@ -19,7 +18,12 @@
     <script type="text/javascript" src="js/menu-filter.js" defer></script>
     <script type="text/javascript" src="js/booking.js" defer></script>
     <script type="text/javascript" src="js/menu-sort.js" defer></script>
+    <script type="text/javascript" src="js/jquery.min.js" defer></script>
+    <script type="text/javascript" src="js/script.js" defer></script>
+    <script type="text/javascript" src="js/menu-pagination.js" defer></script>
+
     <!-- <script type="text/javascript" src="js/search.js" defer></script> -->
+
   </head>
   <body>
     <header class="header" id="main">
@@ -28,6 +32,7 @@
         <div class="mobile-menu">
           <span class="mobile-menu__burger"></span>
         </div>
+
         <!-- menu -->
         <nav class="menu-top">
           <ul class="">
@@ -38,7 +43,7 @@
             <li class="menu-top__menu-item">
               <a href="#our-menu" class="menu-top__menu-link menu-top__menu-link-menu" id="menu-top__menu">Menu</a>
               <ul class="menu__submenu-style menu__submenu_hover" id="menu-top__submenu-menu">
-                <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Soup &amp; appetizer</a></li>
+                <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Soup &amp; Appetizer</a></li>
                 <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Pasta &amp; Main course</a></li>
                 <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Pizza &amp; Second course</a></li>
                 <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Dessert &amp; Beverages</a></li>
@@ -125,6 +130,7 @@
           <section class="booking-section__info-block">
             <a href="#" class="info-block__heading"><h3>Select date and time</h3></a>
             <select name="people-amount" id="info-block__people-amount" class="info-block__people-amount">
+              <option value="">Select</option>
               <option value="1 person">1 person</option>
               <option value="2 people">2 people</option>
               <option value="3 people">3 people</option>
@@ -134,8 +140,11 @@
               <option value="7 people">7 people</option>
               <option value="8 people">8 people</option>
               <option value="9 people">9 people</option>
+              <option value="10 people">10 people</option>
             </select>
+            <p class="booking__alert-message booking__alert-message_people">* select # of people</p>
             <span class="info-block__date-btn">Today</span>
+            <p class="booking__alert-message booking__alert-message_date">* select date</p>
             <select size="10" name="select-time" id="info-block__select-time" class="info-block__select-time">
               <option value="9:00">9:00 <span class="time-available">available</span></option>
               <option value="9:30">9:30 <span class="time-available">available</span></option>
@@ -168,40 +177,82 @@
               <option value="23:00">23:00 <span class="time-available">available</span></option>
               <option value="23:30">23:30 <span class="time-available">available</span></option>
             </select>
+            <p class="booking__alert-message booking__alert-message_time">* select time</p>
             <button class="info-block__submit-booking typical-btn" id="submit-booking">Submit booking</button>
+            <button class="info-block__continue-booking typical-btn" id="continue-booking">Continue booking</button>
           </section>
           <section class="booking-section__table-block">
             <a href="#" class="table-block__heading"><h3>Select your table</h3></a>
             <div class="table-block__table-scheme">
               <div class="table-scheme__table table-scheme__table_table1">
                 <span class="table-scheme__table-number" id="table-number1">1</span>
+                <span class="table-scheme__table-description table-scheme__table-description_table1">
+                  Table #: 1 <br>
+                  # of seats: 10 <br>
+                </span>
               </div>
               <div class="table-scheme__table table-scheme__table_table2">
                 <span class="table-scheme__table-number" id="table-number2">2</span>
+                <span class="table-scheme__table-description table-scheme__table-description_table2">
+                  Table #: 2 <br>
+                  # of seats: 6 <br>
+                </span>
               </div>
               <div class="table-scheme__table table-scheme__table_table3">
                 <span class="table-scheme__table-number" id="table-number3">3</span>
+                <span class="table-scheme__table-description table-scheme__table-description_table3">
+                  Table #: 3 <br>
+                  # of seats: 6 <br>
+                </span>
               </div>
               <div class="table-scheme__table table-scheme__table_table4">
                 <span class="table-scheme__table-number" id="table-number4">4</span>
+                <span class="table-scheme__table-description table-scheme__table-description_table4">
+                  Table #: 4 <br>
+                  # of seats: 6 <br>
+                </span>
             </div>
                 <div class="table-scheme__table table-scheme__table_table5">
                 <span class="table-scheme__table-number" id="table-number5">5</span>
+                <span class="table-scheme__table-description table-scheme__table-description_table5">
+                  Table #: 5 <br>
+                  # of seats: 6 <br>
+                </span>
               </div>
               <div class="table-scheme__table table-scheme__table_table6">
                 <span class="table-scheme__table-number" id="table-number6">6</span>
+                <span class="table-scheme__table-description table-scheme__table-description_table6">
+                  Table #: 6 <br>
+                  # of seats: 6 <br>
+                </span>
               </div>
               <div class="table-scheme__table table-scheme__table_table7">
                 <span class="table-scheme__table-number" id="table-number7">7</span>
+                <span class="table-scheme__table-description table-scheme__table-description_table7">
+                  Table #: 7 <br>
+                  # of seats: 2 <br>
+                </span>
               </div>
               <div class="table-scheme__table table-scheme__table_table8">
                 <span class="table-scheme__table-number" id="table-number8">8</span>
+                <span class="table-scheme__table-description table-scheme__table-description_table8">
+                  Table #: 8 <br>
+                  # of seats: 2 <br>
+                </span>
               </div>
               <div class="table-scheme__table table-scheme__table_table9">
                 <span class="table-scheme__table-number" id="table-number9">9</span>
+                <span class="table-scheme__table-description table-scheme__table-description_table9">
+                  Table #: 9 <br>
+                  # of seats: 2 <br>
+                </span>
               </div>
               <div class="table-scheme__table table-scheme__table_table10">
                 <span class="table-scheme__table-number" id="table-number10">10</span>
+                <span class="table-scheme__table-description table-scheme__table-description_table10">
+                  Table #: 10 <br>
+                  # of seats: 2 <br>
+                </span>
               </div>
             </div>
           </section>
@@ -252,7 +303,7 @@
           <div class="our-menu__wrapper">
             <section class="our-menu__variant menu__soup">
               <span class="our-menu__desc">
-                <p class="our-menu__title">Soup &amp; appetizer</p>
+                <p class="our-menu__title">Soup &amp; Appetizer</p>
               </span>
               <a href="menu/Pietrasanta_Appetizer_Soup.pdf" target="_blank" class="typical-btn our-menu__separate-menu">Download menu</a>
             </section>
@@ -295,7 +346,7 @@
           <form class="buy-food-online__form">
             <section class="food-filter__category">
               <a href="#" class="food-filter__heading"><h3>Category</h3></a>
-              <input type="checkbox" class="food-filter" id="soup-appetizer"><label class="food-filter__label" for="soup-appetizer">Soup &amp; appetizer</label>
+              <input type="checkbox" class="food-filter" id="soup-appetizer"><label class="food-filter__label" for="soup-appetizer">Soup &amp; Appetizer</label>
               <input type="checkbox" class="food-filter" id="pasta"><label class="food-filter__label" for="pasta">Pasta</label>
               <input type="checkbox" class="food-filter" id="pizza"><label class="food-filter__label" for="pizza">Pizza</label>
               <input type="checkbox" class="food-filter" id="dessert"><label class="food-filter__label food-filter__label-dessert" for="dessert">Dessert</label>
@@ -303,14 +354,23 @@
             </section>
             <section class="food-filter__drink-type">
               <a href="#" class="food-filter__heading"><h3>Drinks type</h3></a>
-              <input type="radio" class="food-filter" name="drink-type" id="non-alco"><label class="food-filter__label" for="non-alco">non-alco</label>
-              <input type="radio" class="food-filter" name="drink-type" id="alcoholic"><label class="food-filter__label" for="alcoholic">alcoholic</label>
+              <input type="radio" class="food-filter food-filter__radio" name="drink-type" id="non-alco"><label class="food-filter__label-radio" for="non-alco">non-alco</label>
+              <input type="radio" class="food-filter food-filter__radio" name="drink-type" id="alcoholic"><label class="food-filter__label-radio" for="alcoholic">alcoholic</label>
             </section>
           <button type="button" name="button" class="typical-btn filter-btn">Find</button>
         </form>
         </aside>
-        <main class="food-wrapper__result">
-          <!-- <div class="food-result  food-result__dessert">
+        <div class="buy-food-online__sort-block">
+          <p class="sort-block__heading">Sort meal:</p>
+          <select name="" class="sort-block__sorting" id="sort-block__sorting">
+            <option class="sort-block__option">Select sorting</option>
+            <option class="sort-block__option" value="sort-ascending" id="sort-ascending">Price: lowest first</option>
+            <option class="sort-block__option" value="sort-descending" id="sort-descending">Price: highest first</option>
+            <option class="sort-block__option" value="sort-by-rating" id="sort-by-rating">By rating</option>
+          </select>
+        </div>
+        <main class="food-wrapper__result" id="food-wrapper__result">
+          <div class="food-result  food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic"></a>
               <figcaption class="food-result__name">Italian Ice-cream</figcaption>
@@ -319,7 +379,208 @@
             <span class="food-result__price">&#x20B4;55</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-           <div class="food-result food-result__dessert">
+          <div class="food-result food-result__dessert">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_crostata"></a>
+              <figcaption class="food-result__name">Crostata di Marmellata</figcaption>
+              <figcaption class="food-result__desc">Home made jam orange tarte</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;110</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__dessert">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_semifreddo"></a>
+              <figcaption class="food-result__name">Semifreddo al Caramello</figcaption>
+              <figcaption class="food-result__desc">Vanilla, Coffee, Chocolate flavours available</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;130</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__drinks food-result__drinks-alco">
+            <figure>
+              <a href="#" class="food-result__pic">
+                <img src="img/menu-filter/red-wine.jpg" alt="" class="food-result__pic_red-wine">
+              </a>
+              <figcaption class="food-result__name">Red Wine (by glass)</figcaption>
+              <figcaption class="food-result__desc"></figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__drinks food-result__drinks-non-alco">
+            <figure>
+              <a href="#" class="food-result__pic ">
+                <img src="img/menu-filter/sorbet.jpg" alt="" class="food-result__pic_americano">
+              </a>
+              <figcaption class="food-result__name">Americano</figcaption>
+              <figcaption class="food-result__desc">A classic Aperitif cocktail of Campari and Red Vermouth,
+served on the rocks</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__drinks food-result__drinks-alco">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_spritz-royal"></a>
+              <figcaption class="food-result__name">Spritz Royal</figcaption>
+              <figcaption class="food-result__desc">Signature refreshing aperitif cocktail of Gin,
+White Vermouth, Aperol with a dash of Prosecco</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__drinks food-result__drinks-alco">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_negroni"></a>
+              <figcaption class="food-result__name">Negroni</figcaption>
+              <figcaption class="food-result__desc">A classic aperitif cocktail found in Treviso,
+Italy consists of Gin, Red Vermouth and Campari</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__pizza">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_margherita"></a>
+              <figcaption class="food-result__name">Margherita</figcaption>
+              <figcaption class="food-result__desc">Tomato sauce, Mozzarella Cheese and Basil leaves.</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;120*</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__pizza">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_napoletana"></a>
+              <figcaption class="food-result__name">Napoletana</figcaption>
+              <span class="food-result__rating">
+                <span class="food-result__rating-stars-amount"></span>
+              </span>
+              <figcaption class="food-result__desc">Tomato sauce, Mozzarella Cheese, Anchovies and Capers</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;130</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__pizza">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_diavola"></a>
+              <figcaption class="food-result__name">Diavola</figcaption>
+              <span class="food-result__rating">
+                <span class="food-result__rating-stars-amount"></span>
+              </span>
+              <figcaption class="food-result__desc">Tomato sauce, Mozzarella Cheese and Spicy Salami</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;160</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__soup">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_frittura"></a>
+              <figcaption class="food-result__name">Frittura mista di Pesce</figcaption>
+              <span class="food-result__rating">
+                <span class="food-result__rating-stars-amount"></span>
+              </span>
+              <figcaption class="food-result__desc">Deep fried Prawns, Anchovies, Squid and Zucchini</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;75</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__pizza">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_verdure"></a>
+              <figcaption class="food-result__name">Verdure</figcaption>
+              <span class="food-result__rating">
+                <span class="food-result__rating-stars-amount"></span>
+              </span>
+              <figcaption class="food-result__desc">Rich custard base topped with a contrasting layer of hard caramel</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;150</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__pasta">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_lasagna"></a>
+              <figcaption class="food-result__name">Lasagna</figcaption>
+              <span class="food-result__rating">
+                <span class="food-result__rating-stars-amount"></span>
+              </span>
+              <figcaption class="food-result__desc">Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;70</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__pasta">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_tortelli"></a>
+              <figcaption class="food-result__name">Tortelli di Salsiccia</figcaption>
+              <span class="food-result__rating">
+                <span class="food-result__rating-stars-amount"></span>
+              </span>
+              <figcaption class="food-result__desc">Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;80</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__pasta">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_spaghetti"></a>
+              <figcaption class="food-result__name">Spaghetti ai Frutti di Mare</figcaption>
+              <span class="food-result__rating">
+                <span class="food-result__rating-stars-amount"></span>
+              </span>
+              <figcaption class="food-result__desc">Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;130</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__soup">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_farro"></a>
+              <figcaption class="food-result__name">Farro di Mare</figcaption>
+              <span class="food-result__rating">
+                <span class="food-result__rating-stars-amount"></span>
+              </span>
+              <figcaption class="food-result__desc">Steamed Spelt with Squid,Prawns, Mussels &amp; Tomatoes, with Olive Oil,
+Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;75</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__soup">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_minestrone"></a>
+              <figcaption class="food-result__name">Minestrone di verdure</figcaption>
+              <span class="food-result__rating">
+                <span class="food-result__rating-stars-amount"></span>
+              </span>
+              <figcaption class="food-result__desc">Hearty Vegetable soup</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;75</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result_soup">
+            <figure>
+              <a href="#" class="food-result__pic food-result__pic_zuppa-di-pesce"></a>
+              <figcaption class="food-result__name">Zuppa di pesce</figcaption>
+              <span class="food-result__rating">
+                <span class="food-result__rating-stars-amount"></span>
+              </span>
+              <figcaption class="food-result__desc">Seafood soup with Prawns, Squids, Clams &amp; Mussels,
+served with toasted bread</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;75</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result  food-result__dessert">
+            <figure>
+              <a href="#" class="food-result__pic"></a>
+              <figcaption class="food-result__name">Italian Ice-cream</figcaption>
+              <figcaption class="food-result__desc">Vanilla, Coffee, Chocolate flavours available</figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;55</span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+          <div class="food-result food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_sorbet"></a>
               <figcaption class="food-result__name">Italian Sorbet</figcaption>
@@ -327,8 +588,8 @@
             </figure>
             <span class="food-result__price">&#x20B4;55</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> -->
-          <!--<div class="food-result food-result__dessert">
+          </div>
+          <div class="food-result food-result__dessert">
             <figure>
               <a href="#" class="food-result__pic food-result__pic_panna-cotta"></a>
               <figcaption class="food-result__name">Panna Cotta</figcaption>
@@ -373,183 +634,18 @@
             <span class="food-result__price">&#x20B4;100</span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
-          <div class="food-result food-result__dessert">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_crostata"></a>
-              <figcaption class="food-result__name">Crostata di Marmellata</figcaption>
-              <figcaption class="food-result__desc">Home made jam orange tarte</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;110</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> -->
-          <!-- <div class="food-result food-result__dessert">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_semifreddo"></a>
-              <figcaption class="food-result__name">Semifreddo al Caramello</figcaption>
-              <figcaption class="food-result__desc">Vanilla, Coffee, Chocolate flavours available</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;130</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <div class="food-result food-result__drinks food-result__drinks-alco">
-            <figure>
-              <a href="#" class="food-result__pic">
-                <img src="img/menu-filter/red-wine.jpg" alt="" class="food-result__pic_red-wine">
-              </a>
-              <figcaption class="food-result__name">Red Wine (by glass)</figcaption>
-              <figcaption class="food-result__desc"></figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;55</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <div class="food-result food-result__drinks food-result__drinks-non-alco">
-            <figure>
-              <a href="#" class="food-result__pic ">
-                <img src="img/menu-filter/sorbet.jpg" alt="" class="food-result__pic_americano">
-              </a>
-              <figcaption class="food-result__name">Americano</figcaption>
-              <figcaption class="food-result__desc">A classic Aperitif cocktail of Campari and Red Vermouth,
-served on the rocks</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;55</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> -->
-          <!-- <div class="food-result food-result__drinks food-result__drinks-alco">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_spritz-royal"></a>
-              <figcaption class="food-result__name">Spritz Royal</figcaption>
-              <figcaption class="food-result__desc">Signature refreshing aperitif cocktail of Gin,
-White Vermouth, Aperol with a dash of Prosecco</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;55</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <div class="food-result food-result__drinks food-result__drinks-alco">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_negroni"></a>
-              <figcaption class="food-result__name">Negroni</figcaption>
-              <figcaption class="food-result__desc">A classic aperitif cocktail found in Treviso,
-Italy consists of Gin, Red Vermouth and Campari</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;55</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> -->
-
-
-         <!-- <div class="food-result food-result__pizza">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_margherita"></a>
-              <figcaption class="food-result__name">Margherita</figcaption>
-              <figcaption class="food-result__desc">Tomato sauce, Mozzarella Cheese and Basil leaves.</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;120*</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> -->
-            <div class="food-result food-result__pizza">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_napoletana"></a>
-              <figcaption class="food-result__name">Napoletana</figcaption>
-              <figcaption class="food-result__desc">Tomato sauce, Mozzarella Cheese, Anchovies and Capers</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;130</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <div class="food-result food-result__pizza">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_diavola"></a>
-              <figcaption class="food-result__name">Diavola</figcaption>
-              <figcaption class="food-result__desc">Tomato sauce, Mozzarella Cheese and Spicy Salami</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;160</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> 
-          <div class="food-result food-result__soup">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_frittura"></a>
-              <figcaption class="food-result__name">Frittura mista di Pesce</figcaption>
-              <figcaption class="food-result__desc">Deep fried Prawns, Anchovies, Squid and Zucchini</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;75</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <div class="food-result food-result__pizza">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_verdure"></a>
-              <figcaption class="food-result__name">Verdure</figcaption>
-              <figcaption class="food-result__desc">Rich custard base topped with a contrasting layer of hard caramel</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;150</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <!-- <div class="food-result food-result__pasta">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_lasagna"></a>
-              <figcaption class="food-result__name">Lasagna</figcaption>
-              <figcaption class="food-result__desc">Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;70</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> -->
-        <!--  <div class="food-result food-result__pasta">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_tortelli"></a>
-              <figcaption class="food-result__name">Tortelli di Salsiccia</figcaption>
-              <figcaption class="food-result__desc">Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;80</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <div class="food-result food-result__pasta">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_spaghetti"></a>
-              <figcaption class="food-result__name">Spaghetti ai Frutti di Mare</figcaption>
-              <figcaption class="food-result__desc">Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;130</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> -->
-          
-           <div class="food-result food-result__soup">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_farro"></a>
-              <figcaption class="food-result__name">Farro di Mare</figcaption>
-              <figcaption class="food-result__desc">Steamed Spelt with Squid,Prawns, Mussels &amp; Tomatoes, with Olive Oil,
-Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;75</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <div class="food-result food-result__soup">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_minestrone"></a>
-              <figcaption class="food-result__name">Minestrone di verdure</figcaption>
-              <figcaption class="food-result__desc">Hearty Vegetable soup</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;75</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div>
-          <div class="food-result food-result_soup">
-            <figure>
-              <a href="#" class="food-result__pic food-result__pic_zuppa-di-pesce"></a>
-              <figcaption class="food-result__name">Zuppa di pesce</figcaption>
-              <figcaption class="food-result__desc">Seafood soup with Prawns, Squids, Clams &amp; Mussels,
-served with toasted bread</figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;75</span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
-          </div> 
-          <button onclick="sortByPriceDescending()">Sort</button>
+        </div>
         </main>
-        <div class="goods-wrapper__pagination">
-          <a href="#" class="btn-pagination">&laquo;</a>
-          <a href="#" class="btn-pagination btn-pagination__active">1</a>
-          <a href="#" class="btn-pagination">2</a>
-          <a href="#" class="btn-pagination">3</a>
-          <a href="#" class="btn-pagination">4</a>
-          <a href="#" class="btn-pagination">&raquo;</a>
+        <!-- <div class="goods-wrapper__pagination"> -->
+          <div class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__list-item"><a href="#" id="prev" class="prevnext pagination__link">&nbsp;&laquo;&nbsp;</a></li>
+              <li class="pagination__list-item"><a href="#" id="next" class="prevnext pagination__link">&nbsp;&raquo;&nbsp;</a></li>
+            </ul>
+            <br/>
+          <!-- </div>  -->
         </div>
       </div>
-
       <section class="our-services" id="our-services">
         <a href="#"><h2 class="our-services__heading">Services</h2></a>
         <div class="our-services__content-block">

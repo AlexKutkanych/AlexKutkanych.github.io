@@ -62,7 +62,6 @@ var signupNameField = document.querySelector("#signup__name-field"),
     user,
     allusers = [];
 
-console.log(allusers);
 //check if password entered two time
 // function checkPassRepeat(){
 //     if(signupPassField.value !== signupPassRepeatField.value) {

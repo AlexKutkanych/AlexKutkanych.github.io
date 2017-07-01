@@ -1,25 +1,11 @@
-// var c = document.querySelectorAll(".food-result");
-// var arrNew = [];
+var sortBlock = document.querySelector("#sort-block__sorting"),
+	container = document.querySelector(".food-wrapper__result"),
+	contents = document.querySelectorAll(".food-result__price"),
+	food = document.querySelector(".food-result"),
+	list = [];
 
-// function sortList(){
-
-// 	for (var i = 0; i < prices.length; i++){
-// 		// arrNew.push(prices[i].innerHTML.substring(1));
-
-// 	}
-
-// 	arrNew.sort(function(a, b){return a-b});
-
-// 	console.log(arrNew);
-// }
 
 function sortByPriceAscending() {
-	var container = document.querySelector(".food-wrapper__result");
-	var contents = document.querySelectorAll(".food-result__price");
-	var food = document.getElementsByClassName("food-result");
-
-
-	var list = [];
 
 	for(var i=0; i<contents.length; i++){
 	    list.push(contents[i]);
@@ -41,12 +27,6 @@ function sortByPriceAscending() {
 
 
 function sortByPriceDescending() {
-	var container = document.querySelector(".food-wrapper__result");
-	var contents = document.querySelectorAll(".food-result__price");
-	var food = document.getElementsByClassName("food-result");
-
-
-	var list = [];
 
 	for(var i=0; i<contents.length; i++){
 	    list.push(contents[i]);
@@ -63,3 +43,14 @@ function sortByPriceDescending() {
 		container.insertBefore(list[k].parentNode, container.firstChild);
 	}
 }
+
+sortBlock.addEventListener("change", function(){
+	if (sortBlock.value === "sort-descending"){
+		sortByPriceDescending();
+	} else if (sortBlock.value === "sort-ascending") {
+		sortByPriceAscending();
+
+	} else {
+
+	}
+});
