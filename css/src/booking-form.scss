@@ -13,6 +13,7 @@
 
 .header-wrapper__booking-section {
   max-width: 1000px;
+  width: 95%;
   height: 500px;
   position: absolute;
   top: 75px;
@@ -68,6 +69,9 @@
     width: 30%;
     height: 80%;
     float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &__table-block {
     width: 70%;
@@ -85,20 +89,22 @@
       margin: 10px;
     }
     &__people-amount {
-    width: 160px;
+    width: 80%;
     height: 32px;
     border-radius: 10px;
     border: 2px solid $text-hover-color;
     font-size: 15px;
     float: left;
-    margin: 15px 0 15px 16px;
+    margin: 15px 0;
     font-family: $main-font;
     color: $text-hover-color;
-
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__date-btn {
     display: block;
-    width: 90px;
+    width: 80%;
     float: left;
     position: relative;
     height: 28px;
@@ -106,7 +112,7 @@
     border: 2px solid $text-hover-color;
     font-size: 15px;
     line-height: 28px;
-    margin: 15px 15px 25px ;
+    margin: 15px 0 26px;
     &:hover {
       cursor: pointer;
       background-color: $button-color;
@@ -115,6 +121,7 @@
   }
   &__select-time {
     width: 80%;
+    height: 150px;
     text-indent: 15px;
     font-size: 15px;
     font-family: $main-font;
@@ -164,15 +171,16 @@
   color:red;
   display: none;
   &_date {
-    left: 193px;
-    top: 146px;
+    left: 36px;
+    top: 208px;
   }
   &_people {
-    left: 20px;
+    left: 36px;
     top: 146px;
   }
   &_time {
-    left: 31px;
+    left: 36px;
+    top: 382px;
   }
   &_table {
     left: 31px;
@@ -231,7 +239,7 @@
     line-height: 75px;
   }
   &_table1 {
-    width: 400px;
+    width: 60%;
     &:hover .table-scheme__table-description_table1 {
       display: block;
       top: 42px;
@@ -239,7 +247,7 @@
     }
   }
   &_table2 {
-    width: 150px;
+    width: 20%;
     &:hover .table-scheme__table-description_table2 {
       display: block;
       top: 50px;
@@ -248,6 +256,7 @@
   }
   &_table3 {
     height: 150px;
+    width: 13%;
     &:hover .table-scheme__table-description_table3 {
       display: block;
       top: 0;
@@ -255,7 +264,7 @@
     }
   }
   &_table4 {
-    width: 150px;
+    width: 25%;
     height: 100px;
     margin-top: 30px;
     &:hover .table-scheme__table-description_table4 {
@@ -265,7 +274,7 @@
     }
   }
   &_table5 {
-    width: 150px;
+    width: 25%;
     height: 100px;
     margin-top: 30px;
     &:hover .table-scheme__table-description_table5 {
@@ -276,7 +285,8 @@
   }
   &_table6 {
     height: 150px;
-    margin-left: 51px;
+    width: 13%;
+    margin-left: 20px;
     &:hover .table-scheme__table-description_table6 {
       display: block;
       top: 0;
@@ -284,7 +294,8 @@
     }
   }
   &_table7 {
-    margin-left: 30px;
+    width: 13%;
+    height: width;
     // border-radius: 50%;
     &:hover .table-scheme__table-description_table7 {
       display: block;
@@ -293,7 +304,8 @@
     }
   }
   &_table8 {
-     margin-left: 30px;
+    width: 13%;
+    height: width;
     //  border-radius: 50%;
      &:hover .table-scheme__table-description_table8 {
        display: block;
@@ -302,7 +314,8 @@
      }
    }
    &_table9 {
-    margin-left: 30px;
+    width: 13%;
+    height: width;
     // border-radius: 50%;
     &:hover .table-scheme__table-description_table9 {
       display: block;
@@ -311,7 +324,8 @@
     }
   }
   &_table10 {
-     margin-left: 30px;
+    width: 13%;
+    height: width;
     //  border-radius: 50%;
      &:hover .table-scheme__table-description_table10 {
        display: block;
@@ -332,4 +346,187 @@
 .table-chosen {
   background-color: red;
   color: white;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .header-wrapper__booking-section {
+    height: 870px;
+  }
+  .booking-section {
+    &__info-block {
+      height: 30%;
+      display: block;
+      float: none;
+      width: 90%;
+      margin: 0 auto;
+    }
+    &__table-block {
+      height: 45%;
+      float: none;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  .info-block {
+    &__people-amount {
+      width: 40%;
+      float: left;
+      margin-left: 9%;
+    }
+    &__date-btn {
+      width: 40%;
+      float: right;
+      margin-right: 9%;
+    }
+    &__calendar {
+      
+    }
+    &__select-time {
+      margin-bottom: 20px;
+    }
+    &__submit-booking {
+      position: absolute;
+      left: 10%;
+      top: 740px;
+    }
+    &__continue-booking {
+      position: absolute;
+      left: 10%;
+      top: 795px;
+    }
+  }
+
+  .info-block__calendar_show {
+    right: 13%;
+      left: 0;
+      top: 132px;
+  }
+
+  .booking__alert-message {
+    &_people {
+      left: 71px;
+      top: 137px;
+    }
+    &_date {
+      left: 270px;
+      top: 137px;
+    }
+    &_time {
+      left: 71px;
+      top: 314px;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .header-wrapper__booking-section {
+    height: 920px;
+  }
+  .booking-section {
+    &__info-block {
+      height: 38%;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+    &__table-block {
+      height: 42%;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .info-block {
+    &__people-amount {
+      width: 60%;
+    }
+    &__date-btn {
+      width: 60%;
+      margin-top: 10px;
+    }
+    &__calendar {
+      top: 200px;
+      left: 15px;
+      width: 90%;
+      
+    }
+    &__select-time {
+      margin-bottom: 20px;
+    }
+    &__submit-booking {
+      position: absolute;
+      left: 10%;
+      top: 810px;
+    }
+    &__continue-booking {
+      position: absolute;
+      left: 10%;
+      top: 865px;
+    }
+  }
+
+  .weekdays {
+    padding: 3px 5px;
+  }
+
+  .info-block__calendar_show {
+    right: 13%;
+      left: 0;
+      top: 132px;
+  }
+
+  .booking__alert-message {
+    &_people {
+      left: 72px;
+    }
+    &_date {
+      left: 72px;
+      top: 203px;
+    }
+    &_time {
+      top: 382px;
+    }
+  }
+
+  .table-scheme__table {
+    &_table1 {
+      width: 60%;
+      height: 60px;
+    }
+    &_table2 {
+      width: 25%;
+      height: 60px;
+    }
+    &_table3 {
+      width: 13%;
+      height: 130px;
+    }
+    &_table4 {
+      height: 90px;
+    }
+    &_table5 {
+      height: 90px;
+    }
+    &_table6 {
+      width: 13%;
+      height: 130px;
+      margin-left: 0;
+    }
+    &_table7 {
+      width: 15%;
+    }
+    &_table8 {
+      width: 15%;
+    }
+    &_table9 {
+      width: 15%;
+    }
+    &_table10 {
+      width: 15%;
+    }
+  }
+  &-description {
+    display: none;
+  }
 }

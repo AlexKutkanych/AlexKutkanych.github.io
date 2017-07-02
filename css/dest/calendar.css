@@ -1,8 +1,8 @@
 .info-block__calendar {
   display: none;
   position: absolute;
-  top: 143px;
-  left: 150px;
+  top: 172px;
+  left: 273px;
   width: 240px;
   height: 280px;
   z-index: 2;
@@ -68,6 +68,10 @@
     padding: 5px;
     background: #1abc9c;
     color: white !important; }
+  .day:hover {
+    background-color: black;
+    cursor: pointer;
+    color: white; }
 
 .red {
   color: red; }
