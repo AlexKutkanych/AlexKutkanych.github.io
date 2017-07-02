@@ -1,6 +1,7 @@
 
 var bookingBtn = document.querySelector("#booking__btn"),
-    bookingModal = document.querySelector(".header-wrapper__booking-section"),
+    bookingModalBlock = document.querySelector(".header-wrapper__booking-section"),
+    bookingModal = document.querySelector("#booking-section__modal"),
     closeBookingModalBtn = document.querySelector(".booking-section__close-btn"),
     submitBookingBtn = document.querySelector("#submit-booking"),
     continueBookingBtn = document.querySelector("#continue-booking"),
@@ -13,16 +14,31 @@ var bookingBtn = document.querySelector("#booking__btn"),
     alertMessageTime = document.querySelector(".booking__alert-message_time"),
     alertMessageTable = document.querySelector(".booking__alert-message_table"),
     days = document.querySelector(".calendar__days");
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
 
 function showBookingModal(){
-    bookingModal.classList.toggle("header-wrapper__booking-section_show");
+    bookingModalBlock.classList.toggle("header-wrapper__booking-section_show");
     bookingBtn.classList.toggle("booking__btn_active");
+    bookingModal.style.display = "block";
+    disableScroll();
 }
 
 function closeBookingModal(){
-    bookingModal.classList.remove("header-wrapper__booking-section_show");
+    bookingModalBlock.classList.remove("header-wrapper__booking-section_show");
     bookingBtn.classList.remove("booking__btn_active");
+    bookingModal.style.display = "none";
+    enableScroll();
 }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == bookingModal) {
+        closeBookingModal();
+    }
+}
+
+  //obj for booking information
 
   var orderInfo = {};
 

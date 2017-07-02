@@ -31,7 +31,8 @@ $(document).ready(function(){
 
 
 var bookingBtn = document.querySelector("#booking__btn"),
-    bookingModal = document.querySelector(".header-wrapper__booking-section"),
+    bookingModalBlock = document.querySelector(".header-wrapper__booking-section"),
+    bookingModal = document.querySelector("#booking-section__modal"),
     closeBookingModalBtn = document.querySelector(".booking-section__close-btn"),
     submitBookingBtn = document.querySelector("#submit-booking"),
     continueBookingBtn = document.querySelector("#continue-booking"),
@@ -44,16 +45,31 @@ var bookingBtn = document.querySelector("#booking__btn"),
     alertMessageTime = document.querySelector(".booking__alert-message_time"),
     alertMessageTable = document.querySelector(".booking__alert-message_table"),
     days = document.querySelector(".calendar__days");
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
 
 function showBookingModal(){
-    bookingModal.classList.toggle("header-wrapper__booking-section_show");
+    bookingModalBlock.classList.toggle("header-wrapper__booking-section_show");
     bookingBtn.classList.toggle("booking__btn_active");
+    bookingModal.style.display = "block";
+    disableScroll();
 }
 
 function closeBookingModal(){
-    bookingModal.classList.remove("header-wrapper__booking-section_show");
+    bookingModalBlock.classList.remove("header-wrapper__booking-section_show");
     bookingBtn.classList.remove("booking__btn_active");
+    bookingModal.style.display = "none";
+    enableScroll();
 }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == bookingModal) {
+        closeBookingModal();
+    }
+}
+
+  //obj for booking information
 
   var orderInfo = {};
 
@@ -142,6 +158,43 @@ calendarBtn.addEventListener("click", showCalendar);
 
 
 
+
+//disable scroll
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+}
 
 "use strict";
 
@@ -247,9 +300,9 @@ var loginNameField = document.querySelector("#login__name-field"),
 
 function loginUser(e){
   e.preventDefault();
-  var loggedUser = localStorage.getItem("user");
+  var loggedUser = localStorage.getItem("user0"); //!!!GET THE RIGHT ITEM FROM localStorage
   var parseUserInfo = JSON.parse(loggedUser);
-
+  console.log(loggedUser);
   if(loginNameField.value === parseUserInfo.name && loginPassField.value === parseUserInfo.password) {
     alert("hello "+ loginNameField.value);
     loggedUserGreetings.innerHTML = "hi, "+ loginNameField.value;
@@ -680,7 +733,7 @@ var signupNameField = document.querySelector("#signup__name-field"),
     regexpPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/,
     errors = [],
     allSignupInputs = document.querySelectorAll(".signup-form__wrapper > input"),
-    user,
+    newUser = {},
     allusers = [];
 
 //check if password entered two time
@@ -692,10 +745,56 @@ var signupNameField = document.querySelector("#signup__name-field"),
 //     }
 // }
 
+function addNewUser(){
+  //create new user
+  newUser.name = signupNameField.value;
+  newUser.email = signupEmailField.value;
+  newUser.password = signupPassField.value;
+
+  return newUser;
+}
+
+
+function validateSignupForm(){
+    // e.preventDefault();
+    if (!regexpUsername.test(signupNameField.value)) {
+      // errors[errors.length] = "You must enter valid Name .";
+      alert("You must enter valid Name .");
+    }
+
+    if (!regexpEmail.test(signupEmailField.value)) {
+      // errors[errors.length] = "You must enter a valid email address.";
+      alert("You must enter a valid email address.");
+   }
+
+   if (!regexpPassword.test(signupPassField.value)) {
+      // errors[errors.length] = "You must enter a valid Password ";
+      alert("You must enter a valid Password ");
+   }
+
+   if (!regexpPassword.test(signupPassRepeatField.value)) {
+      // errors[errors.length] = "You must enter similar Password ";
+      alert("You must enter similar Password ");
+   }
+    // checkPassRepeat();
+
+  // if (errors.length > 0) {
+  //   reportErrors(errors);
+  //   return false;
+  // } else {
+  //   closeJoinUsModal();
+  //   clearSignupInputs();
+  //   alert("We sent you a link to prove email address. Check your email "+ signupEmailField.value);
+  // }
+  // errors = [];
+  //  return true;
+}
+
 function toLocalStorage(e){
   e.preventDefault();
   validateSignupForm();
   addNewUser();
+  console.log(newUser);
   // for(var i = 0; i < 5; i++) {
     allusers.push(addNewUser());
 
@@ -705,50 +804,6 @@ function toLocalStorage(e){
   for (var i =0; i < allusers.length; i++){
     var savedUser = localStorage.setItem("user" + [i], JSON.stringify(allusers[i]));
   }
-}
-
-
-function addNewUser(){
-  //create new user
-  user = {
-    name: signupNameField.value,
-    email: signupEmailField.value,
-    password: signupPassField.value
-  };
-
-  return user;
-}
-
-
-function validateSignupForm(e){
-    // e.preventDefault();
-    if (!regexpUsername.test(signupNameField.value)) {
-      errors[errors.length] = "You must enter valid Name .";
-    }
-
-    if (!regexpEmail.test(signupEmailField.value)) {
-      errors[errors.length] = "You must enter a valid email address.";
-   }
-
-   if (!regexpPassword.test(signupPassField.value)) {
-      errors[errors.length] = "You must enter a valid Password ";
-   }
-
-   if (!regexpPassword.test(signupPassRepeatField.value)) {
-      errors[errors.length] = "You must enter similar Password ";
-   }
-    // checkPassRepeat();
-
-  if (errors.length > 0) {
-    reportErrors(errors);
-    return false;
-  } else {
-    closeJoinUsModal();
-    clearSignupInputs();
-    alert("We sent you a link to prove email address. Check your email "+ signupEmailField.value);
-  }
-  errors = [];
-   return true;
 }
 
 

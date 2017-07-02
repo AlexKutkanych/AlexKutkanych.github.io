@@ -11,9 +11,9 @@ var loginNameField = document.querySelector("#login__name-field"),
 
 function loginUser(e){
   e.preventDefault();
-  var loggedUser = localStorage.getItem("user");
+  var loggedUser = localStorage.getItem("user0"); //!!!GET THE RIGHT ITEM FROM localStorage
   var parseUserInfo = JSON.parse(loggedUser);
-
+  console.log(loggedUser);
   if(loginNameField.value === parseUserInfo.name && loginPassField.value === parseUserInfo.password) {
     alert("hello "+ loginNameField.value);
     loggedUserGreetings.innerHTML = "hi, "+ loginNameField.value;
