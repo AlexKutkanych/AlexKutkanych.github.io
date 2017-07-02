@@ -7,22 +7,21 @@
     <link rel="stylesheet" href="css/styles-main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!-- <script type="text/javascript" src="js/google-map-init.js" defer></script> -->
-<!--     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script>
- -->    <script type="text/javascript" src="js/bg-video.js" defer></script>
-    <script type="text/javascript" src="js/registration-form.js" defer></script>
-    <script type="text/javascript" src="js/login-form.js" defer></script>
-    <script type="text/javascript" src="js/mobile-menu.js" defer></script>
-    <script type="text/javascript" src="js/tabs.js" defer></script>
-    <script type="text/javascript" src="js/filter-events.js" defer></script>
-    <script type="text/javascript" src="js/to-top-button.js" defer></script>
-    <script type="text/javascript" src="js/menu-filter.js" defer></script>
-    <script type="text/javascript" src="js/booking.js" defer></script>
-    <script type="text/javascript" src="js/menu-sort.js" defer></script>
-    <script type="text/javascript" src="js/jquery.min.js" defer></script>
-    <script type="text/javascript" src="js/script.js" defer></script>
-    <script type="text/javascript" src="js/menu-pagination.js" defer></script>
-
-    <!-- <script type="text/javascript" src="js/search.js" defer></script> -->
+     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script> -->
+    <script type="text/javascript" src="js/src/bg-video.js" defer></script>
+    <script type="text/javascript" src="js/src/registration-form.js" defer></script>
+    <script type="text/javascript" src="js/src/login-form.js" defer></script>
+    <script type="text/javascript" src="js/src/mobile-menu.js" defer></script>
+    <script type="text/javascript" src="js/src/tabs.js" defer></script>
+    <script type="text/javascript" src="js/src/filter-events.js" defer></script>
+    <script type="text/javascript" src="js/src/to-top-button.js" defer></script>
+    <script type="text/javascript" src="js/src/menu-filter.js" defer></script>
+    <script type="text/javascript" src="js/src/booking.js" defer></script>
+    <!-- <script type="text/javascript" src="js/src/menu-sort.js" defer></script> -->
+    <script type="text/javascript" src="js/src/jquery.min.js" defer></script>
+    <!-- <script type="text/javascript" src="js/src/script.js" defer></script> -->
+    <script type="text/javascript" src="js/src/menu-pagination.js" defer></script>
+    <!-- <script type="text/javascript" src="js/src/search.js" defer></script> -->
 
   </head>
   <body>
@@ -84,6 +83,7 @@
           <a href="#" class="typical-btn join-us__btn" id="join-us__btn">Join us!</a>
           <a href="#" class="typical-btn booking__btn" id="booking__btn">Booking</a>
         </div>
+
         <!-- registration modal -->
         <div class="header-wrapper__registration">
           <span class="registration__close-btn"></span>
@@ -91,6 +91,7 @@
               <a href="#" class="user-form-switch__new">New user</a>
               <a href="#" class="user-form-switch__existing">Have account</a>
           </div>
+          <!-- sign-up form -->
           <div class="registration__signup-form">
             <form action="" method="post" class="signup-form__wrapper">
               <label class="signup-form__label" for="signup__name-field"><img src="img/header/user.svg" alt="user icon" class="registration__icon"></label>
@@ -106,6 +107,7 @@
               <button class="signup-form__button" id="signup__btn">Sign up</button>
             </form>
           </div>
+          <!-- login form -->
           <div class="registration__login-form">
             <form action="" method="post" class="login-form__wrapper">
               <label class="login-form__label" for="login__name-field"><img src="img/header/user.svg" alt="user icon" class="registration__icon"></label>
@@ -128,9 +130,11 @@
           <a href="#" class="booking-section__heading"><h2>Book a table online</h2></a>
           <span class="booking-section__close-btn"></span>
           <section class="booking-section__info-block">
-            <a href="#" class="info-block__heading"><h3>Select date and time</h3></a>
+            <a href="#" class="info-block__heading"><h3>Choose your preferences</h3></a>
+            
+            <!-- people amount -->
             <select name="people-amount" id="info-block__people-amount" class="info-block__people-amount">
-              <option value="">Select</option>
+              <option value="">Select # of people</option>
               <option value="1 person">1 person</option>
               <option value="2 people">2 people</option>
               <option value="3 people">3 people</option>
@@ -143,8 +147,77 @@
               <option value="10 people">10 people</option>
             </select>
             <p class="booking__alert-message booking__alert-message_people">* select # of people</p>
-            <span class="info-block__date-btn">Today</span>
+            
+            <!-- calendar -->
+            <span class="info-block__date-btn" id="info-block__date-btn">Select date</span>
             <p class="booking__alert-message booking__alert-message_date">* select date</p>
+            <section class="info-block__calendar">
+              <div class="calendar__month-block">      
+                <ul class="calendar__month-list">
+                  <li class="calendar__month calendar__month_prev-btn">&#10094;</li>
+                  <li class="calendar__month" id="calendar__month">July</li>
+                  <li class="calendar__year" id="calendar__year">2017</li>
+                  <li class="calendar__month calendar__month_next-btn">&#10095;</li>
+                </ul>
+              </div>
+
+              <ul class="calendar__weekdays">
+                <li class="weekday">Mo</li>
+                <li class="weekday">Tu</li>
+                <li class="weekday">We</li>
+                <li class="weekday">Th</li>
+                <li class="weekday">Fr</li>
+                <li class="weekday">Sa</li>
+                <li class="weekday">Su</li>
+              </ul>
+
+              <ul class="calendar__days">  
+                <li class="day">26</li>
+                <li class="day">27</li>
+                <li class="day">28</li>
+                <li class="day">29</li>
+                <li class="day">30</li>
+                <li class="day">1</li>
+                <li class="day">2</li>
+                <li class="day">3</li>
+                <li class="day">4</li>
+                <li class="day">5</li>
+                <li class="day">6</li>
+                <li class="day">7</li>
+                <li class="day">8</li>
+                <li class="day">9</li>
+                <li class="day">10</li>
+                <li class="day">11</li>
+                <li class="day">12</li>
+                <li class="day">13</li>
+                <li class="day">14</li>
+                <li class="day">15</li>
+                <li class="day">16</li>
+                <li class="day">17</li>
+                <li class="day">18</li>
+                <li class="day">19</li>
+                <li class="day">20</li>
+                <li class="day">21</li>
+                <li class="day">22</li>
+                <li class="day">23</li>
+                <li class="day">24</li>
+                <li class="day">25</li>
+                <li class="day">26</li>
+                <li class="day">27</li>
+                <li class="day">28</li>
+                <li class="day">29</li>
+                <li class="day">30</li>
+                <li class="day">31</li>
+                <li class="day">1</li>
+                <li class="day">2</li>
+                <li class="day">3</li>
+                <li class="day">4</li>
+                <li class="day">5</li>
+                <li class="day">6</li>
+              </ul>
+            </section>
+
+            <!-- time -->
             <select size="10" name="select-time" id="info-block__select-time" class="info-block__select-time">
               <option value="9:00">9:00 <span class="time-available">available</span></option>
               <option value="9:30">9:30 <span class="time-available">available</span></option>
@@ -179,7 +252,7 @@
             </select>
             <p class="booking__alert-message booking__alert-message_time">* select time</p>
             <button class="info-block__submit-booking typical-btn" id="submit-booking">Submit booking</button>
-            <button class="info-block__continue-booking typical-btn" id="continue-booking">Continue booking</button>
+            <button class="info-block__continue-booking typical-btn" id="continue-booking">Proceed to personal info</button>
           </section>
           <section class="booking-section__table-block">
             <a href="#" class="table-block__heading"><h3>Select your table</h3></a>
@@ -255,6 +328,7 @@
                 </span>
               </div>
             </div>
+            <p class="booking__alert-message booking__alert-message_table">* select table</p>
           </section>
         </section>
       </header>
@@ -682,10 +756,13 @@ served with toasted bread</figcaption>
         <a href="#"><h2 class="our-events__heading">News &amp; Events</h2></a>
         <div class="our-events__wrapper">
           <div class="our-events__tabs">
-            <ul>
+            <ul class="tabs-heading__block">
               <li class="tabs-heading"><a href="#" class="tab-news__heading">News</a></li>
               <li class="tabs-heading"><a href="#" class="tab-events__heading tab-active">Events</a></li>
             </ul>
+            <div class="our-events__social-share">
+              <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.google.com.ua%2F%3Fgws_rd%3Dssl&layout=button&size=large&mobile_iframe=true&width=115&height=28&appId" width="115" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
             <div class="tab__content">
               <div class="news-content">
                 <article class="news-content__block">

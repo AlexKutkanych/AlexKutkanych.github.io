@@ -25,7 +25,7 @@ body.modal-open {
   box-shadow: 2px 2px 0 4px #000;
   text-align: center;
   font-family: $main-font;
-  display: none;
+  // display: none;
   &_show {
     display: block;
   }
@@ -63,6 +63,7 @@ body.modal-open {
     width: 70%;
     height: 80%;
     float: left;
+    position: relative;
     border-radius: 10px;
   }
 }
@@ -74,26 +75,28 @@ body.modal-open {
       margin: 10px;
     }
     &__people-amount {
-    width: 100px;
+    width: 160px;
     height: 32px;
     border-radius: 10px;
     border: 2px solid $text-hover-color;
     font-size: 15px;
     float: left;
-    margin: 15px 15px 15px 20px;
+    margin: 15px 0 15px 16px;
     font-family: $main-font;
+    color: $text-hover-color;
 
   }
   &__date-btn {
     display: block;
     width: 90px;
     float: left;
+    position: relative;
     height: 28px;
     border-radius: 10px;
     border: 2px solid $text-hover-color;
     font-size: 15px;
     line-height: 28px;
-    margin: 15px;
+    margin: 15px 15px 25px ;
     &:hover {
       cursor: pointer;
       background-color: $button-color;
@@ -151,14 +154,17 @@ body.modal-open {
   color:red;
   display: none;
   &_date {
-    left: 154px;
-    top: 141px;
+    left: 193px;
+    top: 146px;
   }
   &_people {
     left: 20px;
-    top: 141px;
+    top: 146px;
   }
   &_time {
+    left: 31px;
+  }
+  &_table {
     left: 31px;
   }
 }
