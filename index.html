@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta property="og:url"           content="https://alexkutkanych.github.io/Oasis-Restaurant-Kyiv/" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Restaurant Oasis Kyiv" />
-    <meta property="og:description"   content="Our passion is to deliver a unique dining experience, to explore
-              harmonies of flavours and contrasts in textures" />
-    <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+    <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@nytimes">
+<meta name="twitter:creator" content="@SarahMaslinNir">
+<meta name="twitter:title" content="Parade of Fans for Houston’s Funeral">
+<meta name="twitter:description" content="NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here.">
+<meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg">
     <title>Restaurant Oasis Kyiv</title>
     <link rel="stylesheet" href="css/styles-main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
@@ -28,6 +28,7 @@
     <script type="text/javascript" src="js/src/script.js" defer></script>
     <script type="text/javascript" src="js/src/menu-pagination.js" defer></script>
     <script type="text/javascript" src="js/src/search.js" defer></script> -->
+    <!-- <script type="text/javascript" src="js/src/header-carousel.js" defer></script> -->
     <script type="text/javascript" src="js/script.main.js" defer></script>
   </head>
   <body>
@@ -373,15 +374,25 @@
             <p class="our-history__text">Oasis is an Italian restaurant located in the central part of Kyiv.</p>
             <a href="#" class="our-history__about">about us</a>
             <div class="social-btn__block">
-          <iframe class="social-btn__facebook" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Falexkutkanych.github.io%2FOasis-Restaurant-Kyiv%2F&layout=button_count&size=small&mobile_iframe=true&width=69&height=20&appId" width="99" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-          <div class="fb-like social-btn__twitter" data-href="https://alexkutkanych.github.io/Oasis-Restaurant-Kyiv/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-          <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20like%20Oasis%20Kiev%20Restaurant%20#oasiskyiv%20#oasisrestaurantkyiv">Tweet</a>
+              <iframe class="social-btn__facebook" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Falexkutkanych.github.io%2FOasis-Restaurant-Kyiv%2F&layout=button_count&size=large&mobile_iframe=true&width=84&height=28&appId" width="99" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+              <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20like%20Oasis%20Kiev%20Restaurant%20#oasiskyiv%20#oasisrestaurantkyiv" data-size="large">Tweet</a>
         </div>
           </section>
-          <section class="our-history__photos">
-            <img class="our-history__image" src="img/history/history-1.jpg" alt="Italian pizza">
-            <img class="our-history__image" src="img/history/history-2.jpg" alt="Italian pasta">
-          </section>
+          <div class="our-history__carousel">
+            <div class="calousel-container">
+              <div class="carousel__slide carousel__slide_animated">
+                <img src="img/history/history-1.jpg" class="carousel__picture" alt="Italian salad">
+              </div>
+              <div class="carousel__slide carousel__slide_animated">
+                <img src="img/history/history-2.jpg" class="carousel__picture" alt="Italian pasta">
+              </div>
+              <div class="carousel__slide carousel__slide_animated">
+                <img src="img/history/history-3.jpg" class="carousel__picture" alt="Italian pizza">
+              </div>
+              <a href="#" class="carousel__pagination_prev">&#10094</a>
+              <a href="#" class="carousel__pagination_next">&#10095</a>
+            </div>
+          </div>
         </div>
       </section>
       <section class="our-menu" id="our-menu">
