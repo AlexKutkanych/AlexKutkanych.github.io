@@ -1488,6 +1488,7 @@ span.splink {
   background-color: rgba(150, 75, 0, 0.4);
   text-align: left;
   text-indent: 10px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
@@ -1658,6 +1659,7 @@ span.splink {
     height: 76px;
     background: url("../img/header/mobile-menu.svg") center center no-repeat;
     transition-duration: 1s;
+    -webkit-transition-duration: 1s;
   }
 
   .mobile-menu__burger_open {
@@ -1665,6 +1667,7 @@ span.splink {
     width: 30px;
     margin-left: 25px;
     transition-duration: 1s;
+    -webkit-transition-duration: 1s;
     transform: rotate(90deg);
   }
 
@@ -1678,6 +1681,7 @@ span.splink {
     background-image: url("../img/header/submenu-open.svg");
     background-repeat: no-repeat;
     transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
   }
 
   .mobile-menu__with-submenu_close::after {
@@ -1690,6 +1694,7 @@ span.splink {
     background-image: url("../img/header/submenu-close.svg");
     background-repeat: no-repeat;
     transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
   }
 
   .join-us__btn {
@@ -1784,7 +1789,7 @@ span.splink {
     height: 15px;
     position: absolute;
     right: 10px;
-    top: 8px;
+    top: 10px;
     background-image: url("../img/header/submenu-open.svg");
     background-repeat: no-repeat;
   }
@@ -1832,13 +1837,14 @@ span.splink {
     height: 76px;
     background: url("../img/header/mobile-menu.svg") center center no-repeat;
     transition-duration: 1s;
+    -webkit-transition-duration: 1s;
   }
 
   .mobile-menu__burger_open {
     background: url("../img/header/close.svg") center center no-repeat;
     width: 30px;
     margin-left: 25px;
-    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
     transform: rotate(90deg);
   }
 

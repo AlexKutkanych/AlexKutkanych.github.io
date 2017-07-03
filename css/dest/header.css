@@ -91,6 +91,7 @@ span.splink {
   background-color: rgba(150, 75, 0, 0.4);
   text-align: left;
   text-indent: 10px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s; }
 
 .menu-top__menu-item:hover .menu__submenu_hover {
@@ -209,12 +210,14 @@ span.splink {
       width: 76px;
       height: 76px;
       background: url(../img/header/mobile-menu.svg) center center no-repeat;
-      transition-duration: 1s; }
+      transition-duration: 1s;
+      -webkit-transition-duration: 1s; }
       .mobile-menu__burger_open {
         background: url(../img/header/close.svg) center center no-repeat;
         width: 30px;
         margin-left: 25px;
         transition-duration: 1s;
+        -webkit-transition-duration: 1s;
         transform: rotate(90deg); }
   .mobile-menu__with-submenu::after {
     content: "";
@@ -225,7 +228,8 @@ span.splink {
     top: 10px;
     background-image: url(../img/header/submenu-open.svg);
     background-repeat: no-repeat;
-    transition: ease-in-out .5s; }
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s; }
   .mobile-menu__with-submenu_close::after {
     content: "";
     width: 15px;
@@ -235,7 +239,8 @@ span.splink {
     top: 10px;
     background-image: url(../img/header/submenu-close.svg);
     background-repeat: no-repeat;
-    transition: ease-in-out .5s; }
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s; }
   .join-us__btn {
     width: 100px;
     display: block;
@@ -298,7 +303,7 @@ span.splink {
     height: 15px;
     position: absolute;
     right: 10px;
-    top: 8px;
+    top: 10px;
     background-image: url(../img/header/submenu-open.svg);
     background-repeat: no-repeat; }
   .mobile-menu__with-submenu_close::after {
@@ -331,12 +336,13 @@ span.splink {
       width: 76px;
       height: 76px;
       background: url(../img/header/mobile-menu.svg) center center no-repeat;
-      transition-duration: 1s; }
+      transition-duration: 1s;
+      -webkit-transition-duration: 1s; }
       .mobile-menu__burger_open {
         background: url(../img/header/close.svg) center center no-repeat;
         width: 30px;
         margin-left: 25px;
-        transition-duration: 1s;
+        -webkit-transition-duration: 1s;
         transform: rotate(90deg); }
   .join-us__btn {
     width: 100px;
