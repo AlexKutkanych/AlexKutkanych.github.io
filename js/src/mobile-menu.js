@@ -2,6 +2,12 @@
 
 var menuTop = document.querySelector(".menu-top"),
     burgerBtn = document.querySelector(".mobile-menu__burger");
+    
+
+//get pseudoclass via js
+
+// var submenuClosed = window.getComputedStyle(document.querySelector('.mobile-menu__with-submenu'), '::after').getPropertyValue('position');
+    // console.log(test);
 
 function showMobileMenu(){
   menuTop.classList.toggle("menu-top__active");
@@ -16,7 +22,9 @@ burgerBtn.addEventListener("click", showMobileMenu);
 var menuItemMenu = document.querySelector("#menu-top__menu"),
     menuSubmenuMenu = document.querySelector("#menu-top__submenu-menu"),
     menuItemContacts = document.querySelector("#menu-top__contacts"),
-    menuSubmenuContacts = document.querySelector("#menu-top__submenu-contacts");
+    menuSubmenuContacts = document.querySelector("#menu-top__submenu-contacts"),
+    submenuMenu = document.querySelectorAll(".mobile-menu__with-submenu")[0];
+    submenuContacts = document.querySelectorAll(".mobile-menu__with-submenu")[1];
 
 
 $(window).resize(function() {
@@ -24,10 +32,12 @@ $(window).resize(function() {
     menuItemMenu.addEventListener("click", function(e){
       e.preventDefault();
       menuSubmenuMenu.classList.toggle("menu__submenu-show-menu");
+      submenuMenu.classList.toggle("mobile-menu__with-submenu_close");
     });
     menuItemContacts.addEventListener("click", function(e){
       e.preventDefault();
       menuSubmenuContacts.classList.toggle("menu__submenu-show-menu");
+      submenuContacts.classList.toggle("mobile-menu__with-submenu_close");
     });
     menuSubmenuMenu.classList.remove("menu__submenu_hover");
     menuSubmenuContacts.classList.remove("menu__submenu_hover");

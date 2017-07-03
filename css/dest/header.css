@@ -186,6 +186,8 @@ span.splink {
         height: 0; }
     .menu-top__active {
       display: block; }
+    .menu-top__vertical-line {
+      display: none; }
   .menu-top__menu-item:hover .menu__submenu_hover {
     display: none; }
   .menu__submenu-style {
@@ -214,6 +216,26 @@ span.splink {
         margin-left: 25px;
         transition-duration: 1s;
         transform: rotate(90deg); }
+  .mobile-menu__with-submenu::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-image: url(../img/header/submenu-open.svg);
+    background-repeat: no-repeat;
+    transition: ease-in-out .5s; }
+  .mobile-menu__with-submenu_close::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-image: url(../img/header/submenu-close.svg);
+    background-repeat: no-repeat;
+    transition: ease-in-out .5s; }
   .join-us__btn {
     width: 100px;
     display: block;
@@ -258,7 +280,8 @@ span.splink {
       float: none;
       background-color: #fff;
       z-index: 1;
-      padding: 0; }
+      padding: 0;
+      position: relative; }
       .menu-top__menu-item:not(:last-child) {
         border-bottom: 1px solid #964B00; }
     .menu-top__menu-link {
@@ -267,6 +290,26 @@ span.splink {
         height: 0; }
     .menu-top__active {
       display: block; }
+    .menu-top__vertical-line {
+      display: none; }
+  .mobile-menu__with-submenu::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background-image: url(../img/header/submenu-open.svg);
+    background-repeat: no-repeat; }
+  .mobile-menu__with-submenu_close::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-image: url(../img/header/submenu-close.svg);
+    background-repeat: no-repeat; }
   .menu-top__menu-item:hover .menu__submenu_hover {
     display: none; }
   .menu__submenu-style {
