@@ -17,6 +17,7 @@
     float: left;
     width: 50%;
     text-align: center;
+    margin-right: 30px;
   }
   &__text {
     font-family: $main-font;
@@ -28,8 +29,8 @@
     font-size: 80px;
     margin-bottom: 15px;
   }
-  &__photos {
-    width: 50%;
+  &__carousel {
+    width: 300px;
     text-align: center;
   }
   &__image {
@@ -41,12 +42,75 @@
     color: $text-hover-color;
     text-decoration: underline;
     font-size: 18px;
+    &:hover {
+      color: $button-color;
+    }
   }
 }
 
+.calousel-container {
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+}
+
+.carousel__slide {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  &_animated {
+    animation-name: carousel__slide_animated;
+    animation-duration: 1.5s;
+  }
+}
+
+@keyframes carousel__slide_animated {
+  from{opacity: .4}
+  to{opacity: 1}
+}
+
+
+.carousel__picture {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.carousel__pagination_prev, .carousel__pagination_next {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  margin: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: ease .6s;
+  &:hover {
+    background-color: rgba(0, 0, 0, .8);
+  }
+}
+
+.carousel__pagination_next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.carousel__pagination_prev {
+  left: 0;
+}
+
+
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .our-history {
-    height: 550px;
+    height: 670px;
     margin: 20px auto;
     &__wrapper {
       flex-direction: column;
@@ -54,6 +118,7 @@
     &__description {
       width: 90%;
       margin-bottom: 30px;
+      margin-right: 0;
     }
     &__photos {
       display: block;
@@ -67,13 +132,14 @@
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   .our-history {
-    height: 550px;
+    height: 630px;
     &__wrapper {
       flex-direction: column;
     }
     &__description {
       width: 90%;
       margin-bottom: 30px;
+      margin-right: 0;
     }
     &__photos {
       display: block;

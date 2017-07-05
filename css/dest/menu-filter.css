@@ -156,14 +156,43 @@
   border-radius: 20px;
   font-size: 20px; }
   .filter-btn:hover {
-    margin-top: 2px;
-    cursor: pointer; }
+    cursor: pointer;
+    opacity: .6; }
 
 .filter-group__label:first-child {
   color: red; }
 
 .goods-filter__groups label:nth-child(5)::before {
   bottom: -4px; }
+
+/*food search*/
+.buy-food-online__search-block {
+  margin: 10px;
+  position: relative; }
+
+.search-block__search-field {
+  width: 130px;
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #964B00;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out; }
+
+.search-block__search-field:focus {
+  width: 100%; }
+
+.search-block__search-icon {
+  position: absolute;
+  z-index: 1;
+  top: 11px;
+  left: 5px; }
 
 /*food sorting*/
 .buy-food-online__sort-block {
@@ -213,8 +242,6 @@
   .food-result:hover {
     transform: scale(1.1);
     z-index: 1; }
-  .food-result:nth-child(3n) {
-    margin-right: 0; }
   .food-result__name {
     font-size: 18px;
     margin: 10px 0 5px 15px; }
@@ -271,15 +298,7 @@
   .food-result__pic_semifreddo {
     background-image: url(../img/menu-filter/semifreddo.jpg); }
   .food-result__pic_red-wine {
-    background-image: url(../img/menu-filter/red-wine.jpg);
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto; }
+    background-image: url(../img/menu-filter/red-wine.jpg); }
 
 .food-result__pic_margherita {
   background-image: url(../img/menu-filter/margherita.jpg); }
@@ -315,14 +334,7 @@
   background-image: url(../img/menu-filter/zuppa-di-pesce.jpg); }
 
 .food-result__pic_americano {
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto; }
+  background-image: url(../img/menu-filter/americano.jpeg); }
 
 .food-result__pic_spritz-royal {
   background-image: url(../img/menu-filter/spritz-royal.jpg); }

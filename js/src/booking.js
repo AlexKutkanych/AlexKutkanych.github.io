@@ -1,3 +1,4 @@
+//booking block
 
 var bookingBtn = document.querySelector("#booking__btn"),
     bookingModalBlock = document.querySelector(".header-wrapper__booking-section"),

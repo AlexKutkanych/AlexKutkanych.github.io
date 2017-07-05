@@ -5,8 +5,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');  
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
-
-// var browserSync = require('browser-sync').create();
+var svgstore = require('gulp-svgstore');
 
 
 gulp.task('concat-css', function () {
@@ -30,6 +29,25 @@ gulp.task('concat-js', function() {
         .pipe(concat('script.main.js'))
         .pipe(gulp.dest(jsDest));
 });
+
+//https://www.npmjs.com/package/gulp-svgstore
+gulp.task('svg', function () {
+    return gulp
+        .src('img/header/*.svg', { base: 'img/header/sprite' })
+        .pipe(rename({prefix: 'icon-'}))
+        .pipe(svgstore())
+        .pipe(gulp.dest('img/svg'));
+});
+
+
+//https://www.npmjs.com/package/gulp-svg-spritesheet
+// gulp.task('sprites', function () {
+//     return gulp.src('img/header/*.svg')
+//         .pipe(svgSprite())
+//         .pipe(gulp.dest("img/spritesvg"));
+// });
+
+
 
 //Watch task
 gulp.task('watch',function() {

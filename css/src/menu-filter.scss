@@ -4,7 +4,6 @@
   display: none;
 }
 
-
 .buy-food-online {
   width: 1280px;
   height: 800px;
@@ -39,9 +38,6 @@
   height: 100%;
 
 }
-
-
-
 
 
 /*aside*/
@@ -193,8 +189,8 @@
   border-radius: 20px;
   font-size: 20px;
   &:hover{
-    margin-top: 2px;
     cursor: pointer;
+    opacity: .6;
   }
 }
 
@@ -206,7 +202,39 @@
   bottom: -4px;
 }
 
+/*food search*/
 
+.buy-food-online__search-block {
+  margin: 10px;
+  position: relative;
+}
+
+.search-block__search-field {
+    width: 130px;
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: $text-hover-color;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.search-block__search-field:focus {
+    width: 100%;
+}
+
+.search-block__search-icon {
+  position: absolute;
+  z-index: 1;
+  top: 11px;
+  left: 5px;
+}
 /*food sorting*/
 
 .buy-food-online__sort-block {
@@ -267,12 +295,7 @@
     transform: scale(1.1);
     z-index: 1;
   }
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
-  &:nth-child(4) {
-    // margin-bottom: 43px;
-  }
+  
   &__name {
     font-size: 18px;
     margin: 10px 0 5px 15px;
@@ -349,14 +372,6 @@
   }
   &_red-wine {
     background-image: url(../img/menu-filter/red-wine.jpg);
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
   }
 }
 
@@ -409,15 +424,7 @@
 }
 
 .food-result__pic_americano {
-  // background-image: url(../img/menu-filter/americano.jpeg);
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  background-image: url(../img/menu-filter/americano.jpeg);
 }
 
 .food-result__pic_spritz-royal {
