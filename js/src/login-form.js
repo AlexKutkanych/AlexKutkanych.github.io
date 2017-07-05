@@ -4,8 +4,9 @@ var loginNameField = document.querySelector("#login__name-field"),
     loginPassField = document.querySelector("#login__pass-field"),
     loginBtn = document.querySelector("#login__btn"),
     loggedUserBlock = document.querySelector(".header-wrapper__logged-user-section"),
-    loggedUserGreetings = document.querySelector(".logged-user__greetings");
-    allLoginInputs = document.querySelectorAll(".login-form__wrapper > input");
+    loggedUserGreetings = document.querySelector(".logged-user__greetings"),
+    allLoginInputs = document.querySelectorAll(".login-form__wrapper > input"),
+    loginAlertMessages = document.querySelectorAll(".login__alert-message");
 
 //login user
 
@@ -14,19 +15,28 @@ function loginUser(e){
   var loggedUser = localStorage.getItem("user0"); //!!!GET THE RIGHT ITEM FROM localStorage
   var parseUserInfo = JSON.parse(loggedUser);
   console.log(loggedUser);
+
+  if (loginNameField.value !== parseUserInfo.name) {
+    loginAlertMessages[0].classList.add("show-alert-message");
+  } else {
+    loginAlertMessages[0].classList.remove("show-alert-message");
+  }
+
+  if (loginPassField.value !== parseUserInfo.password) {
+    loginAlertMessages[1].classList.add("show-alert-message");
+  } else {
+    loginAlertMessages[1].classList.remove("show-alert-message");
+  }
+
   if(loginNameField.value === parseUserInfo.name && loginPassField.value === parseUserInfo.password) {
-    alert("hello "+ loginNameField.value);
+    alert("Welcome, "+ loginNameField.value);
     loggedUserGreetings.innerHTML = "hi, "+ loginNameField.value;
     loggedUserBlock.style.display = "block";
-    loginNameField.value = "";
+    // loginNameField.value = "";
     clearLoginInputs();
     clearSignupInputs();
     closeJoinUsModal();
-  } else if (loginNameField.value !== parseUserInfo.name) {
-    alert("You entered wrong username");
-  } else if (loginPassField.value !== parseUserInfo.password) {
-    alert("You entered wrong password");
-  }
+  } 
 
 }
 

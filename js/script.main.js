@@ -329,8 +329,9 @@ var loginNameField = document.querySelector("#login__name-field"),
     loginPassField = document.querySelector("#login__pass-field"),
     loginBtn = document.querySelector("#login__btn"),
     loggedUserBlock = document.querySelector(".header-wrapper__logged-user-section"),
-    loggedUserGreetings = document.querySelector(".logged-user__greetings");
-    allLoginInputs = document.querySelectorAll(".login-form__wrapper > input");
+    loggedUserGreetings = document.querySelector(".logged-user__greetings"),
+    allLoginInputs = document.querySelectorAll(".login-form__wrapper > input"),
+    loginAlertMessages = document.querySelectorAll(".login__alert-message");
 
 //login user
 
@@ -339,19 +340,28 @@ function loginUser(e){
   var loggedUser = localStorage.getItem("user0"); //!!!GET THE RIGHT ITEM FROM localStorage
   var parseUserInfo = JSON.parse(loggedUser);
   console.log(loggedUser);
+
+  if (loginNameField.value !== parseUserInfo.name) {
+    loginAlertMessages[0].classList.add("show-alert-message");
+  } else {
+    loginAlertMessages[0].classList.remove("show-alert-message");
+  }
+
+  if (loginPassField.value !== parseUserInfo.password) {
+    loginAlertMessages[1].classList.add("show-alert-message");
+  } else {
+    loginAlertMessages[1].classList.remove("show-alert-message");
+  }
+
   if(loginNameField.value === parseUserInfo.name && loginPassField.value === parseUserInfo.password) {
-    alert("hello "+ loginNameField.value);
+    alert("Welcome, "+ loginNameField.value);
     loggedUserGreetings.innerHTML = "hi, "+ loginNameField.value;
     loggedUserBlock.style.display = "block";
-    loginNameField.value = "";
+    // loginNameField.value = "";
     clearLoginInputs();
     clearSignupInputs();
     closeJoinUsModal();
-  } else if (loginNameField.value !== parseUserInfo.name) {
-    alert("You entered wrong username");
-  } else if (loginPassField.value !== parseUserInfo.password) {
-    alert("You entered wrong password");
-  }
+  } 
 
 }
 
@@ -816,19 +826,19 @@ var signupNameField = document.querySelector("#signup__name-field"),
     signupPassField = document.querySelector("#signup__pass-field"),
     signupPassRepeatField = document.querySelector("#signup__pass-repeat-field"),
     signupBtn = document.querySelector("#signup__btn"),
-    signupAlertMessages = document.querySelectorAll(".registration__alert-message"),
+    signupAlertMessages = document.querySelectorAll(".signup__alert-message"),
     confirmEmailModal = document.querySelector(".header-wrapper__registration-confirm-modal"),
     regexpUsername = /^[A-Za-z0-9_]{3,20}$/,
     regexpEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
     regexpPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/,
     errors = [],
     allSignupInputs = document.querySelectorAll(".signup-form__wrapper > input"),
-    newUser = {},
     allUsers = [];
 
 
 function addNewUser(){
   //create new user
+  var newUser = {};
   newUser.name = signupNameField.value;
   newUser.email = signupEmailField.value;
   newUser.password = signupPassField.value;
@@ -888,12 +898,13 @@ function toLocalStorage(e){
 
      // write to localStorage
      for (var i = 0; i < allUsers.length; i++){
-       var savedUser = localStorage.setItem("user" + [i], JSON.stringify(allUsers[i]));
+       localStorage.setItem("user" + [i], JSON.stringify(allUsers[i]));
      }
 
      showSentEmailModal();
+     closeJoinUsModal();
    }
-   closeJoinUsModal();
+   
 }
 
 //clear signup inputs after registration

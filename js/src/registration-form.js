@@ -54,19 +54,19 @@ var signupNameField = document.querySelector("#signup__name-field"),
     signupPassField = document.querySelector("#signup__pass-field"),
     signupPassRepeatField = document.querySelector("#signup__pass-repeat-field"),
     signupBtn = document.querySelector("#signup__btn"),
-    signupAlertMessages = document.querySelectorAll(".registration__alert-message"),
+    signupAlertMessages = document.querySelectorAll(".signup__alert-message"),
     confirmEmailModal = document.querySelector(".header-wrapper__registration-confirm-modal"),
     regexpUsername = /^[A-Za-z0-9_]{3,20}$/,
     regexpEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
     regexpPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/,
     errors = [],
     allSignupInputs = document.querySelectorAll(".signup-form__wrapper > input"),
-    newUser = {},
     allUsers = [];
 
 
 function addNewUser(){
   //create new user
+  var newUser = {};
   newUser.name = signupNameField.value;
   newUser.email = signupEmailField.value;
   newUser.password = signupPassField.value;
@@ -126,12 +126,13 @@ function toLocalStorage(e){
 
      // write to localStorage
      for (var i = 0; i < allUsers.length; i++){
-       var savedUser = localStorage.setItem("user" + [i], JSON.stringify(allUsers[i]));
+       localStorage.setItem("user" + [i], JSON.stringify(allUsers[i]));
      }
 
      showSentEmailModal();
+     closeJoinUsModal();
    }
-   closeJoinUsModal();
+   
 }
 
 //clear signup inputs after registration
