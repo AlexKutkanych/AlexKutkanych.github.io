@@ -54,92 +54,84 @@ var signupNameField = document.querySelector("#signup__name-field"),
     signupPassField = document.querySelector("#signup__pass-field"),
     signupPassRepeatField = document.querySelector("#signup__pass-repeat-field"),
     signupBtn = document.querySelector("#signup__btn"),
+    signupAlertMessages = document.querySelectorAll(".registration__alert-message"),
+    confirmEmailModal = document.querySelector(".header-wrapper__registration-confirm-modal"),
     regexpUsername = /^[A-Za-z0-9_]{3,20}$/,
     regexpEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
     regexpPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/,
     errors = [],
     allSignupInputs = document.querySelectorAll(".signup-form__wrapper > input"),
     newUser = {},
-    allusers = [];
+    allUsers = [];
 
-//check if password entered two time
-// function checkPassRepeat(){
-//     if(signupPassField.value !== signupPassRepeatField.value) {
-//       signupPassField.style.border = "2px solid red";
-//       signupPassRepeatField.style.border = "2px solid red";
-//       alert("Password fields don't match");
-//     }
-// }
 
 function addNewUser(){
   //create new user
   newUser.name = signupNameField.value;
   newUser.email = signupEmailField.value;
   newUser.password = signupPassField.value;
-
   return newUser;
 }
 
 
 function validateSignupForm(){
-    // e.preventDefault();
-    if (!regexpUsername.test(signupNameField.value)) {
-      // errors[errors.length] = "You must enter valid Name .";
-      alert("You must enter valid Name .");
-    }
+    
+  //validate username
+  if (!regexpUsername.test(signupNameField.value)) {
+    signupAlertMessages[0].classList.add("show-alert-message");
+  } else {
+    signupAlertMessages[0].classList.remove("show-alert-message");
+  }
 
-    if (!regexpEmail.test(signupEmailField.value)) {
-      // errors[errors.length] = "You must enter a valid email address.";
-      alert("You must enter a valid email address.");
-   }
+  //validate email
+  if (!regexpEmail.test(signupEmailField.value)) {
+    signupAlertMessages[1].classList.add("show-alert-message");
+  } else {
+    signupAlertMessages[1].classList.remove("show-alert-message");
+  }
 
-   if (!regexpPassword.test(signupPassField.value)) {
-      // errors[errors.length] = "You must enter a valid Password ";
-      alert("You must enter a valid Password ");
-   }
+  //validate password
+  if (!regexpPassword.test(signupPassField.value)) {
+    signupAlertMessages[2].classList.add("show-alert-message");
+  } else {
+    signupAlertMessages[2].classList.remove("show-alert-message");
+  }
 
-   if (!regexpPassword.test(signupPassRepeatField.value)) {
-      // errors[errors.length] = "You must enter similar Password ";
-      alert("You must enter similar Password ");
-   }
-    // checkPassRepeat();
+  //validate password[1]
+  if (!regexpPassword.test(signupPassRepeatField.value)) {
+    signupAlertMessages[3].classList.add("show-alert-message");
+  } else {
+    signupAlertMessages[3].classList.remove("show-alert-message");
+  } 
 
-  // if (errors.length > 0) {
-  //   reportErrors(errors);
-  //   return false;
-  // } else {
-  //   closeJoinUsModal();
-  //   clearSignupInputs();
-  //   alert("We sent you a link to prove email address. Check your email "+ signupEmailField.value);
-  // }
-  // errors = [];
-  //  return true;
+  //validate if paswords are equal
+  if (signupPassField.value !== signupPassRepeatField.value) {
+    signupAlertMessages[3].classList.add("show-alert-message");
+  }
+  else {
+    signupAlertMessages[3].classList.remove("show-alert-message");
+  }
 }
 
 function toLocalStorage(e){
   e.preventDefault();
   validateSignupForm();
-  addNewUser();
-  console.log(newUser);
-  // for(var i = 0; i < 5; i++) {
-    allusers.push(addNewUser());
 
-    // console.log(allusers);
-  // }
-  //write to localStorage
-  for (var i =0; i < allusers.length; i++){
-    var savedUser = localStorage.setItem("user" + [i], JSON.stringify(allusers[i]));
-  }
-}
+  if (regexpUsername.test(signupNameField.value) && regexpEmail.test(signupEmailField.value) && 
+   regexpPassword.test(signupPassField.value) && regexpPassword.test(signupPassRepeatField.value)
+   && signupPassField.value === signupPassRepeatField.value) {
+     addNewUser();
+     allUsers.push(addNewUser());
+     console.log(allUsers);
 
+     // write to localStorage
+     for (var i = 0; i < allUsers.length; i++){
+       var savedUser = localStorage.setItem("user" + [i], JSON.stringify(allUsers[i]));
+     }
 
-function reportErrors(errors){
-  var msg = "Please Enter Valide Data...\n";
-  for (var i = 0; i<errors.length; i++) {
-   var numError = i + 1;
-    msg += "\n" + numError + ". " + errors[i];
-  }
-  alert(msg);
+     showSentEmailModal();
+   }
+   closeJoinUsModal();
 }
 
 //clear signup inputs after registration
@@ -150,9 +142,9 @@ function clearSignupInputs(){
 }
 
 function showSentEmailModal(){
-
+    var confirmEmailText = confirmEmailModal.querySelector(".registration-confirm-modal__text");
+    confirmEmailText.innerHTML = "Dear "+ signupNameField.value + "! "+ "We sent you a link to prove email address. Check your email "+ signupEmailField.value;
+    confirmEmailModal.classList.add("header-wrapper__registration-confirm-modal_animate-fading");
 }
-
-
 
 signupBtn.addEventListener("click", toLocalStorage);
