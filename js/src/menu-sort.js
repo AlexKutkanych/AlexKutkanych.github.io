@@ -4,6 +4,8 @@ var sortBlock = document.querySelector("#sort-block__sorting"),
 	food = document.querySelector(".food-result"),
 	list = [];
 
+	console.log(contents.length);
+
 
 function sortByPriceAscending() {
 

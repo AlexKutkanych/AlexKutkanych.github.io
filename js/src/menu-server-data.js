@@ -1,9 +1,26 @@
 //menu-filter via Resig
 
-$(function(){
-  var myPage = $('#mypage').html();
+// example
 
-  var onlineMenu = [
+  // var test = {
+  //   members:[
+  //   {id:1, name:"hoge", text:"aaaaaaaaaaaaaa"},
+  //   {id:9, name:"fuga", text:"bbbbbbbbbbbbbb"},
+  //   {id:15, name:"hoge", text:"cccccccccccccc"},
+  //   {id:22, name:"fuga", text:"dddddddddddddd"},
+  //   {id:78, name:"hoge", text:"eeeeeeeeeeeeee"},
+  //   {id:876, name:"fuga", text:"ffffffffffffff"},
+  //   {id:1033, name:"hoge", text:"gggggggggggggg"},
+  //   {id:7899, name:"fuga", text:"hhhhhhhhhhhhhh"}
+  //   ]
+  // }; // -> End of dataObject
+
+  // var results = document.getElementById("food-wrapper__result");
+  // results.innerHTML = tmpl("item_tmpl", test);
+
+
+
+  var fullOnlineMenu = [
     {name: 'Italian Ice-cream', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '35', classCategory: 'food-result__dessert'},
     {name: 'Crostata di Marmellata', desc: 'Home made jam orange tarte', price: '110', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_crostata'},
     {name: 'Semifreddo al Caramello', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '130', classCategory: 'food-result__dessert', classPicture: 'ood-result__pic_semifreddo'},
@@ -31,11 +48,13 @@ $(function(){
     {name: 'Il Castagnaccio', desc: 'Classic Chestnut Tuscan Dessert. A real classic back home', price: '100', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_castagnaccio'}
   ];
 
-    // console.log(str[0].price);
+  localStorage.setItem("fullOnlineMenu", JSON.stringify(fullOnlineMenu));
+  var onlineMenuData = localStorage.getItem("fullOnlineMenu");
+  var onlineMenu = JSON.parse(onlineMenuData);
 
-  localStorage.setItem("fullOnlineMenu", JSON.stringify(onlineMenu));
-  var content = tmpl(myPage, {data: onlineMenu});
+  //get to html via resig template
+  
+  var results = document.getElementById("food-wrapper__result");
+    results.innerHTML = tmpl("mypage", {data: onlineMenu});
+    
 
-  $('main').append(content);
-
-});

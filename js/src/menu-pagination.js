@@ -2,6 +2,8 @@
 var resultPage = document.createElement("div");
 resultPage.classList.add("food-result__page");
 //
+
+
 (function($){
     $.fn.extend({
         MyPagination: function(options) {
@@ -104,7 +106,9 @@ resultPage.classList.add("food-result__page");
     });
 })(jQuery);
 
+
 // Инициализация
 jQuery(window).load(function() {
     $('#food-wrapper__result').MyPagination({height: 2000, width: 800, fadeSpeed: 0});
 });
+

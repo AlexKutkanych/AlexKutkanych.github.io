@@ -23,7 +23,10 @@
     <script type="text/javascript" src="js/src/menu-pagination.js" defer></script>
     <script type="text/javascript" src="js/src/search.js" defer></script> -->
     <!-- <script type="text/javascript" src="js/src/header-carousel.js" defer></script> -->
+    
     <script type="text/javascript" src="js/script.main.js" defer></script>
+   
+    
     
   </head>
   <body>
@@ -386,6 +389,7 @@
           <section class="our-history__description">
             <h2 class="our-history__heading">Discover our history</h2>
             <p class="our-history__text">Oasis is an Italian restaurant located in the central part of Kyiv.</p>
+            <textarea id="output"></textarea>
             <a href="#" class="our-history__about">about us</a>
             
             <div class="social-btn__block">
@@ -488,19 +492,30 @@
         </div>
         <main class="food-wrapper__result" id="food-wrapper__result">
           <script type="text/html" id="mypage">
-            <!-- <h2><%= data.fullname%></h2> -->
-            <% for (var i = 0; i < data.length; i++) { %>
+            <% for (var i = 0; i < onlineMenu.length; i++) { %>
             <div class="food-result <%= data[i].classCategory %>">
             <figure>
-              <a href="#" class="food-result__pic <%= data[i].classPicture%>"></a>
-              <figcaption class="food-result__name"><%= data[i].name%></figcaption>
-              <figcaption class="food-result__desc"><%= data[i].desc%></figcaption>
+              <a href="#" class="food-result__pic <%= onlineMenu[i].classPicture%>"></a>
+              <figcaption class="food-result__name"><%= onlineMenu[i].name%></figcaption>
+              <figcaption class="food-result__desc"><%= onlineMenu[i].desc%></figcaption>
             </figure>
-            <span class="food-result__price">&#x20B4;<%= data[i].price%></span>
+            <span class="food-result__price">&#x20B4;<%= onlineMenu[i].price%></span>
             <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
           </div>
             <% }; %>
           </script>
+          <ul id="results">
+            output results here.
+          </ul>
+------------------------------------------------------------
+<script type="text/html" id="item_tmpl">
+  <% for ( var i = 0; i < members.length; i++ ) { %>
+    <li id="<%=members[i].id%>" class="<%=(i % 2 == 1 ? " even" : " odd")%>">
+      <%=i+1%>人目 <%=members[i].text%> (from <%=members[i].name%>[ID:<%=members[i].id%>])
+    </li>
+  <% } %>
+</script>
+
         </main>
         <!-- <div class="goods-wrapper__pagination"> -->
           <div class="pagination">

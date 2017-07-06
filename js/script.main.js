@@ -304,6 +304,36 @@ nextSlideBtn.addEventListener("click", function(e){
 	plusSlides(1);
 });
 
+// see:
+// http://ejohn.org/blog/javascript-micro-templating/
+
+// Simple JavaScript Templating
+// John Resig - http://ejohn.org/ - MIT Licensed
+(function(){
+  var cache = {};
+
+  this.tmpl = function tmpl(str, data){
+    // Figure out if we're getting a template, or if we need to
+    // load the template - and be sure to cache the result.
+    var fn = !/\W/.test(str) ?
+      cache[str] = cache[str] ||
+        tmpl(document.getElementById(str).innerHTML) :
+
+      // Generate a reusable function that will serve as a template
+      // generator (and which will be cached).
+      new Function("obj", "var p=[],print=function(){p.push.apply(p,arguments);};" + "with(obj){p.push('"+ str.replace(/[\r\t\n]/g, " ")
+          .split("<%").join("\t")
+          .replace(/((^|%>)[^\t]*)'/g, "$1\r")
+          .replace(/\t=(.*?)%>/g, "',$1,'")
+          .split("\t").join("');")
+          .split("%>").join("p.push('")
+          .split("\r").join("\\'") + "');}return p.join('');");
+
+    // Provide some basic currying to the user
+    return data ? fn( data ) : fn;
+  };
+})();
+
 /*
  * jQuery JavaScript Library v1.3.2
  * http://jquery.com/
@@ -512,6 +542,8 @@ inputPasta.addEventListener("click", function(){
 var resultPage = document.createElement("div");
 resultPage.classList.add("food-result__page");
 //
+
+
 (function($){
     $.fn.extend({
         MyPagination: function(options) {
@@ -614,17 +646,36 @@ resultPage.classList.add("food-result__page");
     });
 })(jQuery);
 
+
 // Инициализация
 jQuery(window).load(function() {
     $('#food-wrapper__result').MyPagination({height: 2000, width: 800, fadeSpeed: 0});
 });
 
+
 //menu-filter via Resig
 
-$(function(){
-  var myPage = $('#mypage').html();
+// example
 
-  var onlineMenu = [
+  // var test = {
+  //   members:[
+  //   {id:1, name:"hoge", text:"aaaaaaaaaaaaaa"},
+  //   {id:9, name:"fuga", text:"bbbbbbbbbbbbbb"},
+  //   {id:15, name:"hoge", text:"cccccccccccccc"},
+  //   {id:22, name:"fuga", text:"dddddddddddddd"},
+  //   {id:78, name:"hoge", text:"eeeeeeeeeeeeee"},
+  //   {id:876, name:"fuga", text:"ffffffffffffff"},
+  //   {id:1033, name:"hoge", text:"gggggggggggggg"},
+  //   {id:7899, name:"fuga", text:"hhhhhhhhhhhhhh"}
+  //   ]
+  // }; // -> End of dataObject
+
+  // var results = document.getElementById("food-wrapper__result");
+  // results.innerHTML = tmpl("item_tmpl", test);
+
+
+
+  var fullOnlineMenu = [
     {name: 'Italian Ice-cream', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '35', classCategory: 'food-result__dessert'},
     {name: 'Crostata di Marmellata', desc: 'Home made jam orange tarte', price: '110', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_crostata'},
     {name: 'Semifreddo al Caramello', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '130', classCategory: 'food-result__dessert', classPicture: 'ood-result__pic_semifreddo'},
@@ -652,20 +703,24 @@ $(function(){
     {name: 'Il Castagnaccio', desc: 'Classic Chestnut Tuscan Dessert. A real classic back home', price: '100', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_castagnaccio'}
   ];
 
-    // console.log(str[0].price);
+  localStorage.setItem("fullOnlineMenu", JSON.stringify(fullOnlineMenu));
+  var onlineMenuData = localStorage.getItem("fullOnlineMenu");
+  var onlineMenu = JSON.parse(onlineMenuData);
 
-  localStorage.setItem("fullOnlineMenu", JSON.stringify(onlineMenu));
-  var content = tmpl(myPage, {data: onlineMenu});
+  //get to html via resig template
+  
+  var results = document.getElementById("food-wrapper__result");
+    results.innerHTML = tmpl("mypage", {data: onlineMenu});
+    
 
-  $('main').append(content);
-
-});
 
 var sortBlock = document.querySelector("#sort-block__sorting"),
 	container = document.querySelector(".food-wrapper__result"),
 	contents = document.querySelectorAll(".food-result__price"),
 	food = document.querySelector(".food-result"),
 	list = [];
+
+	console.log(contents.length);
 
 
 function sortByPriceAscending() {
@@ -1268,36 +1323,6 @@ eventsTab.addEventListener("click", function(e){
   this.classList.add("tab-active");
   newsTab.classList.remove("tab-active");
 });
-
-// see:
-// http://ejohn.org/blog/javascript-micro-templating/
-
-// Simple JavaScript Templating
-// John Resig - http://ejohn.org/ - MIT Licensed
-(function(){
-  var cache = {};
-
-  this.tmpl = function tmpl(str, data){
-    // Figure out if we're getting a template, or if we need to
-    // load the template - and be sure to cache the result.
-    var fn = !/\W/.test(str) ?
-      cache[str] = cache[str] ||
-        tmpl(document.getElementById(str).innerHTML) :
-
-      // Generate a reusable function that will serve as a template
-      // generator (and which will be cached).
-      new Function("obj", "var p=[],print=function(){p.push.apply(p,arguments);};" + "with(obj){p.push('"+ str.replace(/[\r\t\n]/g, " ")
-          .split("<%").join("\t")
-          .replace(/((^|%>)[^\t]*)'/g, "$1\r")
-          .replace(/\t=(.*?)%>/g, "',$1,'")
-          .split("\t").join("');")
-          .split("%>").join("p.push('")
-          .split("\r").join("\\'") + "');}return p.join('');");
-
-    // Provide some basic currying to the user
-    return data ? fn( data ) : fn;
-  };
-})();
 
 
 //to top button
