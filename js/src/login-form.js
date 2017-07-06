@@ -12,7 +12,7 @@ var loginNameField = document.querySelector("#login__name-field"),
 
 function loginUser(e){
   e.preventDefault();
-  var loggedUser = localStorage.getItem("user0"); //!!!GET THE RIGHT ITEM FROM localStorage
+  var loggedUser = localStorage.getItem("signedupUser"); //!!!GET THE RIGHT ITEM FROM localStorage
   var parseUserInfo = JSON.parse(loggedUser);
   console.log(loggedUser);
 
