@@ -541,7 +541,7 @@ inputPasta.addEventListener("click", function(){
 // var resultPage = $("<div class='food-result__page'></div>");
 var resultPage = document.createElement("div");
 resultPage.classList.add("food-result__page");
-//
+
 
 
 (function($){
@@ -653,6 +653,32 @@ jQuery(window).load(function() {
 });
 
 
+//search food
+
+var searchFoodInput = document.querySelector("#search-block__search-field");
+
+
+function searchFood() {
+    var filter = searchFoodInput.value.toUpperCase();
+    var foodCard = document.querySelectorAll(".food-result");
+    var foodCardLgth = foodCard.length;
+    for (i = 0; i < foodCardLgth; i++) {
+    	//search by name
+        var foodName = foodCard[i].querySelector(".food-result__name");
+        var foodDesc = foodCard[i].querySelector(".food-result__desc");
+        var foodPrice = foodCard[i].querySelector(".food-result__price");
+        if (foodName.innerHTML.toUpperCase().indexOf(filter) > -1 || foodPrice.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            foodCard[i].style.display = "";
+        } else {
+            foodCard[i].style.display = "none";
+        }
+        //search by desc
+        
+        
+    }
+}
+
+searchFoodInput.addEventListener("keyup", searchFood);
 //menu-filter via Resig
 
 // example
@@ -694,7 +720,7 @@ jQuery(window).load(function() {
     {name: 'Farro di Mare', desc: 'Steamed Spelt with Squid,Prawns, Mussels &amp; Tomatoes, with Olive Oil, Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_farro'},
     {name: 'Minestrone di verdure', desc: 'Hearty Vegetable soup', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_minestrone'},
     {name: 'Zuppa di pesce', desc: 'Seafood soup with Prawns, Squids, Clams &amp; Mussels, served with toasted bread', price: '75', classCategory: 'food-result_soup', classPicture: 'food-result__pic_zuppa-di-pesce'},
-    {name: 'Italian Ice-cream', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: ''},
+    {name: 'Italian Ice-cream Big', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: ''},
     {name: 'Italian Sorbet', desc: 'Orange, Coconut, Strawberry flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_sorbet'},
     {name: 'Panna Cotta', desc: 'Italian Custard Cream with Caramel', price: '70', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_panna-cotta'},
     {name: 'Crème Brulee', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '75', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_creme-brulee'},
@@ -1227,56 +1253,6 @@ signupBtn.addEventListener("click", toLocalStorage);
 // function showSentEmailModal(){
 //
 // }
-
-var input,search,pr,result,result_arr, locale_HTML, result_store;
-
-function func() {
- 	locale_HTML = document.body.innerHTML;   // сохраняем в переменную весь body (Первоначальный)
-}
-setTimeout(func, 1000);  //ждем подгрузки Jsona и выполняем
-
-function FindOnPage(name, status) {
-
-	input = document.getElementById(name).value; //получаем значение из поля в html
-
-	if(input.length<3 && status === true)
-	{
-		alert('Для поиска вы должны ввести три или более символов');
-		function FindOnPageBack() { document.body.innerHTML = locale_HTML }
-	}
-
-	if(input.length>=3)
-	{
-		function FindOnPageGo() {
-
-			search = '/'+input+'/g';  //делаем из строки регуярное выражение
-			pr = document.body.innerHTML;   // сохраняем в переменную весь body
-			result = pr.match(/>(.*?)</g);  //отсекаем все теги и получаем только текст
-			result_arr = [];   //в этом массиве будем хранить результат работы (подсветку)
-
-			var warning = true;
-			for(var i=0;i<result.length;i++) {
-				if(result[i].match(eval(search))!= null) {
-					warning = false;
-				}
-			}
-			if(warning === true) {
-				alert('Не найдено ни одного совпадения');
-			}
-
-			for(var i=0; i<result.length;i++) {
-				result_arr[i] = result[i].replace(eval(search), '<span style="background-color:yellow;">'+input+'</span>'); //находим нужные элементы, задаем стиль и сохраняем в новый массив
-			}
-			for(var i=0; i<result.length;i++) {
-				pr=pr.replace(result[i],result_arr[i])  //заменяем в переменной с html текст на новый из новогом ассива
-			}
-			document.body.innerHTML = pr;  //заменяем html код
-		}
-	}
-	function FindOnPageBack() { document.body.innerHTML = locale_HTML; }
-	if(status) { FindOnPageBack(); FindOnPageGo(); } //чистим прошлое и Выделяем найденное
-	if(!status) { FindOnPageBack(); } //Снимаем выделение
-}
 
 //social btns settings
 

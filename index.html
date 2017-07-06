@@ -389,9 +389,7 @@
           <section class="our-history__description">
             <h2 class="our-history__heading">Discover our history</h2>
             <p class="our-history__text">Oasis is an Italian restaurant located in the central part of Kyiv.</p>
-            <textarea id="output"></textarea>
             <a href="#" class="our-history__about">about us</a>
-            
             <div class="social-btn__block">
               <iframe class="social-btn__facebook" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Falexkutkanych.github.io%2FOasis-Restaurant-Kyiv%2F&layout=button_count&size=large&mobile_iframe=true&width=84&height=28&appId" width="99" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
               <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20like%20Oasis%20Kiev%20Restaurant%20#oasiskyiv%20#oasisrestaurantkyiv" data-size="large">Tweet</a>
@@ -448,15 +446,6 @@
       </section>
 
       <div class="buy-food-online" id="buy-food-online">
-        <!-- <section class="benefit-section">
-          <a href="#" class="benefit-section__benefit1">
-            <img src="img/menu-filter/mastercard.svg" alt="">
-            <h3 class="benefit1__title">pay online</h3>
-          </a>
-          <a href="#" class="benefit-section__benefit2"><h3 class="benefit2__title">support</h3></a>
-          <a href="#" class="benefit-section__benefit3"><h3 class="benefit3__title">for order over 900 grn</h3></a>
-          <a href="#" class="benefit-section__benefit4"><h3 class="benefit4__title">bonus program</h3></a>
-        </section> -->
         <aside class="buy-food-online__sidebar">
           <!-- <h3>Choose your favourite meal</h3> -->
           <span class="buy-food-online__filter-heading">Filter our menu</span>
@@ -478,7 +467,7 @@
           </form>
           <div class="buy-food-online__search-block">
             <img src="img/menu-filter/search.svg" alt="" class="search-block__search-icon">
-            <input type="text" name="search" placeholder="Search.." class="search-block__search-field">
+            <input type="text" name="search" id="search-block__search-field" placeholder="Search.." class="search-block__search-field">
           </div>
         </aside>
         <div class="buy-food-online__sort-block">
@@ -504,18 +493,6 @@
           </div>
             <% }; %>
           </script>
-          <ul id="results">
-            output results here.
-          </ul>
-------------------------------------------------------------
-<script type="text/html" id="item_tmpl">
-  <% for ( var i = 0; i < members.length; i++ ) { %>
-    <li id="<%=members[i].id%>" class="<%=(i % 2 == 1 ? " even" : " odd")%>">
-      <%=i+1%>人目 <%=members[i].text%> (from <%=members[i].name%>[ID:<%=members[i].id%>])
-    </li>
-  <% } %>
-</script>
-
         </main>
         <!-- <div class="goods-wrapper__pagination"> -->
           <div class="pagination">
