@@ -132,7 +132,8 @@
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   .our-history {
-    height: 630px;
+    height: 680px;
+    margin-top: 20px;
     &__wrapper {
       flex-direction: column;
     }

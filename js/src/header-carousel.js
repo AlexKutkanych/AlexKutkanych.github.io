@@ -1,3 +1,5 @@
+//header carousel
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -32,3 +34,5 @@ nextSlideBtn.addEventListener("click", function(e){
 	e.preventDefault();
 	plusSlides(1);
 });
+
+

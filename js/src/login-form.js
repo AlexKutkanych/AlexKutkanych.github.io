@@ -1,3 +1,4 @@
+
 //login
 
 var loginNameField = document.querySelector("#login__name-field"),
@@ -6,7 +7,8 @@ var loginNameField = document.querySelector("#login__name-field"),
     loggedUserBlock = document.querySelector(".header-wrapper__logged-user-section"),
     loggedUserGreetings = document.querySelector(".logged-user__greetings"),
     allLoginInputs = document.querySelectorAll(".login-form__wrapper > input"),
-    loginAlertMessages = document.querySelectorAll(".login__alert-message");
+    loginAlertMessages = document.querySelectorAll(".login__alert-message"),
+    allLoginInputsLength = allLoginInputs.length;
 
 //login user
 
@@ -40,9 +42,8 @@ function loginUser(e){
 
 }
 
-
 function clearLoginInputs(){
-  for (var i = 0; i < allLoginInputs.length; i++){
+  for (var i = 0; i < allLoginInputsLength; i++){
     allLoginInputs[i].value = "";
   }
 }

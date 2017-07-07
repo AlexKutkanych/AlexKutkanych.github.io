@@ -19,6 +19,7 @@
   }
 }
 
+
 .registration__form-tabs {
   display: -webkit-flex;
   display: -ms-flex;
@@ -73,7 +74,34 @@
   margin-bottom: 20px;
 }
 
+//signup alert messages
+
+.signup__alert-message {
+  position: absolute;
+  width: 100%;
+  font-size: 11px;
+  color: red;
+  left: 10px;
+  display: none;
+  &_username {
+    top: 35px;
+  }
+  &_email {
+    top: 90px;
+  }
+  &_pass {
+    top: 143px;
+  }
+  &_repeat-pass {
+    top: 200px;
+  }
+}
+
 //sign-up
+
+.signup-form__wrapper {
+  position: relative;
+}
 
 .registration__signup-form {
   height: 250px;
@@ -122,13 +150,16 @@
 
 .registration__login-form {
   display: none;
-  height: 150px;
+  height: 170px;
   padding: 15px 10px;
   background-color: rgba(122, 122, 122, .7);
   border-radius: 20px;
 }
 
 .login-form {
+  &__wrapper {
+    position: relative;
+  }
   &__label {
     display: block;
     float: left;
@@ -146,7 +177,7 @@
     border: 2px solid $text-hover-color;
     text-indent: 10px;
     font-size: 17px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   &__name-field {
     width: 70%;
@@ -156,7 +187,7 @@
     border: 2px solid $text-hover-color;
     text-indent: 10px;
     font-size: 17px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   &__button {
     display: block;
@@ -193,13 +224,75 @@
   }
 }
 
+//login alert message
+
+.login__alert-message {
+  position: absolute;
+  width: 100%;
+  font-size: 11px;
+  color: red;
+  left: 10px;
+  display: none;
+  &_username{
+    top: 35px;
+  }
+  &_pass{
+    top: 91px;
+  }
+} 
+
 #login__remember-me {
-  margin: 0 0 17px 10px;
+  margin: 0 0 13px 10px;
 }
 
 .show-user-form {
     display: block;
 }
+
+.show-alert-message {
+  display: block;
+}
+
+//sent email modal
+
+.header-wrapper__registration-confirm-modal {
+  width: 300px;
+  height: 130px;
+  z-index: 1;
+  background-color: #fff;
+  border: 2px solid grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  &_animate-fading {
+    animation:fading 10s 1;
+  }
+}
+
+@keyframes fading {
+  0% {
+    opacity:1;
+  } 
+  100% {
+    opacity:0;
+  }
+}
+
+.registration-confirm-modal {
+  &__heading {
+    text-align: left;
+    padding: 10px;
+    background-color: $text-hover-color;
+    color: white;
+  }
+  &__text {
+    padding: 12px;
+  }
+}
+
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .header-wrapper__registration_show {

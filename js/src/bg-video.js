@@ -1,4 +1,4 @@
-//video playback
+//main video playback
 
 $(document).ready(function(){
 

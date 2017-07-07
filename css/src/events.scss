@@ -1,19 +1,5 @@
 @import "!variables.scss";
 
-//scrollbar styling
-
-body::-webkit-scrollbar {
-    width: 1em;
-}
-
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px $text-hover-color;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: $text-hover-color;
-  outline: 1px solid $text-hover-color;
-}
 
 .our-events {
   width: 100%;
@@ -100,17 +86,18 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   padding: 0;
   overflow-y: scroll;
+  overflow-x: hidden; 
   text-align: center;
   &::-webkit-scrollbar {
     width: 1em;
     margin-right: 10px;
   }
   &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px $text-hover-color;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
+    background-color: $text-hover-color;
+    outline: 1px solid $text-hover-color;
   }
   &__block {
     width: 45%;
@@ -194,6 +181,17 @@ body::-webkit-scrollbar-thumb {
   display: block;
   margin-top: 10px;
   height: 80%;
+  &::-webkit-scrollbar {
+    width: 1em;
+    margin-right: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px $text-hover-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $text-hover-color;
+    outline: 1px solid $text-hover-color;
+  }
   &__section {
     height: 100%;
     margin-top: 30px;
@@ -230,10 +228,9 @@ body::-webkit-scrollbar-thumb {
     border-bottom: 2px solid red;
     // background-color: $text-hover-color;
   }
-}
-
-.filter-all {
-  border-bottom: 1px solid red;
+  &_active {
+    border-bottom: 2px solid red;
+  }
 }
 
 .event-content__block {

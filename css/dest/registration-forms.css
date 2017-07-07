@@ -57,6 +57,25 @@
   font-size: 17px;
   margin-bottom: 20px; }
 
+.signup__alert-message {
+  position: absolute;
+  width: 100%;
+  font-size: 11px;
+  color: red;
+  left: 10px;
+  display: none; }
+  .signup__alert-message_username {
+    top: 35px; }
+  .signup__alert-message_email {
+    top: 90px; }
+  .signup__alert-message_pass {
+    top: 143px; }
+  .signup__alert-message_repeat-pass {
+    top: 200px; }
+
+.signup-form__wrapper {
+  position: relative; }
+
 .registration__signup-form {
   height: 250px;
   text-align: left;
@@ -95,10 +114,13 @@
 
 .registration__login-form {
   display: none;
-  height: 150px;
+  height: 170px;
   padding: 15px 10px;
   background-color: rgba(122, 122, 122, 0.7);
   border-radius: 20px; }
+
+.login-form__wrapper {
+  position: relative; }
 
 .login-form__label {
   display: block;
@@ -117,7 +139,7 @@
   border: 2px solid #964B00;
   text-indent: 10px;
   font-size: 17px;
-  margin-bottom: 10px; }
+  margin-bottom: 20px; }
 
 .login-form__name-field {
   width: 70%;
@@ -127,7 +149,7 @@
   border: 2px solid #964B00;
   text-indent: 10px;
   font-size: 17px;
-  margin-bottom: 15px; }
+  margin-bottom: 20px; }
 
 .login-form__button {
   display: block;
@@ -159,11 +181,56 @@
   .login-form__forgot-pass:hover {
     color: blue; }
 
+.login__alert-message {
+  position: absolute;
+  width: 100%;
+  font-size: 11px;
+  color: red;
+  left: 10px;
+  display: none; }
+  .login__alert-message_username {
+    top: 35px; }
+  .login__alert-message_pass {
+    top: 91px; }
+
 #login__remember-me {
-  margin: 0 0 17px 10px; }
+  margin: 0 0 13px 10px; }
 
 .show-user-form {
   display: block; }
+
+.show-alert-message {
+  display: block; }
+
+.header-wrapper__registration-confirm-modal {
+  width: 300px;
+  height: 130px;
+  z-index: 1;
+  background-color: #fff;
+  border: 2px solid grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0; }
+  .header-wrapper__registration-confirm-modal_animate-fading {
+    animation: fading 10s 1; }
+
+@keyframes fading {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.registration-confirm-modal__heading {
+  text-align: left;
+  padding: 10px;
+  background-color: #964B00;
+  color: white; }
+
+.registration-confirm-modal__text {
+  padding: 12px; }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .header-wrapper__registration_show {

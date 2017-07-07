@@ -11,6 +11,7 @@ var joinUsBtn = document.querySelector("#join-us__btn"),
     newUserForm = document.querySelector(".registration__signup-form");
 
 
+
 function showJoinUsModal(){
     joinUsModal.classList.toggle("header-wrapper__registration_show");
     joinUsBtn.classList.toggle("join-us__btn_active");
@@ -32,6 +33,12 @@ function showNewUserForm() {
   existingUserForm.classList.remove("show-user-form");
   newUserTabBtn.classList.toggle("user-form-switch__new_active");
   existingUserTabBtn.classList.remove("user-form-switch__existing_active");
+  for (var i = 0; i < signupAlertMesLength; i++){
+    signupAlertMessages[i].classList.remove("show-alert-message");
+  }
+  for (var k = 0; k < loginAlertMesLength; k++){
+    loginAlertMessages[k].classList.remove("show-alert-message");
+  }
 }
 
 function showExistingUserForm() {
@@ -39,6 +46,19 @@ function showExistingUserForm() {
   existingUserTabBtn.classList.toggle("user-form-switch__existing_active");
   newUserForm.classList.remove("show-user-form");
   newUserTabBtn.classList.remove("user-form-switch__new_active");
+  for (var i = 0; i < signupAlertMesLength; i++){
+    signupAlertMessages[i].classList.remove("show-alert-message");
+  }
+  for (var j = 0; j < loginAlertMesLength; j++){
+    loginAlertMessages[j].classList.remove("show-alert-message");
+  }
+}
+
+//clear signup inputs after registration
+function clearSignupInputs(){
+  for (var i = 0; i < allSignupInputsLength; i++){
+    allSignupInputs[i].value = "";
+  }
 }
 
 joinUsBtn.addEventListener("click", showJoinUsModal);
@@ -60,8 +80,12 @@ var signupNameField = document.querySelector("#signup__name-field"),
     regexpEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
     regexpPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/,
     errors = [],
-    allSignupInputs = document.querySelectorAll(".signup-form__wrapper > input");
+    allSignupInputs = document.querySelectorAll(".signup-form__wrapper > input"),
     // allUsers = [];
+    //length variables
+    signupAlertMesLength = signupAlertMessages.length,
+    loginAlertMesLength = loginAlertMessages.length,
+    allSignupInputsLength = allSignupInputs.length;
 
 
 function addNewUser(){
@@ -105,7 +129,7 @@ function validateSignupForm(){
   } 
 
   //validate if paswords are equal
-  if (signupPassField.value !== signupPassRepeatField.value) {
+  if (signupPassField.value !== signupPassRepeatField.value || signupPassRepeatField.value == "") {
     signupAlertMessages[3].classList.add("show-alert-message");
   }
   else {
@@ -123,21 +147,12 @@ function toLocalStorage(e){
      var signedupUser = addNewUser();
     console.log(signedupUser);
      // write to localStorage
-     // for (var i = 0; i < allUsers.length; i++){
        localStorage.setItem("signedupUser", JSON.stringify(signedupUser));
-     // }
 
      showSentEmailModal();
      closeJoinUsModal();
    }
    
-}
-
-//clear signup inputs after registration
-function clearSignupInputs(){
-  for (var i = 0; i < allSignupInputs.length; i++){
-    allSignupInputs[i].value = "";
-  }
 }
 
 function showSentEmailModal(){
@@ -147,3 +162,14 @@ function showSentEmailModal(){
 }
 
 signupBtn.addEventListener("click", toLocalStorage);
+
+
+//prevent enter key press from form submition
+
+function stopEnterKey(e) { 
+  if (e.keyCode == 13)  {
+    return false;
+  } 
+} 
+
+joinUsModal.onkeypress = stopEnterKey;

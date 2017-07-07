@@ -33,9 +33,11 @@ color: #0A5794; cursor: pointer; }
       width: 60px;
       height: 65px;
       float: right;
-      margin-top: 10px;
+      padding: 12px 5px 0;
+      font-weight: bold;
       &:hover {
         cursor: pointer;
+        background-color: lightgoldenrodyellow;
       }
     }
   }

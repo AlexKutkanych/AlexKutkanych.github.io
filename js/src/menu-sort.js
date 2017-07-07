@@ -1,3 +1,5 @@
+//menu sort
+
 var sortBlock = document.querySelector("#sort-block__sorting"),
 	container = document.querySelector(".food-wrapper__result"),
 	contents = document.querySelectorAll(".food-result__price"),

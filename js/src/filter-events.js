@@ -1,54 +1,60 @@
-"use strict";
+//events block - filtering
 
-var filterAll = document.getElementsByClassName("filter-all")[0];
-var filterMenu = document.getElementsByClassName("filter-menu")[0];
-var filterMusic = document.getElementsByClassName("filter-music")[0];
-var events = document.getElementsByClassName("event-content__block");
-var menuEvents = document.getElementsByClassName("event-block__menu");
-var musicEvents = document.getElementsByClassName("event-block__music");
-var otherEvents = document.getElementsByClassName("event-block__other"),
-    filterLink = document.querySelectorAll(".event-filter__link");
+var ourEvents = document.querySelector("#our-events"),
+    filterAll = ourEvents.querySelector(".filter-all"),
+    filterMenu = ourEvents.querySelector(".filter-menu"),
+    filterMusic = ourEvents.querySelector(".filter-music"),
+    events = ourEvents.querySelectorAll(".event-content__block"),
+    menuEvents = ourEvents.querySelectorAll(".event-block__menu"),
+    musicEvents = ourEvents.querySelectorAll(".event-block__music"),
+    otherEvents = ourEvents.querySelectorAll(".event-block__other"),
+    filterLink = ourEvents.querySelectorAll(".event-filter__link"),
+    //events length
+    menuEventsLen = menuEvents.length,
+    musicEventsLen = musicEvents.length,
+    otherEventsLen = otherEvents.length,
+    allEventsLen = events.length;
 
 function showMenuEvents(e){
   e.preventDefault();
-  for (var i = 0; i < musicEvents.length; i++) {
+  for (var i = 0; i < musicEventsLen; i++) {
     musicEvents[i].style.display = "none";
   }
-  for (var j = 0; j < otherEvents.length; j++) {
+  for (var j = 0; j < otherEventsLen; j++) {
     otherEvents[j].style.display = "none";
   }
-  for (var k = 0; k < menuEvents.length; k++) {
+  for (var k = 0; k < menuEventsLen; k++) {
     menuEvents[k].style.display = "block";
   }
-  filterMenu.style.borderBottom = "1px solid red";
-  filterAll.style.borderBottom = "none";
-  filterMusic.style.borderBottom = "none";
+  filterMenu.classList.add("event-filter__link_active");
+  filterAll.classList.remove("event-filter__link_active");
+  filterMusic.classList.remove("event-filter__link_active");
 }
 
 function showMusicEvents(e){
   e.preventDefault();
-  for (var i = 0; i < menuEvents.length; i++) {
+  for (var i = 0; i < menuEventsLen; i++) {
     menuEvents[i].style.display = "none";
   }
-  for (var j = 0; j < otherEvents.length; j++) {
+  for (var j = 0; j < otherEventsLen; j++) {
     otherEvents[j].style.display = "none";
   }
-  for (var k = 0; k < musicEvents.length; k++) {
+  for (var k = 0; k < musicEventsLen; k++) {
     musicEvents[k].style.display = "block";
   }
-  filterMusic.style.borderBottom = "1px solid red";
-  filterMenu.style.borderBottom = "none";
-  filterAll.style.borderBottom = "none";
+  filterMenu.classList.remove("event-filter__link_active");
+  filterAll.classList.remove("event-filter__link_active");
+  filterMusic.classList.add("event-filter__link_active");
 }
 
 function showAllEvents(e){
   e.preventDefault();
-  for (var i = 0; i < events.length; i++) {
+  for (var i = 0; i < allEventsLen; i++) {
     events[i].style.display = "block";
   }
-  filterAll.style.borderBottom = "1px solid red";
-  filterMenu.style.borderBottom = "none";
-  filterMusic.style.borderBottom = "none";
+  filterMenu.classList.remove("event-filter__link_active");
+  filterAll.classList.add("event-filter__link_active");
+  filterMusic.classList.remove("event-filter__link_active");
 }
 
 filterMenu.addEventListener("click", showMenuEvents);

@@ -1,7 +1,9 @@
+//menu pagination
+
 // var resultPage = $("<div class='food-result__page'></div>");
 var resultPage = document.createElement("div");
 resultPage.classList.add("food-result__page");
-//
+
 
 
 (function($){

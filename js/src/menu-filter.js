@@ -1,3 +1,5 @@
+//menu filtering
+
 var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
     buyFoodOnline = document.querySelector(".buy-food-online"),
     buyFoodSidebar = document.querySelector(".buy-food-online__sidebar"),

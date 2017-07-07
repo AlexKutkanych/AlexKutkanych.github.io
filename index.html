@@ -121,7 +121,7 @@
               <input type="password" class="registration-form__field signup-form__pass-repeat-field" id="signup__pass-repeat-field" placeholder="Repeat your password"
                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
                <p class="signup__alert-message signup__alert-message_repeat-pass">* Should be the same as password</p>
-              <button class="signup-form__button" id="signup__btn">Sign up</button>
+              <button type="submit" class="signup-form__button" id="signup__btn">Sign up</button>
             </form>
           </div>
           <!-- login form -->
@@ -134,7 +134,7 @@
               <input type="password" class="registration-form__field login-form__pass-field" id="login__pass-field" placeholder="Password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
               <p class="login__alert-message login__alert-message_pass">* Enter correct password</p>
               <label class="login-form__label-remember" for="login__remember-me">Remember me</label><input type="checkbox" id="login__remember-me">
-              <button class="login-form__button" id="login__btn">Login</button>
+              <button type="submit" class="login-form__button" id="login__btn">Login</button>
               <a href="#" class="login-form__forgot-pass">forgot password</a>
             </form>
           </div>
@@ -545,7 +545,7 @@
               <li class="tabs-heading"><a href="#" class="tab-events__heading tab-active">Events</a></li>
             </ul>
             <div class="tab__content">
-              <div class="news-content">
+              <div class="news-content" id="news-content">
                 <article class="news-content__block">
                   <img src="img/events/summer-terrasse.jpg" alt="summer terrasse" class="news-block__img">
                   <img src="img/events/new-icon.svg" alt="new icon" class="new-icon">
@@ -584,9 +584,9 @@
                   <span class="news-block__posted">Posted month ago</span>
                 </article>
               </div>
-              <section class="event-content show-content">
+              <section class="event-content show-content" id="event-content">
                 <ul>
-                  <li class="event-filter"><a href="#" class="event-filter__link filter-all">All</a></li>
+                  <li class="event-filter"><a href="#" class="event-filter__link event-filter__link_active filter-all">All</a></li>
                   <li class="event-filter"><a href="#" class="event-filter__link filter-menu">Menu</a></li>
                   <li class="event-filter"><a href="#" class="event-filter__link filter-music">Music</a></li>
                 </ul>
