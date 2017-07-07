@@ -2532,21 +2532,21 @@ span.splink {
   cursor: pointer;
 }
 
-.food-result__rating {
-  display: block;
+.food-result__rating-block {
+  display: flex;
   height: 14px;
   font-size: 12px;
   margin: 10px 0 10px 15px;
 }
 
-.food-result__rating-stars-amount {
+.food-result__rating-block_stars-amount {
   display: block;
   height: 100%;
-  width: 66px;
+  width: 14px;
   background-image: url("../img/menu-filter/star-rating.svg");
 }
 
-.food-result__rating:hover {
+.food-result__rating-block:hover {
   color: #964B00;
   cursor: pointer;
 }
