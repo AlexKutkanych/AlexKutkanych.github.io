@@ -6,28 +6,10 @@
     <title>Restaurant Oasis Kyiv</title>
     <link rel="stylesheet" href="css/styles-main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
     <!-- <script type="text/javascript" src="js/google-map-init.js" defer></script> -->
      <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script> -->
-    <!-- <script type="text/javascript" src="js/src/bg-video.js" defer></script>
-    <script type="text/javascript" src="js/src/registration-form.js" defer></script>
-    <script type="text/javascript" src="js/src/login-form.js" defer></script>
-    <script type="text/javascript" src="js/src/mobile-menu.js" defer></script>
-    <script type="text/javascript" src="js/src/tabs.js" defer></script>
-    <script type="text/javascript" src="js/src/filter-events.js" defer></script>
-    <script type="text/javascript" src="js/src/to-top-button.js" defer></script>
-    <script type="text/javascript" src="js/src/menu-filter.js" defer></script>
-    <script type="text/javascript" src="js/src/booking.js" defer></script>
-    <script type="text/javascript" src="js/src/menu-sort.js" defer></script>
-    <script type="text/javascript" src="js/src/jquery.min.js" defer></script>
-    <script type="text/javascript" src="js/src/script.js" defer></script>
-    <script type="text/javascript" src="js/src/menu-pagination.js" defer></script>
-    <script type="text/javascript" src="js/src/search.js" defer></script> -->
-    <!-- <script type="text/javascript" src="js/src/header-carousel.js" defer></script> -->
-    
     <script type="text/javascript" src="js/script.main.js" defer></script>
-   
-    
-    
   </head>
   <body>
     <header class="header" id="main">
@@ -356,6 +338,32 @@
               <p class="booking__alert-message booking__alert-message_table">* select table</p>
             </section>
           </section>
+          <div class="booking-loader"></div>
+          
+          <div class="proceed-booking__modal">
+            <span class="proceed-booking__close-btn"></span>
+            <a href="#" class="booking-section__heading"><h3>Submit your order</h3></a>
+            <div class="proceed-booking__your-booking">
+              <p class="your-booking__heading">Order info:</p>
+              <ul class="your-booking__order-result"></ul>
+            </div>
+            <div class="proceed-booking__content">
+              <p class="your-booking__heading">Enter your contacts:</p>
+              <form action="" method="post" class="signup-form__wrapper">
+              <label class="signup-form__label" for="booking__name-field">
+                <img src="img/header/user.svg" alt="user icon" class="registration__icon">
+              </label>
+              <input type="text" class="registration-form__field" id="booking__name-field" placeholder="Enter name or username" title="From 3 to 20 characters">
+              <p class="signup__alert-message signup__alert-message_username">* Enter from 3 to 20 characters</p>
+              <label class="signup-form__label" for="booking__email-field">
+                <img src="img/header/email.svg" width="20" alt="email icon" class="registration__icon">
+              </label>
+              <input type="email" class="registration-form__field" id="booking__email-field" placeholder="Email" >
+              <p class="signup__alert-message signup__alert-message_email">* Enter correct email, e.g. example@email.com</p>
+              <button type="submit" class="signup-form__button" id="submit-booking__btn">Submit order</button>
+            </form>
+            </div>
+          </div>
         </div>
       </header>
 

@@ -29,6 +29,73 @@ $(document).ready(function(){
 
 });
 
+//proceed booking
+
+var proceedBookingBtn = document.querySelector("#continue-booking"),
+    bookingInfoBlock = document.querySelector(".booking-section__info-block"),
+    bookingTableBlock = document.querySelector(".booking-section__table-block"),
+    bookingLoader = document.querySelector(".booking-loader"),
+    proceedBookingModal = document.querySelector(".proceed-booking__modal");
+
+function proceedBooking(){
+  bookingModalBlock.style.display = "none";
+  setTimeout(showBookingLoader, 1);
+  setTimeout(showProceedBookingModal, 3000);
+}
+
+function showBookingLoader(){
+  bookingLoader.style.display = "block";
+}
+
+function showProceedBookingModal(){
+  bookingLoader.style.display = "none";
+  proceedBookingModal.style.display = "block";
+}
+
+proceedBookingBtn.addEventListener("click", proceedBooking);
+
+//personal info booking
+
+var orderResult = document.querySelector(".your-booking__order-result");
+
+for (var key in orderInfo){
+  var li = document.createElement('li');
+  li.classList.add("order-result__list-item");
+  li.innerHTML += key + ": " + key.value;
+  orderResult.appendChild(li);
+  // console.log(key);
+}
+
+
+//validate
+
+var bookingNameField = document.querySelector("#booking__name-field"),
+    bookingEmailField = document.querySelector("#booking__email-field"),
+    bookingSubmitBtn = document.querySelector("#submit-booking__btn");
+
+function validateBookingSubmition(e){
+  e.preventDefault();
+
+  //validate username
+  if (!regexpUsername.test(bookingNameField.value)) {
+    // signupAlertMessages[0].classList.add("show-alert-message");
+    alert("sdf");
+  } else {
+    // signupAlertMessages[0].classList.remove("show-alert-message");
+  }
+
+  //validate email
+  // if (!regexpEmail.test(bookingEmailField.value)) {
+  //   signupAlertMessages[1].classList.add("show-alert-message");
+  // } else {
+  //   signupAlertMessages[1].classList.remove("show-alert-message");
+  // }
+
+}
+
+bookingSubmitBtn.addEventListener("click", validateBookingSubmition);
+
+
 //booking block
 
 var bookingBtn = document.querySelector("#booking__btn"),
@@ -72,35 +139,37 @@ window.onclick = function(event) {
 
   //obj for booking information
 
-  var orderInfo = {};
+  var orderInfo = {people: '', time: '', date: '',table:''};
 
   function chooseTable(e) {
     if (e.target !== e.currentTarget) {
       var clickedItem = e.target.innerHTML;
       e.target.classList.toggle("table-chosen");
-      console.log("Hello " + clickedItem);
-      orderInfo.table = clickedItem;
-    }
-    e.stopPropagation();
+      
+      //push number of table to array if it was selected
+      
+      if(!e.target.classList.contains("table-chosen")){
+        orderInfo.table = '';
+      } else {
+        orderInfo.table = clickedItem;
+      }
+      // console.log(orderInfo.table);
+    }    
   }
 
   function chooseDate(e) {
     if (e.target !== e.currentTarget) {
       var chosenDate = e.target.innerHTML;
-      e.target.classList.toggle("red");
-      console.log("Hello " + chosenDate);
       var getMonth = document.querySelector("#calendar__month");
       orderInfo.date = getMonth.innerHTML +" "+ chosenDate;
       calendarBtn.innerHTML = orderInfo.date;
     }
-    e.stopPropagation();
   }
 
-
-
-  function choosePeopleAmount(){
+  function orderSubmition(){
     orderInfo.people = selectPeopleAmount.value;
     orderInfo.time = selectTime.value;
+    console.log(orderInfo);
 
     if(orderInfo.people === ''){
       alertMessagePeople.style.display = "block";
@@ -119,6 +188,7 @@ window.onclick = function(event) {
     } else {
       alertMessageTable.style.display = "none";
     }
+    console.log(alertMessageTable);
 
 
     if(calendarBtn.innerHTML === "Select date") {
@@ -131,19 +201,23 @@ window.onclick = function(event) {
 
     if (orderInfo.people !== '' && orderInfo.time !== '' && orderInfo.date !== '' && orderInfo.table !== ''){
       continueBookingBtn.style.display = "block";
-
+        var test = localStorage.setItem("order1", JSON.stringify(orderInfo));
+    
     }
     calendarBlock.classList.remove("info-block__calendar_show");
+
   }
 
 
-console.log(orderInfo);
+
 
 bookingBtn.addEventListener("click", showBookingModal);
-submitBookingBtn.addEventListener("click", choosePeopleAmount);
+submitBookingBtn.addEventListener("click", orderSubmition);
 tables.addEventListener("click", chooseTable);
 closeBookingModalBtn.addEventListener("click", closeBookingModal);
 days.addEventListener("click", chooseDate);
+
+
 
 //booking calendar
 
@@ -156,7 +230,6 @@ function showCalendar(){
 }
 
 calendarBtn.addEventListener("click", showCalendar);
-
 
 
 
@@ -470,6 +543,67 @@ loginBtn.addEventListener("click", loginUser);
 //
 // signupBtn.addEventListener("click", validateSignupForm);
 
+//menu-filter via Resig
+
+// example
+
+  // var test = {
+  //   members:[
+  //   {id:1, name:"hoge", text:"aaaaaaaaaaaaaa"},
+  //   {id:9, name:"fuga", text:"bbbbbbbbbbbbbb"},
+  //   {id:15, name:"hoge", text:"cccccccccccccc"},
+  //   {id:22, name:"fuga", text:"dddddddddddddd"},
+  //   {id:78, name:"hoge", text:"eeeeeeeeeeeeee"},
+  //   {id:876, name:"fuga", text:"ffffffffffffff"},
+  //   {id:1033, name:"hoge", text:"gggggggggggggg"},
+  //   {id:7899, name:"fuga", text:"hhhhhhhhhhhhhh"}
+  //   ]
+  // }; // -> End of dataObject
+
+  // var results = document.getElementById("food-wrapper__result");
+  // results.innerHTML = tmpl("item_tmpl", test);
+
+
+
+  var fullOnlineMenu = [
+    {name: 'Italian Ice-cream', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '35', classCategory: 'food-result__dessert', rating: 5},
+    {name: 'Crostata di Marmellata', desc: 'Home made jam orange tarte', price: '110', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_crostata', rating: 4},
+    {name: 'Semifreddo al Caramello', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '130', classCategory: 'food-result__dessert', classPicture: 'ood-result__pic_semifreddo', rating: 4},
+    {name: 'Red Wine (by glass)', desc: 'Some description of this tasty red wine', price: '55', classCategory: 'food-result__drinks food-result__drinks-alco', classPicture: 'food-result__pic_red-wine', rating: 5},
+    {name: 'Americano', desc: 'Natural black Italian coffee', price: '50', classCategory: 'food-result__drinks food-result__drinks-non-alco', classPicture: 'food-result__pic_americano', rating: 5},
+    {name: 'Spritz Royal', desc: 'Signature refreshing aperitif cocktail of Gin, White Vermouth, Aperol with a dash of Prosecco', price: '55', classCategory: 'food-result__drinks food-result__drinks-alco', classPicture: 'food-result__pic_spritz-royal', rating: 5},
+    {name: 'Negroni', desc: 'A classic aperitif cocktail found in Treviso, Italy consists of Gin, Red Vermouth and Campari', price: '55', classCategory: 'food-result__drinks food-result__drinks-alco', classPicture: 'food-result__pic_negroni', rating: 5},
+    {name: 'Margherita', desc: 'Tomato sauce, Mozzarella Cheese and Basil leaves', price: '120', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_margherita', rating: 3},
+    {name: 'Napoletana', desc: 'Tomato sauce, Mozzarella Cheese, Anchovies and Capers', price: '130', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_napoletana', rating: 5},
+    {name: 'Diavola', desc: 'Tomato sauce, Mozzarella Cheese and Spicy Salami', price: '160', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_diavola', rating: 4},
+    {name: 'Frittura mista di Pesce', desc: 'Deep fried Prawns, Anchovies, Squid and Zucchini', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_frittura', rating: 5},
+    {name: 'Verdure', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '150', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_verdure', rating: 5},
+    {name: 'Lasagna', desc: 'Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese', price: '70', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_lasagna', rating: 5},
+    {name: 'Tortelli di Salsiccia', desc: 'Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce', price: '80', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_tortelli', rating: 5},
+    {name: 'Spaghetti ai Frutti di Mare', desc: 'Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce', price: '130', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_spaghetti', rating: 5},
+    {name: 'Farro di Mare', desc: 'Steamed Spelt with Squid,Prawns, Mussels &amp; Tomatoes, with Olive Oil, Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_farro', rating: 5},
+    {name: 'Minestrone di verdure', desc: 'Hearty Vegetable soup', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_minestrone', rating: 5},
+    {name: 'Zuppa di pesce', desc: 'Seafood soup with Prawns, Squids, Clams &amp; Mussels, served with toasted bread', price: '75', classCategory: 'food-result_soup', classPicture: 'food-result__pic_zuppa-di-pesce', rating: 5},
+    {name: 'Italian Ice-cream Big', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: '', rating: 4},
+    {name: 'Italian Sorbet', desc: 'Orange, Coconut, Strawberry flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_sorbet', rating: 2},
+    {name: 'Panna Cotta', desc: 'Italian Custard Cream with Caramel', price: '70', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_panna-cotta', rating: 5},
+    {name: 'Crème Brulee', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '75', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_creme-brulee', rating: 5},
+    {name: 'Tiramisu', desc: 'All-time favourite', price: '80', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tiramisu', rating: 5},
+    {name: 'Tortino caldo di cioccolato', desc: 'Melting chocolate cake', price: '95', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tortino', rating: 3},
+    {name: 'Il Castagnaccio', desc: 'Classic Chestnut Tuscan Dessert. A real classic back home', price: '100', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_castagnaccio', rating: 5}
+  ];
+
+  localStorage.setItem("fullOnlineMenu", JSON.stringify(fullOnlineMenu));
+  var onlineMenuData = localStorage.getItem("fullOnlineMenu");
+  var onlineMenu = JSON.parse(onlineMenuData);
+
+  //get to html via resig template
+  
+  var results = document.getElementById("food-wrapper__result");
+    results.innerHTML = tmpl("mypage", {data: onlineMenu});
+    
+
+
 //menu filtering
 
 var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
@@ -553,9 +687,9 @@ inputPasta.addEventListener("click", function(){
 //   }
 // }
 
-//menu pagination
+// //menu pagination
 
-// var resultPage = $("<div class='food-result__page'></div>");
+// // var resultPage = $("<div class='food-result__page'></div>");
 var resultPage = document.createElement("div");
 resultPage.classList.add("food-result__page");
 
@@ -565,7 +699,7 @@ resultPage.classList.add("food-result__page");
     $.fn.extend({
         MyPagination: function(options) {
             var defaults = {
-                height: 900,
+                height: 400,
                 fadeSpeed: 400
             };
             var options = $.extend(defaults, options);
@@ -670,6 +804,7 @@ jQuery(window).load(function() {
 });
 
 
+
 //menu search food
 
 var searchFoodInput = document.querySelector("#search-block__search-field");
@@ -677,17 +812,26 @@ var searchFoodInput = document.querySelector("#search-block__search-field");
 
 function searchFood() {
     var filter = searchFoodInput.value.toUpperCase();
+    var foodResultPage = document.querySelectorAll(".food-result__page");
     var foodCard = document.querySelectorAll(".food-result");
-    var foodCardLgth = foodCard.length;
-    for (i = 0; i < foodCardLgth; i++) {
+    console.log(foodResultPage.length);
+    var foodCardLen = foodCard.length;
+    var test = 6;
+    for (i = 0; i < foodCardLen; i++) {
     	//search by name
         var foodName = foodCard[i].querySelector(".food-result__name");
         var foodDesc = foodCard[i].querySelector(".food-result__desc");
         var foodPrice = foodCard[i].querySelector(".food-result__price");
         if (foodName.innerHTML.toUpperCase().indexOf(filter) > -1 || foodPrice.innerHTML.toUpperCase().indexOf(filter) > -1) {
             foodCard[i].style.display = "";
+            // foodResultPage[0].appendChild(foodCard[i]); 
+            // if(foodCard.length > test) {
+            //    foodResultPage[1].appendChild(foodCard[test++]); 
+            // }
+            
         } else {
             foodCard[i].style.display = "none";
+            // foodCard[i].style.display = "none";
         }
         //search by desc
         
@@ -696,67 +840,6 @@ function searchFood() {
 }
 
 searchFoodInput.addEventListener("keyup", searchFood);
-//menu-filter via Resig
-
-// example
-
-  // var test = {
-  //   members:[
-  //   {id:1, name:"hoge", text:"aaaaaaaaaaaaaa"},
-  //   {id:9, name:"fuga", text:"bbbbbbbbbbbbbb"},
-  //   {id:15, name:"hoge", text:"cccccccccccccc"},
-  //   {id:22, name:"fuga", text:"dddddddddddddd"},
-  //   {id:78, name:"hoge", text:"eeeeeeeeeeeeee"},
-  //   {id:876, name:"fuga", text:"ffffffffffffff"},
-  //   {id:1033, name:"hoge", text:"gggggggggggggg"},
-  //   {id:7899, name:"fuga", text:"hhhhhhhhhhhhhh"}
-  //   ]
-  // }; // -> End of dataObject
-
-  // var results = document.getElementById("food-wrapper__result");
-  // results.innerHTML = tmpl("item_tmpl", test);
-
-
-
-  var fullOnlineMenu = [
-    {name: 'Italian Ice-cream', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '35', classCategory: 'food-result__dessert', rating: 5},
-    {name: 'Crostata di Marmellata', desc: 'Home made jam orange tarte', price: '110', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_crostata', rating: 4},
-    {name: 'Semifreddo al Caramello', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '130', classCategory: 'food-result__dessert', classPicture: 'ood-result__pic_semifreddo', rating: 4},
-    {name: 'Red Wine (by glass)', desc: 'Some description of this tasty red wine', price: '55', classCategory: 'food-result__drinks food-result__drinks-alco', classPicture: 'food-result__pic_red-wine', rating: 5},
-    {name: 'Americano', desc: 'Natural black Italian coffee', price: '50', classCategory: 'food-result__drinks food-result__drinks-non-alco', classPicture: 'food-result__pic_americano', rating: 5},
-    {name: 'Spritz Royal', desc: 'Signature refreshing aperitif cocktail of Gin, White Vermouth, Aperol with a dash of Prosecco', price: '55', classCategory: 'food-result__drinks food-result__drinks-alco', classPicture: 'food-result__pic_spritz-royal', rating: 5},
-    {name: 'Negroni', desc: 'A classic aperitif cocktail found in Treviso, Italy consists of Gin, Red Vermouth and Campari', price: '55', classCategory: 'food-result__drinks food-result__drinks-alco', classPicture: 'food-result__pic_negroni', rating: 5},
-    {name: 'Margherita', desc: 'Tomato sauce, Mozzarella Cheese and Basil leaves', price: '120', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_margherita', rating: 3},
-    {name: 'Napoletana', desc: 'Tomato sauce, Mozzarella Cheese, Anchovies and Capers', price: '130', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_napoletana', rating: 5},
-    {name: 'Diavola', desc: 'Tomato sauce, Mozzarella Cheese and Spicy Salami', price: '160', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_diavola', rating: 4},
-    {name: 'Frittura mista di Pesce', desc: 'Deep fried Prawns, Anchovies, Squid and Zucchini', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_frittura', rating: 5},
-    {name: 'Verdure', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '150', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_verdure', rating: 5},
-    {name: 'Lasagna', desc: 'Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese', price: '70', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_lasagna', rating: 5},
-    {name: 'Tortelli di Salsiccia', desc: 'Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce', price: '80', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_tortelli', rating: 5},
-    {name: 'Spaghetti ai Frutti di Mare', desc: 'Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce', price: '130', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_spaghetti', rating: 5},
-    {name: 'Farro di Mare', desc: 'Steamed Spelt with Squid,Prawns, Mussels &amp; Tomatoes, with Olive Oil, Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_farro', rating: 5},
-    {name: 'Minestrone di verdure', desc: 'Hearty Vegetable soup', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_minestrone', rating: 5},
-    {name: 'Zuppa di pesce', desc: 'Seafood soup with Prawns, Squids, Clams &amp; Mussels, served with toasted bread', price: '75', classCategory: 'food-result_soup', classPicture: 'food-result__pic_zuppa-di-pesce', rating: 5},
-    {name: 'Italian Ice-cream Big', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: '', rating: 4},
-    {name: 'Italian Sorbet', desc: 'Orange, Coconut, Strawberry flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_sorbet', rating: 2},
-    {name: 'Panna Cotta', desc: 'Italian Custard Cream with Caramel', price: '70', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_panna-cotta', rating: 5},
-    {name: 'Crème Brulee', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '75', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_creme-brulee', rating: 5},
-    {name: 'Tiramisu', desc: 'All-time favourite', price: '80', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tiramisu', rating: 5},
-    {name: 'Tortino caldo di cioccolato', desc: 'Melting chocolate cake', price: '95', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tortino', rating: 3},
-    {name: 'Il Castagnaccio', desc: 'Classic Chestnut Tuscan Dessert. A real classic back home', price: '100', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_castagnaccio', rating: 5}
-  ];
-
-  localStorage.setItem("fullOnlineMenu", JSON.stringify(fullOnlineMenu));
-  var onlineMenuData = localStorage.getItem("fullOnlineMenu");
-  var onlineMenu = JSON.parse(onlineMenuData);
-
-  //get to html via resig template
-  
-  var results = document.getElementById("food-wrapper__result");
-    results.innerHTML = tmpl("mypage", {data: onlineMenu});
-    
-
-
 //menu sort
 
 var sortBlock = document.querySelector("#sort-block__sorting"),
@@ -1068,6 +1151,7 @@ function stopEnterKey(e) {
 joinUsModal.onkeypress = stopEnterKey;
 //PAGINATION
 
+
 // (function($){
 //     $.fn.extend({
 //         MyPagination: function(options) {
@@ -1318,7 +1402,6 @@ joinUsModal.onkeypress = stopEnterKey;
 // function showSentEmailModal(){
 //
 // }
-
 //social btns settings
 
 //twitter btn

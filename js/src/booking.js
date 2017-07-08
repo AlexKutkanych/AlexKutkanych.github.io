@@ -41,35 +41,37 @@ window.onclick = function(event) {
 
   //obj for booking information
 
-  var orderInfo = {};
+  var orderInfo = {people: '', time: '', date: '',table:''};
 
   function chooseTable(e) {
     if (e.target !== e.currentTarget) {
       var clickedItem = e.target.innerHTML;
       e.target.classList.toggle("table-chosen");
-      console.log("Hello " + clickedItem);
-      orderInfo.table = clickedItem;
-    }
-    e.stopPropagation();
+      
+      //push number of table to array if it was selected
+      
+      if(!e.target.classList.contains("table-chosen")){
+        orderInfo.table = '';
+      } else {
+        orderInfo.table = clickedItem;
+      }
+      // console.log(orderInfo.table);
+    }    
   }
 
   function chooseDate(e) {
     if (e.target !== e.currentTarget) {
       var chosenDate = e.target.innerHTML;
-      e.target.classList.toggle("red");
-      console.log("Hello " + chosenDate);
       var getMonth = document.querySelector("#calendar__month");
       orderInfo.date = getMonth.innerHTML +" "+ chosenDate;
       calendarBtn.innerHTML = orderInfo.date;
     }
-    e.stopPropagation();
   }
 
-
-
-  function choosePeopleAmount(){
+  function orderSubmition(){
     orderInfo.people = selectPeopleAmount.value;
     orderInfo.time = selectTime.value;
+    console.log(orderInfo);
 
     if(orderInfo.people === ''){
       alertMessagePeople.style.display = "block";
@@ -88,6 +90,7 @@ window.onclick = function(event) {
     } else {
       alertMessageTable.style.display = "none";
     }
+    console.log(alertMessageTable);
 
 
     if(calendarBtn.innerHTML === "Select date") {
@@ -100,19 +103,23 @@ window.onclick = function(event) {
 
     if (orderInfo.people !== '' && orderInfo.time !== '' && orderInfo.date !== '' && orderInfo.table !== ''){
       continueBookingBtn.style.display = "block";
-
+        var test = localStorage.setItem("order1", JSON.stringify(orderInfo));
+    
     }
     calendarBlock.classList.remove("info-block__calendar_show");
+
   }
 
 
-console.log(orderInfo);
+
 
 bookingBtn.addEventListener("click", showBookingModal);
-submitBookingBtn.addEventListener("click", choosePeopleAmount);
+submitBookingBtn.addEventListener("click", orderSubmition);
 tables.addEventListener("click", chooseTable);
 closeBookingModalBtn.addEventListener("click", closeBookingModal);
 days.addEventListener("click", chooseDate);
+
+
 
 //booking calendar
 
@@ -125,6 +132,5 @@ function showCalendar(){
 }
 
 calendarBtn.addEventListener("click", showCalendar);
-
 
 

@@ -1,6 +1,6 @@
-//menu pagination
+// //menu pagination
 
-// var resultPage = $("<div class='food-result__page'></div>");
+// // var resultPage = $("<div class='food-result__page'></div>");
 var resultPage = document.createElement("div");
 resultPage.classList.add("food-result__page");
 
@@ -10,7 +10,7 @@ resultPage.classList.add("food-result__page");
     $.fn.extend({
         MyPagination: function(options) {
             var defaults = {
-                height: 900,
+                height: 400,
                 fadeSpeed: 400
             };
             var options = $.extend(defaults, options);
@@ -113,4 +113,5 @@ resultPage.classList.add("food-result__page");
 jQuery(window).load(function() {
     $('#food-wrapper__result').MyPagination({height: 2000, width: 800, fadeSpeed: 0});
 });
+
 
