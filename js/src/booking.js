@@ -30,6 +30,7 @@ function closeBookingModal(){
     bookingBtn.classList.remove("booking__btn_active");
     bookingModal.style.display = "none";
     enableScroll();
+    clearOrder();
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -71,7 +72,7 @@ window.onclick = function(event) {
   function orderSubmition(){
     orderInfo.people = selectPeopleAmount.value;
     orderInfo.time = selectTime.value;
-    console.log(orderInfo);
+    var orderInfoSave = localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
 
     if(orderInfo.people === ''){
       alertMessagePeople.style.display = "block";
@@ -107,11 +108,7 @@ window.onclick = function(event) {
     
     }
     calendarBlock.classList.remove("info-block__calendar_show");
-
   }
-
-
-
 
 bookingBtn.addEventListener("click", showBookingModal);
 submitBookingBtn.addEventListener("click", orderSubmition);

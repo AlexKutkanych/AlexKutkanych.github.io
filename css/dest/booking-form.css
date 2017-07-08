@@ -12,8 +12,11 @@
   width: 95%;
   height: 500px;
   position: absolute;
-  top: 75px;
-  right: 10px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
   background-color: #fff;
   border-radius: 20px;
   z-index: 1;
@@ -47,7 +50,8 @@
 .booking-section__heading {
   display: block;
   margin: 10px;
-  color: #964B00; }
+  color: #964B00;
+  text-align: center; }
 
 .booking-section__close-btn {
   position: absolute;
@@ -135,7 +139,8 @@
 .info-block__submit-booking {
   width: 80%;
   margin: auto;
-  margin-top: 20px; }
+  margin-top: 20px;
+  line-height: 28px; }
   .info-block__submit-booking:hover {
     cursor: pointer;
     opacity: .5; }
@@ -145,7 +150,8 @@
   width: 80%;
   margin: auto;
   margin-top: 10px;
-  display: none; }
+  display: none;
+  line-height: 28px; }
   .info-block__continue-booking:hover {
     cursor: pointer;
     opacity: .5; }
@@ -292,6 +298,116 @@
 .table-chosen {
   background-color: red;
   color: white; }
+
+.proceed-booking__modal {
+  display: none;
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  z-index: 2;
+  border-radius: 20px;
+  border: 2px solid red; }
+
+.proceed-booking__close-btn {
+  position: absolute;
+  display: block;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  background-image: url(../img/header/cancel-black.svg);
+  background-repeat: no-repeat;
+  transition: transform .5s; }
+  .proceed-booking__close-btn:hover {
+    background-image: url(../img/header/cancel-hover.svg);
+    cursor: pointer;
+    transform: rotate(90deg); }
+
+.proceed-booking__your-booking {
+  width: 80%;
+  margin: 10px auto; }
+
+.your-booking__heading {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px; }
+
+.your-booking__order-result {
+  margin-left: 10px; }
+
+.order-result__list-item {
+  padding: 5px;
+  list-style-type: circle; }
+  .order-result__list-item:hover {
+    color: red;
+    cursor: pointer; }
+
+.switch-user__new, .switch-user__existing {
+  border-radius: 5px;
+  color: #964B00;
+  font-size: 20px;
+  font-family: "PT Sans Caption", sans-serif;
+  text-align: center;
+  padding: 5px 10px; }
+  .switch-user__new:hover, .switch-user__existing:hover {
+    background-color: #964B00;
+    color: #fff; }
+
+.switch-user__active {
+  background-color: #964B00;
+  color: #fff; }
+
+.proceed-booking__content {
+  width: 76%;
+  margin: auto; }
+
+.proceed-booking__alert-message {
+  position: absolute;
+  font-size: 12px;
+  color: red;
+  left: 10px;
+  display: none; }
+  .proceed-booking__alert-message_email {
+    top: 90px; }
+  .proceed-booking__alert-message_username {
+    top: 35px; }
+
+.booking-loader {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #964B00;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear 5; }
+  .booking-loader_show {
+    display: block; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .header-wrapper__booking-section {

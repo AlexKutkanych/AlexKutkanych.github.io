@@ -304,15 +304,15 @@
       cursor: pointer;
     }
   }
-  &__rating {
-    display: block;
+  &__rating-block {
+    display: flex;
     height: 14px;
     font-size: 12px;
     margin: 10px 0 10px 15px;
-    &-stars-amount {
+    &_stars-amount {
       display: block;
       height:100%;
-      width: 66px;
+      width: 14px;
       background-image: url("../img/menu-filter/star-rating.svg");
     }
     &:hover {

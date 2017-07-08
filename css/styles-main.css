@@ -416,7 +416,7 @@ li {
 }
 
 .proceed-booking__modal {
-  display: block;
+  display: none;
   width: 400px;
   height: 500px;
   position: absolute;
@@ -499,6 +499,22 @@ li {
 .proceed-booking__content {
   width: 76%;
   margin: auto;
+}
+
+.proceed-booking__alert-message {
+  position: absolute;
+  font-size: 12px;
+  color: red;
+  left: 10px;
+  display: none;
+}
+
+.proceed-booking__alert-message_email {
+  top: 90px;
+}
+
+.proceed-booking__alert-message_username {
+  top: 35px;
 }
 
 .booking-loader {
