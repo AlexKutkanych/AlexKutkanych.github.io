@@ -23,9 +23,25 @@
   box-shadow: 2px 2px 0 4px #000;
   text-align: center;
   font-family: "PT Sans Caption", sans-serif;
-  display: none; }
+  display: none;
+  animation: .7s fadeIn 1;
+  animation-timing-function: linear; }
   .header-wrapper__booking-section_show {
     display: block; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: -300px; }
+  30% {
+    opacity: .25;
+    top: -200px; }
+  70% {
+    opacity: .75;
+    top: -100px; }
+  100% {
+    opacity: 1;
+    top: 0; } }
 
 .booking-section__modal {
   display: none;
@@ -303,7 +319,7 @@
   display: none;
   width: 400px;
   height: 500px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -312,7 +328,10 @@
   background-color: #fff;
   z-index: 2;
   border-radius: 20px;
-  border: 2px solid red; }
+  border: 2px solid red;
+  animation: .1s showModal linear 1; }
+  .proceed-booking__modal_show {
+    display: block; }
 
 .proceed-booking__close-btn {
   position: absolute;
@@ -334,6 +353,20 @@
   width: 80%;
   margin: 10px auto; }
 
+@keyframes showModal {
+  0% {
+    opacity: 0;
+    left: -200px; }
+  25% {
+    opacity: .25;
+    left: -100px; }
+  50% {
+    opacity: .5;
+    left: -50px; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+
 .your-booking__heading {
   margin-bottom: 10px;
   font-weight: bold;
@@ -348,21 +381,6 @@
   .order-result__list-item:hover {
     color: red;
     cursor: pointer; }
-
-.switch-user__new, .switch-user__existing {
-  border-radius: 5px;
-  color: #964B00;
-  font-size: 20px;
-  font-family: "PT Sans Caption", sans-serif;
-  text-align: center;
-  padding: 5px 10px; }
-  .switch-user__new:hover, .switch-user__existing:hover {
-    background-color: #964B00;
-    color: #fff; }
-
-.switch-user__active {
-  background-color: #964B00;
-  color: #fff; }
 
 .proceed-booking__content {
   width: 76%;
@@ -381,37 +399,95 @@
 
 .booking-loader {
   display: none;
+  z-index: 3;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   margin: auto;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #964B00;
-  width: 50px;
-  height: 50px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear 5; }
+  background-image: url(../img/header/pizza-loader.png);
+  width: 300px;
+  height: 300px;
+  -webkit-animation: spin 2s linear 3;
+  animation: spin 3s linear 3;
+  overflow: hidden; }
   .booking-loader_show {
     display: block; }
 
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); }
+  20% {
+    -webkit-transform: rotate(72deg); }
+  40% {
+    -webkit-transform: rotate(144deg); }
+  60% {
+    -webkit-transform: rotate(216deg); }
+  80% {
+    -webkit-transform: rotate(288deg); }
   100% {
     -webkit-transform: rotate(360deg); } }
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg); }
+  20% {
+    -webkit-transform: rotate(72deg); }
+  40% {
+    -webkit-transform: rotate(144deg); }
+  60% {
+    -webkit-transform: rotate(216deg); }
+  80% {
+    -webkit-transform: rotate(288deg); }
   100% {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg); } }
+
+.proceed-booking__confirm-modal {
+  width: 300px;
+  height: 160px;
+  z-index: 1;
+  background-color: white;
+  border: 2px solid grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+  opacity: 0; }
+  .proceed-booking__confirm-modal_animate-fading {
+    animation: fading 10s 1;
+    display: block; }
+
+@keyframes fading {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.booking-confirm-modal__heading {
+  background-color: #964B00;
+  color: white;
+  text-align: center;
+  padding: 5px; }
+
+.booking-confirm-modal__msg {
+  color: #964B00;
+  padding: 10px; }
+
+.booking-confirm-modal__text {
+  display: block;
+  float: right;
+  color: #964B00;
+  padding: 10px;
+  text-align: left; }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .header-wrapper__booking-section {
-    height: 870px; }
+    height: 870px;
+    top: 15px;
+    bottom: -360px; }
   .booking-section__info-block {
     height: 30%;
     display: block;
@@ -509,8 +585,10 @@
     width: 13%;
     height: 130px; }
   .table-scheme__table_table4 {
+    width: 23%;
     height: 90px; }
   .table-scheme__table_table5 {
+    width: 23%;
     height: 90px; }
   .table-scheme__table_table6 {
     width: 13%;
@@ -525,4 +603,8 @@
   .table-scheme__table_table10 {
     width: 15%; }
   -description {
-    display: none; } }
+    display: none; }
+  .proceed-booking__modal {
+    width: 90%; }
+  .proceed-booking__content {
+    width: 95%; } }

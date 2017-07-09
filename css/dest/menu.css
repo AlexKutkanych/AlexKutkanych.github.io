@@ -33,7 +33,7 @@
       margin-top: 3px; }
 
 .social-btn__block {
-  width: 165px;
+  width: 210px;
   display: flex;
   justify-content: space-between;
   margin: 20px auto 10px; }
@@ -106,7 +106,8 @@
   border-radius: 50%;
   z-index: 10;
   background: #666 url(../img/header/to-top-arrow.svg) 10px 10px no-repeat;
-  transform: rotate(90deg); }
+  transform: rotate(90deg);
+  transition: .5s; }
   .hide-food-online-btn:hover {
     background-color: #964B00;
     cursor: pointer; }

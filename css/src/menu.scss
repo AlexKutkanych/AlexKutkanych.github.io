@@ -41,7 +41,7 @@
   }
 
 .social-btn__block {
-  width: 165px;
+  width: 210px;
   display: flex;
   justify-content: space-between;
   margin: 20px auto 10px; 
@@ -127,6 +127,7 @@
   z-index: 10;
   background: $menu-text-color url(../img/header/to-top-arrow.svg) 10px 10px no-repeat;
   transform: rotate(90deg);
+  transition: .5s;
   &:hover {
     background-color: $text-hover-color;
     cursor: pointer;
