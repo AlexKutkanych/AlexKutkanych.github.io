@@ -1,6 +1,8 @@
 //to top button
 
-window.onscroll = function(){scrollScreen();};
+window.onscroll = function(){
+	scrollScreen();
+}
 
 var html = document.querySelector("html");
 var toTopButton = document.querySelector("#to-top-button");
@@ -12,3 +14,5 @@ function scrollScreen(){
     toTopButton.style.display = "none";
   }
 }
+
+

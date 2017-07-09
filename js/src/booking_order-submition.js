@@ -4,13 +4,14 @@ var proceedBookingBtn = document.querySelector("#continue-booking"),
     bookingInfoBlock = document.querySelector(".booking-section__info-block"),
     bookingTableBlock = document.querySelector(".booking-section__table-block"),
     bookingLoader = document.querySelector(".booking-loader"),
-    proceedBookingModal = document.querySelector(".proceed-booking__modal"),
+    proceedBookingModal = document.querySelector("#proceed-booking__modal"),
     proceedBookingCloseBtn = document.querySelector(".proceed-booking__close-btn");
 
 function proceedBooking(){
   bookingModalBlock.classList.remove("header-wrapper__booking-section_show");
   setTimeout(showBookingLoader, 1);
   setTimeout(showProceedBookingModal, 3000);
+  orderSubmition();
 }
 
 function showBookingLoader(){
@@ -19,10 +20,12 @@ function showBookingLoader(){
 
 function showProceedBookingModal(){
   bookingLoader.style.display = "none";
-  proceedBookingModal.style.display = "block";
+  proceedBookingModal.classList.add("proceed-booking__modal_show");
   
   // var orderInfoFromLs = localStorage.getItem("orderInfo");
 // var orderInfoParse = JSON.parse(orderInfoFromLs);
+
+
 
 for (var key in orderInfo){
     var li = document.createElement('li');
@@ -33,9 +36,10 @@ for (var key in orderInfo){
 }
 
 function closeProceedBookingModal(){
-  proceedBookingModal.style.display = "none";
+  proceedBookingModal.classList.remove("proceed-booking__modal_show");
   bookingBtn.classList.remove("booking__btn_active");
   bookingModal.style.display = "none";
+  orderResult.innerHTML = "";
 }
 
 proceedBookingBtn.addEventListener("click", proceedBooking);
@@ -53,9 +57,7 @@ var bookingNameField = document.querySelector("#proceed-booking__name-field"),
     bookingSubmitBtn = document.querySelector("#submit-booking__btn"),
     bookingAlertMessages = document.querySelectorAll(".proceed-booking__alert-message");
 
-function validateBookingSubmition(e){
-  e.preventDefault();
-
+function validateBookingSubmition(){
   //validate username
   if (!regexpUsername.test(bookingNameField.value)) {
     bookingAlertMessages[0].classList.add("show-alert-message");
@@ -69,8 +71,23 @@ function validateBookingSubmition(e){
   } else {
     bookingAlertMessages[1].classList.remove("show-alert-message");
   }
-
 }
 
-bookingSubmitBtn.addEventListener("click", validateBookingSubmition);
+function submitBooking(e){
+  e.preventDefault();
+  validateBookingSubmition();
+
+  closeProceedBookingModal();
+  showBookingConfirmation();
+}
+
+//show booking confirmation modal 
+var bookingConfirmationModal = document.querySelector(".proceed-booking__confirm-modal");
+
+function showBookingConfirmation(){
+    bookingConfirmationModal.classList.add("proceed-booking__confirm-modal_animate-fading");
+}
+
+bookingSubmitBtn.addEventListener("click", submitBooking);
+
 

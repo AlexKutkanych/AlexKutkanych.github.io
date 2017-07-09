@@ -10,6 +10,12 @@
     <!-- <script type="text/javascript" src="js/google-map-init.js" defer></script> -->
      <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script> -->
     <script type="text/javascript" src="js/script.main.js" defer></script>
+    <!-- <script type="text/javascript" src="js/src/bg-video.js" defer></script>
+    <script type="text/javascript" src="js/src/booking.js" defer></script>
+    <script type="text/javascript" src="js/src/booking_order-submition.js" defer></script>
+    <script type="text/javascript" src="js/src/disable-scroll.js" defer></script>
+    <script type="text/javascript" src="js/src/header-carousel.js" defer></script>
+    <script type="text/javascript" src="js/src/to-top-button.js" defer></script> -->
 
   </head>
   <body>
@@ -340,7 +346,8 @@
             </section>
           </section>
           <div class="booking-loader"></div>
-          <div class="proceed-booking__modal">
+        </div>
+        <div class="proceed-booking__modal" id="proceed-booking__modal">
             <span class="proceed-booking__close-btn"></span>
             <a href="#" class="booking-section__heading"><h3>Submit your order</h3></a>
             <div class="proceed-booking__your-booking">
@@ -362,10 +369,15 @@
               <p class="proceed-booking__alert-message proceed-booking__alert-message_email">* Enter correct email, e.g. example@email.com</p>
               <button type="submit" class="signup-form__button" id="submit-booking__btn">Submit order</button>
             </form>
-            </div>
           </div>
         </div>
+         <div class="proceed-booking__confirm-modal">
+            <h3 class="booking-confirm-modal__heading">Thank you for your order!</h3>
+            <p class="booking-confirm-modal__msg">We are looking forward to your visit! Have a nice day!</p>
+            <p class="booking-confirm-modal__text">With love, <br>Your Oasis Team.</p>
+          </div>
       </header>
+
 
       <!-- main video -->
 

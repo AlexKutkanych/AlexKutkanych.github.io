@@ -425,7 +425,7 @@
   display: none;
   width: 400px;
   height: 500px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -508,27 +508,6 @@
   cursor: pointer;
 }
 
-.switch-user__new,
-.switch-user__existing {
-  border-radius: 5px;
-  color: #964B00;
-  font-size: 20px;
-  font-family: "PT Sans Caption", sans-serif;
-  text-align: center;
-  padding: 5px 10px;
-}
-
-.switch-user__new:hover,
-.switch-user__existing:hover {
-  background-color: #964B00;
-  color: #fff;
-}
-
-.switch-user__active {
-  background-color: #964B00;
-  color: #fff;
-}
-
 .proceed-booking__content {
   width: 76%;
   margin: auto;
@@ -564,6 +543,7 @@
   height: 300px;
   -webkit-animation: spin 2s linear 3;
   animation: spin 3s linear 3;
+  overflow: hidden;
 }
 
 .booking-loader_show {
@@ -620,6 +600,56 @@
   100% {
     -webkit-transform: rotate(360deg);
   }
+}
+
+.proceed-booking__confirm-modal {
+  width: 300px;
+  height: 160px;
+  z-index: 1;
+  background-color: white;
+  border: 2px solid grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+  opacity: 0;
+}
+
+.proceed-booking__confirm-modal_animate-fading {
+  animation: fading 10s 1;
+  display: block;
+}
+
+@keyframes fading {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.booking-confirm-modal__heading {
+  background-color: #964B00;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+.booking-confirm-modal__msg {
+  color: #964B00;
+  padding: 10px;
+}
+
+.booking-confirm-modal__text {
+  display: block;
+  float: right;
+  color: #964B00;
+  padding: 10px;
+  text-align: left;
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
@@ -1597,7 +1627,7 @@ span.splink {
 .header {
   width: 100%;
   color: #964B00;
-  height: 76px;
+  height: 85px;
   font-family: "PT Sans Caption", sans-serif;
 }
 
@@ -1625,7 +1655,7 @@ span.splink {
   width: 60px;
   height: 65px;
   float: right;
-  padding: 12px 5px 0;
+  padding: 21px 5px 0;
   font-weight: bold;
 }
 
@@ -3096,7 +3126,7 @@ span.splink {
 }
 
 .social-btn__block {
-  width: 165px;
+  width: 210px;
   display: flex;
   justify-content: space-between;
   margin: 20px auto 10px;

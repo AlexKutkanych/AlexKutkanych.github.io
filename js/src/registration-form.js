@@ -145,7 +145,7 @@ function toLocalStorage(e){
    regexpPassword.test(signupPassField.value) && regexpPassword.test(signupPassRepeatField.value)
    && signupPassField.value === signupPassRepeatField.value) {
      var signedupUser = addNewUser();
-    console.log(signedupUser);
+
      // write to localStorage
        localStorage.setItem("signedupUser", JSON.stringify(signedupUser));
 

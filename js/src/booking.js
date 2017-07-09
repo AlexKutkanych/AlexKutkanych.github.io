@@ -14,8 +14,8 @@ var bookingBtn = document.querySelector("#booking__btn"),
     alertMessageDate = document.querySelector(".booking__alert-message_date"),
     alertMessageTime = document.querySelector(".booking__alert-message_time"),
     alertMessageTable = document.querySelector(".booking__alert-message_table"),
-    days = document.querySelector(".calendar__days");
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+    days = document.querySelector(".calendar__days"),
+    keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
 
 function showBookingModal(){
@@ -30,15 +30,15 @@ function closeBookingModal(){
     bookingBtn.classList.remove("booking__btn_active");
     bookingModal.style.display = "none";
     enableScroll();
-    clearOrder();
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == bookingModal) {
-        closeBookingModal();
+      closeBookingModal();
+      closeProceedBookingModal();
     }
-}
+};
 
   //obj for booking information
 
@@ -48,16 +48,16 @@ window.onclick = function(event) {
     if (e.target !== e.currentTarget) {
       var clickedItem = e.target.innerHTML;
       e.target.classList.toggle("table-chosen");
-      
+
       //push number of table to array if it was selected
-      
+
       if(!e.target.classList.contains("table-chosen")){
         orderInfo.table = '';
       } else {
         orderInfo.table = clickedItem;
       }
       // console.log(orderInfo.table);
-    }    
+    }
   }
 
   function chooseDate(e) {
@@ -100,12 +100,12 @@ window.onclick = function(event) {
       alertMessageDate.style.display = "none";
     }
 
-    
+
 
     if (orderInfo.people !== '' && orderInfo.time !== '' && orderInfo.date !== '' && orderInfo.table !== ''){
       continueBookingBtn.style.display = "block";
         var test = localStorage.setItem("order1", JSON.stringify(orderInfo));
-    
+
     }
     calendarBlock.classList.remove("info-block__calendar_show");
   }
@@ -129,5 +129,3 @@ function showCalendar(){
 }
 
 calendarBtn.addEventListener("click", showCalendar);
-
-
