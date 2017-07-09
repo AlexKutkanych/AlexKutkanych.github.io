@@ -184,7 +184,7 @@ function showBookingLoader(){
 
 function showProceedBookingModal(){
   bookingLoader.style.display = "none";
-  proceedBookingModal.style.display = "block";
+  proceedBookingModal.classList.add("proceed-booking__modal_show");
   
   // var orderInfoFromLs = localStorage.getItem("orderInfo");
 // var orderInfoParse = JSON.parse(orderInfoFromLs);
@@ -198,7 +198,7 @@ for (var key in orderInfo){
 }
 
 function closeProceedBookingModal(){
-  proceedBookingModal.style.display = "none";
+  proceedBookingModal.classList.remove("proceed-booking__modal_show");
   bookingBtn.classList.remove("booking__btn_active");
   bookingModal.style.display = "none";
 }

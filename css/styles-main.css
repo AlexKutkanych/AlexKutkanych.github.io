@@ -1,23 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Cookie");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  color: black;
-  overflow-x: hidden;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
 
 .typical-btn {
   height: 33px;
@@ -46,10 +28,34 @@ li {
   text-align: center;
   font-family: "PT Sans Caption", sans-serif;
   display: none;
+  animation: .7s fadeIn 1;
+  animation-timing-function: linear;
 }
 
 .header-wrapper__booking-section_show {
   display: block;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: -300px;
+  }
+
+  30% {
+    opacity: .25;
+    top: -200px;
+  }
+
+  70% {
+    opacity: .75;
+    top: -100px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 
 .booking-section__modal {
@@ -429,6 +435,11 @@ li {
   z-index: 2;
   border-radius: 20px;
   border: 2px solid red;
+  animation: .1s showModal linear 1;
+}
+
+.proceed-booking__modal_show {
+  display: block;
 }
 
 .proceed-booking__close-btn {
@@ -453,6 +464,28 @@ li {
 .proceed-booking__your-booking {
   width: 80%;
   margin: 10px auto;
+}
+
+@keyframes showModal {
+  0% {
+    opacity: 0;
+    left: -200px;
+  }
+
+  25% {
+    opacity: .25;
+    left: -100px;
+  }
+
+  50% {
+    opacity: .5;
+    left: -50px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }
 
 .your-booking__heading {
@@ -519,19 +552,18 @@ li {
 
 .booking-loader {
   display: none;
+  z-index: 3;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   margin: auto;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #964B00;
-  width: 50px;
-  height: 50px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear 5;
+  background-image: url("../img/header/pizza-loader.png");
+  width: 300px;
+  height: 300px;
+  -webkit-animation: spin 2s linear 3;
+  animation: spin 3s linear 3;
 }
 
 .booking-loader_show {
@@ -543,6 +575,22 @@ li {
     -webkit-transform: rotate(0deg);
   }
 
+  20% {
+    -webkit-transform: rotate(72deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(144deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(216deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(288deg);
+  }
+
   100% {
     -webkit-transform: rotate(360deg);
   }
@@ -550,11 +598,27 @@ li {
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(72deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(144deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(216deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(288deg);
   }
 
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
 }
 
@@ -1726,11 +1790,36 @@ span.splink {
   height: 50px;
   border-radius: 50%;
   z-index: 10;
+  animation: 2s blink infinite;
   background: #666 url("../img/header/to-top-arrow.svg") 10px 10px no-repeat;
 }
 
 #to-top-button:hover {
   background-color: #964B00;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.4;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
@@ -3099,6 +3188,7 @@ span.splink {
   z-index: 10;
   background: #666 url("../img/header/to-top-arrow.svg") 10px 10px no-repeat;
   transform: rotate(90deg);
+  transition: .5s;
 }
 
 .hide-food-online-btn:hover {
@@ -3242,6 +3332,7 @@ span.splink {
   border-radius: 20px;
   z-index: 1;
   background-color: rgba(122, 122, 122, 0.7);
+  animation-delay: 1s;
 }
 
 .header-wrapper__registration_show {
@@ -3819,6 +3910,10 @@ span.splink {
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 a {
