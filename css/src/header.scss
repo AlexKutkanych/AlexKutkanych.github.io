@@ -28,18 +28,6 @@ color: #0A5794; cursor: pointer; }
       float: right;
       margin-top: 30px;
     }
-    &__logged-user-section {
-      display: none;
-      width: 60px;
-      height: 65px;
-      float: right;
-      padding: 21px 5px 0;
-      font-weight: bold;
-      &:hover {
-        cursor: pointer;
-        background-color: lightgoldenrodyellow;
-      }
-    }
   }
 }
 
@@ -161,25 +149,6 @@ color: #0A5794; cursor: pointer; }
   left: 85px;
 }
 
-/*logged user*/
-
-.logged-user {
-  &__icon {
-    display: block;
-    width: 30px;
-    margin: 0 auto;
-  }
-  &__greetings {
-    display: block;
-    text-align: center;
-    font-size: 13px;
-    &:hover {
-      cursor: pointer;
-      color: $text-hover-color;
-    }
-  }
-}
-
 /*to top button*/
 
 #to-top-button {
@@ -220,6 +189,31 @@ color: #0A5794; cursor: pointer; }
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 845px) {
+  .header-wrapper {
+    &__btns-section {
+      width: 90px;
+      margin-top: 10px;
+    }
+  }
+
+  .join-us__btn {
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  .booking__btn{
+    display: block;
+    position: relative;
+    left: 0;
+  }
+
+  .header-wrapper__registration_show {
+    right: 10px;
+    top: 85px;
+  }
+}
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
 
@@ -229,7 +223,7 @@ color: #0A5794; cursor: pointer; }
     &__btns-section {
       position: absolute;
       width: 170px;
-      right: 10px;
+      right: 85px;
       top: 20px;
     }
   }
@@ -392,10 +386,11 @@ color: #0A5794; cursor: pointer; }
     &__btns-section {
       position: absolute;
       width: 170px;
-      right: 10px;
+      right: 85px;
       top: 20px;
     }
   }
+
 
   .menu-top {
     width: 100%;
@@ -493,32 +488,24 @@ color: #0A5794; cursor: pointer; }
     }
   }
 
+  .header-wrapper {
+    &__btns-section {
+      width: 90px;
+      margin-top: -15px;
+    }
+  }
+
   .join-us__btn {
-    width: 100px;
     display: block;
-    position: absolute;
-    top: -26px;
-    right: 0;
-    width: 80px;
-    height: 33px;
-    border-radius: 20px;
-    color: white;
-    background-color: $button-color;
-    &_active {
-      margin-top: 3px;
-      background-color: $text-hover-color;
-    }
+    position: relative;
+    margin-bottom: 5px;
   }
 
-  .booking__btn {
-    top: -26px;
-    left: 90px;
-    &_active {
-      margin-top: 3px;
-      background-color: $text-hover-color;
-    }
+  .booking__btn{
+    display: block;
+    position: relative;
+    left: 0;
   }
-
 
   .menu__submenu-show-menu {
     display: block;

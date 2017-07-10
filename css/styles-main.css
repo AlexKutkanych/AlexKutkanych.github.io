@@ -1662,20 +1662,6 @@ span.splink {
   margin-top: 30px;
 }
 
-.header-wrapper__logged-user-section {
-  display: none;
-  width: 60px;
-  height: 65px;
-  float: right;
-  padding: 21px 5px 0;
-  font-weight: bold;
-}
-
-.header-wrapper__logged-user-section:hover {
-  cursor: pointer;
-  background-color: lightgoldenrodyellow;
-}
-
 .menu-top {
   height: 35px;
   float: left;
@@ -1802,25 +1788,6 @@ span.splink {
   left: 85px;
 }
 
-/*logged user*/
-
-.logged-user__icon {
-  display: block;
-  width: 30px;
-  margin: 0 auto;
-}
-
-.logged-user__greetings {
-  display: block;
-  text-align: center;
-  font-size: 13px;
-}
-
-.logged-user__greetings:hover {
-  cursor: pointer;
-  color: #964B00;
-}
-
 /*to top button*/
 
 #to-top-button {
@@ -1864,6 +1831,30 @@ span.splink {
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 845px) {
+  .header-wrapper__btns-section {
+    width: 90px;
+    margin-top: 10px;
+  }
+
+  .join-us__btn {
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  .booking__btn {
+    display: block;
+    position: relative;
+    left: 0;
+  }
+
+  .header-wrapper__registration_show {
+    right: 10px;
+    top: 85px;
+  }
+}
+
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .header-wrapper {
     width: 100%;
@@ -1873,7 +1864,7 @@ span.splink {
   .header-wrapper__btns-section {
     position: absolute;
     width: 170px;
-    right: 10px;
+    right: 85px;
     top: 20px;
   }
 
@@ -2036,7 +2027,7 @@ span.splink {
   .header-wrapper__btns-section {
     position: absolute;
     width: 170px;
-    right: 10px;
+    right: 85px;
     top: 20px;
   }
 
@@ -2140,32 +2131,21 @@ span.splink {
     transform: rotate(90deg);
   }
 
-  .join-us__btn {
-    width: 100px;
-    display: block;
-    position: absolute;
-    top: -26px;
-    right: 0;
-    width: 80px;
-    height: 33px;
-    border-radius: 20px;
-    color: white;
-    background-color: #E30000;
+  .header-wrapper__btns-section {
+    width: 90px;
+    margin-top: -15px;
   }
 
-  .join-us__btn_active {
-    margin-top: 3px;
-    background-color: #964B00;
+  .join-us__btn {
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
   }
 
   .booking__btn {
-    top: -26px;
-    left: 90px;
-  }
-
-  .booking__btn_active {
-    margin-top: 3px;
-    background-color: #964B00;
+    display: block;
+    position: relative;
+    left: 0;
   }
 
   .menu__submenu-show-menu {
@@ -2227,6 +2207,17 @@ span.splink {
 
 .our-history__about:hover {
   color: #E30000;
+}
+
+.social-btn__block {
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto 10px;
+}
+
+.social-btn__facebook {
+  width: 120px;
 }
 
 .calousel-container {
@@ -2398,6 +2389,119 @@ span.splink {
 
 .video-container video.fillWidth {
   width: 100%;
+}
+/*logged user*/
+
+.header-wrapper__logged-user-section {
+  display: none;
+  width: 60px;
+  height: 65px;
+  float: right;
+  padding: 21px 5px 0;
+  font-weight: bold;
+}
+
+.header-wrapper__logged-user-section:hover {
+  cursor: pointer;
+  background-color: lightgoldenrodyellow;
+}
+
+.header-wrapper__logged-user-section_show {
+  display: block;
+}
+
+.header-wrapper__logged-user-modal {
+  width: 300px;
+  height: 150px;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 83px;
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 10px;
+  border: 1px solid #666;
+}
+
+.header-wrapper__logged-user-modal_show {
+  display: block;
+}
+
+.logged-user__icon {
+  display: block;
+  width: 30px;
+  margin: 0 auto;
+}
+
+.logged-user__greetings {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+}
+
+.logged-user__greetings:hover {
+  cursor: pointer;
+  color: #964B00;
+}
+
+.logged-user-modal__icon {
+  float: left;
+  width: 30%;
+  padding: 5px;
+}
+
+.logged-user-modal__icon:hover {
+  cursor: pointer;
+}
+
+.logged-user-modal__info {
+  float: right;
+  width: 60%;
+  height: 87px;
+  padding: 5px;
+  text-align: center;
+}
+
+.logged-user-modal__logout-btn {
+  float: right;
+  padding: 0 20px;
+  margin-right: 10px;
+}
+
+.logged-user-modal__logout-btn:hover {
+  margin-top: 2px;
+  opacity: .5;
+}
+
+.logged-user-modal__username {
+  font-weight: bold;
+  width: 100%;
+  overflow: hidden;
+}
+
+.logged-user-modal__email {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .header-wrapper__logged-user-section {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  .header-wrapper__logged-user-modal {
+    right: 10px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .header-wrapper__logged-user-section {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
 }
 .video-block {
   position: relative;
@@ -2898,6 +3002,7 @@ span.splink {
 
 .food-result__pic_red-wine {
   background-image: url("../img/menu-filter/red-wine.jpg");
+  background-size: contain;
 }
 
 .food-result__pic_margherita {
@@ -3143,13 +3248,6 @@ span.splink {
   cursor: pointer;
   opacity: .5;
   margin-top: 3px;
-}
-
-.social-btn__block {
-  width: 210px;
-  display: flex;
-  justify-content: space-between;
-  margin: 20px auto 10px;
 }
 
 .our-menu__wrapper {

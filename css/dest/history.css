@@ -36,6 +36,15 @@
     .our-history__about:hover {
       color: #E30000; }
 
+.social-btn__block {
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto 10px; }
+
+.social-btn__facebook {
+  width: 120px; }
+
 .calousel-container {
   max-width: 300px;
   position: relative;

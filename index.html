@@ -67,9 +67,21 @@
             <input class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;" value=" " title="Начать поиск">
           </form>
         </div> -->
+
+
+        <!-- logged user panel -->
         <div class="header-wrapper__logged-user-section">
             <img src="img/header/logged-user.svg" alt="logged user icon" class="logged-user__icon">
             <p class="logged-user__greetings">some text</p>
+        </div>
+
+        <div class="header-wrapper__logged-user-modal">
+          <img src="img/header/logged-user.svg" alt="logged user icon" class="logged-user-modal__icon">
+          <div class="logged-user-modal__info">
+            <p class="logged-user-modal__username"></p>
+            <p class="logged-user-modal__email"></p>
+          </div>  
+          <a href="#" id="logout-btn" class="logged-user-modal__logout-btn typical-btn">Log out</a>
         </div>
 
         <!-- login, booking btns -->
@@ -420,11 +432,20 @@
               <div class="carousel__slide carousel__slide_animated">
                 <img src="img/history/history-1.jpg" class="carousel__picture" alt="Italian salad">
               </div>
-              <div class="carousel__slide carousel__slide_animated">
+              <!-- <div class="carousel__slide carousel__slide_animated">
                 <img src="img/history/history-2.jpg" class="carousel__picture" alt="Italian pasta">
               </div>
               <div class="carousel__slide carousel__slide_animated">
                 <img src="img/history/history-3.jpg" class="carousel__picture" alt="Italian pizza">
+              </div> -->
+              <div class="carousel__slide carousel__slide_animated">
+                <img src="img/history/interior-1.jpg" class="carousel__picture" alt="Interior picture">
+              </div>
+              <div class="carousel__slide carousel__slide_animated">
+                <img src="img/history/interior-2.jpg" class="carousel__picture" alt="Interior picture">
+              </div>
+              <div class="carousel__slide carousel__slide_animated">
+                <img src="img/history/interior-3.jpg" class="carousel__picture" alt="Interior picture">
               </div>
               <a href="#" class="carousel__pagination_prev">&#10094</a>
               <a href="#" class="carousel__pagination_next">&#10095</a>

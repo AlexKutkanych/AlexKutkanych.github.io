@@ -1,0 +1,112 @@
+@import "!variables.scss";
+
+/*logged user*/
+
+.header-wrapper {
+  &__logged-user-section {
+    display: none;
+    width: 60px;
+    height: 65px;
+    float: right;
+    padding: 21px 5px 0;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+      background-color: lightgoldenrodyellow;
+    }
+    &_show {
+      display: block;
+    }
+  }
+  &__logged-user-modal {
+    width: 300px;
+    height: 150px;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 83px;
+    background-color: #fff;
+    z-index: 1;
+    border-radius: 10px;
+    border: 1px solid $menu-text-color;
+    &_show {
+      display: block;
+    }
+  }
+}
+
+.logged-user {
+  &__icon {
+    display: block;
+    width: 30px;
+    margin: 0 auto;
+  }
+  &__greetings {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    &:hover {
+      cursor: pointer;
+      color: $text-hover-color;
+    }
+  }
+}
+
+//logged user modal
+
+.logged-user-modal {
+  &__icon {
+    float: left;
+    width: 30%;
+    padding: 5px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__info {
+    float: right;
+    width: 60%;
+    height: 87px;
+    padding: 5px;
+    text-align: center;
+  }
+  &__logout-btn {
+    float: right;
+    padding: 0 20px;
+    margin-right: 10px;
+    &:hover {
+      margin-top: 2px;
+      opacity: .5;
+    }
+  }
+  &__username {
+    font-weight: bold;
+    width: 100%;
+    overflow: hidden;
+  }
+  &__email {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+
+  .header-wrapper__logged-user-section {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  .header-wrapper__logged-user-modal {
+    right: 10px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .header-wrapper__logged-user-section {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+}

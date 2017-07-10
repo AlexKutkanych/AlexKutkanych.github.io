@@ -7,7 +7,7 @@ function searchFood() {
     var filter = searchFoodInput.value.toUpperCase();
     var foodResultPage = document.querySelectorAll(".food-result__page");
     var foodCard = document.querySelectorAll(".food-result");
-    console.log(foodResultPage.length);
+    console.log(foodCard.length);
     var foodCardLen = foodCard.length;
     var test = 6;
     for (i = 0; i < foodCardLen; i++) {
@@ -17,19 +17,18 @@ function searchFood() {
         var foodPrice = foodCard[i].querySelector(".food-result__price");
         if (foodName.innerHTML.toUpperCase().indexOf(filter) > -1 || foodPrice.innerHTML.toUpperCase().indexOf(filter) > -1) {
             foodCard[i].style.display = "";
-            // foodResultPage[0].appendChild(foodCard[i]); 
-            // if(foodCard.length > test) {
-            //    foodResultPage[1].appendChild(foodCard[test++]); 
-            // }
-            
+            foodResultPage[0].appendChild(foodCard[i]); 
+            if(foodCard.length > test) {
+               foodResultPage[1].appendChild(foodCard[test++]); 
+            } else {
+            }
         } else {
             foodCard[i].style.display = "none";
             // foodCard[i].style.display = "none";
         }
         //search by desc
-        
-        
     }
+
 }
 
 searchFoodInput.addEventListener("keyup", searchFood);

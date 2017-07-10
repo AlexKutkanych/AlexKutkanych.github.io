@@ -11,12 +11,13 @@ var loginNameField = document.querySelector("#login__name-field"),
     allLoginInputsLength = allLoginInputs.length;
 
 //login user
+var loggedUser = localStorage.getItem("signedupUser"); //!!!GET THE RIGHT ITEM FROM localStorage
+  var parseUserInfo = JSON.parse(loggedUser);
+  console.log(loggedUser);
 
 function loginUser(e){
   e.preventDefault();
-  var loggedUser = localStorage.getItem("signedupUser"); //!!!GET THE RIGHT ITEM FROM localStorage
-  var parseUserInfo = JSON.parse(loggedUser);
-  console.log(loggedUser);
+  
 
   if (loginNameField.value !== parseUserInfo.name) {
     loginAlertMessages[0].classList.add("show-alert-message");
@@ -33,8 +34,7 @@ function loginUser(e){
   if(loginNameField.value === parseUserInfo.name && loginPassField.value === parseUserInfo.password) {
     alert("Welcome, "+ loginNameField.value);
     loggedUserGreetings.innerHTML = "hi, "+ loginNameField.value;
-    loggedUserBlock.style.display = "block";
-    // loginNameField.value = "";
+    loggedUserBlock.classList.add("header-wrapper__logged-user-section_show");
     clearLoginInputs();
     clearSignupInputs();
     closeJoinUsModal();
@@ -50,6 +50,33 @@ function clearLoginInputs(){
 
 
 loginBtn.addEventListener("click", loginUser);
+
+
+//logged user info block
+
+var loggedUserName = document.querySelector(".logged-user-modal__username"),
+    loggedUserEmail = document.querySelector(".logged-user-modal__email"),
+    loggedUserModal = document.querySelector(".header-wrapper__logged-user-modal");
+
+function showLoggedUserInfo(){
+    loggedUserModal.classList.toggle("header-wrapper__logged-user-modal_show");
+    loggedUserName.innerHTML = parseUserInfo.name;
+    loggedUserEmail.innerHTML = parseUserInfo.email;
+}
+
+loggedUserBlock.addEventListener("click", showLoggedUserInfo);
+
+//logout
+
+var logoutBtn = document.querySelector("#logout-btn");
+
+function logoutUser(e){
+  e.preventDefault();
+  loggedUserBlock.classList.remove("header-wrapper__logged-user-section_show");
+  loggedUserModal.classList.remove("header-wrapper__logged-user-modal_show");
+}
+
+logoutBtn.addEventListener("click", logoutUser);
 
 
 

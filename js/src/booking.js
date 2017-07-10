@@ -17,7 +17,6 @@ var bookingBtn = document.querySelector("#booking__btn"),
     days = document.querySelector(".calendar__days"),
     keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
-
 function showBookingModal(){
     bookingModalBlock.classList.toggle("header-wrapper__booking-section_show");
     bookingBtn.classList.toggle("booking__btn_active");

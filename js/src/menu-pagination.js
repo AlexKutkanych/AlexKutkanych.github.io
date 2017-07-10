@@ -4,6 +4,22 @@
 var resultPage = document.createElement("div");
 resultPage.classList.add("food-result__page");
 
+// function myPagination(){
+
+//     var objContent = this;
+//     //variables
+//     var fullPages = [];
+//     var subPages = [];
+//     var height = 0;
+//     var lastPage = 1;
+//     var paginatePages;
+
+//     //init
+
+//     init = function(){
+//         objContent.childNodes
+//     }
+// }
 
 
 (function($){

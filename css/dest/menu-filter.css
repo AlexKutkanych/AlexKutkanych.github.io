@@ -298,7 +298,8 @@
   .food-result__pic_semifreddo {
     background-image: url(../img/menu-filter/semifreddo.jpg); }
   .food-result__pic_red-wine {
-    background-image: url(../img/menu-filter/red-wine.jpg); }
+    background-image: url(../img/menu-filter/red-wine.jpg);
+    background-size: contain; }
 
 .food-result__pic_margherita {
   background-image: url(../img/menu-filter/margherita.jpg); }
