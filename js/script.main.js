@@ -1127,8 +1127,7 @@ $(window).resize(function() {
     });
     menuSubmenuMenu.classList.remove("menu__submenu_hover");
     menuSubmenuContacts.classList.remove("menu__submenu_hover");
-  }
-   else {
+  } else if ($(window).width() > 769) {
      menuItemMenu.removeEventListener("click", function(){});
      menuItemContacts.removeEventListener("click", function(){});
      menuSubmenuMenu.classList.add("menu__submenu_hover");
