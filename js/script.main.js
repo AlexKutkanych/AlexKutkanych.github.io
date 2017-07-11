@@ -721,22 +721,22 @@ logoutBtn.addEventListener("click", logoutUser);
     {name: 'Spritz Royal', desc: 'Signature refreshing aperitif cocktail of Gin, White Vermouth, Aperol with a dash of Prosecco', price: '55', classCategory: 'food-result__drinks food-result__drinks-alco', classPicture: 'food-result__pic_spritz-royal', rating: 5},
     {name: 'Negroni', desc: 'A classic aperitif cocktail found in Treviso, Italy consists of Gin, Red Vermouth and Campari', price: '55', classCategory: 'food-result__drinks food-result__drinks-alco', classPicture: 'food-result__pic_negroni', rating: 5},
     {name: 'Margherita', desc: 'Tomato sauce, Mozzarella Cheese and Basil leaves', price: '120', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_margherita', rating: 3},
-    {name: 'Napoletana', desc: 'Tomato sauce, Mozzarella Cheese, Anchovies and Capers', price: '130', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_napoletana', rating: 5},
-    {name: 'Diavola', desc: 'Tomato sauce, Mozzarella Cheese and Spicy Salami', price: '160', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_diavola', rating: 4},
-    {name: 'Frittura mista di Pesce', desc: 'Deep fried Prawns, Anchovies, Squid and Zucchini', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_frittura', rating: 5},
-    {name: 'Verdure', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '150', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_verdure', rating: 5},
-    {name: 'Lasagna', desc: 'Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese', price: '70', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_lasagna', rating: 5},
-    {name: 'Tortelli di Salsiccia', desc: 'Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce', price: '80', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_tortelli', rating: 5},
-    {name: 'Spaghetti ai Frutti di Mare', desc: 'Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce', price: '130', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_spaghetti', rating: 5},
-    {name: 'Farro di Mare', desc: 'Steamed Spelt with Squid,Prawns, Mussels &amp; Tomatoes, with Olive Oil, Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_farro', rating: 5},
-    {name: 'Minestrone di verdure', desc: 'Hearty Vegetable soup', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_minestrone', rating: 5},
-    {name: 'Zuppa di pesce', desc: 'Seafood soup with Prawns, Squids, Clams &amp; Mussels, served with toasted bread', price: '75', classCategory: 'food-result_soup', classPicture: 'food-result__pic_zuppa-di-pesce', rating: 5},
-    {name: 'Italian Ice-cream Big', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: '', rating: 4},
-    {name: 'Italian Sorbet', desc: 'Orange, Coconut, Strawberry flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_sorbet', rating: 2},
-    {name: 'Panna Cotta', desc: 'Italian Custard Cream with Caramel', price: '70', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_panna-cotta', rating: 5},
-    {name: 'Crème Brulee', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '75', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_creme-brulee', rating: 5},
-    {name: 'Tiramisu', desc: 'All-time favourite', price: '80', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tiramisu', rating: 5},
-    {name: 'Tortino caldo di cioccolato', desc: 'Melting chocolate cake', price: '95', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tortino', rating: 3},
+    // {name: 'Napoletana', desc: 'Tomato sauce, Mozzarella Cheese, Anchovies and Capers', price: '130', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_napoletana', rating: 5},
+    // {name: 'Diavola', desc: 'Tomato sauce, Mozzarella Cheese and Spicy Salami', price: '160', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_diavola', rating: 4},
+    // {name: 'Frittura mista di Pesce', desc: 'Deep fried Prawns, Anchovies, Squid and Zucchini', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_frittura', rating: 5},
+    // {name: 'Verdure', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '150', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_verdure', rating: 5},
+    // {name: 'Lasagna', desc: 'Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese', price: '70', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_lasagna', rating: 5},
+    // {name: 'Tortelli di Salsiccia', desc: 'Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce', price: '80', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_tortelli', rating: 5},
+    // {name: 'Spaghetti ai Frutti di Mare', desc: 'Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce', price: '130', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_spaghetti', rating: 5},
+    // {name: 'Farro di Mare', desc: 'Steamed Spelt with Squid,Prawns, Mussels &amp; Tomatoes, with Olive Oil, Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_farro', rating: 5},
+    // {name: 'Minestrone di verdure', desc: 'Hearty Vegetable soup', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_minestrone', rating: 5},
+    // {name: 'Zuppa di pesce', desc: 'Seafood soup with Prawns, Squids, Clams &amp; Mussels, served with toasted bread', price: '75', classCategory: 'food-result_soup', classPicture: 'food-result__pic_zuppa-di-pesce', rating: 5},
+    // {name: 'Italian Ice-cream Big', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: '', rating: 4},
+    // {name: 'Italian Sorbet', desc: 'Orange, Coconut, Strawberry flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_sorbet', rating: 2},
+    // {name: 'Panna Cotta', desc: 'Italian Custard Cream with Caramel', price: '70', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_panna-cotta', rating: 5},
+    // {name: 'Crème Brulee', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '75', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_creme-brulee', rating: 5},
+    // {name: 'Tiramisu', desc: 'All-time favourite', price: '80', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tiramisu', rating: 5},
+    // {name: 'Tortino caldo di cioccolato', desc: 'Melting chocolate cake', price: '95', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tortino', rating: 3},
     {name: 'Il Castagnaccio', desc: 'Classic Chestnut Tuscan Dessert. A real classic back home', price: '100', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_castagnaccio', rating: 5}
   ];
 
@@ -858,113 +858,113 @@ resultPage.classList.add("food-result__page");
 // }
 
 
-(function($){
-    $.fn.extend({
-        MyPagination: function(options) {
-            var defaults = {
-                height: 400,
-                fadeSpeed: 400
-            };
-            var options = $.extend(defaults, options);
+// (function($){
+//     $.fn.extend({
+//         MyPagination: function(options) {
+//             var defaults = {
+//                 height: 400,
+//                 fadeSpeed: 400
+//             };
+//             var options = $.extend(defaults, options);
 
-            // Создаем ссылку на объект
-            var objContent = $(this);
+//             // Создаем ссылку на объект
+//             var objContent = $(this);
 
-            // Внутренние переменные
-            var fullPages = new Array();
-            var subPages = new Array();
-            var height = 0;
-            var lastPage = 1;
-            var paginatePages;
+//             // Внутренние переменные
+//             var fullPages = new Array();
+//             var subPages = new Array();
+//             var height = 0;
+//             var lastPage = 1;
+//             var paginatePages;
 
-            // Функция инициализации
-            init = function() {
-                objContent.children().each(function(i){
-                    if (height + this.clientHeight > options.height) {
-                        fullPages.push(subPages);
-                        subPages = new Array();
-                        height = 0;
-                    }
+//             // Функция инициализации
+//             init = function() {
+//                 objContent.children().each(function(i){
+//                     if (height + this.clientHeight > options.height) {
+//                         fullPages.push(subPages);
+//                         subPages = new Array();
+//                         height = 0;
+//                     }
 
-                    height += this.clientHeight;
-                    subPages.push(this);
-                });
+//                     height += this.clientHeight;
+//                     subPages.push(this);
+//                 });
 
-                if (height > 0) {
-                    fullPages.push(subPages);
-                }
+//                 if (height > 0) {
+//                     fullPages.push(subPages);
+//                 }
 
-                // Оборачиваем каждую полную страницу
-                $(fullPages).wrap(resultPage);
+//                 // Оборачиваем каждую полную страницу
+//                 $(fullPages).wrap(resultPage);
 
-                // Скрываем все обернутые страницы
-                objContent.children().hide();
+//                 // Скрываем все обернутые страницы
+//                 objContent.children().hide();
 
-                // Создаем коллекцию для навигации
-                paginatePages = objContent.children();
+//                 // Создаем коллекцию для навигации
+//                 paginatePages = objContent.children();
 
-                // Показываем первую страницу
-                showPage(lastPage);
+//                 // Показываем первую страницу
+//                 showPage(lastPage);
 
-                // Выводим элементы управления
-                showPagination($(paginatePages).length);
-            };
+//                 // Выводим элементы управления
+//                 showPagination($(paginatePages).length);
+//             };
 
-            // Функция обновления счетчика
-            updateCounter = function(i) {
-                $('#page_number').html(i);
-            };
+//             // Функция обновления счетчика
+//             updateCounter = function(i) {
+//                 $('#page_number').html(i);
+//             };
 
-            // Функция вывода страницы
-            showPage = function(page) {
-                i = page - 1;
-                if (paginatePages[i]) {
+//             // Функция вывода страницы
+//             showPage = function(page) {
+//                 i = page - 1;
+//                 if (paginatePages[i]) {
 
-                    // Скрываем старую страницу, показываем новую
-                    $(paginatePages[lastPage]).fadeOut(options.fadeSpeed);
-                    lastPage = i;
-                    $(paginatePages[lastPage]).fadeIn(options.fadeSpeed);
+//                     // Скрываем старую страницу, показываем новую
+//                     $(paginatePages[lastPage]).fadeOut(options.fadeSpeed);
+//                     lastPage = i;
+//                     $(paginatePages[lastPage]).fadeIn(options.fadeSpeed);
 
-                    // и обновлем счетчик
-                    updateCounter(page);
-                }
-            };
-
-
-            // Функция вывода навигации (выводим номера страниц)
-            showPagination = function(numPages) {
-                var pagins = '';
-                for (var i = 1; i <= numPages; i++) {
-                    pagins += '<li class="pagination__list-item"><a href="#" class="pagination__link" onclick="showPage(' + i + '); return false;">' + i + '</a></li>';
-                }
-                $('.pagination li:first-child').after(pagins);
-            };
+//                     // и обновлем счетчик
+//                     updateCounter(page);
+//                 }
+//             };
 
 
-
-            // Выполняем инициализацию
-            init();
-
-            // Привязываем два события - нажатие на кнопке "Предыдущая страница"
-            $('.pagination #prev').click(function(e) {
-                e.preventDefault();
-                showPage(lastPage);
-            });
-            // и "Следующая страница"
-            $('.pagination #next').click(function(e) {
-                e.preventDefault();
-                showPage(lastPage+2);
-            });
-
-        }
-    });
-})(jQuery);
+//             // Функция вывода навигации (выводим номера страниц)
+//             showPagination = function(numPages) {
+//                 var pagins = '';
+//                 for (var i = 1; i <= numPages; i++) {
+//                     pagins += '<li class="pagination__list-item"><a href="#" class="pagination__link" onclick="showPage(' + i + '); return false;">' + i + '</a></li>';
+//                 }
+//                 $('.pagination li:first-child').after(pagins);
+//             };
 
 
-// Инициализация
-jQuery(window).load(function() {
-    $('#food-wrapper__result').MyPagination({height: 2000, width: 800, fadeSpeed: 0});
-});
+
+//             // Выполняем инициализацию
+//             init();
+
+//             // Привязываем два события - нажатие на кнопке "Предыдущая страница"
+//             $('.pagination #prev').click(function(e) {
+//                 e.preventDefault();
+//                 showPage(lastPage);
+//             });
+//             // и "Следующая страница"
+//             $('.pagination #next').click(function(e) {
+//                 e.preventDefault();
+//                 showPage(lastPage+2);
+//             });
+
+//         }
+//     });
+// })(jQuery);
+
+
+// // Инициализация
+// jQuery(window).load(function() {
+//     $('#food-wrapper__result').MyPagination({height: 2000, width: 800, fadeSpeed: 0});
+// });
 
 
 
@@ -1009,25 +1009,29 @@ var sortBlock = document.querySelector("#sort-block__sorting"),
 	contents = document.querySelectorAll(".food-result__price"),
 	rating = document.querySelectorAll(".food-result__rating"),
 	food = document.querySelector(".food-result"),
-	list = [];
+	listAscending = [],
+	listDescending = [],
+	listRating = [],
+	listRandom = [];
+
 
 function sortByPriceAscending() {
 
 	for(var i=0; i<contents.length; i++){
-	    list.push(contents[i]);
+	    listAscending.push(contents[i]);
 	}
 
-	list.sort(function(a, b){
+	listAscending.sort(function(a, b){
 		var aa = parseInt(a.innerHTML.substring(1));
 		var bb = parseInt(b.innerHTML.substring(1));
 		return aa < bb ? -1 : (aa > bb ? 1 : 0);
 	});
 
-	list.reverse();
+	listAscending.reverse();
 
-	for(var k=0; k<list.length; k++){
+	for(var k=0; k<listAscending.length; k++){
 	    // console.log(list[i].innerHTML);
-		container.insertBefore(list[k].parentNode, container.firstChild);
+		container.insertBefore(listAscending[k].parentNode, container.firstChild);
 	}
 }
 
@@ -1035,41 +1039,57 @@ function sortByPriceAscending() {
 function sortByPriceDescending() {
 
 	for(var i=0; i<contents.length; i++){
-	    list.push(contents[i]);
+	    listDescending.push(contents[i]);
 	}
 
-	list.sort(function(a, b){
+	listDescending.sort(function(a, b){
 		var aa = parseInt(a.innerHTML.substring(1));
 		var bb = parseInt(b.innerHTML.substring(1));
 		return aa < bb ? -1 : (aa > bb ? 1 : 0);
 	});
 
-	for(var k=0; k<list.length; k++){
+	for(var k=0; k<listDescending.length; k++){
 	    // console.log(list[i].innerHTML);
-		container.insertBefore(list[k].parentNode, container.firstChild);
+		container.insertBefore(listDescending[k].parentNode, container.firstChild);
 	}
 }
 
 //sort by rating
 
-var ratingField = document.querySelectorAll(".food-result__rating_stars-amount");
-
-
 function sortByRatingDescending() {
 
 	for(var i=0; i<rating.length; i++){
-	    list.push(rating[i]);
+	    listRating.push(rating[i]);
 	}
 
-	list.sort(function(a, b){
+
+	listRating.sort(function(a, b){
 		var aa = parseInt(a.innerHTML);
+		// console.log(aa);
 		var bb = parseInt(b.innerHTML);
 		return aa < bb ? -1 : (aa > bb ? 1 : 0);
 	});
 
-	for(var k=0; k<list.length; k++){
-	    // console.log(list[i].innerHTML);
-		container.insertBefore(list[k].parentNode.parentNode.parentNode, container.firstChild);
+	for(var k=0; k<listRating.length; k++){
+	    // console.log(list[k].innerHTML);
+		container.insertBefore(listRating[k].parentNode.parentNode.parentNode, container.firstChild);
+	}
+}
+
+//sort randomly
+
+function sortRandomly(){
+	for(var i=0; i<contents.length; i++){
+	    listRandom.push(contents[i]);
+	}
+
+	listRandom.sort(function(){
+	 	return 0.5 - Math.random();
+	});
+
+	for(var k=0; k<listRandom.length; k++){
+	    
+		container.insertBefore(listRandom[k].parentNode, container.firstChild);
 	}
 }
 
@@ -1081,6 +1101,8 @@ sortBlock.addEventListener("change", function(){
 
 	} else if (sortBlock.value === "sort-by-rating") {
 		sortByRatingDescending();
+	} else if (sortBlock.value === "Select sorting") {
+		sortRandomly();
 	}
 });
 

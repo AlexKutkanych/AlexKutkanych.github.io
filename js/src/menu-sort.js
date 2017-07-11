@@ -5,25 +5,29 @@ var sortBlock = document.querySelector("#sort-block__sorting"),
 	contents = document.querySelectorAll(".food-result__price"),
 	rating = document.querySelectorAll(".food-result__rating"),
 	food = document.querySelector(".food-result"),
-	list = [];
+	listAscending = [],
+	listDescending = [],
+	listRating = [],
+	listRandom = [];
+
 
 function sortByPriceAscending() {
 
 	for(var i=0; i<contents.length; i++){
-	    list.push(contents[i]);
+	    listAscending.push(contents[i]);
 	}
 
-	list.sort(function(a, b){
+	listAscending.sort(function(a, b){
 		var aa = parseInt(a.innerHTML.substring(1));
 		var bb = parseInt(b.innerHTML.substring(1));
 		return aa < bb ? -1 : (aa > bb ? 1 : 0);
 	});
 
-	list.reverse();
+	listAscending.reverse();
 
-	for(var k=0; k<list.length; k++){
+	for(var k=0; k<listAscending.length; k++){
 	    // console.log(list[i].innerHTML);
-		container.insertBefore(list[k].parentNode, container.firstChild);
+		container.insertBefore(listAscending[k].parentNode, container.firstChild);
 	}
 }
 
@@ -31,41 +35,57 @@ function sortByPriceAscending() {
 function sortByPriceDescending() {
 
 	for(var i=0; i<contents.length; i++){
-	    list.push(contents[i]);
+	    listDescending.push(contents[i]);
 	}
 
-	list.sort(function(a, b){
+	listDescending.sort(function(a, b){
 		var aa = parseInt(a.innerHTML.substring(1));
 		var bb = parseInt(b.innerHTML.substring(1));
 		return aa < bb ? -1 : (aa > bb ? 1 : 0);
 	});
 
-	for(var k=0; k<list.length; k++){
+	for(var k=0; k<listDescending.length; k++){
 	    // console.log(list[i].innerHTML);
-		container.insertBefore(list[k].parentNode, container.firstChild);
+		container.insertBefore(listDescending[k].parentNode, container.firstChild);
 	}
 }
 
 //sort by rating
 
-var ratingField = document.querySelectorAll(".food-result__rating_stars-amount");
-
-
 function sortByRatingDescending() {
 
 	for(var i=0; i<rating.length; i++){
-	    list.push(rating[i]);
+	    listRating.push(rating[i]);
 	}
 
-	list.sort(function(a, b){
+
+	listRating.sort(function(a, b){
 		var aa = parseInt(a.innerHTML);
+		// console.log(aa);
 		var bb = parseInt(b.innerHTML);
 		return aa < bb ? -1 : (aa > bb ? 1 : 0);
 	});
 
-	for(var k=0; k<list.length; k++){
-	    // console.log(list[i].innerHTML);
-		container.insertBefore(list[k].parentNode.parentNode.parentNode, container.firstChild);
+	for(var k=0; k<listRating.length; k++){
+	    // console.log(list[k].innerHTML);
+		container.insertBefore(listRating[k].parentNode.parentNode.parentNode, container.firstChild);
+	}
+}
+
+//sort randomly
+
+function sortRandomly(){
+	for(var i=0; i<contents.length; i++){
+	    listRandom.push(contents[i]);
+	}
+
+	listRandom.sort(function(){
+	 	return 0.5 - Math.random();
+	});
+
+	for(var k=0; k<listRandom.length; k++){
+	    
+		container.insertBefore(listRandom[k].parentNode, container.firstChild);
 	}
 }
 
@@ -77,5 +97,7 @@ sortBlock.addEventListener("change", function(){
 
 	} else if (sortBlock.value === "sort-by-rating") {
 		sortByRatingDescending();
+	} else if (sortBlock.value === "Select sorting") {
+		sortRandomly();
 	}
 });
