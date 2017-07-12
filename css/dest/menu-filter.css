@@ -139,15 +139,14 @@
 .food-filter__label:hover {
   color: #743b09; }
 
-.food-filter__drink-type > .food-filter__label::before {
+.food-filter__beverage-type > .food-filter__label::before {
   border-radius: 50%; }
 
-.food-filter__drink-type > .food-filter__label::before {
-  border-radius: 50%; }
-
-.filter-btn {
-  width: 140px;
+.clear-filter-btn {
+  width: 55%;
   height: 40px;
+  display: block;
+  margin: 5px auto;
   color: white;
   background-color: #E30000;
   line-height: 30px;
@@ -155,7 +154,7 @@
   border: none;
   border-radius: 20px;
   font-size: 20px; }
-  .filter-btn:hover {
+  .clear-filter-btn:hover {
     cursor: pointer;
     opacity: .6; }
 

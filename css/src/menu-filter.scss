@@ -168,19 +168,17 @@
 
 }
 
-//drinks type filter-btn
+//beverage type filter-btn
 
-.food-filter__drink-type > .food-filter__label::before {
+.food-filter__beverage-type > .food-filter__label::before {
   border-radius: 50%;
 }
 
-.food-filter__drink-type > .food-filter__label::before {
-  border-radius: 50%;
-}
-
-.filter-btn {
-  width: 140px;
+.clear-filter-btn {
+  width: 55%;
   height: 40px;
+  display: block;
+  margin: 5px auto;
   color: white;
   background-color: $button-color;
   line-height: 30px;
