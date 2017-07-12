@@ -748,19 +748,22 @@ logoutBtn.addEventListener("click", logoutUser);
   results.innerHTML = tmpl("mypage", {data: onlineMenu});
     
 
+"use strict";
 //menu filtering
 
 var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
     buyFoodOnline = document.querySelector(".buy-food-online"),
     buyFoodSidebar = document.querySelector(".buy-food-online__sidebar"),
     allCards = document.querySelectorAll(".food-result"),
-    allInputs = document.querySelectorAll("input"),
-    test = document.querySelector("#pasta"),
+    allInputs = document.querySelectorAll(".food-filter"),
+    filterForm = document.querySelector(".buy-food-online__form"),
     inputSoup = document.querySelector("#soup-appetizer"),
     inputPasta = document.querySelector("#pasta"),
     inputDesserts = document.querySelector("#dessert"),
-    inputBeverages = document.querySelector("#beverages");
     inputPizza = document.querySelector("#pizza"),
+    inputBeverages = document.querySelector("#beverages");
+    inputBeveragesAlco = document.querySelector("#alco"),
+    inputBeveragesNonAlco = document.querySelector("#non-alco"),
     allInputCategory = document.querySelectorAll(".food-filter"),
     allRadioBeverages = document.querySelector(".food-filter-radio"),
     allFood = [],
@@ -775,7 +778,7 @@ function closeFoodOnlineBlock(){
 
 closeFoodOnlineBtn.addEventListener("click", closeFoodOnlineBlock);
 
-console.log(allInputs);
+console.log(inputBeveragesAlco);
 
 //push all cards to array
 
@@ -791,13 +794,20 @@ function clearAllFilters(){
   for(var i = 0; i < allCards.length; i++){
       allCards[i].style.display = "block";
     }
+
+  for (var j = 0; j <allInputs.length; j++){
+    allInputs[j].checked = false;
+  }
+  inputBeveragesAlco.disabled = false;
+  inputBeveragesNonAlco.disabled = false;
+
 }
 
 //filter soups
 
 function showAllSoups(){
 
-  if(inputSoup.checked === true){
+  if(inputSoup.checked = true){
     
     //hide all cards
 
@@ -822,7 +832,7 @@ function showAllSoups(){
 
 function showAllPasta(){
 
-  if(inputPasta.checked === true){
+  if(inputPasta.checked = true){
     
     //hide all cards
 
@@ -847,7 +857,7 @@ function showAllPasta(){
 
  function showAllPizza(){
 
-  if(inputPizza.checked === true){
+  if(inputPizza.checked = true){
     
     //hide all cards
 
@@ -872,7 +882,7 @@ function showAllPasta(){
 
  function showAllDesserts(){
 
-  if(inputDesserts.checked === true){
+  if(inputDesserts.checked = true){
     
     //hide all cards
 
@@ -897,7 +907,7 @@ function showAllPasta(){
 
  function showAllBeverages(){
 
-  if(inputBeverages.checked === true){
+  if(inputBeverages.checked = true){
     
     //hide all cards
 
@@ -916,14 +926,79 @@ function showAllPasta(){
     }
     
   }
-};
+}
 
+//filter by beverage type
+
+//disable if some other categories selected
+
+function disableBeveragesInputs(){
+  if(inputDesserts.checked == true || inputSoup.checked == true || inputPizza.checked == true || inputPasta.checked == true){
+    inputBeveragesAlco.disabled = true;
+    inputBeveragesNonAlco.disabled = true;
+  } else if (inputBeverages.checked == true){
+    inputBeveragesAlco.disabled = false;
+    inputBeveragesNonAlco.disabled = false;
+  }
+}
+
+//filter non-alco beverages
+
+ function showNonAlcoBeverages(){
+
+  if(inputBeveragesNonAlco.checked = true){
+    
+    //hide all cards
+
+    for(var i = 0; i < allCards.length; i++){
+      allCards[i].style.display = "none";
+    }
+
+    //get array of all soups cards
+
+    var filterNonAlcoBeverages = allFood.filter(function(food){
+        return food.className.substring(35, 67) === "food-result__beverages-non-alco";
+    })
+
+    for(var k=0; k<filterNonAlcoBeverages.length; k++){
+        filterNonAlcoBeverages[k].style.display = "block";
+    }
+  }
+}
+
+//filter alco beverages
+
+  function showAlcoBeverages(){
+
+  if(inputBeveragesAlco.checked = true){
+    
+    //hide all cards
+
+    for(var i = 0; i < allCards.length; i++){
+      allCards[i].style.display = "none";
+    }
+
+    //get array of all soups cards
+
+    var filterAlcoBeverages = allFood.filter(function(food){
+        return food.className.substring(35, 62) === "food-result__beverages-alco";
+    })
+
+    for(var k=0; k<filterAlcoBeverages.length; k++){
+        filterAlcoBeverages[k].style.display = "block";
+    }
+  }
+}
 
 inputSoup.addEventListener("click", showAllSoups);
 inputPasta.addEventListener("click", showAllPasta);
 inputPizza.addEventListener("click", showAllPizza);
 inputDesserts.addEventListener("click", showAllDesserts);
 inputBeverages.addEventListener("click", showAllBeverages);
+inputBeveragesNonAlco.addEventListener("click", showNonAlcoBeverages);
+inputBeveragesAlco.addEventListener("click", showAlcoBeverages);
+
+filterForm.addEventListener("change", disableBeveragesInputs);
 //clear all filters
 
 clearAllFiltersBtn.addEventListener("click", clearAllFilters);

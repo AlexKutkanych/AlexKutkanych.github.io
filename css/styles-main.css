@@ -2642,7 +2642,7 @@ span.splink {
 }
 
 .buy-food-online__hide {
-  height: 1px;
+  height: 0;
   overflow: hidden;
 }
 
@@ -2677,6 +2677,7 @@ span.splink {
 
 .buy-food-online__sidebar {
   width: 25%;
+  min-width: 250px;
   float: left;
   margin: 47px 20px 0 0;
   box-sizing: border-box;
@@ -2705,7 +2706,7 @@ span.splink {
 }
 
 .food-filter__category {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .food-filter__heading {
@@ -2808,10 +2809,10 @@ span.splink {
 }
 
 .clear-filter-btn {
-  width: 55%;
+  width: 160px;
   height: 40px;
   display: block;
-  margin: 5px auto;
+  margin: 30px 0 10px;
   color: white;
   background-color: #E30000;
   line-height: 30px;
@@ -2832,6 +2833,10 @@ span.splink {
 
 .goods-filter__groups label:nth-child(5)::before {
   bottom: -4px;
+}
+
+input:disabled + label {
+  cursor: no-drop;
 }
 
 /*food search*/
@@ -3353,8 +3358,8 @@ span.splink {
   height: 50px;
   border-radius: 50%;
   z-index: 10;
-  background: #666 url("../img/header/to-top-arrow.svg") 10px 10px no-repeat;
-  transform: rotate(90deg);
+  background: #666 url("../img/header/to-top-arrow.svg") 10px 9px no-repeat;
+  transform: rotate(180deg);
   transition: .5s;
 }
 
@@ -3364,7 +3369,7 @@ span.splink {
 }
 
 .hide-food-online-btn_animate {
-  transform: rotate(0deg);
+  transform: rotate(90deg);
   transition: .5s;
 }
 
@@ -3375,8 +3380,9 @@ span.splink {
   float: left;
   margin-top: 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
   line-height: 50px;
+  font-family: "Cookie", cursive;
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
