@@ -504,8 +504,6 @@ nextSlideBtn.addEventListener("click", function(e){
 	plusSlides(1);
 });
 
-
-
 // see:
 // http://ejohn.org/blog/javascript-micro-templating/
 
@@ -721,22 +719,22 @@ logoutBtn.addEventListener("click", logoutUser);
     {name: 'Spritz Royal', desc: 'Signature refreshing aperitif cocktail of Gin, White Vermouth, Aperol with a dash of Prosecco', price: '55', classCategory: 'food-result__drinks food-result__drinks-alco', classPicture: 'food-result__pic_spritz-royal', rating: 5},
     {name: 'Negroni', desc: 'A classic aperitif cocktail found in Treviso, Italy consists of Gin, Red Vermouth and Campari', price: '55', classCategory: 'food-result__drinks food-result__drinks-alco', classPicture: 'food-result__pic_negroni', rating: 5},
     {name: 'Margherita', desc: 'Tomato sauce, Mozzarella Cheese and Basil leaves', price: '120', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_margherita', rating: 3},
-    // {name: 'Napoletana', desc: 'Tomato sauce, Mozzarella Cheese, Anchovies and Capers', price: '130', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_napoletana', rating: 5},
-    // {name: 'Diavola', desc: 'Tomato sauce, Mozzarella Cheese and Spicy Salami', price: '160', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_diavola', rating: 4},
-    // {name: 'Frittura mista di Pesce', desc: 'Deep fried Prawns, Anchovies, Squid and Zucchini', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_frittura', rating: 5},
-    // {name: 'Verdure', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '150', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_verdure', rating: 5},
-    // {name: 'Lasagna', desc: 'Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese', price: '70', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_lasagna', rating: 5},
-    // {name: 'Tortelli di Salsiccia', desc: 'Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce', price: '80', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_tortelli', rating: 5},
-    // {name: 'Spaghetti ai Frutti di Mare', desc: 'Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce', price: '130', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_spaghetti', rating: 5},
-    // {name: 'Farro di Mare', desc: 'Steamed Spelt with Squid,Prawns, Mussels &amp; Tomatoes, with Olive Oil, Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_farro', rating: 5},
-    // {name: 'Minestrone di verdure', desc: 'Hearty Vegetable soup', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_minestrone', rating: 5},
-    // {name: 'Zuppa di pesce', desc: 'Seafood soup with Prawns, Squids, Clams &amp; Mussels, served with toasted bread', price: '75', classCategory: 'food-result_soup', classPicture: 'food-result__pic_zuppa-di-pesce', rating: 5},
-    // {name: 'Italian Ice-cream Big', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: '', rating: 4},
-    // {name: 'Italian Sorbet', desc: 'Orange, Coconut, Strawberry flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_sorbet', rating: 2},
-    // {name: 'Panna Cotta', desc: 'Italian Custard Cream with Caramel', price: '70', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_panna-cotta', rating: 5},
-    // {name: 'Crème Brulee', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '75', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_creme-brulee', rating: 5},
-    // {name: 'Tiramisu', desc: 'All-time favourite', price: '80', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tiramisu', rating: 5},
-    // {name: 'Tortino caldo di cioccolato', desc: 'Melting chocolate cake', price: '95', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tortino', rating: 3},
+    {name: 'Napoletana', desc: 'Tomato sauce, Mozzarella Cheese, Anchovies and Capers', price: '130', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_napoletana', rating: 5},
+    {name: 'Diavola', desc: 'Tomato sauce, Mozzarella Cheese and Spicy Salami', price: '160', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_diavola', rating: 4},
+    {name: 'Frittura mista di Pesce', desc: 'Deep fried Prawns, Anchovies, Squid and Zucchini', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_frittura', rating: 5},
+    {name: 'Verdure', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '150', classCategory: 'food-result__pizza', classPicture: 'food-result__pic_verdure', rating: 5},
+    {name: 'Lasagna', desc: 'Pasta Layers, Bolognese sauce, Ham, Parmesan and Mozzarella Cheese', price: '70', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_lasagna', rating: 5},
+    {name: 'Tortelli di Salsiccia', desc: 'Tuscan Hand-made Ravioli filled with Home-made Sausage in Meat sauce', price: '80', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_tortelli', rating: 5},
+    {name: 'Spaghetti ai Frutti di Mare', desc: 'Spaghetti with Prawns, Clams, Mussels &amp; Squid in Tomato sauce', price: '130', classCategory: 'food-result__pasta', classPicture: 'food-result__pic_spaghetti', rating: 5},
+    {name: 'Farro di Mare', desc: 'Steamed Spelt with Squid,Prawns, Mussels &amp; Tomatoes, with Olive Oil, Lemon &amp; Parsley dressing served in a Parmesan Cheese Basket', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_farro', rating: 5},
+    {name: 'Minestrone di verdure', desc: 'Hearty Vegetable soup', price: '75', classCategory: 'food-result__soup', classPicture: 'food-result__pic_minestrone', rating: 5},
+    {name: 'Zuppa di pesce', desc: 'Seafood soup with Prawns, Squids, Clams &amp; Mussels, served with toasted bread', price: '75', classCategory: 'food-result_soup', classPicture: 'food-result__pic_zuppa-di-pesce', rating: 5},
+    {name: 'Italian Ice-cream Big', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: '', rating: 4},
+    {name: 'Italian Sorbet', desc: 'Orange, Coconut, Strawberry flavours available', price: '55', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_sorbet', rating: 2},
+    {name: 'Panna Cotta', desc: 'Italian Custard Cream with Caramel', price: '70', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_panna-cotta', rating: 5},
+    {name: 'Crème Brulee', desc: 'Rich custard base topped with a contrasting layer of hard caramel', price: '75', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_creme-brulee', rating: 5},
+    {name: 'Tiramisu', desc: 'All-time favourite', price: '80', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tiramisu', rating: 5},
+    {name: 'Tortino caldo di cioccolato', desc: 'Melting chocolate cake', price: '95', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_tortino', rating: 3},
     {name: 'Il Castagnaccio', desc: 'Classic Chestnut Tuscan Dessert. A real classic back home', price: '100', classCategory: 'food-result__dessert', classPicture: 'food-result__pic_castagnaccio', rating: 5}
   ];
 
@@ -747,20 +745,20 @@ logoutBtn.addEventListener("click", logoutUser);
   //get to html via resig template
   
   var results = document.getElementById("food-wrapper__result");
-    results.innerHTML = tmpl("mypage", {data: onlineMenu});
+  results.innerHTML = tmpl("mypage", {data: onlineMenu});
     
-
 
 //menu filtering
 
 var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
     buyFoodOnline = document.querySelector(".buy-food-online"),
     buyFoodSidebar = document.querySelector(".buy-food-online__sidebar"),
-    buyFoodFilter = document.querySelector("#filter-btn-close"),
-    allFood = document.querySelectorAll(".food-result"),
+    // buyFoodFilter = document.querySelector("#filter-btn-close"),
+    allCards = document.querySelectorAll(".food-result"),
     //soup
-    inputSoup = document.querySelector("#soup-appetizer"),
+    inputSoup = document.querySelector("#soup-appetizer"),fullOnlineMenu
     foodSoups = document.querySelectorAll(".food-result__soup"),
+
     //pasta
     inputPasta = document.querySelector("#pasta"),
     foodPasta = document.querySelectorAll(".food-result__pasta"),
@@ -774,9 +772,9 @@ var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
     inputPizza = document.querySelector("#pizza"),
     foodPizza = document.querySelectorAll(".food-result__pizza"),
     allInputCategory = document.querySelectorAll(".food-filter"),
-    allRadioBeverages = document.querySelector(".food-filter-radio");
+    allRadioBeverages = document.querySelector(".food-filter-radio"),
+    allFood = [];
 
-console.log(inputSoup);
 //open-close block
 
 function closeFoodOnlineBlock(){
@@ -786,53 +784,46 @@ function closeFoodOnlineBlock(){
 
 closeFoodOnlineBtn.addEventListener("click", closeFoodOnlineBlock);
 
+//push all cards to array
+
+  for(var i=0; i<allCards.length; i++){
+      allFood.push(allCards[i]);
+  }
+  console.log(allFood);
 //filter soups
 
 inputSoup.addEventListener("click", function(){
+
   if(inputSoup.checked === true){
-    // for(var i = 0; i < foodPasta.length; i++) {
-      foodPasta[0].classList.add("hide");
-      foodSoups[0].classList.remove("hide");
-    // }
-  } else {
-    // for(var k = 0; k < foodPasta.length; i++) {
-      foodPasta[0].classList.remove("hide");
-    // }
+    
+    //hide all cards
+
+    for(var i = 0; i < allCards.length; i++){
+      allCards[i].style.display = "none";
+    }
+
+    //get array of all soups cards
+
+    var filterSoup = allFood.filter(function(food){
+        return food.className.substring(12) === "food-result__soup";
+    })
+
+  console.log(filterSoup);
+
+
+  for(var k=0; k<filterSoup.length; k++){
+      filterSoup[k].style.display = "block";
   }
+    
+  } 
 });
 
 //filter pasta
 
-inputPasta.addEventListener("click", function(){
-  if(inputPasta.checked === true){
-    
-    for(var i = 0; i < foodSoups.length; i++) {
-      foodSoups[0].classList.add("hide");
-    }
-
-  } else {
-    for(var k = 0; k < foodSoups.length; k++) {
-      foodSoups[0].classList.remove("hide");
-    }
-  }
-});
 
 
 //filter desserts
 
-
-
-//disable alco|non-alco
-// console.log(inputBeverages);
-
-
-// for (var i = 0; i < allInputCategory.length; i++) {
-//   if(allInputCategory[i].id == "beverages") {
-//     for(var j = 0; j < allRadioBeverages.length; j++) {
-//       allRadioBeverages[j].setAttribute("disabled", "disabled");
-//     }
-//   }
-// }
 
 // //menu pagination
 
@@ -970,28 +961,65 @@ resultPage.classList.add("food-result__page");
 
 //menu search food
 
+//when pagination on
+
+// var searchFoodInput = document.querySelector("#search-block__search-field");
+
+
+// function searchFood() {
+//     var filter = searchFoodInput.value.toUpperCase();
+//     var foodResultPage = document.querySelectorAll(".food-result__page");
+//     var foodCard = document.querySelectorAll(".food-result");
+//     console.log(foodCard.length);
+//     var foodCardLen = foodCard.length;
+//     var test = 6;
+//     for (i = 0; i < foodCardLen; i++) {
+//     	//search by name
+//         var foodName = foodCard[i].querySelector(".food-result__name");
+//         var foodDesc = foodCard[i].querySelector(".food-result__desc");
+//         var foodPrice = foodCard[i].querySelector(".food-result__price");
+//         if (foodName.innerHTML.toUpperCase().indexOf(filter) > -1 || foodPrice.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//             foodCard[i].style.display = "";
+//             foodResultPage[0].appendChild(foodCard[i]); 
+//             if(foodCard.length > test) {
+//                foodResultPage[1].appendChild(foodCard[test++]); 
+//             } else {
+//             }
+//         } else {
+//             foodCard[i].style.display = "none";
+//             // foodCard[i].style.display = "none";
+//         }
+//         //search by desc
+//     }
+
+// }
+
+// searchFoodInput.addEventListener("keyup", searchFood);
+
+/*when pagination off*/
+
 var searchFoodInput = document.querySelector("#search-block__search-field");
 
 
 function searchFood() {
     var filter = searchFoodInput.value.toUpperCase();
-    var foodResultPage = document.querySelectorAll(".food-result__page");
+    var foodResultPage = document.querySelectorAll("#food-wrapper__result");
     var foodCard = document.querySelectorAll(".food-result");
     console.log(foodCard.length);
     var foodCardLen = foodCard.length;
-    var test = 6;
+    // var test = 6;
     for (i = 0; i < foodCardLen; i++) {
-    	//search by name
+        //search by name
         var foodName = foodCard[i].querySelector(".food-result__name");
         var foodDesc = foodCard[i].querySelector(".food-result__desc");
         var foodPrice = foodCard[i].querySelector(".food-result__price");
         if (foodName.innerHTML.toUpperCase().indexOf(filter) > -1 || foodPrice.innerHTML.toUpperCase().indexOf(filter) > -1) {
             foodCard[i].style.display = "";
             foodResultPage[0].appendChild(foodCard[i]); 
-            if(foodCard.length > test) {
-               foodResultPage[1].appendChild(foodCard[test++]); 
-            } else {
-            }
+            // if(foodCard.length > test) {
+            //    foodResultPage[1].appendChild(foodCard[test++]); 
+            // } else {
+            // }
         } else {
             foodCard[i].style.display = "none";
             // foodCard[i].style.display = "none";
@@ -1030,7 +1058,7 @@ function sortByPriceAscending() {
 	listAscending.reverse();
 
 	for(var k=0; k<listAscending.length; k++){
-	    // console.log(list[i].innerHTML);
+	    console.log(listAscending[0]);
 		container.insertBefore(listAscending[k].parentNode, container.firstChild);
 	}
 }

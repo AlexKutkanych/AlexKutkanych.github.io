@@ -55,6 +55,5 @@
   //get to html via resig template
   
   var results = document.getElementById("food-wrapper__result");
-    results.innerHTML = tmpl("mypage", {data: onlineMenu});
+  results.innerHTML = tmpl("mypage", {data: onlineMenu});
     
-

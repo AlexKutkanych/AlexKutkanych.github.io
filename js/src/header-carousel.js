@@ -34,5 +34,3 @@ nextSlideBtn.addEventListener("click", function(e){
 	e.preventDefault();
 	plusSlides(1);
 });
-
-

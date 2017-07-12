@@ -26,7 +26,7 @@ function sortByPriceAscending() {
 	listAscending.reverse();
 
 	for(var k=0; k<listAscending.length; k++){
-	    // console.log(list[i].innerHTML);
+	    console.log(listAscending[0]);
 		container.insertBefore(listAscending[k].parentNode, container.firstChild);
 	}
 }

@@ -32,7 +32,7 @@
             <li class="menu-top__menu-item">
               <a href="#" class="menu-top__menu-link">Home</a>
             </li>
-            <hr class="menu-top__vertical-line">
+            
             <li class="menu-top__menu-item">
               <a href="#our-menu" class="menu-top__menu-link menu-top__menu-link-menu" id="menu-top__menu"><span class="mobile-menu__with-submenu">Menu</span></a>
               <ul class="menu__submenu-style menu__submenu_hover" id="menu-top__submenu-menu">
@@ -42,15 +42,12 @@
                 <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Dessert &amp; Beverages</a></li>
               </ul>
             </li>
-            <hr class="menu-top__vertical-line">
             <li class="menu-top__menu-item">
               <a href="#our-services" class="menu-top__menu-link">Services</a>
             </li>
-            <hr class="menu-top__vertical-line">
             <li class="menu-top__menu-item">
               <a href="#our-events" class="menu-top__menu-link">News &amp; Events</a>
             </li>
-            <hr class="menu-top__vertical-line">
             <li class="menu-top__menu-item">
               <a href="#our-contacts" class="menu-top__menu-link" id="menu-top__contacts"><span class="mobile-menu__with-submenu">Contacts</span></a>
               <ul class="menu__submenu-style menu__submenu_hover" id="menu-top__submenu-contacts">
@@ -59,6 +56,10 @@
               </ul>
             </li>
           </ul>
+          <span class="menu-top__vertical-line"></span>
+          <span class="menu-top__vertical-line"></span>
+          <span class="menu-top__vertical-line"></span>
+          <span class="menu-top__vertical-line"></span>
         </nav>
         <!-- <div class="header-wrapper__search-section">
           <form>
@@ -99,7 +100,7 @@
           </div>
           <!-- sign-up form -->
           <div class="registration__signup-form">
-            <form action="" method="post" class="signup-form__wrapper">
+            <form method="post" class="signup-form__wrapper">
               <label class="signup-form__label" for="signup__name-field">
                 <img src="img/header/user.svg" alt="user icon" class="registration__icon">
               </label>
@@ -127,7 +128,7 @@
           </div>
           <!-- login form -->
           <div class="registration__login-form">
-            <form action="" method="post" class="login-form__wrapper">
+            <form method="post" class="login-form__wrapper">
               <label class="login-form__label" for="login__name-field"><img src="img/header/user.svg" alt="user icon" class="registration__icon"></label>
               <input type="text" class="registration-form__field login-form__name-field" id="login__name-field" placeholder="Enter your username" title="From 3 to 20 characters" >
               <p class="login__alert-message login__alert-message_username">* User does not exist</p>
@@ -368,7 +369,7 @@
             </div>
             <div class="proceed-booking__content">
               <p class="your-booking__heading">Enter your contacts:</p>
-              <form action="" method="post" class="signup-form__wrapper">
+              <form method="post" class="signup-form__wrapper">
               <label class="signup-form__label" for="proceed-booking__name-field">
                 <img src="img/header/user.svg" alt="user icon" class="registration__icon">
               </label>
@@ -493,16 +494,23 @@
           <form class="buy-food-online__form">
             <section class="food-filter__category">
               <a href="#" class="food-filter__heading"><h3>Category</h3></a>
-              <input type="checkbox" class="food-filter" id="soup-appetizer"><label class="food-filter__label" for="soup-appetizer">Soup &amp; Appetizer</label>
-              <input type="checkbox" class="food-filter" id="pasta"><label class="food-filter__label" for="pasta">Pasta</label>
-              <input type="checkbox" class="food-filter" id="pizza"><label class="food-filter__label" for="pizza">Pizza</label>
-              <input type="checkbox" class="food-filter" id="dessert"><label class="food-filter__label food-filter__label-dessert" for="dessert">Dessert</label>
-              <input type="checkbox" class="food-filter" id="beverages"><label class="food-filter__label" for="beverages">Beverages</label>
+              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="soup-appetizer">
+              <label class="food-filter__label-radio" for="soup-appetizer">Soup &amp; Appetizer</label>
+              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="pasta">
+              <label class="food-filter__label-radio" for="pasta">Pasta</label>
+              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="pizza">
+              <label class="food-filter__label-radio" for="pizza">Pizza</label>
+              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="dessert">
+              <label class="food-filter__label-radio" for="dessert">Dessert</label>
+              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="beverages">
+              <label class="food-filter__label-radio" for="beverages">Beverages</label>
             </section>
             <section class="food-filter__drink-type">
               <a href="#" class="food-filter__heading"><h3>Drinks type</h3></a>
-              <input type="radio" class="food-filter food-filter__radio" name="drink-type" id="non-alco"><label class="food-filter__label-radio" for="non-alco">non-alco</label>
-              <input type="radio" class="food-filter food-filter__radio" name="drink-type" id="alcoholic"><label class="food-filter__label-radio" for="alcoholic">alcoholic</label>
+              <input type="radio" class="food-filter food-filter__radio" name="drink-type" id="non-alco">
+              <label class="food-filter__label-radio" for="non-alco">non-alco</label>
+              <input type="radio" class="food-filter food-filter__radio" name="drink-type" id="alcoholic">
+              <label class="food-filter__label-radio" for="alcoholic">alcoholic</label>
             </section>
             <button type="button" name="button" class="typical-btn filter-btn">Find</button>
           </form>

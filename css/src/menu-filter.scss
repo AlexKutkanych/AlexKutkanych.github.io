@@ -6,7 +6,8 @@
 
 .buy-food-online {
   width: 1280px;
-  height: 800px;
+  height: 1060px;
+  overflow: hidden;
   margin: 0 auto;
   position: relative;
   &__hide {
@@ -139,7 +140,6 @@
   font-size: 42px;
   line-height: 16px;
   text-align: center;
-  backgroung-image: url(../img);
 }
 
 .filter-group__label:before {
@@ -303,6 +303,9 @@
       color: $text-hover-color;
       cursor: pointer;
     }
+  }
+  &__rating {
+    display: inline-block;
   }
   &__rating-block {
     display: flex;

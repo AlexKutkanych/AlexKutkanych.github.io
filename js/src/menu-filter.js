@@ -3,11 +3,12 @@
 var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
     buyFoodOnline = document.querySelector(".buy-food-online"),
     buyFoodSidebar = document.querySelector(".buy-food-online__sidebar"),
-    buyFoodFilter = document.querySelector("#filter-btn-close"),
-    allFood = document.querySelectorAll(".food-result"),
+    // buyFoodFilter = document.querySelector("#filter-btn-close"),
+    allCards = document.querySelectorAll(".food-result"),
     //soup
-    inputSoup = document.querySelector("#soup-appetizer"),
+    inputSoup = document.querySelector("#soup-appetizer"),fullOnlineMenu
     foodSoups = document.querySelectorAll(".food-result__soup"),
+
     //pasta
     inputPasta = document.querySelector("#pasta"),
     foodPasta = document.querySelectorAll(".food-result__pasta"),
@@ -21,9 +22,9 @@ var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
     inputPizza = document.querySelector("#pizza"),
     foodPizza = document.querySelectorAll(".food-result__pizza"),
     allInputCategory = document.querySelectorAll(".food-filter"),
-    allRadioBeverages = document.querySelector(".food-filter-radio");
+    allRadioBeverages = document.querySelector(".food-filter-radio"),
+    allFood = [];
 
-console.log(inputSoup);
 //open-close block
 
 function closeFoodOnlineBlock(){
@@ -33,50 +34,43 @@ function closeFoodOnlineBlock(){
 
 closeFoodOnlineBtn.addEventListener("click", closeFoodOnlineBlock);
 
+//push all cards to array
+
+  for(var i=0; i<allCards.length; i++){
+      allFood.push(allCards[i]);
+  }
+  console.log(allFood);
 //filter soups
 
 inputSoup.addEventListener("click", function(){
+
   if(inputSoup.checked === true){
-    // for(var i = 0; i < foodPasta.length; i++) {
-      foodPasta[0].classList.add("hide");
-      foodSoups[0].classList.remove("hide");
-    // }
-  } else {
-    // for(var k = 0; k < foodPasta.length; i++) {
-      foodPasta[0].classList.remove("hide");
-    // }
+    
+    //hide all cards
+
+    for(var i = 0; i < allCards.length; i++){
+      allCards[i].style.display = "none";
+    }
+
+    //get array of all soups cards
+
+    var filterSoup = allFood.filter(function(food){
+        return food.className.substring(12) === "food-result__soup";
+    })
+
+  console.log(filterSoup);
+
+
+  for(var k=0; k<filterSoup.length; k++){
+      filterSoup[k].style.display = "block";
   }
+    
+  } 
 });
 
 //filter pasta
 
-inputPasta.addEventListener("click", function(){
-  if(inputPasta.checked === true){
-    
-    for(var i = 0; i < foodSoups.length; i++) {
-      foodSoups[0].classList.add("hide");
-    }
-
-  } else {
-    for(var k = 0; k < foodSoups.length; k++) {
-      foodSoups[0].classList.remove("hide");
-    }
-  }
-});
 
 
 //filter desserts
 
-
-
-//disable alco|non-alco
-// console.log(inputBeverages);
-
-
-// for (var i = 0; i < allInputCategory.length; i++) {
-//   if(allInputCategory[i].id == "beverages") {
-//     for(var j = 0; j < allRadioBeverages.length; j++) {
-//       allRadioBeverages[j].setAttribute("disabled", "disabled");
-//     }
-//   }
-// }
