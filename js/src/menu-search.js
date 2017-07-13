@@ -52,7 +52,8 @@ function searchFood() {
         var foodName = foodCard[i].querySelector(".food-result__name");
         var foodDesc = foodCard[i].querySelector(".food-result__desc");
         var foodPrice = foodCard[i].querySelector(".food-result__price");
-        if (foodName.innerHTML.toUpperCase().indexOf(filter) > -1 || foodPrice.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        if (foodName.innerHTML.toUpperCase().indexOf(filter) > -1 || foodPrice.innerHTML.toUpperCase().indexOf(filter) > -1
+            || foodDesc.innerHTML.toUpperCase().indexOf(filter) > -1) {
             foodCard[i].style.display = "";
             foodResultPage[0].appendChild(foodCard[i]); 
             // if(foodCard.length > test) {
