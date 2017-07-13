@@ -2,6 +2,10 @@
 
 .our-history {
   height: 500px;
+  background-image: url('../img/history/parallax-effect.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   &__wrapper {
     width: $wrapper-width;
     margin: 0 auto;

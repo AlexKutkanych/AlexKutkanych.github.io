@@ -473,73 +473,75 @@
           <p class="food-online-heading">Discover online menu</p>
           <span class="hide-food-online-btn"></span>
       </section>
-      <div class="buy-food-online" id="buy-food-online">
-        <aside class="buy-food-online__sidebar">
-          <!-- <h3>Choose your favourite meal</h3> -->
-          <span class="buy-food-online__filter-heading">Filter our menu</span>
-          <form class="buy-food-online__form">
-            <section class="food-filter__category">
-              <a href="#" class="food-filter__heading"><h3>Category</h3></a>
-              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="soup-appetizer">
-              <label class="food-filter__label-radio" for="soup-appetizer">Soup &amp; Appetizer</label>
-              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="pasta">
-              <label class="food-filter__label-radio" for="pasta">Pasta</label>
-              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="pizza">
-              <label class="food-filter__label-radio" for="pizza">Pizza</label>
-              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="dessert">
-              <label class="food-filter__label-radio" for="dessert">Dessert</label>
-              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="beverages">
-              <label class="food-filter__label-radio" for="beverages">Beverages</label>
-            </section>
-            <section class="food-filter__beverage-type">
-              <a href="#" class="food-filter__heading"><h3>Beverage type</h3></a>
-              <input type="radio" class="food-filter food-filter__radio" name="beverage-type" id="non-alco">
-              <label class="food-filter__label-radio" for="non-alco">non-alco</label>
-              <input type="radio" class="food-filter food-filter__radio" name="beverage-type" id="alco">
-              <label class="food-filter__label-radio" for="alco">alcoholic</label>
-            </section>
-            <button type="button" name="button" class="typical-btn clear-filter-btn" id="clear-filter-btn">Clear all filters</button>
-          </form>
-          <div class="buy-food-online__search-block">
-            <img src="img/menu-filter/search.svg" alt="" class="search-block__search-icon">
-            <input type="text" name="search" id="search-block__search-field" placeholder="Search.." class="search-block__search-field">
+      <section class="our-online-menu">
+        <div class="buy-food-online" id="buy-food-online">
+          <aside class="buy-food-online__sidebar">
+            <!-- <h3>Choose your favourite meal</h3> -->
+            <span class="buy-food-online__filter-heading">Filter our menu</span>
+            <form class="buy-food-online__form">
+              <section class="food-filter__category">
+                <a href="#" class="food-filter__heading"><h3>Category</h3></a>
+                <input type="radio" class="food-filter food-filter__radio" name="food-category" id="soup-appetizer">
+                <label class="food-filter__label-radio" for="soup-appetizer">Soup &amp; Appetizer</label>
+                <input type="radio" class="food-filter food-filter__radio" name="food-category" id="pasta">
+                <label class="food-filter__label-radio" for="pasta">Pasta</label>
+                <input type="radio" class="food-filter food-filter__radio" name="food-category" id="pizza">
+                <label class="food-filter__label-radio" for="pizza">Pizza</label>
+                <input type="radio" class="food-filter food-filter__radio" name="food-category" id="dessert">
+                <label class="food-filter__label-radio" for="dessert">Dessert</label>
+                <input type="radio" class="food-filter food-filter__radio" name="food-category" id="beverages">
+                <label class="food-filter__label-radio" for="beverages">Beverages</label>
+              </section>
+              <section class="food-filter__beverage-type">
+                <a href="#" class="food-filter__heading"><h3>Beverage type</h3></a>
+                <input type="radio" class="food-filter food-filter__radio" name="beverage-type" id="non-alco">
+                <label class="food-filter__label-radio" for="non-alco">non-alco</label>
+                <input type="radio" class="food-filter food-filter__radio" name="beverage-type" id="alco">
+                <label class="food-filter__label-radio" for="alco">alcoholic</label>
+              </section>
+              <button type="button" name="button" class="typical-btn clear-filter-btn" id="clear-filter-btn">Clear all filters</button>
+            </form>
+            <div class="buy-food-online__search-block">
+              <img src="img/menu-filter/search.svg" alt="" class="search-block__search-icon">
+              <input type="text" name="search" id="search-block__search-field" placeholder="Search.." class="search-block__search-field">
+            </div>
+          </aside>
+          <div class="buy-food-online__sort-block">
+            <p class="sort-block__heading">Sort meal:</p>
+            <select name="" class="sort-block__sorting" id="sort-block__sorting">
+              <option class="sort-block__option">Select sorting</option>
+              <option class="sort-block__option" value="sort-ascending" id="sort-ascending">Price: lowest first</option>
+              <option class="sort-block__option" value="sort-descending" id="sort-descending">Price: highest first</option>
+              <option class="sort-block__option" value="sort-by-rating" id="sort-by-rating">By rating</option>
+            </select>
           </div>
-        </aside>
-        <div class="buy-food-online__sort-block">
-          <p class="sort-block__heading">Sort meal:</p>
-          <select name="" class="sort-block__sorting" id="sort-block__sorting">
-            <option class="sort-block__option">Select sorting</option>
-            <option class="sort-block__option" value="sort-ascending" id="sort-ascending">Price: lowest first</option>
-            <option class="sort-block__option" value="sort-descending" id="sort-descending">Price: highest first</option>
-            <option class="sort-block__option" value="sort-by-rating" id="sort-by-rating">By rating</option>
-          </select>
-        </div>
-        <main class="food-wrapper__result" id="food-wrapper__result">
-          <script type="text/html" id="mypage">
-            <% for (var i = 0; i < onlineMenu.length; i++) { %>
-            <div class="food-result <%= data[i].classCategory %>">
-            <figure>
-              <a href="#" class="food-result__pic <%= onlineMenu[i].classPicture%>"></a>
-              <figcaption class="food-result__name"><%= onlineMenu[i].name%></figcaption>
-              <div class="food-result__rating-block">Rating:&nbsp;<span class="food-result__rating"><%= onlineMenu[i].rating%></span>&nbsp;<span class="food-result__rating-block_stars-amount"></span></div>
-              <figcaption class="food-result__desc"><%= onlineMenu[i].desc%></figcaption>
-            </figure>
-            <span class="food-result__price">&#x20B4;<%= onlineMenu[i].price%></span>
-            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          <main class="food-wrapper__result" id="food-wrapper__result">
+            <script type="text/html" id="mypage">
+              <% for (var i = 0; i < onlineMenu.length; i++) { %>
+              <div class="food-result <%= data[i].classCategory %>">
+              <figure>
+                <a href="#" class="food-result__pic <%= onlineMenu[i].classPicture%>"></a>
+                <figcaption class="food-result__name"><%= onlineMenu[i].name%></figcaption>
+                <div class="food-result__rating-block">Rating:&nbsp;<span class="food-result__rating"><%= onlineMenu[i].rating%></span>&nbsp;<span class="food-result__rating-block_stars-amount"></span></div>
+                <figcaption class="food-result__desc"><%= onlineMenu[i].desc%></figcaption>
+              </figure>
+              <span class="food-result__price">&#x20B4;<%= onlineMenu[i].price%></span>
+              <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+            </div>
+              <% }; %>
+            </script>
+          </main>
+          <!-- <div class="goods-wrapper__pagination"> -->
+            <!-- <div class="pagination">
+              <ul class="pagination__list">
+                <li class="pagination__list-item"><a href="#" id="prev" class="prevnext pagination__link">&nbsp;&laquo;&nbsp;</a></li>
+                <li class="pagination__list-item"><a href="#" id="next" class="prevnext pagination__link">&nbsp;&raquo;&nbsp;</a></li>
+              </ul>
+              <br/> -->
+            <!-- </div>  -->
           </div>
-            <% }; %>
-          </script>
-        </main>
-        <!-- <div class="goods-wrapper__pagination"> -->
-          <div class="pagination">
-            <ul class="pagination__list">
-              <li class="pagination__list-item"><a href="#" id="prev" class="prevnext pagination__link">&nbsp;&laquo;&nbsp;</a></li>
-              <li class="pagination__list-item"><a href="#" id="next" class="prevnext pagination__link">&nbsp;&raquo;&nbsp;</a></li>
-            </ul>
-            <br/>
-          <!-- </div>  -->
         </div>
-      </div>
+      </section>  
       <section class="our-services" id="our-services">
         <a href="#"><h2 class="our-services__heading">Services</h2></a>
         <div class="our-services__content-block">
