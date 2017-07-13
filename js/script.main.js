@@ -752,7 +752,7 @@ logoutBtn.addEventListener("click", logoutUser);
 //menu filtering
 
 var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
-    buyFoodOnline = document.querySelector(".buy-food-online"),
+    buyFoodOnline = document.querySelector(".our-online-menu"),
     buyFoodSidebar = document.querySelector(".buy-food-online__sidebar"),
     allCards = document.querySelectorAll(".food-result"),
     allInputs = document.querySelectorAll(".food-filter"),
@@ -1194,7 +1194,8 @@ function searchFood() {
         var foodName = foodCard[i].querySelector(".food-result__name");
         var foodDesc = foodCard[i].querySelector(".food-result__desc");
         var foodPrice = foodCard[i].querySelector(".food-result__price");
-        if (foodName.innerHTML.toUpperCase().indexOf(filter) > -1 || foodPrice.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        if (foodName.innerHTML.toUpperCase().indexOf(filter) > -1 || foodPrice.innerHTML.toUpperCase().indexOf(filter) > -1
+            || foodDesc.innerHTML.toUpperCase().indexOf(filter) > -1) {
             foodCard[i].style.display = "";
             foodResultPage[0].appendChild(foodCard[i]); 
             // if(foodCard.length > test) {

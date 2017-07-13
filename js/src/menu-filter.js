@@ -2,7 +2,7 @@
 //menu filtering
 
 var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
-    buyFoodOnline = document.querySelector(".buy-food-online"),
+    buyFoodOnline = document.querySelector(".our-online-menu"),
     buyFoodSidebar = document.querySelector(".buy-food-online__sidebar"),
     allCards = document.querySelectorAll(".food-result"),
     allInputs = document.querySelectorAll(".food-filter"),
