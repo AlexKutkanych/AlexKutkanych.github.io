@@ -56,6 +56,8 @@
 
 .social-btn__block {
   width: 210px;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   justify-content: space-between;
   margin: 20px auto 10px; 

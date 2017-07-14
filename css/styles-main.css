@@ -60,23 +60,15 @@
 
 .booking-section__modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: black;
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 .booking-section__heading {
@@ -109,6 +101,8 @@
   width: 30%;
   height: 80%;
   float: left;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,6 +171,7 @@
 
 .info-block__select-time::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px #964B00;
+  box-shadow: inset 0 0 6px #964B00;
 }
 
 .info-block__select-time::-webkit-scrollbar-thumb {
@@ -541,7 +536,6 @@
   background-image: url("../img/header/pizza-loader.png");
   width: 300px;
   height: 300px;
-  -webkit-animation: spin 2s linear 3;
   animation: spin 3s linear 3;
   overflow: hidden;
 }
@@ -578,27 +572,27 @@
 
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   20% {
-    -webkit-transform: rotate(72deg);
+    transform: rotate(72deg);
   }
 
   40% {
-    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg);
   }
 
   60% {
-    -webkit-transform: rotate(216deg);
+    transform: rotate(216deg);
   }
 
   80% {
-    -webkit-transform: rotate(288deg);
+    transform: rotate(288deg);
   }
 
   100% {
-    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -887,6 +881,8 @@
   margin: 0;
   padding: 0;
   height: 30px;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   justify-content: space-between;
 }
@@ -1500,7 +1496,7 @@
 }
 
 .social-media {
-  font-style: "PT Sans Caption", sans-serif;
+  font-family: "PT Sans Caption", sans-serif;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -1552,7 +1548,7 @@
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .footer {
-    height: 250px;
+    height: 260px;
   }
 
   .footer-wrapper {
@@ -1589,7 +1585,7 @@
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .footer {
-    height: 380px;
+    height: 400px;
   }
 
   .footer-wrapper {
@@ -1728,7 +1724,6 @@ span.splink {
 .menu-top__menu-link:hover::after {
   width: 100%;
   background-color: #964B00;
-  -webkit-transition: width .8s ease-in-out, background-color .8s ease;
   transition: width .8s ease-in-out, background-color .8s ease;
 }
 
@@ -1750,7 +1745,6 @@ span.splink {
   background-color: rgba(150, 75, 0, 0.4);
   text-align: left;
   text-indent: 10px;
-  -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
 
@@ -1955,7 +1949,6 @@ span.splink {
     height: 76px;
     background: url("../img/header/mobile-menu.svg") center center no-repeat;
     transition-duration: 1s;
-    -webkit-transition-duration: 1s;
   }
 
   .mobile-menu__burger_open {
@@ -1963,7 +1956,6 @@ span.splink {
     width: 30px;
     margin-left: 25px;
     transition-duration: 1s;
-    -webkit-transition-duration: 1s;
     transform: rotate(90deg);
   }
 
@@ -1977,7 +1969,6 @@ span.splink {
     background-image: url("../img/header/submenu-open.svg");
     background-repeat: no-repeat;
     transition: ease-in-out .5s;
-    -webkit-transition: ease-in-out .5s;
   }
 
   .mobile-menu__with-submenu_close::after {
@@ -1990,7 +1981,6 @@ span.splink {
     background-image: url("../img/header/submenu-close.svg");
     background-repeat: no-repeat;
     transition: ease-in-out .5s;
-    -webkit-transition: ease-in-out .5s;
   }
 
   .join-us__btn {
@@ -2137,14 +2127,12 @@ span.splink {
     height: 76px;
     background: url("../img/header/mobile-menu.svg") center center no-repeat;
     transition-duration: 1s;
-    -webkit-transition-duration: 1s;
   }
 
   .mobile-menu__burger_open {
     background: url("../img/header/close.svg") center center no-repeat;
     width: 30px;
     margin-left: 25px;
-    -webkit-transition-duration: 1s;
     transform: rotate(90deg);
   }
 
@@ -2232,6 +2220,8 @@ span.splink {
 
 .social-btn__block {
   width: 210px;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   justify-content: space-between;
   margin: 20px auto 10px;
@@ -2637,6 +2627,8 @@ span.splink {
   width: 100%;
   height: 100%;
   top: 0;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   flex-wrap: wrap;
 }
@@ -2706,8 +2698,9 @@ span.splink {
   margin-bottom: 20px;
 }
 
-.hide {
+.our-online-menu__hide {
   display: none;
+  overflow: hidden;
 }
 
 .buy-food-online {
@@ -2717,11 +2710,6 @@ span.splink {
   overflow: hidden;
   margin: 0 auto;
   position: relative;
-}
-
-.buy-food-online__hide {
-  height: 0;
-  overflow: hidden;
 }
 
 /*aside*/
@@ -2901,7 +2889,6 @@ input:disabled + label {
   background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
 
@@ -2997,6 +2984,8 @@ input:disabled + label {
 }
 
 .food-result__rating-block {
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   height: 14px;
   font-size: 12px;
@@ -3328,6 +3317,8 @@ input:disabled + label {
     width: 300px;
     height: 70px;
     margin: 10px auto;
+    display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -3481,7 +3472,7 @@ input:disabled + label {
   background-image: url("../img/menu/dessert.jpg");
 }
 
-.hide-food-online-btn {
+.hide-online-menu-btn {
   display: block;
   float: left;
   margin-top: 20px;
@@ -3494,12 +3485,12 @@ input:disabled + label {
   transition: .5s;
 }
 
-.hide-food-online-btn:hover {
+.hide-online-menu-btn:hover {
   background-color: #964B00;
   cursor: pointer;
 }
 
-.hide-food-online-btn_animate {
+.hide-online-menu-btn__animate {
   transform: rotate(90deg);
   transition: .5s;
 }
@@ -3620,7 +3611,7 @@ input:disabled + label {
     font-size: 38px;
   }
 
-  .hide-food-online-btn {
+  .hide-online-menu-btn {
     margin-top: 50px;
   }
 }
@@ -3902,6 +3893,16 @@ input:disabled + label {
 }
 
 @keyframes fading {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fading {
   0% {
     opacity: 1;
   }

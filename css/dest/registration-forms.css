@@ -224,6 +224,12 @@
   100% {
     opacity: 0; } }
 
+@-webkit-keyframes fading {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .registration-confirm-modal__heading {
   text-align: left;
   padding: 10px;

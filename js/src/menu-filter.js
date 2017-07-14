@@ -1,7 +1,7 @@
 "use strict";
 //menu filtering
 
-var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
+var closeFoodOnlineBtn = document.querySelector(".hide-online-menu-btn"),
     buyFoodOnline = document.querySelector(".our-online-menu"),
     buyFoodSidebar = document.querySelector(".buy-food-online__sidebar"),
     allCards = document.querySelectorAll(".food-result"),
@@ -22,13 +22,13 @@ var closeFoodOnlineBtn = document.querySelector(".hide-food-online-btn"),
 //open-close block
 
 function closeFoodOnlineBlock(){
-    buyFoodOnline.classList.toggle("buy-food-online__hide");
-    closeFoodOnlineBtn.classList.toggle("hide-food-online-btn_animate");
+    buyFoodOnline.classList.toggle("our-online-menu__hide");
+    closeFoodOnlineBtn.classList.toggle("hide-online-menu-btn__animate");
 }
 
-closeFoodOnlineBtn.addEventListener("click", closeFoodOnlineBlock);
+console.log(closeFoodOnlineBtn);
 
-console.log(inputBeveragesAlco);
+closeFoodOnlineBtn.addEventListener("click", closeFoodOnlineBlock);
 
 //push all cards to array
 

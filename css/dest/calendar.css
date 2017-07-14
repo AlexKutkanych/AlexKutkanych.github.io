@@ -24,6 +24,8 @@
     margin: 0;
     padding: 0;
     height: 30px;
+    display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
     justify-content: space-between; }
   .calendar__month_prev-btn {

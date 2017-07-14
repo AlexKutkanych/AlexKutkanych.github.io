@@ -28,7 +28,7 @@
   width: 20%; }
 
 .social-media {
-  font-style: "PT Sans Caption", sans-serif;
+  font-family: "PT Sans Caption", sans-serif;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -61,7 +61,7 @@
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .footer {
-    height: 250px; }
+    height: 260px; }
     .footer-wrapper {
       width: 95%;
       justify-content: center;
@@ -86,7 +86,7 @@
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .footer {
-    height: 380px; }
+    height: 400px; }
     .footer-wrapper {
       width: 100%;
       justify-content: center;
