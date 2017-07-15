@@ -6,6 +6,9 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
 var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var path = require('path');
+ 
 
 
 gulp.task('concat-css', function () {
@@ -31,21 +34,24 @@ gulp.task('concat-js', function() {
 });
 
 //https://www.npmjs.com/package/gulp-svgstore
-gulp.task('svg', function () {
+
+gulp.task('svgstore', function () {
     return gulp
-        .src('img/header/*.svg', { base: 'img/header/sprite' })
-        .pipe(rename({prefix: 'icon-'}))
+        .src('img/menu-filter/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
         .pipe(svgstore())
-        .pipe(gulp.dest('img/svg'));
+        .pipe(gulp.dest('img/'));
 });
-
-
-//https://www.npmjs.com/package/gulp-svg-spritesheet
-// gulp.task('sprites', function () {
-//     return gulp.src('img/header/*.svg')
-//         .pipe(svgSprite())
-//         .pipe(gulp.dest("img/spritesvg"));
-// });
 
 
 

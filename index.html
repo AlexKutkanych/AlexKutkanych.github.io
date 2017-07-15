@@ -503,8 +503,9 @@
             <button type="button" name="button" class="typical-btn clear-filter-btn" id="clear-filter-btn">Clear all filters</button>
           </form>
           <div class="buy-food-online__search-block">
-            <img src="img/menu-filter/search.svg" alt="" class="search-block__search-icon">
-            <input type="text" name="search" id="search-block__search-field" placeholder="Search.." class="search-block__search-field" tabindex="5">
+            <!-- <img src="img/menu-filter/search.svg" alt="" class="search-block__search-icon"> -->
+            <svg class="icon search-block__search-icon"><use xlink:href="img/menu-filter.svg#test" /></svg>
+            <input type="text" name="search" id="search-block__search-field" placeholder="Search.." class="search-block__search-field icon-search" tabindex="5">
           </div>
         </aside>
         <div class="buy-food-online__sort-block">
@@ -523,7 +524,7 @@
             <figure>
               <a href="#" class="food-result__pic <%= onlineMenu[i].classPicture%>"></a>
               <figcaption class="food-result__name"><%= onlineMenu[i].name%></figcaption>
-              <div class="food-result__rating-block">Rating:&nbsp;<span class="food-result__rating"><%= onlineMenu[i].rating%></span>&nbsp;<span class="food-result__rating-block_stars-amount"></span></div>
+              <div class="food-result__rating-block">Rating:&nbsp;<span class="food-result__rating"><%= onlineMenu[i].rating%></span>&nbsp;<span class=" icon-star-rating"></span></div>
               <figcaption class="food-result__desc"><%= onlineMenu[i].desc%></figcaption>
             </figure>
             <span class="food-result__price">&#x20B4;<%= onlineMenu[i].price%></span>
