@@ -584,43 +584,20 @@
           </ul>
           <div class="tab__content">
             <div class="news-content" id="news-content">
-              <article class="news-content__block">
-                <img src="img/events/summer-terrasse.jpg" alt="summer terrasse" class="news-block__img">
-                <img src="img/events/new-icon.svg" alt="new icon" class="new-icon">
-                <a href="#"><h2 class="news-block__head">Summer terrasse is open</h2></a>
-                <div class="news-block__text">
-                  <p class="news-block__text-preview">Luckily the summer is coming, so you can spend time with your friends or family having a meal outside.</p>
-                  <a href="#" class="news-block__read-more">read more</a><br>
-                </div>
-                <span class="news-block__posted">Posted 5 hours ago</span>
-              </article>
-              <article class="news-content__block">
-                <img src="img/events/children-birthday.jpg" alt="birthday cakes" class="news-block__img">
-                <a href="#"><h2 class="news-block__head">Make your children happy</h2></a>
-                <div class="news-block__text">
-                  <p class="news-block__text-preview">Now you can organize a wonderfull birtday for your children.</p>
-                  <a href="#" class="news-block__read-more">read more</a>
-                </div>
-                <span class="news-block__posted">Posted 10 days ago</span>
-              </article>
-              <article class="news-content__block">
-                <img src="img/events/wedding.jpg" alt="wedding" class="news-block__img">
-                <a href="#"><h2 class="news-block__head">Best wedding with us</h2></a>
-                <div class="news-block__text">
-                  <p class="news-block__text-preview">Our restaurant can place up to 60 elite guests inside. Let us make the most important day of your life special.</p>
-                  <a href="#" class="news-block__read-more">read more</a>
-                </div>
-                <span class="news-block__posted">Posted 28 days ago</span>
-              </article>
-              <article class="news-content__block">
-                <img src="img/events/birthday.jpg" alt="birthday cakes" class="news-block__img">
-                <a href="#"><h2 class="news-block__head">Birthday party can be even better</h2></a>
-                <div class="news-block__text">
-                  <p class="news-block__text-preview">Having boring birthday parties? Nah. We can serve you with the best Italian food and drinks. Candy bar is free.</p>
-                  <a href="#" class="news-block__read-more">read more</a>
-                </div>
-                <span class="news-block__posted">Posted month ago</span>
-              </article>
+              <script type="text/html" id="mypage1">
+                <% for (var i = 0; i < ourNews.length; i++) { %>
+                  <article class="news-content__block">
+                    <img src="<%= ourNews[i].image %>" alt="<%= ourNews[i].imageAltern %>" class="news-block__img">
+                    <img src="<%= ourNews[i].freshNewsIcon%>" alt="new icon" class="new-icon">
+                    <a href="#"><h2 class="news-block__head"><%= ourNews[i].heading %></h2></a>
+                    <div class="news-block__text">
+                      <p class="news-block__text-preview"><%= ourNews[i].desc %></p>
+                      <a href="#" class="news-block__read-more">read more</a><br>
+                    </div>
+                    <span class="news-block__posted">Posted <%= ourNews[i].postedTimePast %></span>
+                  </article>
+                <% }; %>
+              </script>
             </div>
             <div class="event-content show-content" id="event-content">
               <ul>
