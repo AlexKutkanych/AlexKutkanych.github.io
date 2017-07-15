@@ -9,7 +9,7 @@ var toTopButton = document.querySelector("#to-top-button");
 
 function scrollScreen(){
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-      toTopButton.style.display = "block";
+    toTopButton.style.display = "block";
   } else {
     toTopButton.style.display = "none";
   }

@@ -1,5 +1,6 @@
 .our-history {
   height: 500px;
+  margin-top: 60px;
   background-image: url("../img/history/parallax-effect.jpg");
   background-size: cover;
   background-attachment: fixed;

@@ -1,5 +1,5 @@
 .our-online-menu {
-  height: 1060px;
+  height: 1080px;
   width: 100%;
   margin-bottom: 20px;
   display: block; }
@@ -170,8 +170,10 @@ input:disabled + label {
 .search-block__search-icon {
   position: absolute;
   z-index: 1;
-  top: 11px;
-  left: 5px; }
+  top: 15px;
+  left: 6px;
+  width: 32px;
+  height: 30px; }
 
 /*food sorting*/
 .buy-food-online__sort-block {
@@ -245,13 +247,12 @@ input:disabled + label {
     display: -ms-flex;
     display: flex;
     height: 14px;
-    font-size: 12px;
+    font-size: 13px;
     margin: 10px 0 10px 15px; }
     .food-result__rating-block_stars-amount {
       display: block;
       height: 100%;
-      width: 14px;
-      background-image: url("../img/menu-filter/star-rating.svg"); }
+      width: 14px; }
     .food-result__rating-block:hover {
       color: #964B00;
       cursor: pointer; }
@@ -265,6 +266,9 @@ input:disabled + label {
     .food-result__desc:hover {
       color: #964B00;
       cursor: pointer; }
+
+.icon-star-rating {
+  width: 15px; }
 
 .food-result__pic {
   display: inline-block;

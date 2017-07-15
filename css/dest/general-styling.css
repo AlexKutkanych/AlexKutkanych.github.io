@@ -21,6 +21,3 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #964B00;
   outline: 1px solid #964B00; }
-
-:focus {
-  outline: 1px dashed #27f434; }

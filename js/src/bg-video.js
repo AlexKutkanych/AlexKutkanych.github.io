@@ -26,5 +26,4 @@ $(document).ready(function(){
 
   // trigger re-scale on pageload
 	$(window).trigger('resize');
-
 });

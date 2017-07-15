@@ -503,8 +503,8 @@
             <button type="button" name="button" class="typical-btn clear-filter-btn" id="clear-filter-btn">Clear all filters</button>
           </form>
           <div class="buy-food-online__search-block">
+            <svg class="icon search-block__search-icon"><use xlink:href="img/menu-filter/menu-filter.svg#search" /></svg>
             <!-- <img src="img/menu-filter/search.svg" alt="" class="search-block__search-icon"> -->
-            <svg class="icon search-block__search-icon"><use xlink:href="img/menu-filter.svg#test" /></svg>
             <input type="text" name="search" id="search-block__search-field" placeholder="Search.." class="search-block__search-field icon-search" tabindex="5">
           </div>
         </aside>
@@ -524,7 +524,7 @@
             <figure>
               <a href="#" class="food-result__pic <%= onlineMenu[i].classPicture%>"></a>
               <figcaption class="food-result__name"><%= onlineMenu[i].name%></figcaption>
-              <div class="food-result__rating-block">Rating:&nbsp;<span class="food-result__rating"><%= onlineMenu[i].rating%></span>&nbsp;<span class=" icon-star-rating"></span></div>
+              <div class="food-result__rating-block">Rating:&nbsp;<span class="food-result__rating"><%= onlineMenu[i].rating%></span>&nbsp;<svg class="icon icon-star-rating"><use xlink:href="img/menu-filter/menu-filter.svg#star-rating" /></svg></div>
               <figcaption class="food-result__desc"><%= onlineMenu[i].desc%></figcaption>
             </figure>
             <span class="food-result__price">&#x20B4;<%= onlineMenu[i].price%></span>
@@ -664,15 +664,15 @@
         <a href="#main" class="totop-button"></a>
         <section class="footer__social-media">
           <a href="#"><h3 class="footer__heading">Find us</h3></a>
-          <a href="https://www.facebook.com" class="social-media social-media__facebook"></a>
-          <a href="https://www.vk.com" class="social-media social-media__vkontakte"></a>
-          <a href="https://www.instagram.com" class="social-media social-media__instagram"></a>
-          <a href="https://www.pinterest.com" class="social-media social-media__pinterest"></a>
+          <a href="https://www.facebook.com" class="social-media social-media__facebook"><svg class="social-media__svg social-media__svg_facebook"><use xlink:href="img/footer/footer.svg#facebook" /></svg><svg class="social-media__svg-hover social-media__svg-hover_facebook"><use xlink:href="img/footer/footer.svg#facebook-hover" /></svg></a>
+          <a href="https://www.vk.com" class="social-media social-media__vk"><svg class="social-media__svg social-media__svg_vk"><use xlink:href="img/footer/footer.svg#vk" /></svg><svg class="social-media__svg-hover social-media__svg-hover_vk"><use xlink:href="img/footer/footer.svg#vk-hover" /></svg></a>
+          <a href="https://www.instagram.com" class="social-media social-media__instagram"><svg class="social-media__svg social-media__svg_instagram"><use xlink:href="img/footer/footer.svg#instagram" /></svg><svg class="social-media__svg-hover social-media__svg-hover_instagram"><use xlink:href="img/footer/footer.svg#instagram-hover" /></svg></a>
+          <a href="https://www.pinterest.com" class="social-media social-media__pinterest"><svg class="social-media__svg social-media__svg_pinterest"><use xlink:href="img/footer/footer.svg#pinterest" /></svg><svg class="social-media__svg-hover social-media__svg-hover_pinterest"><use xlink:href="img/footer/footer.svg#pinterest-hover" /></svg></a>
         </section>
         <section class="footer__app-link">
           <a href="#"><h3 class="footer__heading">Coming soon for</h3></a>
-          <a href="https://itunes.apple.com/" class="social-media app-link__apple"></a>
-          <a href="https://play.google.com/store/apps?hl=uk" class="social-media app-link__android"></a>
+          <a href="https://itunes.apple.com/" class="social-media app-link__apple"><svg class="social-media__svg"><use xlink:href="img/footer/footer.svg#apple"/></svg></a>
+          <a href="https://play.google.com/store/apps?hl=uk" class="social-media app-link__android"><svg class="social-media__svg"><use xlink:href="img/footer/footer.svg#android"/></svg></a>
         </section>
         <p class="footer__copy">Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
       </div>

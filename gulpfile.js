@@ -37,7 +37,7 @@ gulp.task('concat-js', function() {
 
 gulp.task('svgstore', function () {
     return gulp
-        .src('img/menu-filter/*.svg')
+        .src('img/services/*.svg')
         .pipe(svgmin(function (file) {
             var prefix = path.basename(file.relative, path.extname(file.relative));
             return {
@@ -57,5 +57,5 @@ gulp.task('svgstore', function () {
 
 //Watch task
 gulp.task('watch',function() {
-    gulp.watch(['css/src/*.scss', 'css/dest/*.css', 'css/*.css', 'js/src/*.js'], ['concat-css', 'sass', 'concat-js']);
+    gulp.watch(['css/src/*.scss', 'css/dest/*.css', 'css/*.css', 'js/src/*.js', 'img/*/*.svg'], ['concat-css', 'sass', 'concat-js']);
 });

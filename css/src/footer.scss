@@ -26,7 +26,7 @@
 }
 
 .contacts__street:hover, .contacts__phone:hover, .contacts__email:hover {
-  color: black;
+  color: $text-hover-color;
 }
 
 .footer__copy {
@@ -35,6 +35,18 @@
 }
 
 //socials
+
+.social-media__svg {
+  width: 40px;
+  height: 40px;
+}
+
+.social-media__svg-hover {
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
 .social-media {
   font-family: $main-font;
   width: 40px;
@@ -43,43 +55,44 @@
   display: inline-block;
   margin-right: 10px;
   &__facebook {
-    background: url(../img/footer/facebook.svg);
-    &:hover {
-      background: url(../img/footer/facebook-hover.svg);
+    &:hover .social-media__svg-hover_facebook {
+      display: block;
+    }
+    &:hover .social-media__svg_facebook {
+      display: none;
     }
   }
-  &__vkontakte {
-    background: url(../img/footer/vk.svg);
-    &:hover {
-      background: url(../img/footer/vk-hover.svg);
+  &__vk {
+    &:hover .social-media__svg-hover_vk {
+      display: block;
+    }
+    &:hover .social-media__svg_vk {
+      display: none;
     }
   }
   &__instagram {
-    background: url(../img/footer/instagram.svg);
-    background-color: #fff;
-    &:hover {
-      background: url(../img/footer/instagram-hover.svg);
-      background-color: #6A453B;
-
+    &:hover .social-media__svg-hover_instagram {
+      display: block;
+    }
+    &:hover .social-media__svg_instagram {
+      display: none;
     }
   }
   &__pinterest {
-    background: url(../img/footer/pinterest.svg);
-    &:hover {
-      background: url(../img/footer/pinterest-hover.svg);
+    &:hover .social-media__svg-hover_pinterest {
+      display: block;
+    }
+    &:hover .social-media__svg_pinterest {
+      display: none;
     }
   }
 }
 
-//apps
-
-.app-link__apple {
-  background: url(../img/footer/apple.svg);
+.footer-social__svg {
+  width: 40px;
+  height: 40px;
 }
 
-.app-link__android {
-  background: url(../img/footer/android.svg);
-}
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
     .footer {
