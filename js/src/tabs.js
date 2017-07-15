@@ -2,8 +2,8 @@
 
 var newsTab = ourEvents.querySelector(".tab-news__heading"),
     eventsTab = ourEvents.querySelector(".tab-events__heading"),
-    newsBlock = ourEvents.querySelector(".news-content"),
-    eventsBlock = ourEvents.querySelector(".event-content");
+    newsBlock = ourEvents.querySelector("#news-content"),
+    eventsBlock = ourEvents.querySelector("#event-content");
 
 newsTab.addEventListener("click", function(e){
   e.preventDefault();

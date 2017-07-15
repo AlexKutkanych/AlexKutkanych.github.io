@@ -34,3 +34,7 @@ body::-webkit-scrollbar-thumb {
   background-color: $text-hover-color;
   outline: 1px solid $text-hover-color;
 }
+
+:focus {
+  outline: 1px dashed $input-focus-color; 
+}

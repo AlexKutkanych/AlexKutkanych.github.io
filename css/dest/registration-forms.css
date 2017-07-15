@@ -57,6 +57,9 @@
   text-indent: 10px;
   font-size: 17px;
   margin-bottom: 20px; }
+  .registration-form__field:focus {
+    background-color: #27f434;
+    color: #fff; }
 
 .signup__alert-message {
   position: absolute;

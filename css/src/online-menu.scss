@@ -4,6 +4,7 @@
   height: 1060px;
   width: 100%;
   margin-bottom: 20px;
+  display: block;
   &__hide {
     display: none;
     overflow: hidden;
@@ -246,7 +247,7 @@ input:disabled + label {
 
 .food-wrapper__result {
   width: 70%;
-  height: 100%; 
+  height: 96%; 
   float: left;
   position: relative;
   text-transform: none;
@@ -257,7 +258,18 @@ input:disabled + label {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  overflow-y: scroll; 
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 1em;
+    margin-right: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px $text-hover-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $text-hover-color;
+    outline: 1px solid $text-hover-color;
+  } 
 }
 
 .food-result {

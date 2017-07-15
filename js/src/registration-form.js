@@ -10,8 +10,6 @@ var joinUsBtn = document.querySelector("#join-us__btn"),
     existingUserForm = document.querySelector(".registration__login-form"),
     newUserForm = document.querySelector(".registration__signup-form");
 
-
-
 function showJoinUsModal(){
     joinUsModal.classList.toggle("header-wrapper__registration_show");
     joinUsBtn.classList.toggle("join-us__btn_active");
@@ -55,6 +53,7 @@ function showExistingUserForm() {
 }
 
 //clear signup inputs after registration
+
 function clearSignupInputs(){
   for (var i = 0; i < allSignupInputsLength; i++){
     allSignupInputs[i].value = "";
@@ -63,7 +62,6 @@ function clearSignupInputs(){
 
 joinUsBtn.addEventListener("click", showJoinUsModal);
 closeJoinUsModalBtn.addEventListener("click", closeJoinUsModal);
-
 existingUserTabBtn.addEventListener("click", showExistingUserForm);
 newUserTabBtn.addEventListener("click", showNewUserForm);
 
@@ -81,7 +79,7 @@ var signupNameField = document.querySelector("#signup__name-field"),
     regexpPassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/,
     errors = [],
     allSignupInputs = document.querySelectorAll(".signup-form__wrapper > input"),
-    // allUsers = [];
+    
     //length variables
     signupAlertMesLength = signupAlertMessages.length,
     loginAlertMesLength = loginAlertMessages.length,

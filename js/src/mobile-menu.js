@@ -2,12 +2,6 @@
 
 var menuTop = document.querySelector(".menu-top"),
     burgerBtn = document.querySelector(".mobile-menu__burger");
-    
-
-//get pseudoclass via js
-
-// var submenuClosed = window.getComputedStyle(document.querySelector('.mobile-menu__with-submenu'), '::after').getPropertyValue('position');
-    // console.log(test);
 
 function showMobileMenu(){
   menuTop.classList.toggle("menu-top__active");
@@ -15,7 +9,6 @@ function showMobileMenu(){
 }
 
 burgerBtn.addEventListener("click", showMobileMenu);
-
 
 
 //mobile open submenu

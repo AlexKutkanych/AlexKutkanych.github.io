@@ -6,11 +6,9 @@
     <title>Restaurant Oasis Kyiv</title>
     <link rel="stylesheet" href="css/styles-main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    
 
-    <!-- <script type="text/javascript" src="js/google-map-init.js" defer></script> -->
-     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script> -->
     <script type="text/javascript" src="js/script.main.js" defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1fcpOyHQgOw5TY_uAeIy6bsAZNfYLDHA&callback=initMap"></script>
     <!-- <script type="text/javascript" src="js/src/bg-video.js" defer></script>
     <script type="text/javascript" src="js/src/booking.js" defer></script>
     <script type="text/javascript" src="js/src/booking_order-submition.js" defer></script>
@@ -34,12 +32,12 @@
             </li>
             
             <li class="menu-top__menu-item">
-              <a href="#our-menu" class="menu-top__menu-link menu-top__menu-link-menu" id="menu-top__menu"><span class="mobile-menu__with-submenu">Menu</span></a>
+              <a href="#our-menu" class="menu-top__menu-link menu-top__menu-link-menu" id="menu-top__menu"><span class="mobile-menu__with-submenu" tabindex="1">Menu</span></a>
               <ul class="menu__submenu-style menu__submenu_hover" id="menu-top__submenu-menu">
-                <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Soup &amp; Appetizer</a></li>
-                <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Pasta &amp; Main course</a></li>
-                <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Pizza &amp; Second course</a></li>
-                <li class="submenu__menu-item"><a href="#" class="submenu__menu-link">Dessert &amp; Beverages</a></li>
+                <li class="submenu__menu-item"><a href="#our-menu" class="submenu__menu-link">Soup &amp; Appetizer</a></li>
+                <li class="submenu__menu-item"><a href="#our-menu" class="submenu__menu-link">Pasta &amp; Main course</a></li>
+                <li class="submenu__menu-item"><a href="#our-menu" class="submenu__menu-link">Pizza &amp; Second course</a></li>
+                <li class="submenu__menu-item"><a href="#our-menu" class="submenu__menu-link">Dessert &amp; Beverages</a></li>
               </ul>
             </li>
             <li class="menu-top__menu-item">
@@ -79,8 +77,8 @@
 
         <!-- login, booking btns -->
         <div class="header-wrapper__btns-section">
-          <a href="#" class="typical-btn join-us__btn" id="join-us__btn">Join us!</a>
-          <a href="#" class="typical-btn booking__btn" id="booking__btn">Booking</a>
+          <a href="#" class="typical-btn join-us__btn" id="join-us__btn" tabindex="2">Join us!</a>
+          <a href="#" class="typical-btn booking__btn" id="booking__btn" tabindex="3">Booking</a>
         </div>
 
         <!-- registration modal -->
@@ -238,36 +236,36 @@
 
               <!-- time -->
               <select size="10" name="select-time" id="info-block__select-time" class="info-block__select-time">
-                <option value="9:00">9:00 available</option>
-                <option value="9:30">9:30 available</option>
-                <option value="10:00">10:00 available</option>
-                <option value="10:30">10:30 available</option>
-                <option value="11:00">11:00 available</option>
-                <option value="11:30">11:30 available</option>
-                <option value="12:00">12:00 available</option>
-                <option value="12:30">12:30 available</option>
-                <option value="13:00">13:00 available</option>
-                <option value="13:30">13:30 available</option>
-                <option value="14:00">14:00 available</option>
-                <option value="14:30">14:30 available</option>
-                <option value="15:00">15:00 available</option>
-                <option value="15:30">15:30 available</option>
-                <option value="16:00">16:00">available</option>
-                <option value="16:30">16:30">available</option>
-                <option value="17:00">17:00 available</option>
-                <option value="17:30">17:30 available</option>
-                <option value="18:00">18:00 available</option>
-                <option value="18:30">18:30 available</option>
-                <option value="19:00">19:00 available</option>
-                <option value="19:30">19:30 available</option>
-                <option value="20:00">20:00 available</option>
-                <option value="20:30">20:30 available</option>
-                <option value="21:00">21:00 available</option>
-                <option value="21:30">21:30 available</option>
-                <option value="22:00">22:00 available</option>
-                <option value="22:30">22:30 available</option>
-                <option value="23:00">23:00 available</option>
-                <option value="23:30">23:30 available</option>
+                <option data-hour="9" data-minute="0" value="9:00">9:00 available</option>
+                <option data-hour="9" data-minute="30" value="9:30">9:30 available</option>
+                <option data-hour="10" data-minute="0" value="10:00">10:00 available</option>
+                <option data-hour="10" data-minute="30" value="10:30">10:30 available</option>
+                <option data-hour="11" data-minute="0" value="11:00">11:00 available</option>
+                <option data-hour="11" data-minute="30" value="11:30">11:30 available</option>
+                <option data-hour="12" data-minute="0" value="12:00">12:00 available</option>
+                <option data-hour="12" data-minute="30" value="12:30">12:30 available</option>
+                <option data-hour="13" data-minute="0" value="13:00">13:00 available</option>
+                <option data-hour="13" data-minute="30" value="13:30">13:30 available</option>
+                <option data-hour="14" data-minute="0" value="14:00">14:00 available</option>
+                <option data-hour="14" data-minute="30" value="14:30">14:30 available</option>
+                <option data-hour="15" data-minute="0" value="15:00">15:00 available</option>
+                <option data-hour="15" data-minute="30" value="15:30">15:30 available</option>
+                <option data-hour="16" data-minute="0" value="16:00">16:00">available</option>
+                <option data-hour="16" data-minute="30" value="16:30">16:30">available</option>
+                <option data-hour="17" data-minute="0" value="17:00">17:00 available</option>
+                <option data-hour="17" data-minute="30" value="17:30">17:30 available</option>
+                <option data-hour="18" data-minute="0" value="18:00">18:00 available</option>
+                <option data-hour="18" data-minute="30" value="18:30">18:30 available</option>
+                <option data-hour="19" data-minute="0" value="19:00">19:00 available</option>
+                <option data-hour="19" data-minute="30" value="19:30">19:30 available</option>
+                <option data-hour="20" data-minute="0" value="20:00">20:00 available</option>
+                <option data-hour="20" data-minute="30" value="20:30">20:30 available</option>
+                <option data-hour="21" data-minute="0" value="21:00">21:00 available</option>
+                <option data-hour="21" data-minute="30" value="21:30">21:30 available</option>
+                <option data-hour="22" data-minute="0" value="22:00">22:00 available</option>
+                <option data-hour="22" data-minute="30" value="22:30">22:30 available</option>
+                <option data-hour="23" data-minute="0" value="23:00">23:00 available</option>
+                <option data-hour="23" data-minute="30" value="23:30">23:30 available</option>
               </select>
               <p class="booking__alert-message booking__alert-message_time">* select time</p>
               <button class="info-block__submit-booking typical-btn" id="submit-booking">Submit booking</button>
@@ -278,73 +276,73 @@
               <div class="table-block__table-scheme">
                 <div class="table-scheme__table table-scheme__table_table1">
                   <span class="table-scheme__table-number" id="table-number1">1</span>
-                  <span class="table-scheme__table-description table-scheme__table-description_table1">
+                  <!-- <span class="table-scheme__table-description table-scheme__table-description_table1">
                     Table #: 1 <br>
                     # of seats: 10 <br>
-                  </span>
+                  </span> -->
                 </div>
                 <div class="table-scheme__table table-scheme__table_table2">
                   <span class="table-scheme__table-number" id="table-number2">2</span>
-                  <span class="table-scheme__table-description table-scheme__table-description_table2">
+                  <!-- <span class="table-scheme__table-description table-scheme__table-description_table2">
                     Table #: 2 <br>
                     # of seats: 6 <br>
-                  </span>
+                  </span> -->
                 </div>
                 <div class="table-scheme__table table-scheme__table_table3">
                   <span class="table-scheme__table-number" id="table-number3">3</span>
-                  <span class="table-scheme__table-description table-scheme__table-description_table3">
+                  <!-- <span class="table-scheme__table-description table-scheme__table-description_table3">
                     Table #: 3 <br>
                     # of seats: 6 <br>
-                  </span>
+                  </span> -->
                 </div>
                 <div class="table-scheme__table table-scheme__table_table4">
                   <span class="table-scheme__table-number" id="table-number4">4</span>
-                  <span class="table-scheme__table-description table-scheme__table-description_table4">
+                  <!-- <span class="table-scheme__table-description table-scheme__table-description_table4">
                     Table #: 4 <br>
                     # of seats: 6 <br>
-                  </span>
+                  </span> -->
               </div>
                   <div class="table-scheme__table table-scheme__table_table5">
                   <span class="table-scheme__table-number" id="table-number5">5</span>
-                  <span class="table-scheme__table-description table-scheme__table-description_table5">
+                  <!-- <span class="table-scheme__table-description table-scheme__table-description_table5">
                     Table #: 5 <br>
                     # of seats: 6 <br>
-                  </span>
+                  </span> -->
                 </div>
                 <div class="table-scheme__table table-scheme__table_table6">
                   <span class="table-scheme__table-number" id="table-number6">6</span>
-                  <span class="table-scheme__table-description table-scheme__table-description_table6">
+                  <!-- <span class="table-scheme__table-description table-scheme__table-description_table6">
                     Table #: 6 <br>
                     # of seats: 6 <br>
-                  </span>
+                  </span> -->
                 </div>
                 <div class="table-scheme__table table-scheme__table_table7">
                   <span class="table-scheme__table-number" id="table-number7">7</span>
-                  <span class="table-scheme__table-description table-scheme__table-description_table7">
+                  <!-- <span class="table-scheme__table-description table-scheme__table-description_table7">
                     Table #: 7 <br>
                     # of seats: 2 <br>
-                  </span>
+                  </span> -->
                 </div>
                 <div class="table-scheme__table table-scheme__table_table8">
                   <span class="table-scheme__table-number" id="table-number8">8</span>
-                  <span class="table-scheme__table-description table-scheme__table-description_table8">
+                  <!-- <span class="table-scheme__table-description table-scheme__table-description_table8">
                     Table #: 8 <br>
                     # of seats: 2 <br>
-                  </span>
+                  </span> -->
                 </div>
                 <div class="table-scheme__table table-scheme__table_table9">
                   <span class="table-scheme__table-number" id="table-number9">9</span>
-                  <span class="table-scheme__table-description table-scheme__table-description_table9">
+                  <!-- <span class="table-scheme__table-description table-scheme__table-description_table9">
                     Table #: 9 <br>
                     # of seats: 2 <br>
-                  </span>
+                  </span> -->
                 </div>
                 <div class="table-scheme__table table-scheme__table_table10">
                   <span class="table-scheme__table-number" id="table-number10">10</span>
-                  <span class="table-scheme__table-description table-scheme__table-description_table10">
+                  <!-- <span class="table-scheme__table-description table-scheme__table-description_table10">
                     Table #: 10 <br>
                     # of seats: 2 <br>
-                  </span>
+                  </span> -->
                 </div>
               </div>
               <p class="booking__alert-message booking__alert-message_table">* select table</p>
@@ -352,6 +350,9 @@
           </section>
           <div class="booking-loader"></div>
         </div>
+
+        <!-- proceedbooking modal -->
+
         <div class="proceed-booking__modal" id="proceed-booking__modal">
             <span class="proceed-booking__close-btn"></span>
             <a href="#" class="booking-section__heading"><h3>Submit your order</h3></a>
@@ -443,7 +444,7 @@
     </section>
     <section class="our-menu" id="our-menu">
       <a href="#"><h2 class="our-menu__heading">Our menu</h2></a>
-      <a href="menu/menu/Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="typical-btn our-menu__full-menu">Download full menu</a>
+      <a href="menu/menu/Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="typical-btn our-menu__full-menu" tabindex="4">Download full menu</a>
         <div class="our-menu__wrapper">
           <section class="our-menu__variant menu__soup">
             <p class="our-menu__desc">
@@ -503,7 +504,7 @@
           </form>
           <div class="buy-food-online__search-block">
             <img src="img/menu-filter/search.svg" alt="" class="search-block__search-icon">
-            <input type="text" name="search" id="search-block__search-field" placeholder="Search.." class="search-block__search-field">
+            <input type="text" name="search" id="search-block__search-field" placeholder="Search.." class="search-block__search-field" tabindex="5">
           </div>
         </aside>
         <div class="buy-food-online__sort-block">
@@ -621,7 +622,7 @@
                 <span class="news-block__posted">Posted month ago</span>
               </article>
             </div>
-            <section class="event-content show-content" id="event-content">
+            <div class="event-content show-content" id="event-content">
               <ul>
                 <li class="event-filter"><a href="#" class="event-filter__link event-filter__link_active filter-all">All</a></li>
                 <li class="event-filter"><a href="#" class="event-filter__link filter-menu">Menu</a></li>
@@ -653,19 +654,8 @@
                   <img src="img/events/events/music-band2-mobile.jpg" alt="" class="event-block__img_mobile">
                   <span class="event-block__desc"><span class="red">Sandy Spring</span> is coming!</span>
                 </div>
-                <!-- <div class="event-content__block event-content__block_menu">
-                  <img src="img/events/events/pizza.jpg" alt="" class="event-content__block_img">
-                  <span class="event-content__block_desc">Pizza Fridays<br> Get <span class="red">-30%</span> for all family pizzas. </span>
-                </div> -->
               </div>
-              <!-- <article class="event-block">
-                <img src="img/events/cake.jpg" alt="wedding cake" width="300">
-                <img src="img/events/christmas.jpg" alt="wedding cake" width="300">
-              </article>
-              <article class="event-block">
-                <img src="img/events/wedding.jpg" alt="" width="300">
-              </article> -->
-            </section>
+            </div>
           </div>
         </div>
       </div>
@@ -683,7 +673,7 @@
               <a href="#" class="contacts__street">64 Lva Tolstoho Str., Kyiv</a>
             </li>
             <li>
-              <a href="callto:0679402342" class="contacts__phone">0679402342</a>
+              <a href="callto:0679402342" class="contacts__phone" tabindex="6">0679402342</a>
             </li>
             <li>
               <a href="callto:0952342109" class="contacts__phone">0952342109</a>

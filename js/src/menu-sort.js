@@ -3,17 +3,20 @@
 var sortBlock = document.querySelector("#sort-block__sorting"),
 	container = document.querySelector(".food-wrapper__result"),
 	contents = document.querySelectorAll(".food-result__price"),
+	contentsLen = contents.length;
 	rating = document.querySelectorAll(".food-result__rating"),
+	ratingLen = rating.length,
 	food = document.querySelector(".food-result"),
 	listAscending = [],
 	listDescending = [],
 	listRating = [],
 	listRandom = [];
+	
 
 
 function sortByPriceAscending() {
 
-	for(var i=0; i<contents.length; i++){
+	for(var i = 0; i < contentsLen; i++){
 	    listAscending.push(contents[i]);
 	}
 
@@ -25,8 +28,9 @@ function sortByPriceAscending() {
 
 	listAscending.reverse();
 
-	for(var k=0; k<listAscending.length; k++){
-	    console.log(listAscending[0]);
+	var listAscendingLen = listAscending.length;
+
+	for(var k = 0; k < listAscendingLen; k++){
 		container.insertBefore(listAscending[k].parentNode, container.firstChild);
 	}
 }
@@ -34,7 +38,7 @@ function sortByPriceAscending() {
 
 function sortByPriceDescending() {
 
-	for(var i=0; i<contents.length; i++){
+	for(var i = 0; i < contentsLen; i++){
 	    listDescending.push(contents[i]);
 	}
 
@@ -44,8 +48,9 @@ function sortByPriceDescending() {
 		return aa < bb ? -1 : (aa > bb ? 1 : 0);
 	});
 
-	for(var k=0; k<listDescending.length; k++){
-	    // console.log(list[i].innerHTML);
+	var listDescendingLen = listDescending.length;
+
+	for(var k = 0; k < listDescendingLen; k++){
 		container.insertBefore(listDescending[k].parentNode, container.firstChild);
 	}
 }
@@ -54,20 +59,19 @@ function sortByPriceDescending() {
 
 function sortByRatingDescending() {
 
-	for(var i=0; i<rating.length; i++){
+	for(var i = 0; i < ratingLen; i++){
 	    listRating.push(rating[i]);
 	}
 
-
 	listRating.sort(function(a, b){
 		var aa = parseInt(a.innerHTML);
-		// console.log(aa);
 		var bb = parseInt(b.innerHTML);
 		return aa < bb ? -1 : (aa > bb ? 1 : 0);
 	});
 
-	for(var k=0; k<listRating.length; k++){
-	    // console.log(list[k].innerHTML);
+	var listRatingLen = listRating.length;
+
+	for(var k = 0; k < listRatingLen; k++){
 		container.insertBefore(listRating[k].parentNode.parentNode.parentNode, container.firstChild);
 	}
 }
@@ -75,7 +79,7 @@ function sortByRatingDescending() {
 //sort randomly
 
 function sortRandomly(){
-	for(var i=0; i<contents.length; i++){
+	for(var i = 0; i < contentsLen; i++){
 	    listRandom.push(contents[i]);
 	}
 
@@ -83,8 +87,9 @@ function sortRandomly(){
 	 	return 0.5 - Math.random();
 	});
 
-	for(var k=0; k<listRandom.length; k++){
-	    
+	var listRandomLen = listRandom.length;
+
+	for(var k = 0; k < listRandomLen; k++){
 		container.insertBefore(listRandom[k].parentNode, container.firstChild);
 	}
 }

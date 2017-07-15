@@ -44,7 +44,6 @@ function searchFood() {
     var filter = searchFoodInput.value.toUpperCase();
     var foodResultPage = document.querySelectorAll("#food-wrapper__result");
     var foodCard = document.querySelectorAll(".food-result");
-    console.log(foodCard.length);
     var foodCardLen = foodCard.length;
     // var test = 6;
     for (i = 0; i < foodCardLen; i++) {
