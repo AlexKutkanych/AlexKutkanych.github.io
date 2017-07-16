@@ -217,9 +217,11 @@
   left: 0;
   right: 0;
   margin: auto;
-  opacity: 0; }
+  opacity: 0;
+  display: none; }
   .header-wrapper__registration-confirm-modal_animate-fading {
-    animation: fading 10s 1; }
+    animation: fading 10s 1;
+    display: block; }
 
 @keyframes fading {
   0% {

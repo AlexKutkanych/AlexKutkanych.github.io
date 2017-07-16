@@ -649,6 +649,7 @@
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   .header-wrapper__booking-section {
     height: 920px;
+    top: 490px;
   }
   .booking-section {
     &__info-block {
@@ -680,6 +681,7 @@
     }
     &__select-time {
       margin-bottom: 20px;
+      height: 20px;
     }
     &__submit-booking {
       position: absolute;

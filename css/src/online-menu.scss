@@ -259,6 +259,7 @@ input:disabled + label {
   display: -ms-flex;
   display: flex;
   justify-content: space-around;
+  align-content: flex-start;
   flex-wrap: wrap;
   overflow-y: scroll;
   &::-webkit-scrollbar {
@@ -607,6 +608,7 @@ input:disabled + label {
 
   .food-wrapper__result {
     width: 100%;
+    height: 42%;
   }
 }
 
@@ -669,5 +671,6 @@ input:disabled + label {
 
   .food-wrapper__result {
     width: 100%;
+    height: 42%;
   }
 }

@@ -272,8 +272,10 @@
   right: 0;
   margin: auto;
   opacity: 0;
+  display: none;
   &_animate-fading {
     animation:fading 10s 1;
+    display: block;
   }
 }
 

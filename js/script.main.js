@@ -348,6 +348,11 @@ var bookingConfirmationModal = document.querySelector(".proceed-booking__confirm
 
 function showBookingConfirmation(){
     bookingConfirmationModal.classList.add("proceed-booking__confirm-modal_animate-fading");
+    setTimeout(hideBookingConfirmation, 8000);
+}
+
+function hideBookingConfirmation(){
+  bookingConfirmationModal.classList.remove("proceed-booking__confirm-modal_animate-fading");
 }
 
 bookingSubmitBtn.addEventListener("click", submitBooking);
@@ -1486,7 +1491,7 @@ function showSentEmailModal(){
     var confirmEmailText = confirmEmailModal.querySelector(".registration-confirm-modal__text");
     confirmEmailText.innerHTML = "Dear "+ signupNameField.value + "! "+ "We sent you a link to prove email address. Check your email "+ signupEmailField.value;
     confirmEmailModal.classList.add("header-wrapper__registration-confirm-modal_animate-fading");
-    setTimeout(hideSentEmailModal, 5000);
+    setTimeout(hideSentEmailModal, 8000);
 }
 
 function hideSentEmailModal(){

@@ -88,6 +88,11 @@ var bookingConfirmationModal = document.querySelector(".proceed-booking__confirm
 
 function showBookingConfirmation(){
     bookingConfirmationModal.classList.add("proceed-booking__confirm-modal_animate-fading");
+    setTimeout(hideBookingConfirmation, 8000);
+}
+
+function hideBookingConfirmation(){
+  bookingConfirmationModal.classList.remove("proceed-booking__confirm-modal_animate-fading");
 }
 
 bookingSubmitBtn.addEventListener("click", submitBooking);

@@ -157,7 +157,7 @@ function showSentEmailModal(){
     var confirmEmailText = confirmEmailModal.querySelector(".registration-confirm-modal__text");
     confirmEmailText.innerHTML = "Dear "+ signupNameField.value + "! "+ "We sent you a link to prove email address. Check your email "+ signupEmailField.value;
     confirmEmailModal.classList.add("header-wrapper__registration-confirm-modal_animate-fading");
-    setTimeout(hideSentEmailModal, 5000);
+    setTimeout(hideSentEmailModal, 8000);
 }
 
 function hideSentEmailModal(){

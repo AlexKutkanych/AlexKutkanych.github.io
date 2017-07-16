@@ -40,6 +40,8 @@ span.splink {
     float: left;
     padding-right: 20px;
     padding-left: 20px; }
+    .menu-top__menu-item:hover {
+      color: red; }
   .menu-top__menu-link {
     color: #666666; }
     .menu-top__menu-link-underline {
