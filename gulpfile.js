@@ -4,7 +4,6 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');  
 var rename = require('gulp-rename');  
 var uglify = require('gulp-uglify');
-var jsmin = require('gulp-jsmin');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var path = require('path');
@@ -34,13 +33,6 @@ gulp.task('concat-js', function() {
         .pipe(gulp.dest(jsDest));
 });
 
-gulp.task('min-js', function () {
-    gulp.src('js/script.main.js')
-        .pipe(jsmin())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('js'));
-});
-
 //https://www.npmjs.com/package/gulp-svgstore
 
 gulp.task('svgstore', function () {
@@ -65,5 +57,5 @@ gulp.task('svgstore', function () {
 
 //Watch task
 gulp.task('watch',function() {
-    gulp.watch(['css/src/*.scss', 'css/dest/*.css', 'css/*.css', 'js/src/*.js', 'js/*.js', 'img/*/*.svg'], ['concat-css', 'sass', 'concat-js', 'min-js']);
+    gulp.watch(['css/src/*.scss', 'css/dest/*.css', 'css/*.css', 'js/src/*.js', 'js/*.js', 'img/*/*.svg'], ['concat-css', 'sass', 'concat-js']);
 });

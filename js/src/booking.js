@@ -107,7 +107,6 @@ function orderSubmition(){
 
   if (orderInfo.people !== '' && orderInfo.time !== '' && orderInfo.date !== '' && orderInfo.table !== ''){
     continueBookingBtn.style.display = "block";
-    var test = localStorage.setItem("order1", JSON.stringify(orderInfo));
 
   }
   calendarBlock.classList.remove("info-block__calendar_show");

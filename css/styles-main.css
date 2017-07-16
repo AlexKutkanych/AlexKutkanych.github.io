@@ -2940,6 +2940,7 @@ input:disabled + label {
   display: -ms-flex;
   display: flex;
   justify-content: space-around;
+  align-content: flex-start;
   flex-wrap: wrap;
   overflow-y: scroll;
 }

@@ -51,6 +51,7 @@ function clearAllFilters(){
   }
   inputBeveragesAlco.disabled = false;
   inputBeveragesNonAlco.disabled = false;
+  searchFoodInput.value = '';
 }
 
 //filter soups
