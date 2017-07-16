@@ -39,75 +39,80 @@ window.onclick = function(event) {
     }
 };
 
-  //obj for booking information
+//obj for booking information
 
-  var orderInfo = {people: '', time: '', date: '',table:''};
+var orderInfo = {people: '', time: '', date: '',table:''};
 
-  function chooseTable(e) {
-    if (e.target !== e.currentTarget) {
-      var clickedItem = e.target.innerHTML;
-      e.target.classList.toggle("table-chosen");
-
-      //push number of table to array if it was selected
-
-      if(!e.target.classList.contains("table-chosen")){
-        orderInfo.table = '';
-      } else {
-        orderInfo.table = clickedItem;
-      }
-      // console.log(orderInfo.table);
-    }
+function chooseTable(e) {
+  var tablesChosen = [];
+  var target = e.target;
+  if (target.className == 'table-scheme__table-number') {
+    var clickedItem = target.innerHTML;
+    target.classList.add("table-chosen");
+  } else {
+    target.classList.remove("table-chosen");
   }
 
-  function chooseDate(e) {
-    if (e.target !== e.currentTarget) {
-      var chosenDate = e.target.innerHTML;
-      var getMonth = document.querySelector("#calendar__month");
-      orderInfo.date = getMonth.innerHTML +" "+ chosenDate;
-      calendarBtn.innerHTML = orderInfo.date;
-    }
+  //push number of table to array if it was selected
+
+  if(!target.classList.contains("table-chosen")){
+    orderInfo.table = '';
+    continueBookingBtn.style.display = "none";
+  } else {
+    orderInfo.table = clickedItem;
+  }
+}
+
+
+function chooseDate(e) {
+  if (e.target !== e.currentTarget) {
+    var chosenDate = e.target.innerHTML;
+    var getMonth = document.querySelector("#calendar__month");
+    orderInfo.date = getMonth.innerHTML +" "+ chosenDate;
+    calendarBtn.innerHTML = orderInfo.date;
+  }
+}
+
+function orderSubmition(){
+  orderInfo.people = selectPeopleAmount.value;
+  orderInfo.time = selectTime.value;
+  var orderInfoSave = localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
+
+  if(orderInfo.people === ''){
+    alertMessagePeople.style.display = "block";
+  } else {
+    alertMessagePeople.style.display = "none";
   }
 
-  function orderSubmition(){
-    orderInfo.people = selectPeopleAmount.value;
-    orderInfo.time = selectTime.value;
-    var orderInfoSave = localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
-
-    if(orderInfo.people === ''){
-      alertMessagePeople.style.display = "block";
-    } else {
-      alertMessagePeople.style.display = "none";
-    }
-
-    if(orderInfo.time === ''){
-      alertMessageTime.style.display = "block";
-    } else {
-      alertMessageTime.style.display = "none";
-    }
-
-    if(orderInfo.table === ''){
-      alertMessageTable.style.display = "block";
-    } else {
-      alertMessageTable.style.display = "none";
-    }
-    console.log(alertMessageTable);
-
-
-    if(calendarBtn.innerHTML === "Select date") {
-      alertMessageDate.style.display = "block";
-    } else {
-      alertMessageDate.style.display = "none";
-    }
-
-
-
-    if (orderInfo.people !== '' && orderInfo.time !== '' && orderInfo.date !== '' && orderInfo.table !== ''){
-      continueBookingBtn.style.display = "block";
-        var test = localStorage.setItem("order1", JSON.stringify(orderInfo));
-
-    }
-    calendarBlock.classList.remove("info-block__calendar_show");
+  if(orderInfo.time === ''){
+    alertMessageTime.style.display = "block";
+  } else {
+    alertMessageTime.style.display = "none";
   }
+
+  if(orderInfo.table === ''){
+    alertMessageTable.style.display = "block";
+  } else {
+    alertMessageTable.style.display = "none";
+  }
+  console.log(alertMessageTable);
+
+
+  if(calendarBtn.innerHTML === "Select date") {
+    alertMessageDate.style.display = "block";
+  } else {
+    alertMessageDate.style.display = "none";
+  }
+
+
+
+  if (orderInfo.people !== '' && orderInfo.time !== '' && orderInfo.date !== '' && orderInfo.table !== ''){
+    continueBookingBtn.style.display = "block";
+    var test = localStorage.setItem("order1", JSON.stringify(orderInfo));
+
+  }
+  calendarBlock.classList.remove("info-block__calendar_show");
+}
 
 bookingBtn.addEventListener("click", showBookingModal);
 submitBookingBtn.addEventListener("click", orderSubmition);
