@@ -7,6 +7,7 @@
   // background-color: lightblue;
   &__wrapper {
     width: 96%;
+    max-width: $max-wrapper-width;
     margin: 0 auto;
     height: 100%;
   }

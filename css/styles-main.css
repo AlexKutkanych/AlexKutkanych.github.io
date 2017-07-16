@@ -1,5 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Cookie");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
 
 .typical-btn {
   height: 33px;
@@ -725,7 +757,7 @@
   }
 
   .booking-section__info-block {
-    height: 38%;
+    height: 23%;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -841,6 +873,28 @@
 
   -description {
     display: none;
+  }
+
+  #table-number1,
+  #table-number2 {
+    line-height: 60px;
+  }
+
+  #table-number3,
+  #table-number6 {
+    line-height: 128px;
+  }
+
+  #table-number4,
+  #table-number5 {
+    line-height: 90px;
+  }
+
+  #table-number7,
+  #table-number8,
+  #table-number9,
+  #table-number10 {
+    line-height: 70px;
   }
 
   .proceed-booking__modal {
@@ -980,6 +1034,8 @@
 
 #contacts-block__google-map {
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   height: 80%;
   background-color: grey;
 }
@@ -1011,6 +1067,7 @@
 
 .our-events__wrapper {
   width: 96%;
+  max-width: 1440px;
   margin: 0 auto;
   height: 100%;
 }
@@ -1466,6 +1523,7 @@
   position: relative;
   background-color: rgba(122, 122, 122, 0.5);
   width: 90%;
+  max-width: 1440px;
   color: black;
   margin: 0 auto;
   height: 100%;
@@ -1674,6 +1732,7 @@ span.splink {
 
 .header-wrapper {
   width: 95%;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
   position: relative;
@@ -1817,6 +1876,9 @@ span.splink {
   height: 33px;
   top: 0;
   left: 0;
+  font-size: 16px;
+  line-height: 31px;
+  border: 1px solid #E30000;
 }
 
 .join-us__btn:hover,
@@ -2160,6 +2222,7 @@ span.splink {
 
 .our-history__wrapper {
   width: 90%;
+  max-width: 1440px;
   margin: 0 auto;
   height: 100%;
   display: -webkit-flex;
@@ -2514,6 +2577,8 @@ span.splink {
 }
 
 .video-block__container {
+  max-width: 1440px;
+  margin: 0 auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -3371,6 +3436,8 @@ input:disabled + label {
 }
 .our-menu {
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   height: 660px;
   position: relative;
   margin-bottom: 90px;
@@ -3413,6 +3480,9 @@ input:disabled + label {
 }
 
 .our-menu__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   height: 85%;
   display: -webkit-flex;
   display: -ms-flex;
@@ -4017,6 +4087,8 @@ input:disabled + label {
 
 .our-services__content-block {
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   height: 85%;
   background-image: url("../img/services/services-bg.jpg");
   background-size: cover;
@@ -4024,6 +4096,7 @@ input:disabled + label {
 
 .our-services__wrapper {
   width: 90%;
+  max-width: 1440px;
   margin: 0 auto;
   color: white;
   font-family: "PT Sans Caption", sans-serif;

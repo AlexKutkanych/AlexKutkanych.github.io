@@ -1,5 +1,7 @@
 //mobile menu
 
+"use strict";
+
 var menuTop = document.querySelector(".menu-top"),
     burgerBtn = document.querySelector(".mobile-menu__burger");
 

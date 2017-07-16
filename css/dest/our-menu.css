@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
 .our-menu {
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   height: 660px;
   position: relative;
   margin-bottom: 90px;
@@ -33,6 +37,9 @@
       margin-top: 3px; }
 
 .our-menu__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   height: 85%;
   display: -webkit-flex;
   display: -ms-flex;

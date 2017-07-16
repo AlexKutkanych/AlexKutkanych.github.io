@@ -1,6 +1,7 @@
 
 //news block templating
 
+"use strict";
 
   var allNews = [
     {image: 'img/events/summer-terrasse.jpg', imageAltern: 'summer terrasse', heading: 'Summer terrasse is open', desc: 'Luckily the summer is coming, so you can spend time with your friends or family having a meal outside.', postedTimePast: '5 hours ago'},

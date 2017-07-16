@@ -1,6 +1,5 @@
 @import "!variables.scss";
-@import url('https://fonts.googleapis.com/css?family=Cookie');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
+
 
 span.highlight {
 background-color: yellow; cursor: pointer; }
@@ -15,6 +14,7 @@ color: #0A5794; cursor: pointer; }
   font-family: $main-font;
   &-wrapper {
     width: 95%;
+    max-width: $max-wrapper-width;
     height: 100%;
     margin: 0 auto;
     position: relative;
@@ -148,6 +148,9 @@ color: #0A5794; cursor: pointer; }
   height: 33px;
   top: 0;
   left: 0;
+  font-size: 16px;
+  line-height: 31px;
+  border: 1px solid $button-color;
   &:hover {
     cursor: pointer;
     opacity: .5;

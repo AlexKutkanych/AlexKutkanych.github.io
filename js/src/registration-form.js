@@ -2,6 +2,8 @@
 
 //appearance
 
+"use strict";
+
 var joinUsBtn = document.querySelector("#join-us__btn"),
     joinUsModal = document.querySelector(".header-wrapper__registration"),
     closeJoinUsModalBtn = document.querySelector(".registration__close-btn"),

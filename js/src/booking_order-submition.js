@@ -1,4 +1,7 @@
+
 //proceed booking
+
+"use strict";
 
 var proceedBookingBtn = document.querySelector("#continue-booking"),
     bookingInfoBlock = document.querySelector(".booking-section__info-block"),
@@ -21,11 +24,6 @@ function showBookingLoader(){
 function showProceedBookingModal(){
   bookingLoader.style.display = "none";
   proceedBookingModal.classList.add("proceed-booking__modal_show");
-  
-  // var orderInfoFromLs = localStorage.getItem("orderInfo");
-// var orderInfoParse = JSON.parse(orderInfoFromLs);
-
-
 
 for (var key in orderInfo){
     var li = document.createElement('li');
@@ -40,6 +38,7 @@ function closeProceedBookingModal(){
   bookingBtn.classList.remove("booking__btn_active");
   bookingModal.style.display = "none";
   orderResult.innerHTML = "";
+  enableScroll();
 }
 
 proceedBookingBtn.addEventListener("click", proceedBooking);
@@ -79,11 +78,11 @@ function submitBooking(e){
 
   if(regexpUsername.test(bookingNameField.value) && regexpEmail.test(bookingEmailField.value)) {
     closeProceedBookingModal();
-    showBookingConfirmation();  
+    showBookingConfirmation();
   }
 }
 
-//show booking confirmation modal 
+//show booking confirmation modal
 var bookingConfirmationModal = document.querySelector(".proceed-booking__confirm-modal");
 
 function showBookingConfirmation(){
@@ -96,5 +95,3 @@ function hideBookingConfirmation(){
 }
 
 bookingSubmitBtn.addEventListener("click", submitBooking);
-
-

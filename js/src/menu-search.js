@@ -1,5 +1,7 @@
 //search block
 
+"use strict";
+
 var searchFoodInput = document.querySelector("#search-block__search-field");
 
 

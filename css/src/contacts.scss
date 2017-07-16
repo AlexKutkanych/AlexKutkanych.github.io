@@ -28,6 +28,8 @@
 
 #contacts-block__google-map {
    width: 100%;
+   max-width: $max-wrapper-width;
+   margin: 0 auto;
    height: 80%;
    background-color: grey;
  }

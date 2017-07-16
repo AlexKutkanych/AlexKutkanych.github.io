@@ -1,5 +1,7 @@
 //creating tabs
 
+"use strict";
+
 var newsTab = ourEvents.querySelector(".tab-news__heading"),
     eventsTab = ourEvents.querySelector(".tab-events__heading"),
     newsBlock = ourEvents.querySelector("#news-content"),

@@ -9,6 +9,7 @@
   background-position: center;
   &__wrapper {
     width: $wrapper-width;
+    max-width: $max-wrapper-width;
     margin: 0 auto;
     height: 100%;
     display: -webkit-flex;

@@ -1,6 +1,8 @@
 
 //login
 
+"use strict";
+
 var loginNameField = document.querySelector("#login__name-field"),
     loginPassField = document.querySelector("#login__pass-field"),
     loginBtn = document.querySelector("#login__btn"),

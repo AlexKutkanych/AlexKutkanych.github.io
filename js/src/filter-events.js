@@ -1,5 +1,7 @@
 //events block - filtering
 
+"use strict";
+
 var ourEvents = document.querySelector("#our-events"),
     filterAll = ourEvents.querySelector(".filter-all"),
     filterMenu = ourEvents.querySelector(".filter-menu"),

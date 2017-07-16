@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
 .typical-btn {
   height: 33px;
   border-radius: 20px;
@@ -530,7 +532,7 @@
     height: 920px;
     top: 490px; }
   .booking-section__info-block {
-    height: 38%;
+    height: 23%;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 15px; }
@@ -600,6 +602,15 @@
     width: 15%; }
   -description {
     display: none; }
+  #table-number1, #table-number2 {
+    line-height: 60px; }
+  #table-number3, #table-number6 {
+    line-height: 128px; }
+  #table-number4, #table-number5 {
+    line-height: 90px; }
+  #table-number7, #table-number8,
+  #table-number9, #table-number10 {
+    line-height: 70px; }
   .proceed-booking__modal {
     width: 90%; }
   .proceed-booking__content {

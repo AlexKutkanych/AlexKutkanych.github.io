@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
 .our-events {
   width: 100%;
   height: 730px; }
   .our-events__wrapper {
     width: 96%;
+    max-width: 1440px;
     margin: 0 auto;
     height: 100%; }
   .our-events__heading {

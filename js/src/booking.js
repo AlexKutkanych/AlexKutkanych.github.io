@@ -1,4 +1,7 @@
+
 //booking block
+
+"use strict";
 
 var bookingBtn = document.querySelector("#booking__btn"),
     bookingModalBlock = document.querySelector(".header-wrapper__booking-section"),
@@ -8,7 +11,7 @@ var bookingBtn = document.querySelector("#booking__btn"),
     continueBookingBtn = document.querySelector("#continue-booking"),
     bookingResult = document.querySelector(".info-block__result"),
     selectPeopleAmount = document.querySelector("#info-block__people-amount"),
-    selectTime = document.querySelector("#info-block__select-time");
+    selectTime = document.querySelector("#info-block__select-time"),
     tables = document.querySelector(".table-block__table-scheme"),
     alertMessagePeople = document.querySelector(".booking__alert-message_people"),
     alertMessageDate = document.querySelector(".booking__alert-message_date"),
@@ -124,7 +127,6 @@ days.addEventListener("click", chooseDate);
 
 var calendarBtn = document.querySelector("#info-block__date-btn"),
     calendarBlock = document.querySelector(".info-block__calendar");
-console.log(days);
 
 function showCalendar(){
   calendarBlock.classList.toggle("info-block__calendar_show");

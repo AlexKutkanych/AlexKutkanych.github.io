@@ -1,24 +1,6 @@
 //menu-filter via Resig
 
-// example
-
-  // var test = {
-  //   members:[
-  //   {id:1, name:"hoge", text:"aaaaaaaaaaaaaa"},
-  //   {id:9, name:"fuga", text:"bbbbbbbbbbbbbb"},
-  //   {id:15, name:"hoge", text:"cccccccccccccc"},
-  //   {id:22, name:"fuga", text:"dddddddddddddd"},
-  //   {id:78, name:"hoge", text:"eeeeeeeeeeeeee"},
-  //   {id:876, name:"fuga", text:"ffffffffffffff"},
-  //   {id:1033, name:"hoge", text:"gggggggggggggg"},
-  //   {id:7899, name:"fuga", text:"hhhhhhhhhhhhhh"}
-  //   ]
-  // }; // -> End of dataObject
-
-  // var results = document.getElementById("food-wrapper__result");
-  // results.innerHTML = tmpl("item_tmpl", test);
-
-
+"use strict";
 
   var fullOnlineMenu = [
     {name: 'Italian Ice-cream', desc: 'Vanilla, Coffee, Chocolate flavours available', price: '35', classCategory: 'food-result__dessert', rating: 5},

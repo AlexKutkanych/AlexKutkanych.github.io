@@ -2,6 +2,8 @@
 
 .our-menu {
   width: 100%;
+  max-width: $max-wrapper-width;
+  margin: 0 auto;
   height: 660px;
   position: relative;
   margin-bottom: 90px;
@@ -40,6 +42,9 @@
   }
 
 .our-menu__wrapper {
+  width: 100%;
+  max-width: $max-wrapper-width;
+  margin: 0 auto;
   height: 85%;
   display: -webkit-flex;
   display: -ms-flex;

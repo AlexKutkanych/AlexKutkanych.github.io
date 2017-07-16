@@ -27,6 +27,8 @@
 
 .our-services__content-block {
   width: 100%;
+  max-width: $max-wrapper-width;
+  margin: 0 auto;
   height: 85%;
   background-image: url(../img/services/services-bg.jpg);
   background-size: cover;
@@ -34,6 +36,7 @@
 
 .our-services__wrapper {
   width: $wrapper-width;
+  max-width: $max-wrapper-width;
   margin: 0 auto;
   color: white;
   font-family: $main-font;
