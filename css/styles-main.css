@@ -2288,6 +2288,7 @@ span.splink {
   .our-history {
     height: 670px;
     margin: 20px auto;
+    background-image: none;
   }
 
   .our-history__wrapper {
@@ -2314,6 +2315,7 @@ span.splink {
   .our-history {
     height: 680px;
     margin-top: 20px;
+    background-image: none;
   }
 
   .our-history__wrapper {
@@ -3297,6 +3299,7 @@ input:disabled + label {
 
   .food-wrapper__result {
     width: 100%;
+    height: 42%;
   }
 }
 
@@ -3357,6 +3360,7 @@ input:disabled + label {
 
   .food-wrapper__result {
     width: 100%;
+    height: 42%;
   }
 }
 .our-menu {
