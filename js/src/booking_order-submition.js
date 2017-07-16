@@ -55,21 +55,21 @@ var orderResult = document.querySelector(".your-booking__order-result");
 var bookingNameField = document.querySelector("#proceed-booking__name-field"),
     bookingEmailField = document.querySelector("#proceed-booking__email-field"),
     bookingSubmitBtn = document.querySelector("#submit-booking__btn"),
-    bookingAlertMessages = document.querySelectorAll(".proceed-booking__alert-message");
+    proceedBookingAlertMessages = document.querySelectorAll(".proceed-booking__alert-message");
 
 function validateBookingSubmition(){
   //validate username
   if (!regexpUsername.test(bookingNameField.value)) {
-    bookingAlertMessages[0].classList.add("show-alert-message");
+    proceedBookingAlertMessages[0].classList.add("show-alert-message");
   } else {
-    bookingAlertMessages[0].classList.remove("show-alert-message");
+    proceedBookingAlertMessages[0].classList.remove("show-alert-message");
   }
 
   //validate email
   if (!regexpEmail.test(bookingEmailField.value)) {
-    bookingAlertMessages[1].classList.add("show-alert-message");
+    proceedBookingAlertMessages[1].classList.add("show-alert-message");
   } else {
-    bookingAlertMessages[1].classList.remove("show-alert-message");
+    proceedBookingAlertMessages[1].classList.remove("show-alert-message");
   }
 }
 
@@ -77,8 +77,10 @@ function submitBooking(e){
   e.preventDefault();
   validateBookingSubmition();
 
-  closeProceedBookingModal();
-  showBookingConfirmation();
+  if(regexpUsername.test(bookingNameField.value) && regexpEmail.test(bookingEmailField.value)) {
+    closeProceedBookingModal();
+    showBookingConfirmation();  
+  }
 }
 
 //show booking confirmation modal 

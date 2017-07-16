@@ -1,33 +1,3 @@
-// see:
-// http://ejohn.org/blog/javascript-micro-templating/
-
-// Simple JavaScript Templating
-// John Resig - http://ejohn.org/ - MIT Licensed
-(function(){
-  var cache = {};
-
-  this.tmpl = function tmpl(str, data){
-    // Figure out if we're getting a template, or if we need to
-    // load the template - and be sure to cache the result.
-    var fn = !/\W/.test(str) ?
-      cache[str] = cache[str] ||
-        tmpl(document.getElementById(str).innerHTML) :
-
-      // Generate a reusable function that will serve as a template
-      // generator (and which will be cached).
-      new Function("obj", "var p=[],print=function(){p.push.apply(p,arguments);};" + "with(obj){p.push('"+ str.replace(/[\r\t\n]/g, " ")
-          .split("<%").join("\t")
-          .replace(/((^|%>)[^\t]*)'/g, "$1\r")
-          .replace(/\t=(.*?)%>/g, "',$1,'")
-          .split("\t").join("');")
-          .split("%>").join("p.push('")
-          .split("\r").join("\\'") + "');}return p.join('');");
-
-    // Provide some basic currying to the user
-    return data ? fn( data ) : fn;
-  };
-})();
-
 //main video playback
 
 $(document).ready(function(){
@@ -251,7 +221,6 @@ function orderSubmition(){
   } else {
     alertMessageTable.style.display = "none";
   }
-  console.log(alertMessageTable);
 
 
   if(calendarBtn.innerHTML === "Select date") {
@@ -347,21 +316,21 @@ var orderResult = document.querySelector(".your-booking__order-result");
 var bookingNameField = document.querySelector("#proceed-booking__name-field"),
     bookingEmailField = document.querySelector("#proceed-booking__email-field"),
     bookingSubmitBtn = document.querySelector("#submit-booking__btn"),
-    bookingAlertMessages = document.querySelectorAll(".proceed-booking__alert-message");
+    proceedBookingAlertMessages = document.querySelectorAll(".proceed-booking__alert-message");
 
 function validateBookingSubmition(){
   //validate username
   if (!regexpUsername.test(bookingNameField.value)) {
-    bookingAlertMessages[0].classList.add("show-alert-message");
+    proceedBookingAlertMessages[0].classList.add("show-alert-message");
   } else {
-    bookingAlertMessages[0].classList.remove("show-alert-message");
+    proceedBookingAlertMessages[0].classList.remove("show-alert-message");
   }
 
   //validate email
   if (!regexpEmail.test(bookingEmailField.value)) {
-    bookingAlertMessages[1].classList.add("show-alert-message");
+    proceedBookingAlertMessages[1].classList.add("show-alert-message");
   } else {
-    bookingAlertMessages[1].classList.remove("show-alert-message");
+    proceedBookingAlertMessages[1].classList.remove("show-alert-message");
   }
 }
 
@@ -369,8 +338,10 @@ function submitBooking(e){
   e.preventDefault();
   validateBookingSubmition();
 
-  closeProceedBookingModal();
-  showBookingConfirmation();
+  if(regexpUsername.test(bookingNameField.value) && regexpEmail.test(bookingEmailField.value)) {
+    closeProceedBookingModal();
+    showBookingConfirmation();  
+  }
 }
 
 //show booking confirmation modal 
@@ -541,6 +512,36 @@ nextSlideBtn.addEventListener("click", function(e){
 	e.preventDefault();
 	plusSlides(1);
 });
+
+// see:
+// http://ejohn.org/blog/javascript-micro-templating/
+
+// Simple JavaScript Templating
+// John Resig - http://ejohn.org/ - MIT Licensed
+(function(){
+  var cache = {};
+
+  this.tmpl = function tmpl(str, data){
+    // Figure out if we're getting a template, or if we need to
+    // load the template - and be sure to cache the result.
+    var fn = !/\W/.test(str) ?
+      cache[str] = cache[str] ||
+        tmpl(document.getElementById(str).innerHTML) :
+
+      // Generate a reusable function that will serve as a template
+      // generator (and which will be cached).
+      new Function("obj", "var p=[],print=function(){p.push.apply(p,arguments);};" + "with(obj){p.push('"+ str.replace(/[\r\t\n]/g, " ")
+          .split("<%").join("\t")
+          .replace(/((^|%>)[^\t]*)'/g, "$1\r")
+          .replace(/\t=(.*?)%>/g, "',$1,'")
+          .split("\t").join("');")
+          .split("%>").join("p.push('")
+          .split("\r").join("\\'") + "');}return p.join('');");
+
+    // Provide some basic currying to the user
+    return data ? fn( data ) : fn;
+  };
+})();
 
 /*
  * jQuery JavaScript Library v1.3.2

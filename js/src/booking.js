@@ -95,7 +95,6 @@ function orderSubmition(){
   } else {
     alertMessageTable.style.display = "none";
   }
-  console.log(alertMessageTable);
 
 
   if(calendarBtn.innerHTML === "Select date") {
