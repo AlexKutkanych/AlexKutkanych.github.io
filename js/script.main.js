@@ -165,75 +165,80 @@ window.onclick = function(event) {
     }
 };
 
-  //obj for booking information
+//obj for booking information
 
-  var orderInfo = {people: '', time: '', date: '',table:''};
+var orderInfo = {people: '', time: '', date: '',table:''};
 
-  function chooseTable(e) {
-    if (e.target !== e.currentTarget) {
-      var clickedItem = e.target.innerHTML;
-      e.target.classList.toggle("table-chosen");
-
-      //push number of table to array if it was selected
-
-      if(!e.target.classList.contains("table-chosen")){
-        orderInfo.table = '';
-      } else {
-        orderInfo.table = clickedItem;
-      }
-      // console.log(orderInfo.table);
-    }
+function chooseTable(e) {
+  var tablesChosen = [];
+  var target = e.target;
+  if (target.className == 'table-scheme__table-number') {
+    var clickedItem = target.innerHTML;
+    target.classList.add("table-chosen");
+  } else {
+    target.classList.remove("table-chosen");
   }
 
-  function chooseDate(e) {
-    if (e.target !== e.currentTarget) {
-      var chosenDate = e.target.innerHTML;
-      var getMonth = document.querySelector("#calendar__month");
-      orderInfo.date = getMonth.innerHTML +" "+ chosenDate;
-      calendarBtn.innerHTML = orderInfo.date;
-    }
+  //push number of table to array if it was selected
+
+  if(!target.classList.contains("table-chosen")){
+    orderInfo.table = '';
+    continueBookingBtn.style.display = "none";
+  } else {
+    orderInfo.table = clickedItem;
+  }
+}
+
+
+function chooseDate(e) {
+  if (e.target !== e.currentTarget) {
+    var chosenDate = e.target.innerHTML;
+    var getMonth = document.querySelector("#calendar__month");
+    orderInfo.date = getMonth.innerHTML +" "+ chosenDate;
+    calendarBtn.innerHTML = orderInfo.date;
+  }
+}
+
+function orderSubmition(){
+  orderInfo.people = selectPeopleAmount.value;
+  orderInfo.time = selectTime.value;
+  var orderInfoSave = localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
+
+  if(orderInfo.people === ''){
+    alertMessagePeople.style.display = "block";
+  } else {
+    alertMessagePeople.style.display = "none";
   }
 
-  function orderSubmition(){
-    orderInfo.people = selectPeopleAmount.value;
-    orderInfo.time = selectTime.value;
-    var orderInfoSave = localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
-
-    if(orderInfo.people === ''){
-      alertMessagePeople.style.display = "block";
-    } else {
-      alertMessagePeople.style.display = "none";
-    }
-
-    if(orderInfo.time === ''){
-      alertMessageTime.style.display = "block";
-    } else {
-      alertMessageTime.style.display = "none";
-    }
-
-    if(orderInfo.table === ''){
-      alertMessageTable.style.display = "block";
-    } else {
-      alertMessageTable.style.display = "none";
-    }
-    console.log(alertMessageTable);
-
-
-    if(calendarBtn.innerHTML === "Select date") {
-      alertMessageDate.style.display = "block";
-    } else {
-      alertMessageDate.style.display = "none";
-    }
-
-
-
-    if (orderInfo.people !== '' && orderInfo.time !== '' && orderInfo.date !== '' && orderInfo.table !== ''){
-      continueBookingBtn.style.display = "block";
-        var test = localStorage.setItem("order1", JSON.stringify(orderInfo));
-
-    }
-    calendarBlock.classList.remove("info-block__calendar_show");
+  if(orderInfo.time === ''){
+    alertMessageTime.style.display = "block";
+  } else {
+    alertMessageTime.style.display = "none";
   }
+
+  if(orderInfo.table === ''){
+    alertMessageTable.style.display = "block";
+  } else {
+    alertMessageTable.style.display = "none";
+  }
+  console.log(alertMessageTable);
+
+
+  if(calendarBtn.innerHTML === "Select date") {
+    alertMessageDate.style.display = "block";
+  } else {
+    alertMessageDate.style.display = "none";
+  }
+
+
+
+  if (orderInfo.people !== '' && orderInfo.time !== '' && orderInfo.date !== '' && orderInfo.table !== ''){
+    continueBookingBtn.style.display = "block";
+    var test = localStorage.setItem("order1", JSON.stringify(orderInfo));
+
+  }
+  calendarBlock.classList.remove("info-block__calendar_show");
+}
 
 bookingBtn.addEventListener("click", showBookingModal);
 submitBookingBtn.addEventListener("click", orderSubmition);
@@ -1346,10 +1351,10 @@ $(window).resize(function() {
 
 
   var allNews = [
-    {image: 'img/events/summer-terrasse.jpg', imageAltern: 'summer terrasse', freshNewsIcon: 'img/events/new-icon.svg', heading: 'Summer terrasse is open', desc: 'Luckily the summer is coming, so you can spend time with your friends or family having a meal outside.', postedTimePast: '5 hours ago'},
-    {image: 'img/events/children-birthday.jpg', imageAltern: 'birthday cakes', freshNewsIcon: '', heading: 'Make your children happy', desc: 'Now you can organize a wonderfull birtday for your children.', postedTimePast: '10 days ago'},
-    {image: 'img/events/wedding.jpg', imageAltern: 'wedding', freshNewsIcon: '', heading: 'Best wedding with us', desc: 'Our restaurant can place up to 60 elite guests inside. Let us make the most important day of your life special.', postedTimePast: '28 days ago'},
-    {image: 'img/events/birthday.jpg', imageAltern: 'birthday cakes', freshNewsIcon: '', heading: 'Birthday party can be even better', desc: 'Having boring birthday parties? Nah. We can serve you with the best Italian food and drinks. Candy bar is free.', postedTimePast: 'a month ago'},
+    {image: 'img/events/summer-terrasse.jpg', imageAltern: 'summer terrasse', heading: 'Summer terrasse is open', desc: 'Luckily the summer is coming, so you can spend time with your friends or family having a meal outside.', postedTimePast: '5 hours ago'},
+    {image: 'img/events/children-birthday.jpg', imageAltern: 'birthday cakes', heading: 'Make your children happy', desc: 'Now you can organize a wonderfull birtday for your children.', postedTimePast: '10 days ago'},
+    {image: 'img/events/wedding.jpg', imageAltern: 'wedding', heading: 'Best wedding with us', desc: 'Our restaurant can place up to 60 elite guests inside. Let us make the most important day of your life special.', postedTimePast: '28 days ago'},
+    {image: 'img/events/birthday.jpg', imageAltern: 'birthday cakes', heading: 'Birthday party can be even better', desc: 'Having boring birthday parties? Nah. We can serve you with the best Italian food and drinks. Candy bar is free.', postedTimePast: 'a month ago'},
   ];
 
   localStorage.setItem("allNews", JSON.stringify(allNews));
@@ -1360,39 +1365,6 @@ $(window).resize(function() {
   
   var results = document.getElementById("news-content");
   results.innerHTML = tmpl("mypage1", {data: ourNews});
-
-
-//delete img tag if the news is not new
-
-window.addEventListener("load", function(){
-  var docFreshNewsIcon = document.querySelectorAll(".new-icon");
-  var ourNewsLen = ourNews.length;
-  for (var i = 0; i < ourNewsLen; i++){
-    if(ourNews[i].freshNewsIcon === ''){
-      docFreshNewsIcon[i].remove();
-    }
-  }
-})
-
-//polyfill for .remove() method for IE9+
-
-(function (arr) {
-  arr.forEach(function (item) {
-    if (item.hasOwnProperty('remove')) {
-      return;
-    }
-    Object.defineProperty(item, 'remove', {
-      configurable: true,
-      enumerable: true,
-      writable: true,
-      value: function remove() {
-        this.parentNode.removeChild(this);
-      }
-    });
-  });
-})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
-
-
   
 //registration
 
@@ -1847,7 +1819,6 @@ window.twttr = (function(d, s, id) {
 
   return t;
 }(document, "script", "twitter-wjs"));
-
 //creating tabs
 
 var newsTab = ourEvents.querySelector(".tab-news__heading"),
