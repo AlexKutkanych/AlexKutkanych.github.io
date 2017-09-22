@@ -35,6 +35,8 @@ gulp.task('concat-js', function() {
 
 //https://www.npmjs.com/package/gulp-svgstore
 
+//INSTALL ALL DEPENDENCIES
+
 gulp.task('svgstore', function () {
     return gulp
         .src('img/services/*.svg')
