@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Task 2</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/isotope.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+    <script src="js/handlebars-v4.0.10.js"></script>
+    <script src="js/skills.js" defer></script>
+    <script src="js/features.js" defer></script>
+    <script src="js/firebase.js" defer></script>
+    <script src="js/isotope.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+
+    <!-- MAIN PAGE -->
+    <div id="main-page">
+        <section class="portfolio-block">
+            <h2 class="heading">Portfolio</h2>
+            <div class="button-group filters-button-group">
+                <span class="portfolio__breadcrumbs is-checked" data-filter="*">All</span> /
+                <span class="portfolio__breadcrumbs" data-filter=".coder">Code</span> /
+                <span class="portfolio__breadcrumbs" data-filter=".web-designer">UI</span>
+            </div>
+            <div class="grid" id="developers-grid">
+                <div class="element-item coder" data-category="coder">
+                    <img class="developer-picture" src="img/coder.jpg">
+                    <span class="developer-name"></span>
+                </div>
+                <div class="element-item coder" data-category="coder">
+                    <img class="developer-picture" src="img/coder.jpg">
+                    <span class="developer-name"></span>
+                </div>
+                <div class="element-item web-designer" data-category="web-designer">
+                    <img class="developer-picture" src="img/web-designer.jpg">
+                    <span class="developer-name"></span>
+                </div>
+                <div class="element-item web-designer" data-category="web-designer">
+                    <img class="developer-picture" src="img/web-designer.jpg">
+                    <span class="developer-name"></span>
+                </div>
+                <div class="element-item coder" data-category="coder">
+                    <img class="developer-picture" src="img/coder.jpg">
+                    <span class="developer-name"></span>
+                </div>
+                <div class="element-item web-designer" data-category="web-designer">
+                    <img class="developer-picture" src="img/web-designer.jpg">
+                    <span class="developer-name"></span>
+                </div>
+                <div class="element-item coder" data-category="coder">
+                    <img class="developer-picture" src="img/coder.jpg">
+                    <span class="developer-name"></span>
+                </div>
+                <div class="element-item web-designer" data-category="web-designer">
+                    <img class="developer-picture" src="img/web-designer.jpg">
+                    <span class="developer-name"></span>
+                </div>
+                <div class="element-item coder" data-category="coder">
+                    <img class="developer-picture" src="img/coder.jpg">
+                     <span class="developer-name"></span>
+                </div>
+                <div class="element-item web-designer" data-category="web-designer">
+                    <img class="developer-picture" src="img/web-designer.jpg">
+                    <span class="developer-name"></span>
+                </div>
+                <div class="element-item web-designer" data-category="web-designer">
+                    <img class="developer-picture" src="img/web-designer.jpg">
+                    <span class="developer-name"></span>
+                </div>
+            </div>
+        </section>
+        <section class="contacts-block">
+            <h2 class="heading">Contacts</h2>
+            <div class="contacts__phone contacts__info">
+                <p class="phone">500 35 242</p>
+            </div>
+            <div class="contacts__email contacts__info">
+                <p class="email">someemail@email.com</p>
+            </div>
+        </section>
+    </div>
+
+        <!-- PROFILE PAGE -->
+
+    <div id="profile-page">
+        <div class="burger-menu">
+            <div id="burger-icon" class="burger-icon">
+                <span class="burger-icon__strip"></span>
+                <span class="burger-icon__strip"></span>
+                <span class="burger-icon__strip"></span>
+            </div>
+            <ul class="top-menu">
+                <a href="index.html" class="top-menu__link">Home</a>
+                <a href="#education" class="top-menu__link">Education</a>
+                <a href="#experience" class="top-menu__link">Experience</a>
+                <a href="#skills" class="top-menu__link">Skills</a>
+            </ul>
+        </div>
+        <div class="education-block">
+            <h2 class="heading" id="education">Education</h2>
+            <section id="education-temp">
+                <script id="education-block" type="text/x-handlebars-template">
+                    {{#each education}}
+                    <div id="education-temp-block">
+                            <div class="education-block__place">
+                            <div class="education-block__time">
+                                <p class="education-year">{{year}}</p>
+                                <div class="education-line"></div>
+                            </div>
+                            <div class="education-block__description">
+                                <p class="education-block__title">{{title}}</p>
+                                <p class="education-block__responsibilities">{{responsibilities}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+                </script>
+            </section>
+        </div>
+
+        <div class="experience-block">
+            <h2 class="heading" id="experience">Experience</h2>
+            <section id="experience-temp">
+                <script id="experience-block" type="text/x-handlebars-template">
+                    <div id="experience-temp-block">
+                        {{#each experience}}
+                        <div class="experience-block__job">
+                            <div class="job-title">
+                                <p class="job-title__company">{{this.company}}</p>
+                                <p class="job-title__time">{{this.period}}</p>
+                            </div>
+                            <div class="job-description">
+                                <p class="job-description__position">{{this.title}}</p>
+                                <p class="job-description__responsibilities">{{this.responsibilities}}</p>
+                            </div>
+                        </div>
+                    {{/each}}
+                    </div>
+                </script>
+            </section>
+        </div>
+
+        <div class="skills-block">
+            <h2 class="heading" id="skills">Skills</h2>
+            <div class="skills-section">
+                <section class="skills-selection__section">
+                    <input type="text" id="skill-name" class="skills-input skill-name" placeholder="Enter your skill">
+                    <label class="input-label" for="skill-name">Skill name</label>
+                    <p class="skills-name__error-message error-message">*should be not longer than 100 characters</p>
+                </section>
+                <section class="skills-selection__section">
+                    <input type="text" id="skill-range" class="skills-input skill-range" placeholder="Enter skill range">
+                    <label class="input-label" for="skill-range">Skill range</label>
+                    <p class="skills-range__error-message error-message">*should be not bigger than 100 points, should be a number</p>
+                </section>
+                <button class="button" id="add-skill-btn">Add your skill</button>
+            </div>
+        </div>
+        <div class="skills-result" id="skills-result">
+        </div>
+        <span id="to-main-page" class="to-main-page-btn">to main page</span>
+        <a href="#burger-icon" id="to-top-button"></a>
+    </div>
+</body>
+</html>
