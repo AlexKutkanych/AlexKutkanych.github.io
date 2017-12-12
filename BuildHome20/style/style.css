@@ -113,33 +113,30 @@ li {
     font-family: "Ubuntu", sans-serif;
     font-size: 13px; }
 
-.search-box {
+.search-block {
   float: right;
   width: 567px;
   height: 57px;
   background-color: #2a2d32; }
-  .search-box .search {
+
+.search-box {
+  height: 40px;
+  width: 240px;
+  position: relative;
+  float: right;
+  line-height: 57px;
+  border: 2px solid #171b1e;
+  margin: 7px 10px 0 0; }
+  .search-box__input {
+    background: no-repeat 95% 10px url("../img/search.svg");
+    background-color: #35383d;
+    float: left;
+    width: 200px;
     height: 40px;
-    width: 240px;
-    float: right;
-    line-height: 57px;
-    border: 2px solid #171b1e;
-    margin: 7px 10px 0 0; }
-    .search-box .search input {
-      background-color: #35383d;
-      float: left;
-      width: 200px;
-      height: 40px;
-      color: #616568;
-      border: none;
-      text-indent: 10px; }
-    .search-box .search button {
-      float: right;
-      width: 40px;
-      height: 100%;
-      background-color: #35383d;
-      border: none;
-      cursor: pointer; }
+    padding-right: 40px;
+    color: #616568;
+    border: none;
+    text-indent: 10px; }
 
 .menu-top a:hover {
   color: #f4b60d; }
