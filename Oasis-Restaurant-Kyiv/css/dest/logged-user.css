@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+/*logged user*/
+.header-wrapper__logged-user-section {
+  display: none;
+  width: 60px;
+  height: 65px;
+  float: right;
+  padding: 21px 5px 0;
+  font-weight: bold; }
+  .header-wrapper__logged-user-section:hover {
+    cursor: pointer;
+    background-color: lightgoldenrodyellow; }
+  .header-wrapper__logged-user-section_show {
+    display: block; }
+
+.header-wrapper__logged-user-modal {
+  width: 300px;
+  height: 150px;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 83px;
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 10px;
+  border: 1px solid #666; }
+  .header-wrapper__logged-user-modal_show {
+    display: block; }
+
+.logged-user__icon {
+  display: block;
+  width: 30px;
+  margin: 0 auto; }
+
+.logged-user__greetings {
+  display: block;
+  text-align: center;
+  font-size: 13px; }
+  .logged-user__greetings:hover {
+    cursor: pointer;
+    color: #964B00; }
+
+.logged-user-modal__icon {
+  float: left;
+  width: 30%;
+  padding: 5px; }
+  .logged-user-modal__icon:hover {
+    cursor: pointer; }
+
+.logged-user-modal__info {
+  float: right;
+  width: 60%;
+  height: 87px;
+  padding: 5px;
+  text-align: center; }
+
+.logged-user-modal__logout-btn {
+  float: right;
+  padding: 0 20px;
+  margin-right: 10px; }
+  .logged-user-modal__logout-btn:hover {
+    margin-top: 2px;
+    opacity: .5; }
+
+.logged-user-modal__username {
+  font-weight: bold;
+  width: 100%;
+  overflow: hidden; }
+
+.logged-user-modal__email {
+  width: 100%;
+  overflow: hidden; }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .header-wrapper__logged-user-section {
+    position: absolute;
+    top: 0;
+    right: 10px; }
+  .header-wrapper__logged-user-modal {
+    right: 10px; } }
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .header-wrapper__logged-user-section {
+    position: absolute;
+    top: 0;
+    right: 10px; } }

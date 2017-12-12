@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+.header-wrapper__registration {
+  display: none;
+  position: absolute;
+  right: 123px;
+  top: 76px;
+  width: 300px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 1;
+  background-color: rgba(122, 122, 122, 0.7);
+  animation-delay: 1s; }
+  .header-wrapper__registration_show {
+    display: block; }
+
+.registration__form-tabs {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  position: relative;
+  margin: 6px 0 13px 0; }
+
+.registration__close-btn {
+  position: absolute;
+  display: block;
+  top: 20px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  background-image: url(../img/header/cancel.svg);
+  background-repeat: no-repeat;
+  transition: transform .5s; }
+  .registration__close-btn:hover {
+    background-image: url(../img/header/cancel-hover.svg);
+    cursor: pointer;
+    transform: rotate(90deg); }
+
+.user-form-switch__new, .user-form-switch__existing {
+  display: block;
+  color: #fff;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 19px;
+  margin: 10px 15px; }
+  .user-form-switch__new:hover, .user-form-switch__existing:hover {
+    color: #E30000; }
+  .user-form-switch__new_active, .user-form-switch__existing_active {
+    color: black;
+    font-weight: bold; }
+
+.registration-form__field {
+  width: 70%;
+  display: block;
+  float: left;
+  height: 30px;
+  border: 2px solid #964B00;
+  text-indent: 10px;
+  font-size: 17px;
+  margin-bottom: 20px; }
+  .registration-form__field:focus {
+    background-color: #27f434;
+    color: #fff; }
+
+.signup__alert-message {
+  position: absolute;
+  width: 100%;
+  font-size: 11px;
+  color: red;
+  left: 10px;
+  display: none; }
+  .signup__alert-message_username {
+    top: 35px; }
+  .signup__alert-message_email {
+    top: 90px; }
+  .signup__alert-message_pass {
+    top: 143px; }
+  .signup__alert-message_repeat-pass {
+    top: 200px; }
+
+.signup-form__wrapper {
+  position: relative; }
+
+.registration__signup-form {
+  height: 250px;
+  text-align: left;
+  display: none;
+  background-color: rgba(122, 122, 122, 0.7);
+  padding: 15px 10px;
+  border-radius: 20px; }
+
+.signup-form__label {
+  display: block;
+  float: left;
+  margin-left: 10px;
+  width: 34px;
+  height: 34px;
+  background-color: #964B00;
+  position: relative; }
+
+.signup-form__button {
+  display: block;
+  width: 50%;
+  height: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: #E30000;
+  border-radius: 20px;
+  margin-left: 10px; }
+  .signup-form__button:hover {
+    cursor: pointer;
+    margin-top: 3px; }
+
+.registration__icon {
+  position: absolute;
+  top: 7px;
+  left: 8px; }
+
+.registration__login-form {
+  display: none;
+  height: 170px;
+  padding: 15px 10px;
+  background-color: rgba(122, 122, 122, 0.7);
+  border-radius: 20px; }
+
+.login-form__wrapper {
+  position: relative; }
+
+.login-form__label {
+  display: block;
+  float: left;
+  margin-left: 10px;
+  width: 34px;
+  height: 34px;
+  background-color: #964B00;
+  position: relative; }
+
+.login-form__pass-field {
+  width: 70%;
+  display: block;
+  float: left;
+  height: 30px;
+  border: 2px solid #964B00;
+  text-indent: 10px;
+  font-size: 17px;
+  margin-bottom: 20px; }
+
+.login-form__name-field {
+  width: 70%;
+  height: 20px;
+  float: left;
+  height: 30px;
+  border: 2px solid #964B00;
+  text-indent: 10px;
+  font-size: 17px;
+  margin-bottom: 20px; }
+
+.login-form__button {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: #E30000;
+  border-radius: 20px;
+  margin-left: 10px; }
+  .login-form__button:hover {
+    cursor: pointer;
+    margin-top: 3px; }
+
+.login-form__label-remember {
+  margin-left: 10px;
+  color: #fff; }
+  .login-form__label-remember:hover {
+    color: blue;
+    cursor: pointer; }
+
+.login-form__forgot-pass {
+  display: block;
+  float: right;
+  font-size: 12px;
+  margin-top: 6px; }
+  .login-form__forgot-pass:hover {
+    color: blue; }
+
+.login__alert-message {
+  position: absolute;
+  width: 100%;
+  font-size: 11px;
+  color: red;
+  left: 10px;
+  display: none; }
+  .login__alert-message_username {
+    top: 35px; }
+  .login__alert-message_pass {
+    top: 91px; }
+
+#login__remember-me {
+  margin: 0 0 13px 10px; }
+
+.show-user-form {
+  display: block; }
+
+.show-alert-message {
+  display: block; }
+
+.header-wrapper__registration-confirm-modal {
+  width: 300px;
+  height: 130px;
+  z-index: 1;
+  background-color: #fff;
+  border: 2px solid grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+  display: none; }
+  .header-wrapper__registration-confirm-modal_animate-fading {
+    animation: fading 10s 1;
+    display: block; }
+
+@keyframes fading {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fading {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.registration-confirm-modal__heading {
+  text-align: left;
+  padding: 10px;
+  background-color: #964B00;
+  color: white; }
+
+.registration-confirm-modal__text {
+  padding: 12px; }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .header-wrapper__registration_show {
+    right: 123px;
+    width: 300px; }
+  .user-form-switch__new:hover, .user-form-switch__existing:hover {
+    color: white; }
+  .registration__signup-form {
+    width: 280px; } }
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .header-wrapper__registration_show {
+    right: 0;
+    width: 100%; }
+  .login-form__wrapper, .signup-form__wrapper {
+    max-width: 90%;
+    margin: 5px auto; }
+  .registration__signup-form, .registration__login-form {
+    width: 100%;
+    padding: 15px 0; }
+  .registration__form-tabs {
+    width: 100%; }
+  .registration-form__field {
+    width: 80%; } }

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+.contacts-block {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin-top: 10px; }
+
+.contacts-block__heading {
+  display: block;
+  font-family: "Cookie", cursive;
+  font-size: 80px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+  color: black; }
+  .contacts-block__heading::after {
+    position: absolute;
+    content: "";
+    width: 180px;
+    height: 2px;
+    bottom: 10px;
+    margin-left: -272px;
+    background-color: #964B00; }
+
+#contacts-block__google-map {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 80%;
+  background-color: grey; }
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .contacts-block {
+    height: 600px;
+    padding-bottom: 20px; }
+    .contacts-block__heading {
+      font-size: 50px; }
+      .contacts-block__heading::after {
+        width: 160px;
+        bottom: 0;
+        margin-left: -200px; }
+  #contacts-block__google-map {
+    height: 90%; } }

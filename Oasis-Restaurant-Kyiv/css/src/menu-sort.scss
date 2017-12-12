@@ -1,0 +1,64 @@
+@import "!variables.scss";
+
+.food-result__page {
+    width: 100%;
+    height: 100%;
+    top:0;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagination {
+    display: block;
+    width: 345px;
+    margin: 0 auto;
+    padding: 2px;
+    font-family: $main-font;
+    &__list {
+        // margin: 0;
+        padding: 0;
+        text-align: left;
+        font-size: 16px;
+        margin-right: 5px;
+        font-weight: bold;
+        &:last-child {
+            margin-right: 0;
+        } 
+        &-item{
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid $text-hover-color;
+            margin-right: 5px;
+            list-style-type: none;
+            display: inline-block;
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.pagination__link, .pagination__link:visited {
+    display: block;
+    text-decoration: none;
+    color: #964B00;
+
+}
+
+.pagination__link:hover, .pagination__link:active{
+    color: #fff;
+    background-color: $button-color;
+}
+.prevnext{
+    font-weight: bold;
+}
+.page_number {
+    border: 1px solid #9aafe5;
+    color: #2e6ab1;
+    padding:5px;
+    text-align: center;
+    width: 20px;
+}

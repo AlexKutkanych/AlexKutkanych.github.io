@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Restaurant Oasis Kyiv</title>
+    <link rel="stylesheet" href="css/styles-main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.main.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzXDqVXWokcVGkg18fxtf03mAxeJvWZK4&callback=initMap"
+    defer></script>
+    <!-- <script type="text/javascript" src="js/src/booking.js" defer></script> -->
+    <!-- <script type="text/javascript" src="js/src/booking_order-submition.js" defer></script> -->
+  </head>
+  <body>
+    <header class="header" id="main">
+      <div class="header-wrapper">
+        <!-- mobile menu -->
+        <div class="mobile-menu">
+          <span class="mobile-menu__burger"></span>
+        </div>
+        <!-- menu -->
+        <nav class="menu-top">
+          <ul class="">
+            <li class="menu-top__menu-item">
+              <a href="#" class="menu-top__menu-link">Home</a>
+            </li>
+            
+            <li class="menu-top__menu-item">
+              <a href="#our-menu" class="menu-top__menu-link menu-top__menu-link-menu" id="menu-top__menu"><span class="mobile-menu__with-submenu" tabindex="1">Menu</span></a>
+              <ul class="menu__submenu-style menu__submenu_hover" id="menu-top__submenu-menu">
+                <li class="submenu__menu-item"><a href="#our-menu" class="submenu__menu-link">Soup &amp; Appetizer</a></li>
+                <li class="submenu__menu-item"><a href="#our-menu" class="submenu__menu-link">Pasta &amp; Main course</a></li>
+                <li class="submenu__menu-item"><a href="#our-menu" class="submenu__menu-link">Pizza &amp; Second course</a></li>
+                <li class="submenu__menu-item"><a href="#our-menu" class="submenu__menu-link">Dessert &amp; Beverages</a></li>
+              </ul>
+            </li>
+            <li class="menu-top__menu-item">
+              <a href="#our-services" class="menu-top__menu-link">Services</a>
+            </li>
+            <li class="menu-top__menu-item">
+              <a href="#our-events" class="menu-top__menu-link">News &amp; Events</a>
+            </li>
+            <li class="menu-top__menu-item">
+              <a href="#our-contacts" class="menu-top__menu-link" id="menu-top__contacts"><span class="mobile-menu__with-submenu">Contacts</span></a>
+              <ul class="menu__submenu-style menu__submenu_hover" id="menu-top__submenu-contacts">
+                <li class="submenu__menu-item"><a href="#our-contacts" class="submenu__menu-link">See us on map</a></li>
+                <li class="submenu__menu-item"><a href="#footer" class="submenu__menu-link">Social networks</a></li>
+              </ul>
+            </li>
+          </ul>
+          <span class="menu-top__vertical-line"></span>
+          <span class="menu-top__vertical-line"></span>
+          <span class="menu-top__vertical-line"></span>
+          <span class="menu-top__vertical-line"></span>
+        </nav>
+
+        <!-- logged user panel -->
+        <div class="header-wrapper__logged-user-section">
+          <img src="img/header/logged-user.svg" alt="logged user icon" class="logged-user__icon">
+          <p class="logged-user__greetings">some text</p>
+        </div>
+
+        <div class="header-wrapper__logged-user-modal">
+          <img src="img/header/logged-user.svg" alt="logged user icon" class="logged-user-modal__icon">
+          <div class="logged-user-modal__info">
+            <p class="logged-user-modal__username"></p>
+            <p class="logged-user-modal__email"></p>
+          </div>  
+          <a href="#" id="logout-btn" class="logged-user-modal__logout-btn typical-btn">Log out</a>
+        </div>
+
+        <!-- login, booking btns -->
+        <div class="header-wrapper__btns-section">
+          <button type="button" class="typical-btn join-us__btn" id="join-us__btn" tabindex="2">Join us!</button>
+          <button type="button" class="typical-btn booking__btn" id="booking__btn" tabindex="3">Booking</button>
+        </div>
+
+        <!-- registration modal -->
+        <div class="header-wrapper__registration">
+          <span class="registration__close-btn"></span>
+          <div class="registration__form-tabs">
+            <a href="#" class="user-form-switch__new">New user</a>
+            <a href="#" class="user-form-switch__existing">Have account</a>
+          </div>
+          <!-- sign-up form -->
+          <div class="registration__signup-form">
+            <form method="post" class="signup-form__wrapper">
+              <label class="signup-form__label" for="signup__name-field">
+                <img src="img/header/user.svg" alt="user icon" class="registration__icon">
+              </label>
+              <input type="text" class="registration-form__field signup-form__name-field" id="signup__name-field" placeholder="Enter your username" title="From 3 to 20 characters">
+              <p class="signup__alert-message signup__alert-message_username">* Enter from 3 to 20 characters</p>
+              <label class="signup-form__label" for="signup__email-field">
+                <img src="img/header/email.svg" width="20" alt="email icon" class="registration__icon">
+              </label>
+              <input type="email" class="registration-form__field signup-form__email-field" id="signup__email-field" placeholder="Email" >
+              <p class="signup__alert-message signup__alert-message_email">* Enter correct email, e.g. example@email.com</p>
+              <label class="signup-form__label" for="signup__pass-field">
+                <img src="img/header/password.svg" width="20" alt="email icon" class="registration__icon">
+              </label>
+              <input type="password" class="registration-form__field signup-form__pass-field" id="signup__pass-field" placeholder="Enter your password"
+              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
+              <p class="signup__alert-message signup__alert-message_pass">* Contain number, uppercase, 8 or more characters</p>
+              <label class="signup-form__label" for="signup__pass-repeat-field">
+                <img src="img/header/password.svg" width="20" alt="email icon" class="registration__icon">
+              </label>
+              <input type="password" class="registration-form__field signup-form__pass-repeat-field" id="signup__pass-repeat-field" placeholder="Repeat your password"
+               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
+               <p class="signup__alert-message signup__alert-message_repeat-pass">* Should be the same as password</p>
+              <button type="submit" class="signup-form__button" id="signup__btn">Sign up</button>
+            </form>
+          </div>
+          <!-- login form -->
+          <div class="registration__login-form">
+            <form method="post" class="login-form__wrapper">
+              <label class="login-form__label" for="login__name-field"><img src="img/header/user.svg" alt="user icon" class="registration__icon"></label>
+              <input type="text" class="registration-form__field login-form__name-field" id="login__name-field" placeholder="Enter your username" title="From 3 to 20 characters" >
+              <p class="login__alert-message login__alert-message_username">* User does not exist</p>
+              <label class="login-form__label" for="login__pass-field"><img src="img/header/password.svg" width="20" alt="password icon" class="registration__icon"></label>
+              <input type="password" class="registration-form__field login-form__pass-field" id="login__pass-field" placeholder="Password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
+              <p class="login__alert-message login__alert-message_pass">* Enter correct password</p>
+              <label class="login-form__label-remember" for="login__remember-me">Remember me</label><input type="checkbox" id="login__remember-me">
+              <button type="submit" class="login-form__button" id="login__btn">Login</button>
+              <a href="#" class="login-form__forgot-pass">forgot password</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="header-wrapper__registration-confirm-modal">
+            <h3 class="registration-confirm-modal__heading">Email confirmation</h3>
+            <p class="registration-confirm-modal__text"></p>
+        </div>
+
+        <!-- to top btn -->
+
+        <a href="#main" id="to-top-button"></a>
+
+        <!-- booking modal -->
+        <div id="booking-section__modal" class="booking-section__modal">
+          <section class="header-wrapper__booking-section">
+            <a href="#" class="booking-section__heading"><h2>Book a table online</h2></a>
+            <span class="booking-section__close-btn"></span>
+            <section class="booking-section__info-block">
+              <a href="#" class="info-block__heading"><h3>Your preferences</h3></a>
+
+              <!-- people amount -->
+              <select name="people-amount" id="info-block__people-amount" class="info-block__people-amount">
+                <option value="">Select # of people</option>
+                <option value="1 person">1 person</option>
+                <option value="2 people">2 people</option>
+                <option value="3 people">3 people</option>
+                <option value="4 people">4 people</option>
+                <option value="5 people">5 people</option>
+                <option value="6 people">6 people</option>
+                <option value="7 people">7 people</option>
+                <option value="8 people">8 people</option>
+                <option value="9 people">9 people</option>
+                <option value="10 people">10 people</option>
+              </select>
+              <p class="booking__alert-message booking__alert-message_people">* select # of people</p>
+
+              <!-- calendar -->
+              <span class="info-block__date-btn" id="info-block__date-btn">Select date</span>
+              <p class="booking__alert-message booking__alert-message_date">* select date</p>
+              <section class="info-block__calendar">
+                <div class="calendar__month-block">
+                  <ul class="calendar__month-list">
+                    <li class="calendar__month calendar__month_prev-btn">&#10094;</li>
+                    <li class="calendar__month" id="calendar__month">July</li>
+                    <li class="calendar__year" id="calendar__year">2017</li>
+                    <li class="calendar__month calendar__month_next-btn">&#10095;</li>
+                  </ul>
+                </div>
+
+                <ul class="calendar__weekdays">
+                  <li class="weekday">Mo</li>
+                  <li class="weekday">Tu</li>
+                  <li class="weekday">We</li>
+                  <li class="weekday">Th</li>
+                  <li class="weekday">Fr</li>
+                  <li class="weekday">Sa</li>
+                  <li class="weekday">Su</li>
+                </ul>
+
+                <ul class="calendar__days">
+                  <li class="day"></li>
+                  <li class="day"></li>
+                  <li class="day"></li>
+                  <li class="day"></li>
+                  <li class="day"></li>
+                  <li class="day">1</li>
+                  <li class="day">2</li>
+                  <li class="day">3</li>
+                  <li class="day">4</li>
+                  <li class="day">5</li>
+                  <li class="day">6</li>
+                  <li class="day">7</li>
+                  <li class="day">8</li>
+                  <li class="day">9</li>
+                  <li class="day">10</li>
+                  <li class="day">11</li>
+                  <li class="day">12</li>
+                  <li class="day">13</li>
+                  <li class="day">14</li>
+                  <li class="day">15</li>
+                  <li class="day">16</li>
+                  <li class="day">17</li>
+                  <li class="day">18</li>
+                  <li class="day">19</li>
+                  <li class="day">20</li>
+                  <li class="day">21</li>
+                  <li class="day">22</li>
+                  <li class="day">23</li>
+                  <li class="day">24</li>
+                  <li class="day">25</li>
+                  <li class="day">26</li>
+                  <li class="day">27</li>
+                  <li class="day">28</li>
+                  <li class="day">29</li>
+                  <li class="day">30</li>
+                  <li class="day">31</li>
+                  <li class="day"></li>
+                  <li class="day"></li>
+                  <li class="day"></li>
+                  <li class="day"></li>
+                  <li class="day"></li>
+                  <li class="day"></li>
+                </ul>
+              </section>
+
+              <!-- time -->
+              <select size="10" name="select-time" id="info-block__select-time" class="info-block__select-time">
+                <option data-hour="9" data-minute="0" value="9:00">9:00 available</option>
+                <option data-hour="9" data-minute="30" value="9:30">9:30 available</option>
+                <option data-hour="10" data-minute="0" value="10:00">10:00 available</option>
+                <option data-hour="10" data-minute="30" value="10:30">10:30 available</option>
+                <option data-hour="11" data-minute="0" value="11:00">11:00 available</option>
+                <option data-hour="11" data-minute="30" value="11:30">11:30 available</option>
+                <option data-hour="12" data-minute="0" value="12:00">12:00 available</option>
+                <option data-hour="12" data-minute="30" value="12:30">12:30 available</option>
+                <option data-hour="13" data-minute="0" value="13:00">13:00 available</option>
+                <option data-hour="13" data-minute="30" value="13:30">13:30 available</option>
+                <option data-hour="14" data-minute="0" value="14:00">14:00 available</option>
+                <option data-hour="14" data-minute="30" value="14:30">14:30 available</option>
+                <option data-hour="15" data-minute="0" value="15:00">15:00 available</option>
+                <option data-hour="15" data-minute="30" value="15:30">15:30 available</option>
+                <option data-hour="16" data-minute="0" value="16:00">16:00">available</option>
+                <option data-hour="16" data-minute="30" value="16:30">16:30">available</option>
+                <option data-hour="17" data-minute="0" value="17:00">17:00 available</option>
+                <option data-hour="17" data-minute="30" value="17:30">17:30 available</option>
+                <option data-hour="18" data-minute="0" value="18:00">18:00 available</option>
+                <option data-hour="18" data-minute="30" value="18:30">18:30 available</option>
+                <option data-hour="19" data-minute="0" value="19:00">19:00 available</option>
+                <option data-hour="19" data-minute="30" value="19:30">19:30 available</option>
+                <option data-hour="20" data-minute="0" value="20:00">20:00 available</option>
+                <option data-hour="20" data-minute="30" value="20:30">20:30 available</option>
+                <option data-hour="21" data-minute="0" value="21:00">21:00 available</option>
+                <option data-hour="21" data-minute="30" value="21:30">21:30 available</option>
+                <option data-hour="22" data-minute="0" value="22:00">22:00 available</option>
+                <option data-hour="22" data-minute="30" value="22:30">22:30 available</option>
+                <option data-hour="23" data-minute="0" value="23:00">23:00 available</option>
+                <option data-hour="23" data-minute="30" value="23:30">23:30 available</option>
+              </select>
+              <p class="booking__alert-message booking__alert-message_time">* select time</p>
+              <button class="info-block__submit-booking typical-btn" id="submit-booking">Submit booking</button>
+              <button class="info-block__continue-booking typical-btn" id="continue-booking">Proceed to personal info</button>
+            </section>
+            <section class="booking-section__table-block">
+              <a href="#" class="table-block__heading"><h3>Select your table</h3></a>
+              <div class="table-block__table-scheme">
+                <div class="table-scheme__table table-scheme__table_table1">
+                  <span class="table-scheme__table-number" id="table-number1">1</span>
+                  <span class="table-scheme__table-description table-scheme__table-description_table1">
+                    Table #: 1 <br>
+                    # of seats: 10 <br>
+                  </span>
+                </div>
+                <div class="table-scheme__table table-scheme__table_table2">
+                  <span class="table-scheme__table-number" id="table-number2">2</span>
+                  <span class="table-scheme__table-description table-scheme__table-description_table2">
+                    Table #: 2 <br>
+                    # of seats: 6 <br>
+                  </span>
+                </div>
+                <div class="table-scheme__table table-scheme__table_table3">
+                  <span class="table-scheme__table-number" id="table-number3">3</span>
+                  <span class="table-scheme__table-description table-scheme__table-description_table3">
+                    Table #: 3 <br>
+                    # of seats: 6 <br>
+                  </span>
+                </div>
+                <div class="table-scheme__table table-scheme__table_table4">
+                  <span class="table-scheme__table-number" id="table-number4">4</span>
+                  <span class="table-scheme__table-description table-scheme__table-description_table4">
+                    Table #: 4 <br>
+                    # of seats: 6 <br>
+                  </span>
+              </div>
+                  <div class="table-scheme__table table-scheme__table_table5">
+                  <span class="table-scheme__table-number" id="table-number5">5</span>
+                  <span class="table-scheme__table-description table-scheme__table-description_table5">
+                    Table #: 5 <br>
+                    # of seats: 6 <br>
+                  </span>
+                </div>
+                <div class="table-scheme__table table-scheme__table_table6">
+                  <span class="table-scheme__table-number" id="table-number6">6</span>
+                  <span class="table-scheme__table-description table-scheme__table-description_table6">
+                    Table #: 6 <br>
+                    # of seats: 6 <br>
+                  </span>
+                </div>
+                <div class="table-scheme__table table-scheme__table_table7">
+                  <span class="table-scheme__table-number" id="table-number7">7</span>
+                  <span class="table-scheme__table-description table-scheme__table-description_table7">
+                    Table #: 7 <br>
+                    # of seats: 2 <br>
+                  </span>
+                </div>
+                <div class="table-scheme__table table-scheme__table_table8">
+                  <span class="table-scheme__table-number" id="table-number8">8</span>
+                  <span class="table-scheme__table-description table-scheme__table-description_table8">
+                    Table #: 8 <br>
+                    # of seats: 2 <br>
+                  </span>
+                </div>
+                <div class="table-scheme__table table-scheme__table_table9">
+                  <span class="table-scheme__table-number" id="table-number9">9</span>
+                  <span class="table-scheme__table-description table-scheme__table-description_table9">
+                    Table #: 9 <br>
+                    # of seats: 2 <br>
+                  </span>
+                </div>
+                <div class="table-scheme__table table-scheme__table_table10">
+                  <span class="table-scheme__table-number" id="table-number10">10</span>
+                  <span class="table-scheme__table-description table-scheme__table-description_table10">
+                    Table #: 10 <br>
+                    # of seats: 2 <br>
+                  </span>
+                </div>
+              </div>
+              <p class="booking__alert-message booking__alert-message_table">* select table</p>
+            </section>
+          </section>
+          <div class="booking-loader"></div>
+        </div>
+
+        <!-- proceedbooking modal -->
+
+        <div class="proceed-booking__modal" id="proceed-booking__modal">
+            <span class="proceed-booking__close-btn"></span>
+            <a href="#" class="booking-section__heading"><h3>Submit your order</h3></a>
+            <div class="proceed-booking__your-booking">
+              <p class="your-booking__heading">Order info:</p>
+              <ul class="your-booking__order-result"></ul>
+            </div>
+            <div class="proceed-booking__content">
+              <p class="your-booking__heading">Enter your contacts:</p>
+              <form method="post" class="signup-form__wrapper">
+              <label class="signup-form__label" for="proceed-booking__name-field">
+                <img src="img/header/user.svg" alt="user icon" class="registration__icon">
+              </label>
+              <input type="text" class="registration-form__field" id="proceed-booking__name-field" placeholder="Enter name or username" title="From 3 to 20 characters">
+              <p class="proceed-booking__alert-message proceed-booking__alert-message_username">* Enter from 3 to 20 characters</p>
+              <label class="signup-form__label" for="proceed-booking__email-field">
+                <img src="img/header/email.svg" width="20" alt="email icon" class="registration__icon">
+              </label>
+              <input type="email" class="registration-form__field" id="proceed-booking__email-field" placeholder="Email" >
+              <p class="proceed-booking__alert-message proceed-booking__alert-message_email">* Enter correct email, e.g. example@email.com</p>
+              <button type="submit" class="signup-form__button" id="submit-booking__btn">Submit order</button>
+            </form>
+          </div>
+        </div>
+        <div class="proceed-booking__confirm-modal">
+          <h3 class="booking-confirm-modal__heading">Thank you for your order!</h3>
+          <p class="booking-confirm-modal__msg">We are looking forward to your visit! Have a nice day!</p>
+          <p class="booking-confirm-modal__text">With love, <br>Your Oasis Team.</p>
+        </div>
+      </div>
+    </header>
+
+
+      <!-- main video -->
+
+    <div class="video-block">
+      <div class="video-block__container">
+        <video autoplay loop="loop" muted class="video-block__video">
+          <!-- fallback for video tag for IE 11, 10 -->
+          <!--[if lte IE 11]>
+          <video src="vid/bg-video.mp4" autoplay="true" loop="loop" muted class="video-block__video"></video>
+          <![endif]-->
+          <source type="video/mp4" src="vid/bg-video.mp4">
+          <source type="video/webm" src="vid/bg-video.webm">
+          <source type="video/ogg" src="vid/bg-video.ogv">
+        </video>
+        <div class="video-block__poster">
+          <img src="vid/bg-video-poster.png" alt="video poster">
+        </div>
+        <div class="video-block__overlay">
+          <h2 class="overlay__slogan_heading">Welcome to Oasis!</h2>
+          <h3>Italian restaurant</h3>
+          <p class="overlay__slogan_passion">Our passion is to deliver a unique dining experience, to explore
+            harmonies of flavours and contrasts in textures</p><span class="overlay__slogan_author"> – Peter Gilmore, Executive Chef</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="our-history" id="our-history">
+      <div class="our-history__wrapper">
+        <section class="our-history__description">
+          <h2 class="our-history__heading">Discover our history</h2>
+          <p class="our-history__text">Oasis is an Italian restaurant located in the central part of Kyiv.</p>
+          <a href="#" class="our-history__about">about us</a>
+          <div class="social-btn__block">
+            <iframe class="social-btn__facebook" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Falexkutkanych.github.io%2FOasis-Restaurant-Kyiv%2F&layout=button_count&size=large&mobile_iframe=true&width=84&height=28&appId" width="99" height="28" style="border:none;overflow:hidden"></iframe>
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20like%20Oasis%20Kiev%20Restaurant%20#oasiskyiv%20#oasisrestaurantkyiv" data-size="large">Tweet</a>
+          </div>
+        </section>
+        <div class="our-history__carousel">
+          <div class="calousel-container">
+            <div class="carousel__slide carousel__slide_animated">
+              <img src="img/history/history-1.jpg" class="carousel__picture" alt="Italian salad">
+            </div>
+            <div class="carousel__slide carousel__slide_animated">
+              <img src="img/history/interior-1.jpg" class="carousel__picture" alt="Interior picture">
+            </div>
+            <div class="carousel__slide carousel__slide_animated">
+              <img src="img/history/interior-2.jpg" class="carousel__picture" alt="Interior picture">
+            </div>
+            <div class="carousel__slide carousel__slide_animated">
+              <img src="img/history/interior-3.jpg" class="carousel__picture" alt="Interior picture">
+            </div>
+            <a href="#" class="carousel__pagination_prev">&#10094;</a>
+            <a href="#" class="carousel__pagination_next">&#10095;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="our-menu" id="our-menu">
+      <a href="#"><h2 class="our-menu__heading">Our menu</h2></a>
+      <a href="menu/Pietrasanta_Ala_Carte_Menu.pdf" target="_blank" class="typical-btn our-menu__full-menu" tabindex="4">Download full menu</a>
+        <div class="our-menu__wrapper">
+          <section class="our-menu__variant menu__soup">
+            <p class="our-menu__desc">
+              <span class="our-menu__title">Soup &amp; Appetizer</span>
+            </p>
+            <a href="menu/Pietrasanta_Appetizer_Soup.pdf" target="_blank" class="typical-btn our-menu__separate-menu">Download menu</a>
+          </section>
+          <section class="our-menu__variant menu__pasta">
+            <p class="our-menu__desc">
+              <span class="our-menu__title">Pasta &amp; Main course</span>
+            </p>
+            <a href="menu/Pietrasanta_Pasta.pdf" target="_blank" class="typical-btn our-menu__separate-menu">Download menu</a>
+          </section>
+          <section class="our-menu__variant menu__pizza">
+            <p class="our-menu__desc">
+              <span class="our-menu__title">Pizza &amp; Second course</span>
+            </p>
+            <a href="menu/Pietrasanta_Pizza_Second_Course.pdf" target="_blank" class="typical-btn our-menu__separate-menu">Download menu</a>
+          </section>
+          <section class="our-menu__variant menu__dessert">
+            <p class="our-menu__desc">
+              <span class="our-menu__title">Dessert &amp; Beverages</span>
+            </p>
+            <a href="Pietrasanta_Dessert_Beverage.pdf" target="_blank" class="typical-btn our-menu__separate-menu">Download menu</a>
+          </section>
+        </div>
+        <p class="food-online-heading">Discover online menu</p>
+        <span class="hide-online-menu-btn"></span>
+    </section>
+    <section class="our-online-menu">
+      <div class="buy-food-online" id="buy-food-online">
+        <aside class="buy-food-online__sidebar">
+          <!-- <h3>Choose your favourite meal</h3> -->
+          <span class="buy-food-online__filter-heading">Filter our menu</span>
+          <form class="buy-food-online__form">
+            <section class="food-filter__category">
+              <a href="#" class="food-filter__heading"><h3>Category</h3></a>
+              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="soup-appetizer">
+              <label class="food-filter__label-radio" for="soup-appetizer">Soup &amp; Appetizer</label>
+              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="pasta">
+              <label class="food-filter__label-radio" for="pasta">Pasta</label>
+              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="pizza">
+              <label class="food-filter__label-radio" for="pizza">Pizza</label>
+              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="dessert">
+              <label class="food-filter__label-radio" for="dessert">Dessert</label>
+              <input type="radio" class="food-filter food-filter__radio" name="food-category" id="beverages">
+              <label class="food-filter__label-radio" for="beverages">Beverages</label>
+            </section>
+            <section class="food-filter__beverage-type">
+              <a href="#" class="food-filter__heading"><h3>Beverage type</h3></a>
+              <input type="radio" class="food-filter food-filter__radio" name="beverage-type" id="non-alco">
+              <label class="food-filter__label-radio" for="non-alco">non-alco</label>
+              <input type="radio" class="food-filter food-filter__radio" name="beverage-type" id="alco">
+              <label class="food-filter__label-radio" for="alco">alcoholic</label>
+            </section>
+            <button type="button" name="button" class="typical-btn clear-filter-btn" id="clear-filter-btn">Clear all filters</button>
+          </form>
+          <div class="buy-food-online__search-block">
+            <svg class="icon search-block__search-icon"><use xlink:href="img/menu-filter/menu-filter.svg#search" /></svg>
+            <!-- <img src="img/menu-filter/search.svg" alt="" class="search-block__search-icon"> -->
+            <input type="text" name="search" id="search-block__search-field" placeholder="Search.." class="search-block__search-field icon-search" tabindex="5">
+          </div>
+        </aside>
+        <div class="buy-food-online__sort-block">
+          <p class="sort-block__heading">Sort meal:</p>
+          <select class="sort-block__sorting" id="sort-block__sorting">
+            <option class="sort-block__option">Select sorting</option>
+            <option class="sort-block__option" value="sort-ascending" id="sort-ascending">Price: lowest first</option>
+            <option class="sort-block__option" value="sort-descending" id="sort-descending">Price: highest first</option>
+            <option class="sort-block__option" value="sort-by-rating" id="sort-by-rating">By rating</option>
+          </select>
+        </div>
+        <main class="food-wrapper__result" id="food-wrapper__result">
+          <script type="text/html" id="mypage">
+            <% for (var i = 0; i < onlineMenu.length; i++) { %>
+            <div class="food-result <%= data[i].classCategory %>">
+            <figure>
+              <a href="#" class="food-result__pic <%= onlineMenu[i].classPicture%>"></a>
+              <figcaption class="food-result__name"><%= onlineMenu[i].name%></figcaption>
+              <div class="food-result__rating-block">Rating:&nbsp;<span class="food-result__rating"><%= onlineMenu[i].rating%></span>&nbsp;<svg class="icon icon-star-rating"><use xlink:href="img/menu-filter/menu-filter.svg#star-rating" /></svg></div>
+              <figcaption class="food-result__desc"><%= onlineMenu[i].desc%></figcaption>
+            </figure>
+            <span class="food-result__price">&#x20B4;<%= onlineMenu[i].price%></span>
+            <button type="button" name="button" class="btn food-result__buy">Add to cart</button>
+          </div>
+            <% }; %>
+          </script>
+        </main>
+        <!-- <div class="goods-wrapper__pagination"> -->
+          <!-- <div class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__list-item"><a href="#" id="prev" class="prevnext pagination__link">&nbsp;&laquo;&nbsp;</a></li>
+              <li class="pagination__list-item"><a href="#" id="next" class="prevnext pagination__link">&nbsp;&raquo;&nbsp;</a></li>
+            </ul>
+            <br/> -->
+          <!-- </div>  -->
+      </div>
+    </section>  
+    <section class="our-services" id="our-services">
+      <a href="#"><h2 class="our-services__heading">Services</h2></a>
+      <div class="our-services__content-block">
+        <div class="our-services__wrapper">
+          <section class="our-services__offer-section">
+            <h2 class="our-services__subheading">What we offer</h2>
+            <ul class="our-services-list">
+              <li class="our-services-list__offer">Authentic Italian food</li>
+              <li class="our-services-list__offer">Experienced service staff</li>
+              <li class="our-services-list__offer">42 Seated Guests, Standing Buffet</li>
+              <li class="our-services-list__offer">Free Parking</li>
+              <li class="our-services-list__offer">Audio system with microphones</li>
+              <li class="our-services-list__offer">Projector with Laptop</li>
+              <li class="our-services-list__offer">Free Wi-Fi</li>
+            </ul>
+          </section>
+          <section class="our-services__suitability-section">
+            <h2 class="our-services__subheading">Suitable for:</h2>
+            <ul class="our-suitability-list">
+              <li class="our-suitability-list__offer">Company Meeting and Work Shop</li>
+              <li class="our-suitability-list__offer">Company Function and Business Lunch</li>
+              <li class="our-suitability-list__offer">Private Dinner</li>
+              <li class="our-suitability-list__offer">Standing Buffet</li>
+              <li class="our-suitability-list__offer">Cocktail Party</li>
+              <li class="our-suitability-list__offer">Birthday Party</li>
+              <li class="our-suitability-list__offer">Cooking Classes</li>
+              <li class="our-suitability-list__offer">Wedding</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+    <section class="our-events" id="our-events">
+      <a href="#"><h2 class="our-events__heading">News &amp; Events</h2></a>
+      <div class="our-events__wrapper">
+        <div class="our-events__tabs">
+          <ul class="tabs-heading__block">
+            <li class="tabs-heading"><a href="#" class="tab-news__heading">News</a></li>
+            <li class="tabs-heading"><a href="#" class="tab-events__heading tab-active">Events</a></li>
+          </ul>
+          <div class="tab__content">
+            <div class="news-content" id="news-content">
+              <script type="text/html" id="mypage1">
+                <% for (var i = 0; i < ourNews.length; i++) { %>
+                  <article class="news-content__block">
+                    <img src="<%= ourNews[i].image %>" alt="<%= ourNews[i].imageAltern %>" class="news-block__img">
+                    <a href="#"><h2 class="news-block__head"><%= ourNews[i].heading %></h2></a>
+                    <div class="news-block__text">
+                      <p class="news-block__text-preview"><%= ourNews[i].desc %></p>
+                      <a href="#" class="news-block__read-more">read more</a><br>
+                    </div>
+                    <span class="news-block__posted">Posted <%= ourNews[i].postedTimePast %></span>
+                  </article>
+                <% }; %>
+              </script>
+            </div>
+            <div class="event-content show-content" id="event-content">
+              <ul>
+                <li class="event-filter"><a href="#" class="event-filter__link event-filter__link_active filter-all">All</a></li>
+                <li class="event-filter"><a href="#" class="event-filter__link filter-menu">Menu</a></li>
+                <li class="event-filter"><a href="#" class="event-filter__link filter-music">Music</a></li>
+              </ul>
+              <div class="event-content__section">
+                <div class="event-content__block event-block__menu">
+                  <img src="img/events/events/pizza.jpg" alt="pizza" class="event-block__img">
+                  <img src="img/events/events/pizza-mobile.jpg" alt="pizza" class="event-block__img_mobile">
+                  <span class="event-block__desc">Pizza Fridays<br> Get <span class="red">-30%</span> for all family pizzas</span>
+                </div>
+                <div class="event-content__block event-block__menu">
+                  <img src="img/events/events/coffee+croissant.jpg" alt="Coffee and croissant" class="event-block__img">
+                  <img src="img/events/events/coffee+croissant-mobile.jpg" alt="Coffee and croissant" class="event-block__img_mobile">
+                  <span class="event-block__desc">Before 10 am<br> Buy Coffee, get <span class="red">Free</span> Croissant</span>
+                </div>
+                <div class="event-content__block event-block__other">
+                  <img src="img/events/events/master-class.jpg" alt="master class" class="event-block__img">
+                  <img src="img/events/events/master-class-mobile.jpg" alt="master class" class="event-block__img_mobile">
+                  <span class="event-block__desc">Attend our free master classes<br><a class="event-full-schedule">See full schedule</a></span>
+                </div>
+                <div class="event-content__block event-block__music">
+                  <img src="img/events/events/music-band1.jpg" alt="" class="event-block__img">
+                  <img src="img/events/events/music-band1-mobile.jpg" alt="" class="event-block__img_mobile">
+                  <span class="event-block__desc">Welcome <span class="red">Astronomy Lovers</span> at our restaurant</span>
+                </div>
+                <div class="event-content__block event-block__music">
+                  <img src="img/events/events/music-band2.jpg" alt="" class="event-block__img">
+                  <img src="img/events/events/music-band2-mobile.jpg" alt="" class="event-block__img_mobile">
+                  <span class="event-block__desc"><span class="red">Sandy Spring</span> is coming!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts-block" id="our-contacts">
+      <a href="#"><h2 class="contacts-block__heading">How to reach us</h2></a>
+      <section id="contacts-block__google-map"></section>
+    </section>
+    <footer class="footer" id="footer">
+      <div class="footer-wrapper">
+        <section class="footer__contacts">
+          <a href="#"><h3 class="footer__heading">Contact us</h3></a>
+          <ul class="contacts">
+            <li>
+              <a href="#" class="contacts__street">64 Lva Tolstoho Str., Kyiv</a>
+            </li>
+            <li>
+              <a href="callto:0679402342" class="contacts__phone" tabindex="6">0679402342</a>
+            </li>
+            <li>
+              <a href="callto:0952342109" class="contacts__phone">0952342109</a>
+            </li>
+            <li>
+              <a href="mailto:oasis-kyiv@gmail.com" class="contacts__email">oasis-kyiv@gmail.com</a>
+            </li>
+          </ul>
+        </section>
+        <a href="#main" class="totop-button"></a>
+        <section class="footer__social-media">
+          <a href="#"><h3 class="footer__heading">Find us</h3></a>
+          <a href="https://www.facebook.com" class="social-media social-media__facebook"><svg class="social-media__svg social-media__svg_facebook"><use xlink:href="img/footer/footer.svg#facebook" /></svg><svg class="social-media__svg-hover social-media__svg-hover_facebook"><use xlink:href="img/footer/footer.svg#facebook-hover" /></svg></a>
+          <a href="https://www.vk.com" class="social-media social-media__vk"><svg class="social-media__svg social-media__svg_vk"><use xlink:href="img/footer/footer.svg#vk" /></svg><svg class="social-media__svg-hover social-media__svg-hover_vk"><use xlink:href="img/footer/footer.svg#vk-hover" /></svg></a>
+          <a href="https://www.instagram.com" class="social-media social-media__instagram"><svg class="social-media__svg social-media__svg_instagram"><use xlink:href="img/footer/footer.svg#instagram" /></svg><svg class="social-media__svg-hover social-media__svg-hover_instagram"><use xlink:href="img/footer/footer.svg#instagram-hover" /></svg></a>
+          <a href="https://www.pinterest.com" class="social-media social-media__pinterest"><svg class="social-media__svg social-media__svg_pinterest"><use xlink:href="img/footer/footer.svg#pinterest" /></svg><svg class="social-media__svg-hover social-media__svg-hover_pinterest"><use xlink:href="img/footer/footer.svg#pinterest-hover" /></svg></a>
+        </section>
+        <section class="footer__app-link">
+          <a href="#"><h3 class="footer__heading">Coming soon for</h3></a>
+          <a href="https://itunes.apple.com/" class="social-media app-link__apple"><svg class="social-media__svg"><use xlink:href="img/footer/footer.svg#apple"/></svg></a>
+          <a href="https://play.google.com/store/apps?hl=uk" class="social-media app-link__android"><svg class="social-media__svg"><use xlink:href="img/footer/footer.svg#android"/></svg></a>
+        </section>
+        <p class="footer__copy">Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

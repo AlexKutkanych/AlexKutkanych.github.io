@@ -1,0 +1,96 @@
+@import "!variables.scss";
+
+.info-block__calendar {
+    display: none;
+    position: absolute;
+    top: 172px;
+    left: 273px;
+    width: 240px;
+    height: 280px;
+    z-index: 2;
+    font-family: $main-font;
+    &_show {
+        display: block;
+    }
+}
+
+.calendar__month-block {
+    padding: 10px 0;
+    width: 100%;
+    background-color:$text-hover-color;
+}
+
+.calendar__month {
+    
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    &-list {
+        margin: 0;
+        padding: 0;
+        height: 30px;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_prev-btn {
+        float: left;
+        padding-left: 12px;  
+    }
+    &_next-btn {
+        float: right;
+        padding-right: 12px;
+    }
+}
+.calendar__year {
+    float: left;
+    color: #fff;
+    font-size: 20px;
+}
+
+.calendar__weekdays {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekday {
+    display: inline-block;
+    width: 9.1%;   
+    color: #666;
+    text-align: center;
+    padding: 3px;
+}
+
+.calendar__days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.day {
+    list-style-type: none;
+    display: inline-block;
+    width: 11.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+    &-active {
+        padding: 5px;
+        background: #1abc9c;
+        color: white !important
+    }
+    &:hover {
+        background-color: black;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.red {
+    color: red;
+}
