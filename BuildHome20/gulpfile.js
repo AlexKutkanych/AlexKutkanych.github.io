@@ -26,7 +26,8 @@ gulp.task('sass', function () {
 gulp.task('sprite', function () {
     var spriteData = gulp.src('img/src/*.png').pipe(spritesmith({
         imgName: 'sprite.png',
-        cssName: 'sprite.css'
+        cssName: 'sprite.css',
+        padding: 10
     }));
     return spriteData.pipe(gulp.dest('img/'));
 });
@@ -72,4 +73,4 @@ gulp.task('watch', function() {
     gulp.watch('img/src/*.png', ['sprite']);
 });
 
-gulp.task('default', ['sass', 'watch', 'webserver']);
+gulp.task('default', ['sass', 'watch', 'webserver', 'sprite']);

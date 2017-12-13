@@ -17,6 +17,6 @@
     "gulp-svgstore": "^6.1.0",
     "gulp-watch": "^4.3.11",
     "gulp-webserver": "^0.9.1",
-    "gulp.spritesmith": "^6.5.1"
+    "gulp.spritesmith": "^6.7.0"
   }
 }

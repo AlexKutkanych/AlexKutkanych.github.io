@@ -57,7 +57,7 @@ li {
   float: left;
   width: 52px;
   height: 36px;
-  background-image: url(../img/main_logo.png);
+  background: 0px -115px url(../img/sprite.png);
 }
 
 .social-network {
@@ -175,7 +175,7 @@ li {
   margin: 7px 10px 0 0;
 
   &__input {
-    background: no-repeat 95% 10px url('../img/search.svg');
+    background: no-repeat 95% 10px url('../img/search.png');
     background-color: #35383d;
     float: left;
     width: 200px;
@@ -289,19 +289,19 @@ li {
   }
   &__icon {
     display: block;
-    background-image: url(../img/article-icon.png);
+    background: 0px -73px url(../img/sprite.png);
     height: 32px;
     width: 32px;
     float: left;
     margin-bottom: 15px;
 
     &_icon2 {
-      background-position: 71px 0;
+      background-position: -34px -73px;
       width: 35px;
     }
 
     &_icon3 {
-      background-position: 34px 0;
+      background-position: -74px -73px;
       width: 34px;
     }
   }
@@ -315,7 +315,7 @@ li {
     color: $hover-color-menu;
 
     & .read-more__arrow {
-      background-position: 0 9px;
+      background-position: -62px -130px;
     }
   }
 
@@ -327,7 +327,7 @@ li {
   &__arrow {
     width: 10px;
     height: 9px;
-    background: url(../img/arrow.png) 0 0;
+    background: -62px -115px url(../img/sprite.png);
     margin: 3px 10px;
     display: inline-block;
   }
@@ -474,7 +474,7 @@ li {
     height: 151px;
     display: block;
     float: left;
-    background-image: url(../img/news.png);
+    background-image: url(../img/news.jpg);
     clear: both;
     margin: 0 32px 28px 0;
   }
@@ -782,37 +782,47 @@ li {
   @extend .footer__menu-block;
   padding-top: 0;
   height: 100%;
+
   &__text {
     line-height: 60px;
     color: $footer-a-color;
     font-size: 12px;
     float: left;
   }
-  .location {
-    background-image: url(../img/footer-icons.png);
+
+  :nth-child(2) {
+    margin: 0 36px 0 3px;
+  }
+
+  :nth-child(4) {
+    margin-right: 41px;
+  }
+
+  :last-child {
+    float: right;
+  }
+}
+
+.contacts {
+
+  &__location {
+    background: -116px -73px url(../img/sprite.png);
     width: 13px;
     height: 16px;
     float: left;
     margin: 23px 7px 0 3px;
   }
-  :nth-child(2) {
-    margin: 0 36px 0 3px;
-  }
-  .phone {
-    @extend .location;
-    background-position: 12px 0;
+
+  &__phone {
+    @extend .contacts__location;
+    background-position: -150px -73px;
     width: 12px;
   }
-  :nth-child(4) {
-    margin-right: 41px;
-  }
-  .email {
-    @extend .location;
-    background-position: 30px 0;
+
+  &__email {
+    @extend .contacts__location;
+    background-position: -131px -73px;
     width: 18px;
     margin-right: 10px;
-  }
-  :last-child {
-    float: right;
   }
 }
