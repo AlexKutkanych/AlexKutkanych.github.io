@@ -707,73 +707,82 @@ li {
 
 }
 
-footer {
+.footer {
   @extend .wrapper-services;
   width: 100%;
   height: 387px;
   clear: both;
   font-family: $main-font;
+  background-color: $main-bg-color;
+
+  &__menu-block {
+    @extend .wrapper-services;
+    height: 325px;
+    padding-top: 30px;
+  }
+
+  &__menu {
+    width: 260px;
+    height: 100%;
+    float: left;
+    margin-right: 42px;
+
+    &_menu2 {
+      margin-right: 41px;
+    }
+
+    &_menu3 {
+      margin-right: 37px;
+    }
+
+    &_menu4 {
+      margin-right: 0px;
+    }
+  }
 }
 
-.footer-menu {
-  @extend .wrapper-services;
-  height: 325px;
-}
+.menu {
 
-.menu1 {
-  width: 260px;
-  height: 100%;
-  float: left;
-  margin-right: 42px;
-  span a {
+  &__heading {
     text-transform: uppercase;
     font-size: 15px;
     margin: 18px 0 33px 0;
   }
-  li {
-    border-bottom: 1px solid #393c40;
 
+  &-list {
+
+    &__item {
+      border-bottom: 1px solid #393c40;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &__link {
+      color: $footer-a-color;
+      font-size: 13px;
+      padding: 10px 0 11px 0;
+
+      &:hover {
+        color: $hover-color-menu;
+      }
+    }
   }
-  li:last-child {
-    border-bottom: none;
-  }
-  li a {
-    color: $footer-a-color;
-    font-size: 13px;
-    padding: 10px 0 11px 0;
-  }
-
-  li a:hover {
-    color: $hover-color-menu;
-  }
-}
-
-.menu2 {
-  @extend .menu1;
-  margin-right: 41px;
-}
-
-.menu3 {
-  @extend .menu1;
-  margin-right: 37px;
-}
-
-.menu4 {
-  @extend .menu1;
-  margin-right: 0px;
 }
 
 //contacts
 .wrapper-contacts {
-  @extend footer;
+  @extend .footer;
   background-color: #35383c;
   height: 60px;
 }
 
-.contacts {
-  @extend .footer-menu;
+.contacts-block {
+  @extend .footer__menu-block;
+  padding-top: 0;
   height: 100%;
-  span {
+  &__text {
     line-height: 60px;
     color: $footer-a-color;
     font-size: 12px;
