@@ -10,7 +10,7 @@ a {
 li {
   list-style: none; }
 
-.wrapper-top, .wrapper-articles, .services-section, .wrapper-news-inner, .wrapper-logos {
+.wrapper-top, .wrapper-articles, .services-section, .news-section, .banner-place, .wrapper-logos {
   width: 1160px;
   height: 100px;
   margin: 0 auto;
@@ -326,21 +326,22 @@ li {
   height: 540px;
   background-color: #f7f7f7; }
 
-.wrapper-news-inner {
+.news-section, .banner-place {
   height: 540px; }
 
-.news, .banner-place {
+.news-block {
   float: left;
   height: 100%;
   width: 50%;
   font-family: "Ubuntu", sans-serif; }
-  .news .name, .banner-place .name {
+  .news-block__heading {
     margin: 58px 0 46px 2px;
     font-size: 24px;
-    font-weight: bold; }
-  .news :nth-child(2), .banner-place :nth-child(2) {
+    font-weight: bold;
+    color: #000; }
+  .news-block:nth-child(2) {
     margin-bottom: 10px; }
-  .news .news-img, .banner-place .news-img {
+  .news-block .news-img {
     width: 151px;
     height: 151px;
     display: block;
@@ -348,54 +349,64 @@ li {
     background-image: url(../img/news.png);
     clear: both;
     margin: 0 32px 28px 0; }
-  .news .post, .banner-place .post {
-    float: left;
-    width: 65%; }
-    .news .post p, .banner-place .post p {
-      color: #8a8a8a; }
-    .news .post h3:hover, .banner-place .post h3:hover, .news .post .author, .banner-place .post .author {
-      color: #248cec;
-      cursor: pointer; }
+  .news-block__post {
+    position: relative; }
 
-section {
-  position: relative; }
-
-.month-sqr, .date-sqr, .post2 .date-sqr, .post2 .month-sqr {
+.post__month-square, .post__date-square {
   width: 40px;
   height: 40px;
   background-color: #248cec;
   position: absolute;
   top: 12px;
   left: -18px; }
+  .post__month-square_post1 {
+    top: 12px; }
+  .post__month-square_post2 {
+    top: 190px; }
 
-.month, .date {
+.post__month, .post__date {
   position: relative;
   top: 13px;
   left: 0;
   color: #f0f7fe;
   font-size: 13px;
   margin-left: 11px; }
+  .post__month_post2 {
+    top: 192px; }
 
-.date-sqr, .post2 .date-sqr {
+.post__date-square {
   background-color: #f4b60d;
   top: 52px; }
+  .post__date-square_post2 {
+    top: 230px; }
 
-.date {
+.post__date {
   font-size: 16px;
   color: #2a2b2e;
   font-weight: bold; }
 
-.post2 .date-sqr, .post2 .month-sqr {
-  top: 192px; }
+.post__text {
+  float: left;
+  width: 65%;
+  color: #8a8a8a; }
 
-.post2 .date-sqr {
-  top: 230px; }
+.post__title {
+  text-transform: capitalize; }
+  .post__title:hover {
+    color: #248cec;
+    cursor: pointer; }
+
+.post__comments, .post__author {
+  color: #248cec;
+  cursor: pointer; }
 
 .img-post2 {
   background-position: 0 150px; }
 
-section h3 {
-  text-transform: capitalize; }
+.banner-place {
+  width: 50%;
+  clear: none;
+  float: left; }
 
 .ac-container {
   width: 562px;

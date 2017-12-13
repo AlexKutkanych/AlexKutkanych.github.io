@@ -448,22 +448,25 @@ li {
   background-color: #f7f7f7;
 }
 
-.wrapper-news-inner {
+.news-section {
   @extend .wrapper-top;
   height: 540px;
 }
 
-.news {
+.news-block {
   float: left;
   height: 100%;
   width: 50%;
   font-family: $main-font;
-  .name {
+
+  &__heading {
     margin: 58px 0 46px 2px;
     font-size: 24px;
     font-weight: bold;
+    color: #000;
   }
-  :nth-child(2) {
+
+  &:nth-child(2) {
     margin-bottom: 10px;
   }
   .news-img {
@@ -475,62 +478,79 @@ li {
     clear: both;
     margin: 0 32px 28px 0;
   }
-  .post {
-    float: left;
-    width: 65%;
-    p {
-      color: #8a8a8a;
+
+  &__post {
+    position: relative;
+  }
+}
+
+.post {
+
+  &__month-square {
+    width: 40px;
+    height: 40px;
+    background-color: $hover-color-menu;
+    position: absolute;
+    top: 12px;
+    left: -18px;
+
+    &_post1 {
+      top: 12px;
     }
-    h3:hover, .author {
+
+    &_post2 {
+      top: 190px;
+    }
+  }
+
+  &__month {
+    position: relative;
+    top: 13px;
+    left: 0;
+    color: #f0f7fe;
+    font-size: 13px;
+    margin-left: 11px;
+
+    &_post2 {
+        top: 192px;
+    }
+  }
+
+  &__date-square {
+    @extend .post__month-square;
+    background-color: $hover-color;
+    top: 52px;
+
+    &_post2 {
+      top: 230px;
+    }
+  }
+
+  &__date {
+    @extend .post__month;
+    font-size: 16px;
+    color: #2a2b2e;
+    font-weight: bold;
+  }
+
+  &__text {
+      float: left;
+      width: 65%;
+      color: #8a8a8a;
+  }
+
+  &__title {
+    text-transform: capitalize;
+
+    &:hover {
       color: $hover-color-menu;
       cursor: pointer;
     }
   }
-}
 
-section {
-  position: relative;
-}
-
-.month-sqr {
-  width: 40px;
-  height: 40px;
-  background-color: $hover-color-menu;
-  position: absolute;
-  top: 12px;
-  left: -18px;
-}
-
-.month {
-  position: relative;
-  top: 13px;
-  left: 0;
-  color: #f0f7fe;
-  font-size: 13px;
-  margin-left: 11px;
-}
-
-.date-sqr {
-  @extend .month-sqr;
-  background-color: $hover-color;
-  top: 52px;
-}
-
-.date {
-  @extend .month;
-  font-size: 16px;
-  color: #2a2b2e;
-  font-weight: bold;
-}
-
-.post2 {
-  .month-sqr{
-    @extend .month-sqr;
-    top: 192px;
-  }
-  .date-sqr {
-    @extend .date-sqr;
-    top: 230px;
+  &__comments, &__author {
+    color: $hover-color-menu;
+    cursor: pointer;
   }
 }
 
@@ -538,14 +558,11 @@ section {
   background-position: 0 150px;
 }
 
-section {
-  h3 {
-    text-transform: capitalize;
-  }
-}
-
 .banner-place {
-  @extend .news;
+  @extend .news-section;
+  width: 50%;
+  clear: none;
+  float: left;
 }
 
 //accordeon
