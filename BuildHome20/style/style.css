@@ -10,7 +10,7 @@ a {
 li {
   list-style: none; }
 
-.wrapper-top, .wrapper-articles, .wrapper-services, .wrapper-news, footer, .wrapper-contacts, .wrapper-news-inner, .wrapper-logos {
+.wrapper-top, .wrapper-articles, .services-section, .wrapper-news-inner, .wrapper-logos {
   width: 1160px;
   height: 100px;
   margin: 0 auto;
@@ -249,90 +249,77 @@ li {
     margin: 3px 10px;
     display: inline-block; }
 
-.wrapper-services, .wrapper-news, footer, .wrapper-contacts {
+.services-section {
   width: 100%;
   height: 504px;
   background-color: #2a2d32; }
 
-.inner, .footer-menu, .contacts {
+.wrapper-services, .wrapper-news, footer, .wrapper-contacts, .footer-menu, .contacts {
   width: 1160px;
   height: 100%;
   margin: 0 auto;
   color: white;
   font-family: "Ubuntu", sans-serif; }
-  .inner span a, .footer-menu span a, .contacts span a {
-    font-size: 25px;
-    margin-bottom: 52px;
-    padding-top: 42px; }
 
-.service1 {
-  margin: 0 40px 0 -1px; }
+.services__heading {
+  font-size: 25px;
+  margin-bottom: 52px;
+  padding-top: 42px; }
 
-.service2, .service3 {
-  margin-right: 40px; }
-
-.services {
+.service-block {
   position: relative;
   width: 260px;
   height: 312px;
   float: left; }
-  .services a {
+  .service-block__service1 {
+    margin: 0 40px 0 -1px; }
+  .service-block__service2, .service-block__service3 {
+    margin-right: 40px; }
+  .service-block__subheading {
     margin: 32px 0 0 -14px;
     text-align: center;
     font-size: 18px; }
+    .service-block__subheading:hover {
+      color: #f4b60d;
+      cursor: pointer; }
+  .service-block__picture {
+    width: 260px;
+    height: 260px;
+    background-image: url(../img/services.png);
+    background-position: -170px 0;
+    position: relative; }
+    .service-block__picture_picture2 {
+      background-position: -490px 0; }
+    .service-block__picture_picture3 {
+      background-position: -755px 0; }
+    .service-block__picture_picture4 {
+      background-position: -1017px 0; }
+  .service-block__overlay {
+    height: 260px;
+    width: 260px;
+    background-color: #248cec;
+    opacity: .9;
+    display: none; }
 
-.service1 a:hover, .service2 a:hover, .service3 a:hover, .service4 a:hover {
-  color: #f4b60d;
-  cursor: pointer; }
-
-.serv-pic1, .serv-pic2, .serv-pic3, .serv-pic4 {
-  width: 260px;
-  height: 260px;
-  background-image: url(../img/services.png);
-  background-position: -170px 0;
-  position: relative; }
-
-.block1, .block2, .block3, .block4 {
-  height: 260px;
-  width: 260px;
-  background-color: #248cec;
-  opacity: .9;
-  display: none; }
-
-.block1 span, .block2 span, .block3 span, .block4 span {
+.overlay__add {
   color: white;
   font-size: 60px;
   position: absolute;
   top: 100px;
   left: 110px; }
 
-.serv-pic1:hover .block1, .serv-pic2:hover .block1, .serv-pic3:hover .block1, .serv-pic4:hover .block1, .serv-pic1:hover .block2, .serv-pic2:hover .block2, .serv-pic3:hover .block2, .serv-pic4:hover .block2, .serv-pic1:hover .block3, .serv-pic2:hover .block3, .serv-pic3:hover .block3, .serv-pic4:hover .block3, .serv-pic1:hover .block4, .serv-pic2:hover .block4, .serv-pic3:hover .block4, .serv-pic4:hover .block4 {
+.service-block__picture_picture1:hover .service-block__overlay_overlay1,
+.service-block__picture_picture2:hover .service-block__overlay_overlay2,
+.service-block__picture_picture3:hover .service-block__overlay_overlay3,
+.service-block__picture_picture4:hover .service-block__overlay_overlay4 {
   display: block;
   cursor: pointer; }
 
-.serv-pic1:hover + a, .serv-pic2:hover + a, .serv-pic3:hover + a, .serv-pic4:hover + a {
+.service-block__picture_picture1:hover + .service-block__subheading_subheading1,
+.service-block__picture_picture2:hover + .service-block__subheading_subheading2,
+.service-block__picture_picture3:hover + .service-block__subheading_subheading3,
+.service-block__picture_picture4:hover + .service-block__subheading_subheading4 {
   color: #f4b60d;
-  cursor: pointer; }
-
-.serv-pic2 {
-  background-position: -490px 0; }
-
-.serv-pic2:hover .block2 {
-  display: block;
-  cursor: pointer; }
-
-.serv-pic3 {
-  background-position: -755px 0; }
-
-.serv-pic3:hover .block3 {
-  display: block;
-  cursor: pointer; }
-
-.serv-pic4 {
-  background-position: -1017px 0; }
-
-.serv-pic4:hover .block4 {
-  display: block;
   cursor: pointer; }
 
 .wrapper-news {

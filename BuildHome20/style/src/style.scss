@@ -335,68 +335,88 @@ li {
 
 //services
 
-.wrapper-services {
+.services-section {
   @extend .wrapper-top;
   width: 100%;
   height: 504px;
   background-color: $main-bg-color;
 }
 
-.inner {
+.wrapper-services {
   width: 1160px;
   height: 100%;
   margin: 0 auto;
   color: white;
   font-family: $main-font;
-  span a {
-    font-size: 25px;
-    margin-bottom: 52px;
-    padding-top: 42px;
-  }
-}
-
-.service1 {
-  margin: 0 40px 0 -1px;
-}
-
-.service2, .service3 {
-  margin-right: 40px;
 }
 
 .services {
+    &__heading {
+      font-size: 25px;
+      margin-bottom: 52px;
+      padding-top: 42px;
+    }
+}
+
+.service-block {
   position: relative;
   width: 260px;
   height: 312px;
   float: left;
-  a {
+
+  &__service1 {
+    margin: 0 40px 0 -1px;
+  }
+
+  &__service2, &__service3 {
+    margin-right: 40px;
+  }
+
+  &__subheading {
     margin: 32px 0 0 -14px;
     text-align: center;
     font-size: 18px;
+
+    &:hover {
+      color: $hover-color;
+      cursor: pointer;
+    }
+  }
+
+  &__picture {
+    width: 260px;
+    height: 260px;
+    background-image: url(../img/services.png);
+    background-position: -170px 0;
+    position: relative;
+
+    &_picture1 {
+
+    }
+
+    &_picture2 {
+        background-position: -490px 0;
+    }
+
+    &_picture3 {
+        background-position: -755px 0;
+    }
+
+    &_picture4 {
+        background-position: -1017px 0;
+    }
+  }
+
+  &__overlay {
+    height: 260px;
+    width: 260px;
+    background-color: #248cec;
+    opacity: .9;
+    display: none;
   }
 }
 
-.service1 a:hover, .service2 a:hover, .service3 a:hover, .service4 a:hover,{
-  color: $hover-color;
-  cursor: pointer;
-}
-
-.serv-pic1 {
-  width: 260px;
-  height: 260px;
-  background-image: url(../img/services.png);
-  background-position: -170px 0;
-  position: relative;
-}
-
-.block1 {
-  height: 260px;
-  width: 260px;
-  background-color: #248cec;
-  opacity: .9;
-  display: none;
-}
-
-.block1 span {
+.overlay__add {
   color: white;
   font-size: 60px;
   position: absolute;
@@ -404,55 +424,19 @@ li {
   left: 110px;
 }
 
-.serv-pic1:hover .block1 {   //BLOCK1 INSIDE PICTURE BLOCK
+.service-block__picture_picture1:hover .service-block__overlay_overlay1,
+.service-block__picture_picture2:hover .service-block__overlay_overlay2,
+.service-block__picture_picture3:hover .service-block__overlay_overlay3,
+.service-block__picture_picture4:hover .service-block__overlay_overlay4 {
   display: block;
   cursor: pointer;
 }
 
-.serv-pic1:hover + a{
+.service-block__picture_picture1:hover + .service-block__subheading_subheading1,
+.service-block__picture_picture2:hover + .service-block__subheading_subheading2,
+.service-block__picture_picture3:hover + .service-block__subheading_subheading3,
+.service-block__picture_picture4:hover + .service-block__subheading_subheading4 {
   color: $hover-color;
-  cursor: pointer;
-}
-
-.serv-pic2 {
-  @extend .serv-pic1;
-  background-position: -490px 0;
-}
-
-.block2 {
-  @extend .block1;
-}
-
-.serv-pic2:hover .block2 {   //BLOCK1 INSIDE PICTURE BLOCK
-  display: block;
-  cursor: pointer;
-}
-
-.serv-pic3 {
-  @extend .serv-pic1;
-  background-position: -755px 0;
-}
-
-.block3 {
-  @extend .block1;
-}
-
-.serv-pic3:hover .block3 {   //BLOCK1 INSIDE PICTURE BLOCK
-  display: block;
-  cursor: pointer;
-}
-
-.serv-pic4 {
-  @extend .serv-pic1;
-  background-position: -1017px 0;
-}
-
-.block4 {
-  @extend .block1;
-}
-
-.serv-pic4:hover .block4 {   //BLOCK INSIDE PICTURE BLOCK in hmtl
-  display: block;
   cursor: pointer;
 }
 
@@ -715,7 +699,7 @@ footer {
 }
 
 .footer-menu {
-  @extend .inner;
+  @extend .wrapper-services;
   height: 325px;
 }
 
