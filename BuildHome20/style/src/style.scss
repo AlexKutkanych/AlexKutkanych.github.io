@@ -641,7 +641,7 @@ li {
 	position: absolute;
 	width: 39px;
 	height: 39px;
-	right: 519px;
+	right: 525px;
 	top: 0px;
 	background: transparent url(../img/open.jpg) 0 0 no-repeat;
   border-right: 2px solid #e8e8e8;
@@ -712,6 +712,10 @@ li {
   margin-top: 87px;
   opacity: 0.65;
   margin-right: 45px;
+
+  &:hover {
+    opacity: 1;
+  }
 
   &__logo2 {
     background-position: -148px 0;
