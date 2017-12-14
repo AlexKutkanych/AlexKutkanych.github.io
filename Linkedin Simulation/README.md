@@ -1,7 +1,7 @@
 Simulation of Linkedin like page.
 Technologies used:
 - HTML, CSS
-- JS
+- JS, JQuery
 - Firebase
 - Isotope
-- handlebars templating
+- Handlebars templating
