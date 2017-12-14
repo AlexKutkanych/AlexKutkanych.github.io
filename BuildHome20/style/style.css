@@ -406,7 +406,8 @@ li {
 .banner-place {
   width: 50%;
   clear: none;
-  float: left; }
+  float: left;
+  color: #000; }
 
 .ac-container {
   width: 562px;
@@ -491,36 +492,31 @@ li {
 .wrapper-logos {
   height: 240px; }
 
-.logo1, .logo2, .logo3, .logo4, .logo5, .logo6 {
+.logos {
   display: block;
   float: left;
   height: 62px;
   width: 143px;
-  background-image: url(../img/bot_logos.png);
+  background-image: url(../img/sprite.png);
   margin-top: 87px;
   opacity: 0.65;
   margin-right: 45px; }
-
-.logo2 {
-  background-position: -148px 0;
-  margin: 90px 68px 0 0; }
-
-.logo3 {
-  width: 184px;
-  background-position: -295px 0;
-  margin: 90px 45px 0 0; }
-
-.logo4 {
-  background-position: -480px 0;
-  margin: 90px 60px 0 0; }
-
-.logo5 {
-  background-position: -628px 0;
-  margin-right: 0; }
-
-.logo6 {
-  background-position: -757px 0;
-  margin-right: 0; }
+  .logos__logo2 {
+    background-position: -148px 0;
+    margin: 90px 68px 0 0; }
+  .logos__logo3 {
+    width: 184px;
+    background-position: -295px 0;
+    margin: 90px 45px 0 0; }
+  .logos__logo4 {
+    background-position: -480px 0;
+    margin: 90px 60px 0 0; }
+  .logos__logo5 {
+    background-position: -628px 0;
+    margin-right: 0; }
+  .logos__logo6 {
+    background-position: -757px 0;
+    margin-right: 0; }
 
 .footer, .wrapper-contacts {
   width: 100%;

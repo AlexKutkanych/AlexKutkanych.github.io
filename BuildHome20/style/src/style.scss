@@ -287,6 +287,7 @@ li {
     color: #8a8a8a;
     font-size: 14px;
   }
+  
   &__icon {
     display: block;
     background: 0px -73px url(../img/sprite.png);
@@ -389,10 +390,6 @@ li {
     background-image: url(../img/services.png);
     background-position: -170px 0;
     position: relative;
-
-    &_picture1 {
-
-    }
 
     &_picture2 {
         background-position: -490px 0;
@@ -563,6 +560,7 @@ li {
   width: 50%;
   clear: none;
   float: left;
+  color: #000;
 }
 
 //accordeon
@@ -663,48 +661,41 @@ li {
   height: 240px;
 }
 
-.logo1 {
+.logos {
   display: block;
   float: left;
   height: 62px;
   width: 143px;
-  background-image: url(../img/bot_logos.png);
+  background-image: url(../img/sprite.png);
   margin-top: 87px;
   opacity: 0.65;
   margin-right: 45px;
-}
 
-.logo2 {
-  @extend .logo1;
-  background-position: -148px 0;
-  margin: 90px 68px 0 0;
+  &__logo2 {
+    background-position: -148px 0;
+    margin: 90px 68px 0 0;
+  }
 
-}
+  &__logo3 {
+    width: 184px;
+    background-position: -295px 0;
+    margin: 90px 45px 0 0;
+  }
 
-.logo3 {
-  @extend .logo1;
-  width: 184px;
-  background-position: -295px 0;
-  margin: 90px 45px 0 0;
-}
+  &__logo4 {
+    background-position: -480px 0;
+    margin: 90px 60px 0 0;
+  }
 
-.logo4 {
-  @extend .logo1;
-  background-position: -480px 0;
-  margin: 90px 60px 0 0;
-}
+  &__logo5 {
+    background-position: -628px 0;
+    margin-right: 0;
+  }
 
-.logo5 {
-  @extend .logo1;
-  background-position: -628px 0;
-  margin-right: 0;
-}
-
-.logo6 {
-  @extend .logo1;
-  background-position: -757px 0;
-  margin-right: 0;
-
+  &__logo6 {
+    background-position: -757px 0;
+    margin-right: 0;
+  }
 }
 
 .footer {
