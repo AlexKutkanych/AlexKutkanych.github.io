@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 100,
+      "id": 0,
       "name": "Dwyane Wade",
       "position": "coder",
       "education": [
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "id": 101,
+      "id": 1,
       "name": "Lebron James",
       "position": "coder",
       "education": [
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "id": 102,
+      "id": 2,
       "name": "Derrick Rose",
       "position": "web-designer",
       "education": [
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "id": 103,
+      "id": 3,
       "name": "Carmelo Anthony",
       "position": "web-designer",
       "education": [
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "id": 104,
+      "id": 4,
       "name": "Corey Joseph",
       "position": "coder",
       "education": [
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "id": 105,
+      "id": 5,
       "name": "Alex Len",
       "position": "coder",
       "education": [
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "id": 106,
+      "id": 6,
       "name": "JR Smith",
       "position": "web-designer",
       "education": [
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "id": 107,
+      "id": 7,
       "name": "Hassan Whiteside",
       "position": "coder",
       "education": [
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "id": 108,
+      "id": 8,
       "name": "Russell Westbrook",
       "position": "web-designer",
       "education": [
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "id": 109,
+      "id": 9,
       "name": "Blake Griffin",
       "position": "coder",
       "education": [
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "id": 110,
+      "id": 10,
       "name": "Chris Paul",
       "position": "web-designer",
       "education": [
@@ -200,6 +200,3 @@
     }
   ]
 }
-
-
-

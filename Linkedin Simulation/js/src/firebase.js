@@ -85,8 +85,8 @@ function showDevelopersProfile(e){
                     var skillsResult = document.querySelector("#skills-result");
 
                     for (var key in usersSkills){
-                        skillsResult.innerHTML += "<div class='skills-result__bar' style='width:" + usersSkills[key] + "%'>" +
-                            "<span class='skills-result__skill-name'>" + key + "<span>" + "</div>";
+                        skillsResult.innerHTML += `<div id=${snap.key} class='skills-result__bar' style='width:${usersSkills[key]}%'>
+                            <span class='skills-result__skill-name'>${key}<span></div>`;
                     }
                 }
             }

@@ -128,8 +128,8 @@ function showDevelopersProfile(e){
                     var skillsResult = document.querySelector("#skills-result");
 
                     for (var key in usersSkills){
-                        skillsResult.innerHTML += "<div class='skills-result__bar' style='width:" + usersSkills[key] + "%'>" +
-                            "<span class='skills-result__skill-name'>" + key + "<span>" + "</div>";
+                        skillsResult.innerHTML += `<div id=${snap.key} class='skills-result__bar' style='width:${usersSkills[key]}%'>
+                            <span class='skills-result__skill-name'>${key}<span></div>`;
                     }
                 }
             }
@@ -181,7 +181,6 @@ var skillRangeInput = document.querySelector("#skill-range");
 var skillNameErrorMsg = document.querySelector(".skills-name__error-message");
 var skillRangeErrorMsg = document.querySelector(".skills-range__error-message");
 
-var dBListSkills = dBRefObject.child('skills');
 
 function checkSkillNameLen(){
     if(skillNameInput.value.length > 100) {
@@ -199,9 +198,9 @@ function checkSkillRangeLen(){
     }
 }
 
-dBListSkills.on('child_added', function(snap){
-  console.log(snap.val());
-})
+// dBListSkills.on('child_added', function(snap){
+//   console.log(snap.val());
+// })
 
 function addNewSkillBar() {
     checkSkillNameLen();
@@ -219,15 +218,40 @@ function addNewSkillBar() {
         var userName = document.querySelector("#user-name");
         var userIdentification = userName.dataset.id;
 
+        var t = skillNameInput.value;
+        var b = skillRangeInput.value;
+
+        var dBListSkills = firebase.database().ref().child(`users/${userIdentification}`).child("skills/0");
+
+        dBListSkills.update({
+          [t]: b
+        })
+
+        // dBListSkills.on('value', function(snap){
+        //   var skillRange = snap.val();
+        //   console.log(skillRange);
+        //
+        //   // console.log(skillRange);
+        // })
 
 
-        // function updateSkills(userId, skill, range) {
-        //   firebase.database().ref(`users/${userId}/skills/0`).update({
+        // dBListSkills.push({t: b});
+        // dBListSkills.on('value', function(snap){
+        //     var skillsList = snap.val();
+        //     console.log('skillsList', skillsList);
+        //
+        //     skillsList.push({t: b});
+        // });
+
+
+
+        // function updateSkills(range) {
+        //   firebase.database().ref().child(`users/${userIdentification}`).child("skills").update({
         //     skill: range,
         //   });
         // }
         //
-        // updateSkills(userIdentification, 'sdfdsf', 100);
+        // updateSkills(b);
 
     } else if (skillNameInput.value.length === 0  || skillRangeInput.value.length === 0) {
         alert("Fill all fields");
