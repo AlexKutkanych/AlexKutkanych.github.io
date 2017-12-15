@@ -10,6 +10,8 @@ var skillRangeInput = document.querySelector("#skill-range");
 var skillNameErrorMsg = document.querySelector(".skills-name__error-message");
 var skillRangeErrorMsg = document.querySelector(".skills-range__error-message");
 
+var dBListSkills = dBRefObject.child('skills');
+
 function checkSkillNameLen(){
     if(skillNameInput.value.length > 100) {
         skillNameErrorMsg.style.display = "block";
@@ -24,11 +26,11 @@ function checkSkillRangeLen(){
     } else {
         skillRangeErrorMsg.style.display = "none";
     }
-
 }
 
-
-
+dBListSkills.on('child_added', function(snap){
+  console.log(snap.val());
+})
 
 function addNewSkillBar() {
     checkSkillNameLen();
@@ -43,13 +45,22 @@ function addNewSkillBar() {
         skillName.innerHTML = skillNameInput.value;
         skillBar.appendChild(skillName);
         skillsResult.appendChild(skillBar);
+        var userName = document.querySelector("#user-name");
+        var userIdentification = userName.dataset.id;
+
+
+
+        // function updateSkills(userId, skill, range) {
+        //   firebase.database().ref(`users/${userId}/skills/0`).update({
+        //     skill: range,
+        //   });
+        // }
+        //
+        // updateSkills(userIdentification, 'sdfdsf', 100);
+
     } else if (skillNameInput.value.length === 0  || skillRangeInput.value.length === 0) {
         alert("Fill all fields");
-        
     }
-
-
 }
 
 addSkillsBtn.addEventListener("click", addNewSkillBar);
-
