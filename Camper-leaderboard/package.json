@@ -1,9 +1,11 @@
 {
   "name": "camper-leaderboard",
+  "homepage": "https://AlexKutkanych.github.io/Camper-leaderboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "gh-pages": "^1.1.0",
     "material-ui": "^0.20.0",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.2",
@@ -13,6 +15,8 @@
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
