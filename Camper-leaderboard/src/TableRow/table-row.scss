@@ -1,0 +1,25 @@
+.table__row {
+  display: flex;
+  height: 130px;
+
+  &:nth-child(2n) {
+    background-color: lightgreen;
+  }
+
+  &:hover {
+    background-color: lightsteelblue;
+    cursor: pointer;
+  }
+}
+
+.userphoto {
+  float: left;
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.username {
+  display: block;
+  float: left;
+  margin: 0 10px;
+}

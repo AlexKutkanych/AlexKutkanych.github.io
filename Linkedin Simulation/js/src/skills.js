@@ -50,17 +50,10 @@ function addNewSkillBar() {
         var t = skillNameInput.value;
         var b = skillRangeInput.value;
 
-        var dBListSkills = firebase.database().ref().child(`users/${userIdentification}`).child("skills/0");
-
-        dBListSkills.update({
-          [t]: b
-        })
-
-        // dBListSkills.on('value', function(snap){
-        //   var skillRange = snap.val();
-        //   console.log(skillRange);
+        // var dBListSkills = firebase.database().ref().child(`users/${userIdentification}`).child("skills/0");
         //
-        //   // console.log(skillRange);
+        // dBListSkills.update({
+        //   [t]: b
         // })
 
 
@@ -74,13 +67,13 @@ function addNewSkillBar() {
 
 
 
-        // function updateSkills(range) {
-        //   firebase.database().ref().child(`users/${userIdentification}`).child("skills").update({
-        //     skill: range,
-        //   });
-        // }
-        //
-        // updateSkills(b);
+        function updateSkills(skill, range) {
+          firebase.database().ref().child(`users/${userIdentification}`).child("skills/0").update({
+            [skill]: range,
+          });
+        }
+
+        updateSkills(t, b);
 
     } else if (skillNameInput.value.length === 0  || skillRangeInput.value.length === 0) {
         alert("Fill all fields");

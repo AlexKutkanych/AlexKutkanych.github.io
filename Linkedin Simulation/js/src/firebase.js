@@ -83,13 +83,22 @@ function showDevelopersProfile(e){
                     //skills block
                     var usersSkills = loadedUser.skills[0];
                     var skillsResult = document.querySelector("#skills-result");
+                    var skillsId = document.getElementsByClassName("skills-result__bar");
+                    var skillsIdArr = [];
+                    var length = skillsId.length;
+                    for(var j = 0; j < length; j++){
 
-                    for (var key in usersSkills){
-                        skillsResult.innerHTML += `<div id=${snap.key} class='skills-result__bar' style='width:${usersSkills[key]}%'>
+                        skillsIdArr.push(skillsId[j].id);
+                    }
+
+                        for(var key in usersSkills){
+                          skillsResult.innerHTML += `<div id=${key} class='skills-result__bar' style='width:${usersSkills[key]}%'>
                             <span class='skills-result__skill-name'>${key}<span></div>`;
+                          }
+
+
                     }
                 }
-            }
         });
 
     }

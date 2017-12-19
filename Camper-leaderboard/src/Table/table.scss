@@ -1,0 +1,63 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+
+    &__block {
+      width: 70%;
+      margin: 40px auto;
+    }
+
+    &__heading {
+      display: flex;
+      height: 50px;
+    }
+
+    &__cell {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &_heading {
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      &_small {
+        width: 10%;
+      }
+
+      &_userphoto {
+        display: block;
+        line-height: 130px;
+      }
+
+      &_sortable {
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 90px;
+          top: 15px;
+          width: 20px;
+          height: 20px;
+          background-image: url(../img/arrow-up.svg);
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+}
+
+.users__sorted {
+  color: lightgrey;
+
+  &::after {
+    transform: rotateX(180deg);
+  }
+}
