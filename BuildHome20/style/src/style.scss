@@ -146,7 +146,6 @@ li {
     display: inline-block;
     border-right: 1px solid #181a1d;
     text-align: center;
-    padding: 0 34px 0;
 
     &:hover {
       background-color: $hover-color-menu;
@@ -159,6 +158,7 @@ li {
 
   &__link {
     display: block;
+    padding: 0 34px 0;
     text-transform: uppercase;
     line-height: 57px;
     font-family: $main-font;
@@ -596,7 +596,8 @@ li {
 }
 
 //accordeon
-.ac-container{
+
+.ac-container {
 	width: 570px;
 	text-align: left;
   max-height: 408px;
@@ -606,7 +607,7 @@ li {
     display: block;
     position: relative;
     height: 39px;
-    margin-bottom: -5px;
+    margin-bottom: 5px;
     padding: 0 20px;
     padding-left: 25px;
     border: 1px solid #e8e8e8;
@@ -620,37 +621,31 @@ li {
     font-size: 13px;
     font-weight: bold;
     color: #2a2d32;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 39px;
+      height: 39px;
+      right: 525px;
+      top: 0px;
+      background: url(../img/open.jpg) 0 0 no-repeat;
+      border-right: 2px solid #e8e8e8;
+    }
+    
+    &_active {
+      background: $hover-color;
+      color: #fefaef;
+      margin-bottom: 0;
+
+        &::before{
+          border: none;
+          border-right: 1px solid #f6c53d;
+          background: url(../img/close.jpg) 0 0 no-repeat;
+      }
+    }
   }
-}
-
-.ac-container .ac-container__label:hover{
-	background: #fff;
-
-}
-.ac-container .ac-container__input:checked + .ac-container__label,
-.ac-container .ac-container__input:checked + .ac-container__label:hover{
-	background: $hover-color;
-	color: #fefaef;
-  margin-bottom: 0;
-  border: none;
-}
-
-.ac-container .ac-container__label::before {
-	content: '';
-  display: block;
-	position: absolute;
-	width: 39px;
-	height: 39px;
-	right: 525px;
-	top: 0px;
-	background: transparent url(../img/open.jpg) 0 0 no-repeat;
-  border-right: 2px solid #e8e8e8;
-}
-
-.ac-container .ac-container__input:checked + .ac-container__label::before{
-  border: none;
-  border-right: 1px solid #f6c53d;
-	background: url(../img/close.jpg) 0 0 no-repeat;
 }
 
 .ac-container {
@@ -679,6 +674,11 @@ li {
       padding: 5px;
        font-weight: 400;
        overflow: hidden;
+    }
+
+    &_active {
+      height: 100px;
+
     }
   }
 

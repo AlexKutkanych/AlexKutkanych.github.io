@@ -106,14 +106,14 @@ li {
   .menu-top__item {
     display: inline-block;
     border-right: 1px solid #181a1d;
-    text-align: center;
-    padding: 0 34px 0; }
+    text-align: center; }
     .menu-top__item:hover {
       background-color: #248cec; }
     .menu-top__item_active {
       background-color: #248cec; }
   .menu-top__link {
     display: block;
+    padding: 0 34px 0;
     text-transform: uppercase;
     line-height: 57px;
     font-family: "Ubuntu", sans-serif;
@@ -439,7 +439,7 @@ li {
     display: block;
     position: relative;
     height: 39px;
-    margin-bottom: -5px;
+    margin-bottom: 5px;
     padding: 0 20px;
     padding-left: 25px;
     border: 1px solid #e8e8e8;
@@ -453,32 +453,24 @@ li {
     font-size: 13px;
     font-weight: bold;
     color: #2a2d32; }
-
-.ac-container .ac-container__label:hover {
-  background: #fff; }
-
-.ac-container .ac-container__input:checked + .ac-container__label,
-.ac-container .ac-container__input:checked + .ac-container__label:hover {
-  background: #f4b60d;
-  color: #fefaef;
-  margin-bottom: 0;
-  border: none; }
-
-.ac-container .ac-container__label::before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 39px;
-  height: 39px;
-  right: 525px;
-  top: 0px;
-  background: transparent url(../img/open.jpg) 0 0 no-repeat;
-  border-right: 2px solid #e8e8e8; }
-
-.ac-container .ac-container__input:checked + .ac-container__label::before {
-  border: none;
-  border-right: 1px solid #f6c53d;
-  background: url(../img/close.jpg) 0 0 no-repeat; }
+    .ac-container__label::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 39px;
+      height: 39px;
+      right: 525px;
+      top: 0px;
+      background: url(../img/open.jpg) 0 0 no-repeat;
+      border-right: 2px solid #e8e8e8; }
+    .ac-container__label_active {
+      background: #f4b60d;
+      color: #fefaef;
+      margin-bottom: 0; }
+      .ac-container__label_active::before {
+        border: none;
+        border-right: 1px solid #f6c53d;
+        background: url(../img/close.jpg) 0 0 no-repeat; }
 
 .ac-container__input {
   display: none; }
@@ -501,6 +493,8 @@ li {
     padding: 5px;
     font-weight: 400;
     overflow: hidden; }
+  .ac-medium_active {
+    height: 100px; }
 
 .ac-container .ac-container__input:checked ~ .ac-medium {
   -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
