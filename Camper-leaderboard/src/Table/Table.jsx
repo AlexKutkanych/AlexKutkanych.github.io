@@ -21,7 +21,6 @@ componentDidMount(){
 getTopCampersLast30days = (url) => {
   axios.get(url)
   .then(res => {
-    console.log(res.data);
     this.setState({
       users: res.data
     })

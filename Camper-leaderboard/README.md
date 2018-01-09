@@ -1,4 +1,5 @@
 FreeCodeCamp Leaders Board.
 Technologies used:
-- ReactJS, SCSS
+- ReactJS, JS
 - axios
+- HTML, SCSS

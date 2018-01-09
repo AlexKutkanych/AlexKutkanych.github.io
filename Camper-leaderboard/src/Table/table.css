@@ -27,7 +27,7 @@
         content: '';
         display: block;
         position: absolute;
-        right: 90px;
+        right: 40px;
         top: 15px;
         width: 20px;
         height: 20px;
@@ -36,6 +36,6 @@
         cursor: pointer; }
 
 .users__sorted {
-  color: lightgrey; }
+  color: yellow; }
   .users__sorted::after {
     transform: rotateX(180deg); }
